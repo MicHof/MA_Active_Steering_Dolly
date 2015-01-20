@@ -1,0 +1,195 @@
+
+
+
+                        RTICANMM_MonitorData[0]
+            {
+             type:    UINT(32)
+             alias:   "ID"
+              flags:   OUTPUT|READONLY
+             desc:  "ID"
+             unit:  ""
+             value:  0
+            }
+
+
+
+                        RTICANMM_MonitorData[1]
+            {
+             type:    UINT(32)
+             alias:   "Service"
+              flags:   OUTPUT|READONLY
+             desc:  "Service"
+             unit:  ""
+             value:  0
+            }
+
+
+
+                        RTICANMM_MonitorData[2]
+            {
+             type:    UINT(32)
+             alias:   "Data1"
+              flags:   OUTPUT|READONLY
+             desc:  "Data1"
+             unit:  ""
+             value:  0
+            }
+
+
+
+                        RTICANMM_MonitorData[3]
+            {
+             type:    UINT(32)
+             alias:   "Data2"
+              flags:   OUTPUT|READONLY
+             desc:  "Data2"
+             unit:  ""
+             value:  0
+            }
+
+
+
+
+
+
+group "ControllerSetup_Blocks" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+
+
+group "Controller1" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+                        CANMMMonitor_Controller1
+            {
+             type:    UINT(8)
+             alias:   "Monitoring_Enable"
+              flags:   PARAM
+             desc:  "Monitoring Enable"
+             unit:  ""
+             value:  0
+            }
+
+
+
+
+                        MonitoringTimeStamp_Controller1
+            {
+             type:    flt(64,IEEE)
+             alias:   "Monitoring_TimeStamp"
+              flags:   OUTPUT|READONLY
+             desc:  "Monitoring TimeStamp"
+             unit:  "s"
+             value:  0
+            }
+
+
+
+                        CANMM_CTL_SETUP_Controller1_Variation
+            {
+             type:    UINT(8)
+             alias:   "Variation"
+              flags:   PARAM
+             desc:  "Variation used if Variation_Switch == 1"
+             unit:  ""
+             value:  1
+            }
+
+
+
+
+                        CANMM_CTL_SETUP_Controller1_VariationSwitch
+            {
+             type:    UINT(8)
+             alias:   "Variation_Switch"
+              flags:   PARAM
+             desc:  "Variation Switch: Variation changed by MODEL=0 (default) | EXPERIMENT SOFTWARE=1"
+             unit:  ""
+             value:  0
+            }
+
+
+
+
+
+
+
+endgroup -- block-group "Controller1"
+
+
+
+
+group "Controller2" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+                        CANMMMonitor_Controller2
+            {
+             type:    UINT(8)
+             alias:   "Monitoring_Enable"
+              flags:   PARAM
+             desc:  "Monitoring Enable"
+             unit:  ""
+             value:  0
+            }
+
+
+
+
+                        MonitoringTimeStamp_Controller2
+            {
+             type:    flt(64,IEEE)
+             alias:   "Monitoring_TimeStamp"
+              flags:   OUTPUT|READONLY
+             desc:  "Monitoring TimeStamp"
+             unit:  "s"
+             value:  0
+            }
+
+
+
+                        CANMM_CTL_SETUP_Controller2_Variation
+            {
+             type:    UINT(8)
+             alias:   "Variation"
+              flags:   PARAM
+             desc:  "Variation used if Variation_Switch == 1"
+             unit:  ""
+             value:  1
+            }
+
+
+
+
+                        CANMM_CTL_SETUP_Controller2_VariationSwitch
+            {
+             type:    UINT(8)
+             alias:   "Variation_Switch"
+              flags:   PARAM
+             desc:  "Variation Switch: Variation changed by MODEL=0 (default) | EXPERIMENT SOFTWARE=1"
+             unit:  ""
+             value:  0
+            }
+
+
+
+
+
+
+
+endgroup -- block-group "Controller2"
+
+
+
+
+endgroup -- block-group "ControllerSetup_Blocks"
+
+
+
+

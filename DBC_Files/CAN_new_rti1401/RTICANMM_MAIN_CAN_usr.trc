@@ -1,0 +1,488 @@
+
+
+-- START@RTICANMM_MAIN_CAN_DS1401_1_1_1
+
+
+
+group "CAN" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+CANMM_CTL_SETUP_Controller1_ID
+{
+type: UINT(8)
+alias: "Variation"
+flags: OUTPUT|READONLY
+desc: "current Variation of Controller1"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_NL
+{
+type: UINT(32)
+alias: "NumLostMsgs"
+flags: OUTPUT|READONLY
+desc: "Number of lost messages"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_TRAFFIC
+{
+type: UINT(8)
+alias: "Traffic"
+flags: OUTPUT|READONLY
+desc: "Traffic"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_GEIN
+{
+type: UINT(8)
+alias: "GlobalEnable"
+flags: PARAM
+desc: "Enable CAN"
+unit: ""
+range: <0; 1>
+value: 1
+}
+
+
+
+
+CANMMCAN_MAXMSGPERSTEP
+{
+type: INT(32)
+alias: "MaxMessagesPerStep"
+flags: PARAM
+desc: "MaxMessagesPerStep"
+unit: ""
+range: <0; 100>
+value: 0
+}
+
+
+
+
+
+group "AngleSensor" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+
+group "RX" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+CANMMCAN_RX_Msg_1_Sgn_1
+{
+type: UINT(8)
+alias: "PacketType"
+flags: OUTPUT|READONLY
+desc: ""
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_RX_Msg_1_Sgn_2
+{
+type: UINT(8)
+alias: "MessageCounter"
+flags: OUTPUT|READONLY
+desc: ""
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_RX_Msg_1_Sgn_3
+{
+type: flt(64,IEEE)
+alias: "Angle"
+flags: OUTPUT|READONLY
+desc: ""
+unit: "degr"
+value: -200
+}
+
+
+
+
+CANMMCAN_RX_Msg_1_Sgn_4
+{
+type: INT(16)
+alias: "Temperature"
+flags: OUTPUT|READONLY
+desc: ""
+unit: "°C"
+value: -40
+}
+
+
+
+
+CANMMCAN_RX_Msg_1_Sgn_5
+{
+type: UINT(8)
+alias: "AlarmWarningBits"
+flags: OUTPUT|READONLY
+desc: ""
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_MIDRX[1]
+{
+type: UINT(32)
+alias: "AngleSensor_ID"
+flags: OUTPUT|READONLY
+desc: "Message ID"
+unit: ""
+value: 419406392
+}
+
+
+
+
+CANMMCAN_MIDFRX[1]
+{
+type: UINT(8)
+alias: "AngleSensor_IDFormat"
+flags: OUTPUT|READONLY
+desc: "Message ID Format"
+unit: ""
+value: 1
+}
+
+
+
+
+CANMMCAN_RXLEN[1]
+{
+type: UINT(8)
+alias: "AngleSensor_Length"
+flags: OUTPUT|READONLY
+desc: "Message Length"
+unit: ""
+value: 5
+}
+
+
+
+
+CANMMCAN_RXsta[1]
+{
+type: UINT(8)
+alias: "AngleSensor_status"
+flags: OUTPUT|READONLY
+desc: "AngleSensor Status"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_RXdt[1]
+{
+type: flt(64,IEEE)
+alias: "AngleSensor_dt"
+flags: OUTPUT|READONLY
+desc: "AngleSensor DeltaTime"
+unit: "s"
+value: 0
+}
+
+
+
+
+CANMMCAN_RXt[1]
+{
+type: flt(64,IEEE)
+alias: "AngleSensor_time"
+flags: OUTPUT|READONLY
+desc: "AngleSensor Time"
+unit: "s"
+value: 0.0
+}
+
+
+
+
+
+endgroup -- block-group "RX"
+
+
+
+endgroup -- block-group "AngleSensor"
+
+
+
+group "ISO11992_EBS21" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+
+group "RX" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+CANMMCAN_RX_Msg_2_Sgn_1
+{
+type: UINT(8)
+alias: "VehicleABSActive"
+flags: OUTPUT|READONLY
+desc: ""
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_RX_Msg_2_Sgn_2
+{
+type: UINT(8)
+alias: "VehicleRetarderCtrlActive"
+flags: OUTPUT|READONLY
+desc: ""
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_RX_Msg_2_Sgn_3
+{
+type: UINT(8)
+alias: "VehicleServiceBrakeActive"
+flags: OUTPUT|READONLY
+desc: ""
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_RX_Msg_2_Sgn_4
+{
+type: UINT(8)
+alias: "AutomTowedVehBreakActive"
+flags: OUTPUT|READONLY
+desc: ""
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_RX_Msg_2_Sgn_5
+{
+type: UINT(8)
+alias: "VDCActive"
+flags: OUTPUT|READONLY
+desc: ""
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_RX_Msg_2_Sgn_6
+{
+type: UINT(8)
+alias: "SupplyLineBrakingRequest"
+flags: OUTPUT|READONLY
+desc: ""
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_RX_Msg_2_Sgn_7
+{
+type: flt(64,IEEE)
+alias: "Wheel_BasedVehicleSpeed"
+flags: OUTPUT|READONLY
+desc: ""
+unit: "km/"
+value: 0
+}
+
+
+
+
+CANMMCAN_RX_Msg_2_Sgn_8
+{
+type: INT(16)
+alias: "ActualRetarderPercTorque"
+flags: OUTPUT|READONLY
+desc: ""
+unit: "%"
+value: -125
+}
+
+
+
+
+CANMMCAN_RX_Msg_2_Sgn_9
+{
+type: flt(64,IEEE)
+alias: "WheelSpeedDiffMainAxle"
+flags: OUTPUT|READONLY
+desc: ""
+unit: "km/h"
+value: -125
+}
+
+
+
+
+CANMMCAN_MIDRX[0]
+{
+type: UINT(32)
+alias: "ISO11992_EBS21_ID"
+flags: OUTPUT|READONLY
+desc: "Message ID"
+unit: ""
+value: 201531592
+}
+
+
+
+
+CANMMCAN_MIDFRX[0]
+{
+type: UINT(8)
+alias: "ISO11992_EBS21_IDFormat"
+flags: OUTPUT|READONLY
+desc: "Message ID Format"
+unit: ""
+value: 1
+}
+
+
+
+
+CANMMCAN_RXLEN[0]
+{
+type: UINT(8)
+alias: "ISO11992_EBS21_Length"
+flags: OUTPUT|READONLY
+desc: "Message Length"
+unit: ""
+value: 8
+}
+
+
+
+
+CANMMCAN_RXsta[0]
+{
+type: UINT(8)
+alias: "ISO11992_EBS21_status"
+flags: OUTPUT|READONLY
+desc: "ISO11992_EBS21 Status"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_RXdt[0]
+{
+type: flt(64,IEEE)
+alias: "ISO11992_EBS21_dt"
+flags: OUTPUT|READONLY
+desc: "ISO11992_EBS21 DeltaTime"
+unit: "s"
+value: 0
+}
+
+
+
+
+CANMMCAN_RXt[0]
+{
+type: flt(64,IEEE)
+alias: "ISO11992_EBS21_time"
+flags: OUTPUT|READONLY
+desc: "ISO11992_EBS21 Time"
+unit: "s"
+value: 0.0
+}
+
+
+
+
+
+endgroup -- block-group "RX"
+
+
+
+endgroup -- block-group "ISO11992_EBS21"
+
+
+
+group "RT" -- subsystem-group
+{
+     flags: COLLAPSED | HIDDEN
+}
+
+
+
+group "FreeRawMessages" -- subsystem-group
+{
+     flags: COLLAPSED | HIDDEN
+}
+
+
+
+endgroup -- block-group "FreeRawMessages"
+
+
+
+endgroup -- block-group "RT"
+
+
+
+endgroup -- block-group "CAN"
+
+
+-- END@RTICANMM_MAIN_CAN_DS1401_1_1_1

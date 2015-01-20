@@ -1,0 +1,1942 @@
+-- ****************************************************************************
+--
+--  Trace file: CAN_Communication.trc
+--
+--  RTI1401 7.2 (02-May-2014)
+--  Tue Jan 13 20:02:23 2015
+--
+--  Used options:
+--    TRCGenerateVirtualBlocks      = 1
+--    TRCGenerateLabels             = 1
+--    TRCGenerateStates             = 0
+--    TRCGenerateDerivatives        = 0
+--    TRCGenerateParamValues        = 0
+--    TRCGenerateApplicationKeyword = 0
+--    TRCOnlyGlobals                = 0
+--    TRCIsOmitVdOn                 = 0
+--
+--  Trace file format: 2
+--
+--  (c) Copyright 2008, dSPACE GmbH. All rights reserved.
+--
+-- ****************************************************************************
+
+-- ******** Keywords **********************************************************
+
+-- _application "CAN_Communication.map"
+
+_genname     "RTI"
+_genversion  "7.2"
+_gendate     "01/13/2015 20:02:53"
+_description ""
+_author      "RTI1401 7.2 (02-May-2014)"
+_model       "CAN_Communication.mdl"
+
+-- Default data type formats
+_floating_point_type(64,IEEE)
+_integer_type(32)
+
+-- No Data Capture blocks within model: use base sample time as sampling period
+sampling_period[0]
+{
+  value:       0.001
+  alias:       "HostService"
+  increment:   0.001
+  unit:        "s"
+}
+
+
+
+-- Type definitions for arrays
+typedef CAN_Communication_ArrayDT5_6 uint(16)[6]
+
+
+-- ******** Simulation control variables **************************************
+
+finalTime
+{
+ type:  flt(64,IEEE)*
+ alias: "finalTime"
+ desc:  "Simulation stop time. When reached, simState switches to STOP."
+ flags:  SYSTEM|READONLY
+ unit:  "s"
+}
+
+currentTime
+{
+ type:  flt(64,IEEE)*
+ alias: "currentTime"
+ desc:  "Current simulation time. Increments with execution of Timer Task 1."
+ flags: SYSTEM|READONLY
+ unit:  "s"
+}
+
+modelStepSize
+{
+ type:  flt(64,IEEE)
+ alias: "modelStepSize"
+ desc:  "Fixed step size of the model, sample time of Timer Task 1."
+ flags: SYSTEM|READONLY
+ unit:  "s"
+}
+
+simState
+{
+ type:  int(32)
+ alias: "simState"
+ desc:  "Simulation state: STOP=0 PAUSE=1 RUN=2"
+ flags: SYSTEM
+ unit:  "-"
+}
+
+msg_last_error_no
+{
+ type:  uint(32)
+ alias: "errorNumber"
+ desc:  "Error number of last error message (zero if no error)."
+ unit:  "-"
+ flags: SYSTEM|READONLY
+}
+
+rtiAssertionMode
+{
+ type:  int(32)
+ alias: "rtiAssertionMode"
+ desc:  "Assertion Mode: OFF=0 WARN=1 STOP=2"
+ flags: SYSTEM
+ unit:  "-"
+}
+
+
+
+-- ******** Model variables ***************************************************
+
+group "Model Root"
+{
+ flags: COLLAPSED
+}
+	group "Reset@RTICANMM\nControllerSetup" -- block-group
+	{
+	 block: "Constant"
+	 desc:  ""
+	 flags: BLOCK|COLLAPSED
+	}
+		-- Skipping output Out1
+		p_1_CAN_Communication_boolean_T_3[0]
+		{
+		 type:    uint(8)*
+		 alias:   "Value"
+		 range:   < 0 ; 1 >
+		 bitmask: 0x01
+		 flags:   PARAM
+		}
+
+
+	endgroup -- block-group "Reset@RTICANMM\nControllerSetup"
+
+	group "Variation@RTICANMM\nControllerSetup" -- block-group
+	{
+	 block: "Constant"
+	 desc:  ""
+	 flags: BLOCK|COLLAPSED
+	}
+		-- Skipping output Out1
+		p_1_CAN_Communication_uint8_T_2[0]
+		{
+		 type:    uint(8)*
+		 alias:   "Value"
+		 flags:   PARAM
+		}
+
+
+	endgroup -- block-group "Variation@RTICANMM\nControllerSetup"
+
+  
+  
+	group "RTI Data" -- subsystem-group
+	{
+	 flags: COLLAPSED
+	 desc:  ""
+	}
+
+
+	endgroup -- subsystem-group "RTI Data"
+  
+  
+	group "RTICANMM\nControllerSetup" -- subsystem-group
+	{
+	 flags: COLLAPSED
+	 desc:  ""
+	}
+
+
+
+		group "VariationInput" -- block-group
+		{
+		 block: "Inport"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			-- Skipping output Out1
+
+
+		endgroup -- block-group "VariationInput"
+
+		group "Reset" -- block-group
+		{
+		 block: "Inport"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			-- Skipping output Out1
+
+
+		endgroup -- block-group "Reset"
+
+		group "Variation_DTC" -- block-group
+		{
+		 block: "DataTypeConversion"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			p_0_CAN_Communication_uint8_T_2[0]
+			{
+			 type:    uint(8)*
+			 alias:   "Out1"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "Variation_DTC"
+
+		group "RTICANMMCHANNEL_TLC" -- block-group
+		{
+		 block: "S-Function"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+
+
+			p_1_CAN_Communication_real_T_0[0]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "P1"
+			 flags:   PARAM
+			}
+			p_1_CAN_Communication_real_T_0[1]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "P2"
+			 flags:   PARAM
+			}
+			p_1_CAN_Communication_real_T_0[2]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "P3"
+			 flags:   PARAM
+			}
+			p_1_CAN_Communication_real_T_0[3]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "P4"
+			 flags:   PARAM
+			}
+			p_1_CAN_Communication_real_T_0[4]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "P5"
+			 flags:   PARAM
+			}
+			p_1_CAN_Communication_uint16_T_1[0]
+			{
+			 type:    CAN_Communication_ArrayDT5_6*
+			 alias:   "P6"
+			 flags:   PARAM
+			}
+
+
+		endgroup -- block-group "RTICANMMCHANNEL_TLC"
+
+		group "sfcn" -- block-group
+		{
+		 block: "S-Function"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			p_0_CAN_Communication_uint8_T_2[0]
+			{
+			 type:    uint(8)*
+			 alias:   "In1"
+			 desc:    ""
+			 flags:   SINK|READONLY
+			}
+
+			-- Skipping inport In2
+
+
+
+
+		endgroup -- block-group "sfcn"
+
+  
+  
+		group "ModelClose" -- subsystem-group
+		{
+		 flags: COLLAPSED
+		 desc:  ""
+		}
+
+
+
+
+
+		endgroup -- subsystem-group "ModelClose"
+
+
+	endgroup -- subsystem-group "RTICANMM\nControllerSetup"
+  
+  
+	group "RTICANMM\nGeneralSetup" -- subsystem-group
+	{
+	 flags: COLLAPSED
+	 desc:  ""
+	}
+
+
+	endgroup -- subsystem-group "RTICANMM\nGeneralSetup"
+  
+  
+	group "RTICANMM\nMainBlock" -- subsystem-group
+	{
+	 flags: COLLAPSED
+	 desc:  ""
+	}
+
+		p_0_CAN_Communication_uint8_T_2[1]
+		{
+		 type:    uint(8)*
+		 alias:   "RX_Data{SubArray1}"
+		 desc:    ""
+		 flags:   OUTPUT|READONLY
+		}
+		p_0_CAN_Communication_uint8_T_2[2]
+		{
+		 type:    uint(8)*
+		 alias:   "RX_Data{SubArray2}"
+		 desc:    ""
+		 flags:   OUTPUT|READONLY
+		}
+		p_0_CAN_Communication_real_T_0[0]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "RX_Data{SubArray3}"
+		 desc:    ""
+		 flags:   OUTPUT|READONLY
+		}
+		p_0_CAN_Communication_int16_T_1[0]
+		{
+		 type:    int(16)*
+		 alias:   "RX_Data{SubArray4}"
+		 desc:    ""
+		 flags:   OUTPUT|READONLY
+		}
+		p_0_CAN_Communication_uint8_T_2[3]
+		{
+		 type:    uint(8)*
+		 alias:   "RX_Data{SubArray5}"
+		 desc:    ""
+		 flags:   OUTPUT|READONLY
+		}
+		p_0_CAN_Communication_uint8_T_2[4]
+		{
+		 type:    uint(8)*
+		 alias:   "RX_Data{SubArray6}"
+		 desc:    ""
+		 flags:   OUTPUT|READONLY
+		}
+		p_0_CAN_Communication_uint8_T_2[5]
+		{
+		 type:    uint(8)*
+		 alias:   "RX_Data{SubArray7}"
+		 desc:    ""
+		 flags:   OUTPUT|READONLY
+		}
+		p_0_CAN_Communication_uint8_T_2[6]
+		{
+		 type:    uint(8)*
+		 alias:   "RX_Data{SubArray8}"
+		 desc:    ""
+		 flags:   OUTPUT|READONLY
+		}
+		p_0_CAN_Communication_uint8_T_2[7]
+		{
+		 type:    uint(8)*
+		 alias:   "RX_Data{SubArray9}"
+		 desc:    ""
+		 flags:   OUTPUT|READONLY
+		}
+		p_0_CAN_Communication_uint8_T_2[8]
+		{
+		 type:    uint(8)*
+		 alias:   "RX_Data{SubArray10}"
+		 desc:    ""
+		 flags:   OUTPUT|READONLY
+		}
+		p_0_CAN_Communication_uint8_T_2[9]
+		{
+		 type:    uint(8)*
+		 alias:   "RX_Data{SubArray11}"
+		 desc:    ""
+		 flags:   OUTPUT|READONLY
+		}
+		p_0_CAN_Communication_real_T_0[1]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "RX_Data{SubArray12}"
+		 desc:    ""
+		 flags:   OUTPUT|READONLY
+		}
+		p_0_CAN_Communication_int16_T_1[1]
+		{
+		 type:    int(16)*
+		 alias:   "RX_Data{SubArray13}"
+		 desc:    ""
+		 flags:   OUTPUT|READONLY
+		}
+		p_0_CAN_Communication_real_T_0[2]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "RX_Data{SubArray14}"
+		 desc:    ""
+		 flags:   OUTPUT|READONLY
+		}
+
+	endgroup -- subsystem-group "RTICANMM\nMainBlock"
+  
+  
+	group "User2RTICANMM\nMainBlock" -- subsystem-group
+	{
+	 flags: COLLAPSED
+	 desc:  ""
+	}
+
+		-- Skipping output out{SubArray1}
+		-- Skipping output out{SubArray2}
+		-- Skipping output out{SubArray3}
+		-- Skipping output out{SubArray4}
+		-- Skipping output out{SubArray5}
+		-- Skipping output out{SubArray6}
+		-- Skipping output out{SubArray7}
+		-- Skipping output out{SubArray8}
+		-- Skipping output out{SubArray9}
+		-- Skipping output out{SubArray10}
+		-- Skipping output out{SubArray11}
+		-- Skipping output out{SubArray12}
+		-- Skipping output out{SubArray13}
+		-- Skipping output out{SubArray14}
+
+
+		group "buscreator" -- block-group
+		{
+		 block: "BusCreator"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			-- Skipping output Out1{SubArray1}
+			-- Skipping output Out1{SubArray2}
+			-- Skipping output Out1{SubArray3}
+			-- Skipping output Out1{SubArray4}
+			-- Skipping output Out1{SubArray5}
+			-- Skipping output Out1{SubArray6}
+			-- Skipping output Out1{SubArray7}
+			-- Skipping output Out1{SubArray8}
+			-- Skipping output Out1{SubArray9}
+			-- Skipping output Out1{SubArray10}
+			-- Skipping output Out1{SubArray11}
+			-- Skipping output Out1{SubArray12}
+			-- Skipping output Out1{SubArray13}
+			-- Skipping output Out1{SubArray14}
+
+
+		endgroup -- block-group "buscreator"
+
+  
+  
+		group "AngleSensor" -- subsystem-group
+		{
+		 flags: COLLAPSED
+		 desc:  ""
+		}
+
+			-- Skipping output out{SubArray1}
+			-- Skipping output out{SubArray2}
+			-- Skipping output out{SubArray3}
+			-- Skipping output out{SubArray4}
+			-- Skipping output out{SubArray5}
+
+
+			group "buscreator" -- block-group
+			{
+			 block: "BusCreator"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				-- Skipping output Out1{SubArray1}
+				-- Skipping output Out1{SubArray2}
+				-- Skipping output Out1{SubArray3}
+				-- Skipping output Out1{SubArray4}
+				-- Skipping output Out1{SubArray5}
+
+
+			endgroup -- block-group "buscreator"
+
+			group "AlarmWarningBits" -- block-group
+			{
+			 block: "Ground"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				-- Skipping output Out1
+
+
+			endgroup -- block-group "AlarmWarningBits"
+
+			group "Angle" -- block-group
+			{
+			 block: "Ground"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				-- Skipping output Out1
+
+
+			endgroup -- block-group "Angle"
+
+			group "MessageCounter" -- block-group
+			{
+			 block: "Ground"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				-- Skipping output Out1
+
+
+			endgroup -- block-group "MessageCounter"
+
+			group "PacketType" -- block-group
+			{
+			 block: "Ground"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				-- Skipping output Out1
+
+
+			endgroup -- block-group "PacketType"
+
+			group "Temperature" -- block-group
+			{
+			 block: "Ground"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				-- Skipping output Out1
+
+
+			endgroup -- block-group "Temperature"
+
+
+			-- Skipping label "AlarmWarningBits"
+
+			-- Skipping label "Angle"
+
+			-- Skipping label "AngleSensor{SubArray1}"
+
+			-- Skipping label "AngleSensor{SubArray2}"
+
+			-- Skipping label "AngleSensor{SubArray3}"
+
+			-- Skipping label "AngleSensor{SubArray4}"
+
+			-- Skipping label "AngleSensor{SubArray5}"
+
+			-- Skipping label "MessageCounter"
+
+			-- Skipping label "PacketType"
+
+			-- Skipping label "Temperature"
+
+
+		endgroup -- subsystem-group "AngleSensor"
+  
+  
+		group "ISO11992_EBS21" -- subsystem-group
+		{
+		 flags: COLLAPSED
+		 desc:  ""
+		}
+
+			-- Skipping output out{SubArray1}
+			-- Skipping output out{SubArray2}
+			-- Skipping output out{SubArray3}
+			-- Skipping output out{SubArray4}
+			-- Skipping output out{SubArray5}
+			-- Skipping output out{SubArray6}
+			-- Skipping output out{SubArray7}
+			-- Skipping output out{SubArray8}
+			-- Skipping output out{SubArray9}
+
+
+			group "buscreator" -- block-group
+			{
+			 block: "BusCreator"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				-- Skipping output Out1{SubArray1}
+				-- Skipping output Out1{SubArray2}
+				-- Skipping output Out1{SubArray3}
+				-- Skipping output Out1{SubArray4}
+				-- Skipping output Out1{SubArray5}
+				-- Skipping output Out1{SubArray6}
+				-- Skipping output Out1{SubArray7}
+				-- Skipping output Out1{SubArray8}
+				-- Skipping output Out1{SubArray9}
+
+
+			endgroup -- block-group "buscreator"
+
+			group "ActualRetarderPercTorque" -- block-group
+			{
+			 block: "Ground"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				-- Skipping output Out1
+
+
+			endgroup -- block-group "ActualRetarderPercTorque"
+
+			group "AutomTowedVehBreakActive" -- block-group
+			{
+			 block: "Ground"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				-- Skipping output Out1
+
+
+			endgroup -- block-group "AutomTowedVehBreakActive"
+
+			group "SupplyLineBrakingRequest" -- block-group
+			{
+			 block: "Ground"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				-- Skipping output Out1
+
+
+			endgroup -- block-group "SupplyLineBrakingRequest"
+
+			group "VDCActive" -- block-group
+			{
+			 block: "Ground"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				-- Skipping output Out1
+
+
+			endgroup -- block-group "VDCActive"
+
+			group "VehicleABSActive" -- block-group
+			{
+			 block: "Ground"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				-- Skipping output Out1
+
+
+			endgroup -- block-group "VehicleABSActive"
+
+			group "VehicleRetarderCtrlActive" -- block-group
+			{
+			 block: "Ground"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				-- Skipping output Out1
+
+
+			endgroup -- block-group "VehicleRetarderCtrlActive"
+
+			group "VehicleServiceBrakeActive" -- block-group
+			{
+			 block: "Ground"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				-- Skipping output Out1
+
+
+			endgroup -- block-group "VehicleServiceBrakeActive"
+
+			group "WheelSpeedDiffMainAxle" -- block-group
+			{
+			 block: "Ground"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				-- Skipping output Out1
+
+
+			endgroup -- block-group "WheelSpeedDiffMainAxle"
+
+			group "Wheel_BasedVehicleSpeed" -- block-group
+			{
+			 block: "Ground"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				-- Skipping output Out1
+
+
+			endgroup -- block-group "Wheel_BasedVehicleSpeed"
+
+
+			-- Skipping label "ActualRetarderPercTorque"
+
+			-- Skipping label "AutomTowedVehBreakActive"
+
+			-- Skipping label "ISO11992_EBS21{SubArray1}"
+
+			-- Skipping label "ISO11992_EBS21{SubArray2}"
+
+			-- Skipping label "ISO11992_EBS21{SubArray3}"
+
+			-- Skipping label "ISO11992_EBS21{SubArray4}"
+
+			-- Skipping label "ISO11992_EBS21{SubArray5}"
+
+			-- Skipping label "ISO11992_EBS21{SubArray6}"
+
+			-- Skipping label "ISO11992_EBS21{SubArray7}"
+
+			-- Skipping label "ISO11992_EBS21{SubArray8}"
+
+			-- Skipping label "ISO11992_EBS21{SubArray9}"
+
+			-- Skipping label "SupplyLineBrakingRequest"
+
+			-- Skipping label "VDCActive"
+
+			-- Skipping label "VehicleABSActive"
+
+			-- Skipping label "VehicleRetarderCtrlActive"
+
+			-- Skipping label "VehicleServiceBrakeActive"
+
+			-- Skipping label "WheelSpeedDiffMainAxle"
+
+			-- Skipping label "Wheel_BasedVehicleSpeed"
+
+
+		endgroup -- subsystem-group "ISO11992_EBS21"
+
+		-- Skipping label "AngleSensor{SubArray1}"
+
+		-- Skipping label "AngleSensor{SubArray2}"
+
+		-- Skipping label "AngleSensor{SubArray3}"
+
+		-- Skipping label "AngleSensor{SubArray4}"
+
+		-- Skipping label "AngleSensor{SubArray5}"
+
+		-- Skipping label "CAN{SubArray1}"
+
+		-- Skipping label "CAN{SubArray2}"
+
+		-- Skipping label "CAN{SubArray3}"
+
+		-- Skipping label "CAN{SubArray4}"
+
+		-- Skipping label "CAN{SubArray5}"
+
+		-- Skipping label "CAN{SubArray6}"
+
+		-- Skipping label "CAN{SubArray7}"
+
+		-- Skipping label "CAN{SubArray8}"
+
+		-- Skipping label "CAN{SubArray9}"
+
+		-- Skipping label "CAN{SubArray10}"
+
+		-- Skipping label "CAN{SubArray11}"
+
+		-- Skipping label "CAN{SubArray12}"
+
+		-- Skipping label "CAN{SubArray13}"
+
+		-- Skipping label "CAN{SubArray14}"
+
+		-- Skipping label "ISO11992_EBS21{SubArray1}"
+
+		-- Skipping label "ISO11992_EBS21{SubArray2}"
+
+		-- Skipping label "ISO11992_EBS21{SubArray3}"
+
+		-- Skipping label "ISO11992_EBS21{SubArray4}"
+
+		-- Skipping label "ISO11992_EBS21{SubArray5}"
+
+		-- Skipping label "ISO11992_EBS21{SubArray6}"
+
+		-- Skipping label "ISO11992_EBS21{SubArray7}"
+
+		-- Skipping label "ISO11992_EBS21{SubArray8}"
+
+		-- Skipping label "ISO11992_EBS21{SubArray9}"
+
+
+	endgroup -- subsystem-group "User2RTICANMM\nMainBlock"
+
+
+
+
+endgroup -- "Model Root"
+-- ******** Tunable Parameters ************************************************
+
+-- InlineParameters is off: no separate group for Tunable Parameters
+
+
+-- ******** State Machine Data ************************************************
+
+-- No Stateflow chart within the model.
+
+
+-- ******** Data Store Memories ***********************************************
+
+-- No Data Store Memories within the model.
+
+
+-- ******** Labels ************************************************************
+
+group "Labels"
+{
+ flags: COLLAPSED
+}
+	-- Skipping label "ActualRetarderPercTorque"
+
+	-- Skipping label "AlarmWarningBits"
+
+	-- Skipping label "Angle"
+
+	-- Skipping label "AngleSensor{Occurence1}{SubArray1}"
+
+	-- Skipping label "AngleSensor{Occurence1}{SubArray2}"
+
+	-- Skipping label "AngleSensor{Occurence1}{SubArray3}"
+
+	-- Skipping label "AngleSensor{Occurence1}{SubArray4}"
+
+	-- Skipping label "AngleSensor{Occurence1}{SubArray5}"
+
+	-- Skipping label "AngleSensor{Occurence2}{SubArray1}"
+
+	-- Skipping label "AngleSensor{Occurence2}{SubArray2}"
+
+	-- Skipping label "AngleSensor{Occurence2}{SubArray3}"
+
+	-- Skipping label "AngleSensor{Occurence2}{SubArray4}"
+
+	-- Skipping label "AngleSensor{Occurence2}{SubArray5}"
+
+	-- Skipping label "AutomTowedVehBreakActive"
+
+	-- Skipping label "CAN{SubArray1}"
+
+	-- Skipping label "CAN{SubArray2}"
+
+	-- Skipping label "CAN{SubArray3}"
+
+	-- Skipping label "CAN{SubArray4}"
+
+	-- Skipping label "CAN{SubArray5}"
+
+	-- Skipping label "CAN{SubArray6}"
+
+	-- Skipping label "CAN{SubArray7}"
+
+	-- Skipping label "CAN{SubArray8}"
+
+	-- Skipping label "CAN{SubArray9}"
+
+	-- Skipping label "CAN{SubArray10}"
+
+	-- Skipping label "CAN{SubArray11}"
+
+	-- Skipping label "CAN{SubArray12}"
+
+	-- Skipping label "CAN{SubArray13}"
+
+	-- Skipping label "CAN{SubArray14}"
+
+	-- Skipping label "ISO11992_EBS21{Occurence1}{SubArray1}"
+
+	-- Skipping label "ISO11992_EBS21{Occurence1}{SubArray2}"
+
+	-- Skipping label "ISO11992_EBS21{Occurence1}{SubArray3}"
+
+	-- Skipping label "ISO11992_EBS21{Occurence1}{SubArray4}"
+
+	-- Skipping label "ISO11992_EBS21{Occurence1}{SubArray5}"
+
+	-- Skipping label "ISO11992_EBS21{Occurence1}{SubArray6}"
+
+	-- Skipping label "ISO11992_EBS21{Occurence1}{SubArray7}"
+
+	-- Skipping label "ISO11992_EBS21{Occurence1}{SubArray8}"
+
+	-- Skipping label "ISO11992_EBS21{Occurence1}{SubArray9}"
+
+	-- Skipping label "ISO11992_EBS21{Occurence2}{SubArray1}"
+
+	-- Skipping label "ISO11992_EBS21{Occurence2}{SubArray2}"
+
+	-- Skipping label "ISO11992_EBS21{Occurence2}{SubArray3}"
+
+	-- Skipping label "ISO11992_EBS21{Occurence2}{SubArray4}"
+
+	-- Skipping label "ISO11992_EBS21{Occurence2}{SubArray5}"
+
+	-- Skipping label "ISO11992_EBS21{Occurence2}{SubArray6}"
+
+	-- Skipping label "ISO11992_EBS21{Occurence2}{SubArray7}"
+
+	-- Skipping label "ISO11992_EBS21{Occurence2}{SubArray8}"
+
+	-- Skipping label "ISO11992_EBS21{Occurence2}{SubArray9}"
+
+	-- Skipping label "MessageCounter"
+
+	-- Skipping label "PacketType"
+
+	-- Skipping label "SupplyLineBrakingRequest"
+
+	-- Skipping label "Temperature"
+
+	-- Skipping label "VDCActive"
+
+	-- Skipping label "VehicleABSActive"
+
+	-- Skipping label "VehicleRetarderCtrlActive"
+
+	-- Skipping label "VehicleServiceBrakeActive"
+
+	-- Skipping label "WheelSpeedDiffMainAxle"
+
+	-- Skipping label "Wheel_BasedVehicleSpeed"
+
+
+endgroup
+
+-- ******** RTT Dynamic Variables *********************************************
+
+group "RTT Dynamic Variables"
+{
+ flags: COLLAPSED
+}
+
+endgroup
+
+ 
+ 
+ 
+
+group "BusSystems" -- subsystem-group
+        {
+     flags: COLLAPSED
+ }
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+
+group "CAN" -- subsystem-group
+        {
+     flags: COLLAPSED
+ }
+
+
+ 
+ 
+ 
+
+
+
+                        RTICANMM_MonitorData[0]
+            {
+             type:    UINT(32)
+             alias:   "ID"
+              flags:   OUTPUT|READONLY
+             desc:  "ID"
+             unit:  ""
+             value:  0
+            }
+
+
+
+                        RTICANMM_MonitorData[1]
+            {
+             type:    UINT(32)
+             alias:   "Service"
+              flags:   OUTPUT|READONLY
+             desc:  "Service"
+             unit:  ""
+             value:  0
+            }
+
+
+
+                        RTICANMM_MonitorData[2]
+            {
+             type:    UINT(32)
+             alias:   "Data1"
+              flags:   OUTPUT|READONLY
+             desc:  "Data1"
+             unit:  ""
+             value:  0
+            }
+
+
+
+                        RTICANMM_MonitorData[3]
+            {
+             type:    UINT(32)
+             alias:   "Data2"
+              flags:   OUTPUT|READONLY
+             desc:  "Data2"
+             unit:  ""
+             value:  0
+            }
+
+
+
+
+
+
+group "ControllerSetup_Blocks" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+
+
+group "Controller1" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+                        CANMMMonitor_Controller1
+            {
+             type:    UINT(8)
+             alias:   "Monitoring_Enable"
+              flags:   PARAM
+             desc:  "Monitoring Enable"
+             unit:  ""
+             value:  0
+            }
+
+
+
+
+                        MonitoringTimeStamp_Controller1
+            {
+             type:    flt(64,IEEE)
+             alias:   "Monitoring_TimeStamp"
+              flags:   OUTPUT|READONLY
+             desc:  "Monitoring TimeStamp"
+             unit:  "s"
+             value:  0
+            }
+
+
+
+                        CANMM_CTL_SETUP_Controller1_Variation
+            {
+             type:    UINT(8)
+             alias:   "Variation"
+              flags:   PARAM
+             desc:  "Variation used if Variation_Switch == 1"
+             unit:  ""
+             value:  1
+            }
+
+
+
+
+                        CANMM_CTL_SETUP_Controller1_VariationSwitch
+            {
+             type:    UINT(8)
+             alias:   "Variation_Switch"
+              flags:   PARAM
+             desc:  "Variation Switch: Variation changed by MODEL=0 (default) | EXPERIMENT SOFTWARE=1"
+             unit:  ""
+             value:  0
+            }
+
+
+
+
+
+
+
+endgroup -- block-group "Controller1"
+
+
+
+
+endgroup -- block-group "ControllerSetup_Blocks"
+
+
+
+
+
+
+-- START@RTICANMM_MAIN_CAN_DS1401_1_1_1
+
+
+
+group "CAN" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+CANMM_CTL_SETUP_Controller1_ID
+{
+type: UINT(8)
+alias: "Variation"
+flags: OUTPUT|READONLY
+desc: "current Variation of Controller1"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_NL
+{
+type: UINT(32)
+alias: "NumLostMsgs"
+flags: OUTPUT|READONLY
+desc: "Number of lost messages"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_TRAFFIC
+{
+type: UINT(8)
+alias: "Traffic"
+flags: OUTPUT|READONLY
+desc: "Traffic"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_GEIN
+{
+type: UINT(8)
+alias: "GlobalEnable"
+flags: PARAM
+desc: "Enable CAN"
+unit: ""
+range: <0; 1>
+value: 1
+}
+
+
+
+
+CANMMCAN_TXGEIN
+{
+type: UINT(8)
+alias: "GlobalEnableTX"
+flags: PARAM
+desc: "Enable TX of CAN"
+unit: ""
+range: <0; 1>
+value: 1
+}
+
+
+
+
+CANMMCAN_MAXMSGPERSTEP
+{
+type: INT(32)
+alias: "MaxMessagesPerStep"
+flags: PARAM
+desc: "MaxMessagesPerStep"
+unit: ""
+range: <0; 100>
+value: 0
+}
+
+
+
+
+CANMMCAN_TXEEIE[0]
+{
+type: UINT(8)
+alias: "Vector__XXX_Enable"
+flags: PARAM
+desc: "Enable Vector__XXX"
+unit: ""
+range: <0; 1>
+value: 1
+}
+
+
+
+
+
+group "AngleSensor" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+
+group "RX" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+CANMMCAN_RX_Msg_1_Sgn_1
+{
+type: UINT(8)
+alias: "PacketType"
+flags: OUTPUT|READONLY
+desc: ""
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_RX_Msg_1_Sgn_2
+{
+type: UINT(8)
+alias: "MessageCounter"
+flags: OUTPUT|READONLY
+desc: ""
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_RX_Msg_1_Sgn_3
+{
+type: flt(64,IEEE)
+alias: "Angle"
+flags: OUTPUT|READONLY
+desc: ""
+unit: "degr"
+value: -200
+}
+
+
+
+
+CANMMCAN_RX_Msg_1_Sgn_4
+{
+type: INT(16)
+alias: "Temperature"
+flags: OUTPUT|READONLY
+desc: ""
+unit: "°C"
+value: -40
+}
+
+
+
+
+CANMMCAN_RX_Msg_1_Sgn_5
+{
+type: UINT(8)
+alias: "AlarmWarningBits"
+flags: OUTPUT|READONLY
+desc: ""
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_MIDRX[1]
+{
+type: UINT(32)
+alias: "AngleSensor_ID"
+flags: OUTPUT|READONLY
+desc: "Message ID"
+unit: ""
+value: 419406392
+}
+
+
+
+
+CANMMCAN_MIDFRX[1]
+{
+type: UINT(8)
+alias: "AngleSensor_IDFormat"
+flags: OUTPUT|READONLY
+desc: "Message ID Format"
+unit: ""
+value: 1
+}
+
+
+
+
+CANMMCAN_RXLEN[1]
+{
+type: UINT(8)
+alias: "AngleSensor_Length"
+flags: OUTPUT|READONLY
+desc: "Message Length"
+unit: ""
+value: 5
+}
+
+
+
+
+CANMMCAN_RXsta[1]
+{
+type: UINT(8)
+alias: "AngleSensor_status"
+flags: OUTPUT|READONLY
+desc: "AngleSensor Status"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_RXdt[1]
+{
+type: flt(64,IEEE)
+alias: "AngleSensor_dt"
+flags: OUTPUT|READONLY
+desc: "AngleSensor DeltaTime"
+unit: "s"
+value: 0
+}
+
+
+
+
+CANMMCAN_RXt[1]
+{
+type: flt(64,IEEE)
+alias: "AngleSensor_time"
+flags: OUTPUT|READONLY
+desc: "AngleSensor Time"
+unit: "s"
+value: 0.0
+}
+
+
+
+
+
+endgroup -- block-group "RX"
+
+
+
+group "TX" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+CANMMCAN_WBS[1]
+{
+type: UINT(8)
+alias: "AngleSensor_CheckEnable"
+flags: OUTPUT|READONLY
+desc: "Check enabled AngleSensor"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_TXDT[1]
+{
+type: flt(64,IEEE)
+alias: "AngleSensor_DelayTime"
+flags: OUTPUT|READONLY
+desc: "DelayTime AngleSensor"
+unit: "s"
+value: 0
+}
+
+
+
+
+CANMMCAN_TXsta[1]
+{
+type: UINT(8)
+alias: "AngleSensor_status"
+flags: OUTPUT|READONLY
+desc: "AngleSensor Status"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_TXEIN[1]
+{
+type: UINT(8)
+alias: "AngleSensor_Enable"
+flags: PARAM
+desc: "Enable AngleSensor"
+unit: ""
+range: <0; 1>
+value: 1
+}
+
+
+
+
+CANMMCAN_TXCIE[1]
+{
+type: UINT(8)
+alias: "AngleSensor_PeriodicalOn"
+flags: PARAM
+desc: "Activate cyclic transmission for AngleSensor"
+unit: ""
+range: <0; 1>
+value: 1
+}
+
+
+
+
+CANMMCAN_TXKIEX[1]
+{
+type: UINT(8)
+alias: "AngleSensor_Kickout"
+flags: PARAM
+desc: "Kickout AngleSensor"
+unit: ""
+range: <0; 1>
+value: 0
+}
+
+
+
+
+CANMMCAN_TXCT[1]
+{
+type: flt(64,IEEE)
+alias: "AngleSensor_CycleTime"
+flags: PARAM
+desc: "CycleTime AngleSensor"
+unit: "s"
+range: <0; 1000>
+value: 0
+}
+
+
+
+
+
+endgroup -- block-group "TX"
+
+
+
+endgroup -- block-group "AngleSensor"
+
+
+
+group "ISO11992_EBS21" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+
+group "RX" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+CANMMCAN_RX_Msg_2_Sgn_1
+{
+type: UINT(8)
+alias: "VehicleABSActive"
+flags: OUTPUT|READONLY
+desc: ""
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_RX_Msg_2_Sgn_2
+{
+type: UINT(8)
+alias: "VehicleRetarderCtrlActive"
+flags: OUTPUT|READONLY
+desc: ""
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_RX_Msg_2_Sgn_3
+{
+type: UINT(8)
+alias: "VehicleServiceBrakeActive"
+flags: OUTPUT|READONLY
+desc: ""
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_RX_Msg_2_Sgn_4
+{
+type: UINT(8)
+alias: "AutomTowedVehBreakActive"
+flags: OUTPUT|READONLY
+desc: ""
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_RX_Msg_2_Sgn_5
+{
+type: UINT(8)
+alias: "VDCActive"
+flags: OUTPUT|READONLY
+desc: ""
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_RX_Msg_2_Sgn_6
+{
+type: UINT(8)
+alias: "SupplyLineBrakingRequest"
+flags: OUTPUT|READONLY
+desc: ""
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_RX_Msg_2_Sgn_7
+{
+type: flt(64,IEEE)
+alias: "Wheel_BasedVehicleSpeed"
+flags: OUTPUT|READONLY
+desc: ""
+unit: "km/"
+value: 0
+}
+
+
+
+
+CANMMCAN_RX_Msg_2_Sgn_8
+{
+type: INT(16)
+alias: "ActualRetarderPercTorque"
+flags: OUTPUT|READONLY
+desc: ""
+unit: "%"
+value: -125
+}
+
+
+
+
+CANMMCAN_RX_Msg_2_Sgn_9
+{
+type: flt(64,IEEE)
+alias: "WheelSpeedDiffMainAxle"
+flags: OUTPUT|READONLY
+desc: ""
+unit: "km/h"
+value: -125
+}
+
+
+
+
+CANMMCAN_MIDRX[0]
+{
+type: UINT(32)
+alias: "ISO11992_EBS21_ID"
+flags: OUTPUT|READONLY
+desc: "Message ID"
+unit: ""
+value: 201531592
+}
+
+
+
+
+CANMMCAN_MIDFRX[0]
+{
+type: UINT(8)
+alias: "ISO11992_EBS21_IDFormat"
+flags: OUTPUT|READONLY
+desc: "Message ID Format"
+unit: ""
+value: 1
+}
+
+
+
+
+CANMMCAN_RXLEN[0]
+{
+type: UINT(8)
+alias: "ISO11992_EBS21_Length"
+flags: OUTPUT|READONLY
+desc: "Message Length"
+unit: ""
+value: 8
+}
+
+
+
+
+CANMMCAN_RXsta[0]
+{
+type: UINT(8)
+alias: "ISO11992_EBS21_status"
+flags: OUTPUT|READONLY
+desc: "ISO11992_EBS21 Status"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_RXdt[0]
+{
+type: flt(64,IEEE)
+alias: "ISO11992_EBS21_dt"
+flags: OUTPUT|READONLY
+desc: "ISO11992_EBS21 DeltaTime"
+unit: "s"
+value: 0
+}
+
+
+
+
+CANMMCAN_RXt[0]
+{
+type: flt(64,IEEE)
+alias: "ISO11992_EBS21_time"
+flags: OUTPUT|READONLY
+desc: "ISO11992_EBS21 Time"
+unit: "s"
+value: 0.0
+}
+
+
+
+
+
+endgroup -- block-group "RX"
+
+
+
+group "TX" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+CANMMCAN_WBS[0]
+{
+type: UINT(8)
+alias: "ISO11992_EBS21_CheckEnable"
+flags: OUTPUT|READONLY
+desc: "Check enabled ISO11992_EBS21"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_TXDT[0]
+{
+type: flt(64,IEEE)
+alias: "ISO11992_EBS21_DelayTime"
+flags: OUTPUT|READONLY
+desc: "DelayTime ISO11992_EBS21"
+unit: "s"
+value: 0
+}
+
+
+
+
+CANMMCAN_TXsta[0]
+{
+type: UINT(8)
+alias: "ISO11992_EBS21_status"
+flags: OUTPUT|READONLY
+desc: "ISO11992_EBS21 Status"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_TXEIN[0]
+{
+type: UINT(8)
+alias: "ISO11992_EBS21_Enable"
+flags: PARAM
+desc: "Enable ISO11992_EBS21"
+unit: ""
+range: <0; 1>
+value: 1
+}
+
+
+
+
+CANMMCAN_TXCIE[0]
+{
+type: UINT(8)
+alias: "ISO11992_EBS21_PeriodicalOn"
+flags: PARAM
+desc: "Activate cyclic transmission for ISO11992_EBS21"
+unit: ""
+range: <0; 1>
+value: 1
+}
+
+
+
+
+CANMMCAN_TXKIEX[0]
+{
+type: UINT(8)
+alias: "ISO11992_EBS21_Kickout"
+flags: PARAM
+desc: "Kickout ISO11992_EBS21"
+unit: ""
+range: <0; 1>
+value: 0
+}
+
+
+
+
+CANMMCAN_TXCT[0]
+{
+type: flt(64,IEEE)
+alias: "ISO11992_EBS21_CycleTime"
+flags: PARAM
+desc: "CycleTime ISO11992_EBS21"
+unit: "s"
+range: <0; 1000>
+value: 0
+}
+
+
+
+
+
+endgroup -- block-group "TX"
+
+
+
+endgroup -- block-group "ISO11992_EBS21"
+
+
+
+group "RT" -- subsystem-group
+{
+     flags: COLLAPSED | HIDDEN
+}
+
+
+
+group "FreeRawMessages" -- subsystem-group
+{
+     flags: COLLAPSED | HIDDEN
+}
+
+
+
+endgroup -- block-group "FreeRawMessages"
+
+
+
+endgroup -- block-group "RT"
+
+
+
+endgroup -- block-group "CAN"
+
+
+-- END@RTICANMM_MAIN_CAN_DS1401_1_1_1
+ 
+ 
+ 
+
+        endgroup -- block-group "CAN"
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+
+        endgroup -- block-group "BusSystems"
+
+
+ 
+ 
+ 
+-- ******** User variables from model_usr.trc *********************************
+
+-- RTI_USR_TRC_BEGIN
+
+-- No user file CAN_Communication_usr.trc found.
+
+-- RTI_USR_TRC_END
+-- ******** Task Information variables ****************************************
+
+group "Task Info"
+{
+ flags: COLLAPSED
+}
+  group "Timer Task 1"
+  {
+   flags: COLLAPSED
+  }
+
+  pRti_TIMERA_STime
+  {
+   type:  flt(64,IEEE)*
+   alias: "sampleTime"
+   flags: SYSTEM|READONLY
+  }
+  pRti_TIMERA_TTime
+  {
+   type:  flt(64,IEEE)*
+   alias: "turnaroundTime"
+   flags: SYSTEM|READONLY
+  }
+  pRti_TIMERA_TState
+  {
+   type:  int(32)*
+   alias: "state"
+   flags: SYSTEM|READONLY
+  }
+  pRti_TIMERA_OType
+  {
+   type:  int(32)*
+   alias: "overrunCheckType"
+   flags: SYSTEM|READONLY
+  }
+  pRti_TIMERA_OMax
+  {
+   type:  int(32)*
+   alias: "overrunQueueMax"
+   flags: SYSTEM|READONLY
+  }
+  pRti_TIMERA_ORpt
+  {
+   type:  int(32)*
+   alias: "overrunQueueCount"
+   flags: SYSTEM|READONLY
+  }
+  pRti_TIMERA_OCnt
+  {
+   type:  int(32)*
+   alias: "overrunCount"
+   flags: SYSTEM|READONLY
+  }
+  pRti_TIMERA_TCnt
+  {
+   type:  flt(64,IEEE)*
+   alias: "taskCallCount"
+   flags: SYSTEM|READONLY
+  }
+  pRti_TIMERA_Prio
+  {
+   type:  int(32)*
+   alias: "priority"
+   flags: SYSTEM|READONLY
+  }
+  endgroup
+
+
+endgroup
+
+-- ******** [EOF] *************************************************************
+
+
+

@@ -1,0 +1,367 @@
+VERSION "HNPBNNNYNNNNNNNNNNNNNNNNNNNNNNNNYNYYYYYYYY>4>%%%/4>'%**4YYY///"
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: STEERING_WHEEL CRASH_SYSTEM IGNITION ENGINE_CONTROL CENTRAL_GATEWAY
+VAL_TABLE_ ValueTableOilLevel 15 "Error" 5 "Maximum" 4 "Near to max" 3 "Normal" 2 "Near to Min" 1 "Minimum" ;
+
+
+BO_ 2398307702 DIAGNOSTICS: 2 CENTRAL_GATEWAY
+ SG_ DiagnosticSwitch M : 8|8@1+ (1,0) [0|0] ""  CRASH_SYSTEM,ENGINE_CONTROL,IGNITION,STEERING_WHEEL
+ SG_ D_Data_8 m8 : 0|8@1+ (1,0) [0|0] ""  CRASH_SYSTEM,ENGINE_CONTROL,IGNITION,STEERING_WHEEL
+ SG_ D_Data_7 m7 : 0|8@1+ (1,0) [0|0] ""  CRASH_SYSTEM,ENGINE_CONTROL,IGNITION,STEERING_WHEEL
+ SG_ D_Data_6 m6 : 0|8@1+ (1,0) [0|0] ""  CRASH_SYSTEM,ENGINE_CONTROL,IGNITION,STEERING_WHEEL
+ SG_ D_Data_5 m5 : 0|8@1+ (1,0) [0|0] ""  CRASH_SYSTEM,ENGINE_CONTROL,IGNITION,STEERING_WHEEL
+ SG_ D_Data_4 m4 : 0|8@1+ (1,0) [0|0] ""  CRASH_SYSTEM,ENGINE_CONTROL,IGNITION,STEERING_WHEEL
+ SG_ D_Data_3 m3 : 0|8@1+ (1,0) [0|0] ""  CRASH_SYSTEM,ENGINE_CONTROL,IGNITION,STEERING_WHEEL
+ SG_ D_Data_2 m2 : 0|8@1+ (1,0) [0|0] ""  CRASH_SYSTEM,ENGINE_CONTROL,IGNITION,STEERING_WHEEL
+ SG_ D_Data_1 m1 : 0|8@1+ (1,0) [0|0] ""  ENGINE_CONTROL,CRASH_SYSTEM,IGNITION,STEERING_WHEEL
+
+BO_ 767 TIRE_INFO: 7 CENTRAL_GATEWAY
+ SG_ TirePressure_RearRight : 48|8@1+ (0.025,0) [0|6.325] "bar"  ENGINE_CONTROL
+ SG_ TirePressure_RearLeft : 40|8@1+ (0.025,0) [0|6.325] "bar"  ENGINE_CONTROL
+ SG_ TirePressure_FrontRight : 32|8@1+ (0.025,0) [0|6.325] "bar"  ENGINE_CONTROL
+ SG_ TirePressure_FrontLeft : 24|8@1+ (0.025,0) [0|6.325] "bar"  ENGINE_CONTROL
+
+BO_ 815 STEERING_1: 4 STEERING_WHEEL
+ SG_ CRC_Steering : 24|8@1+ (1,0) [0|0] ""  CRASH_SYSTEM,CENTRAL_GATEWAY
+ SG_ SteeringWheel_Position : 8|16@1- (0.01,0) [-320|320] "Degrees"  CRASH_SYSTEM,CENTRAL_GATEWAY
+ SG_ SteeringWheel_Temp : 0|8@1+ (0.5,-40) [-40|85] "Degrees Celsius"  CRASH_SYSTEM,CENTRAL_GATEWAY
+
+BO_ 2 CRASH_2: 8 CRASH_SYSTEM
+ SG_ CrashParity : 15|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CrashEventDescription_5 : 48|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CrashEventDescription_4 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CrashEventDescription_3 : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CrashEventDescription_2 : 24|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CrashEventDescription_1 : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CRC_Crash_2 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Event_O : 14|1@1+ (1,0) [0|0] ""  CENTRAL_GATEWAY
+ SG_ Event_N : 13|1@1+ (1,0) [0|0] ""  CENTRAL_GATEWAY
+ SG_ Event_M : 12|1@1+ (1,0) [0|0] ""  CENTRAL_GATEWAY,IGNITION
+ SG_ Event_L : 11|1@1+ (1,0) [0|0] ""  CENTRAL_GATEWAY
+ SG_ Event_K : 10|1@1+ (1,0) [0|0] ""  CENTRAL_GATEWAY,IGNITION
+ SG_ Event_I : 9|1@1+ (1,0) [0|0] ""  CENTRAL_GATEWAY
+ SG_ Event_H : 8|1@1+ (1,0) [0|0] ""  CENTRAL_GATEWAY
+ SG_ Event_Tgl : 7|1@1+ (1,0) [0|0] ""  CENTRAL_GATEWAY,IGNITION,ENGINE_CONTROL
+ SG_ Event_G : 6|1@1+ (1,0) [0|0] ""  CENTRAL_GATEWAY
+ SG_ Event_F : 5|1@1+ (1,0) [0|0] ""  CENTRAL_GATEWAY,ENGINE_CONTROL
+ SG_ Event_E : 4|1@1+ (1,0) [0|0] ""  CENTRAL_GATEWAY,IGNITION
+ SG_ Event_D : 3|1@1+ (1,0) [0|0] ""  CENTRAL_GATEWAY
+ SG_ Event_C : 2|1@1+ (1,0) [0|0] ""  CENTRAL_GATEWAY,ENGINE_CONTROL
+ SG_ Event_B : 1|1@1+ (1,0) [0|0] ""  CENTRAL_GATEWAY,IGNITION
+ SG_ Event_A : 0|1@1+ (1,0) [0|0] ""  CENTRAL_GATEWAY
+
+BO_ 885 CRASH_1: 4 CRASH_SYSTEM
+ SG_ MC_Crash_1 : 8|8@1+ (1,0) [0|15] ""  CENTRAL_GATEWAY
+ SG_ CRC_Crash_1 : 24|8@1+ (1,0) [0|0] ""  CENTRAL_GATEWAY
+ SG_ SRS_Indication_Lamp : 0|2@1+ (1,0) [0|0] ""  CENTRAL_GATEWAY
+
+BO_ 925 DISPLAY_2: 6 CENTRAL_GATEWAY
+ SG_ SpeedUnit : 41|1@1+ (1,0) [0|0] ""  ENGINE_CONTROL
+ SG_ TankRange : 23|16@0+ (1,0) [0|9999] "km"  ENGINE_CONTROL
+ SG_ Preheat : 15|1@1+ (1,0) [0|0] ""  ENGINE_CONTROL
+ SG_ TankMinimum : 7|1@1+ (1,0) [0|0] ""  ENGINE_CONTROL
+ SG_ TankDisplay : 0|7@1+ (1,0) [0|126] "l"  ENGINE_CONTROL
+
+BO_ 415 DISPLAY_1: 8 CENTRAL_GATEWAY
+ SG_ AirTempOut_sport m2 : 16|8@1+ (0.5,-40) [-40|85] "Degrees Celsius"  ENGINE_CONTROL,CRASH_SYSTEM
+ SG_ SpeedDisplay_sport m2 : 3|12@0- (0.1,0) [-204.8|204.7] ""  ENGINE_CONTROL,CRASH_SYSTEM
+ SG_ DisplayVersionHandler M : 4|4@1+ (1,0) [0|0] ""  ENGINE_CONTROL,CRASH_SYSTEM
+ SG_ Odo : 47|24@0+ (0.1,0) [0|999999.9] "km"  CRASH_SYSTEM,STEERING_WHEEL,IGNITION,ENGINE_CONTROL
+ SG_ AirTempOut m1 : 16|8@1+ (0.5,-40) [-40|85] "Degrees Celsius"  CRASH_SYSTEM,ENGINE_CONTROL
+ SG_ SpeedDisplay m1 : 3|12@0+ (0.1,0) [0|409.4] "km/h"  CRASH_SYSTEM,ENGINE_CONTROL
+
+BO_ 301 IGNITION_2: 8 IGNITION
+ SG_ MC_Ignition_2 : 8|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ KeyID : 39|32@0+ (1,0) [0|0] ""  CRASH_SYSTEM
+ SG_ Panic_off : 7|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Panic_on : 6|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ KeyIdent : 0|4@1+ (1,0) [0|7] "" Vector__XXX
+
+BO_ 1 IGNITION_1: 8 IGNITION
+ SG_ CRC_Ignition_1 : 56|8@1+ (1,0) [0|0] ""  CENTRAL_GATEWAY,ENGINE_CONTROL
+ SG_ MC_Ignition_1 : 52|4@1+ (1,0) [0|15] ""  CENTRAL_GATEWAY,ENGINE_CONTROL
+ SG_ EngineStart : 9|1@1+ (1,0) [0|0] ""  CENTRAL_GATEWAY,ENGINE_CONTROL
+ SG_ Ignition_on_no_Start : 3|1@1+ (1,0) [0|0] ""  CENTRAL_GATEWAY,CRASH_SYSTEM,ENGINE_CONTROL
+ SG_ IgnitionKey : 0|3@1+ (1,0) [0|0] ""  CENTRAL_GATEWAY,CRASH_SYSTEM,STEERING_WHEEL,ENGINE_CONTROL
+
+BO_ 841 ENGINE_2: 5 ENGINE_CONTROL
+ SG_ NeutralRPM_Request : 29|14@0+ (1,0) [0|16382] "rpm"  CENTRAL_GATEWAY
+
+BO_ 781 ENGINE_1: 5 ENGINE_CONTROL
+ SG_ EngineOilQual : 32|8@1+ (0.01969,1) [1|6] "" Vector__XXX
+ SG_ OilLevel : 24|4@1+ (1,0) [0|4] ""  CENTRAL_GATEWAY
+ SG_ EngineOilTemp : 16|8@1+ (1,-40) [-40|160] "Degrees Celsius"  CENTRAL_GATEWAY
+ SG_ EngineCoolerTemp : 0|8@1+ (1,-40) [-40|214] "Degrees Celsius"  CENTRAL_GATEWAY
+
+
+
+CM_ SG_ 767 TirePressure_RearRight "TirePressure Rear Right";
+CM_ SG_ 767 TirePressure_RearLeft "TirePressure Rear Left";
+CM_ SG_ 767 TirePressure_FrontRight "TirePressure Front Right";
+CM_ SG_ 767 TirePressure_FrontLeft "TirePressure Front Left";
+CM_ BO_ 815 "Steering wheel parameter";
+CM_ SG_ 815 CRC_Steering "CRC-checksum";
+CM_ SG_ 815 SteeringWheel_Position "Position of Steering Wheel";
+CM_ SG_ 815 SteeringWheel_Temp "Steering wheel temperature";
+CM_ BO_ 2 "Specific crash informations";
+CM_ SG_ 2 CrashParity "Parity calculated as checksum";
+CM_ SG_ 2 CrashEventDescription_5 "Additional flags to the current crash event";
+CM_ SG_ 2 CrashEventDescription_4 "Additional flags to the current crash event";
+CM_ SG_ 2 CrashEventDescription_3 "Additional flags to the current crash event";
+CM_ SG_ 2 CrashEventDescription_2 "Additional flags to the current crash event";
+CM_ SG_ 2 CrashEventDescription_1 "Additional flags to the current crash event";
+CM_ SG_ 2 CRC_Crash_2 "CRC-checksum";
+CM_ SG_ 2 Event_O "Event tbd";
+CM_ SG_ 2 Event_N "Front Event 3";
+CM_ SG_ 2 Event_M "Side event 0";
+CM_ SG_ 2 Event_L "Side event 2";
+CM_ SG_ 2 Event_K "Rear event 3";
+CM_ SG_ 2 Event_I "Turn over event 3";
+CM_ SG_ 2 Event_H "Turn over event 2";
+CM_ SG_ 2 Event_Tgl "Toggle bit for all impact events";
+CM_ SG_ 2 Event_G "Turn over event 1";
+CM_ SG_ 2 Event_F "Front event 2";
+CM_ SG_ 2 Event_E "Rear event 2";
+CM_ SG_ 2 Event_D "Side event 1";
+CM_ SG_ 2 Event_C "Front event 5";
+CM_ SG_ 2 Event_B "Rear event 1";
+CM_ SG_ 2 Event_A "Front event 1";
+CM_ BO_ 885 "Crash information to be displayed";
+CM_ SG_ 885 MC_Crash_1 "Message counter";
+CM_ SG_ 885 CRC_Crash_1 "CRC-checksum";
+CM_ SG_ 885 SRS_Indication_Lamp "SRS indication lamp request";
+CM_ BO_ 925 "Additional display parameters";
+CM_ SG_ 925 SpeedUnit "Vehicle speed unit";
+CM_ SG_ 925 TankRange "Tank range";
+CM_ SG_ 925 Preheat "Preheat indication lamp fault";
+CM_ SG_ 925 TankMinimum "Tank level minimum";
+CM_ SG_ 925 TankDisplay "Displayed tank level";
+CM_ BO_ 415 "Display parameters";
+CM_ SG_ 415 AirTempOut_sport "Displayed outside air temperature";
+CM_ SG_ 415 SpeedDisplay_sport "Displayed vehicle speed";
+CM_ SG_ 415 DisplayVersionHandler "Handling of different variations in one message";
+CM_ SG_ 415 Odo "Odometer";
+CM_ SG_ 415 AirTempOut "Displayed outside air temperature";
+CM_ SG_ 415 SpeedDisplay "Displayed vehicle speed";
+CM_ BO_ 301 "Ignition special informations";
+CM_ SG_ 301 MC_Ignition_2 "Message counter";
+CM_ SG_ 301 KeyID "Key ID for prefiltering";
+CM_ SG_ 301 Panic_off "Panic alarm off request";
+CM_ SG_ 301 Panic_on "Panic alarm on request";
+CM_ SG_ 301 KeyIdent "Actual key line";
+CM_ BO_ 1 "Ignition common informations";
+CM_ SG_ 1 CRC_Ignition_1 "CRC-checksum";
+CM_ SG_ 1 MC_Ignition_1 "Message counter";
+CM_ SG_ 1 EngineStart "Enable engine start request";
+CM_ SG_ 1 Ignition_on_no_Start "Ignition is on and starting procedure is inactive (15x)";
+CM_ SG_ 1 IgnitionKey "Ignition switch state";
+CM_ BO_ 841 "Engine informations";
+CM_ SG_ 841 NeutralRPM_Request "Desired engine idle speed";
+CM_ BO_ 781 "Engine status";
+CM_ SG_ 781 EngineOilQual "Engine oil quality";
+CM_ SG_ 781 OilLevel "Engine oil level";
+CM_ SG_ 781 EngineOilTemp "Engine oil temperature";
+CM_ SG_ 781 EngineCoolerTemp "Engine coolant temperature";
+BA_DEF_  "NmBaseAddress" INT 0 0;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_ BO_  "GenMsgStartValue" STRING ;
+BA_DEF_  "Version" HEX 0 255;
+BA_DEF_ SG_  "GenSigStartValue" HEX 0 4294967295;
+BA_DEF_ SG_  "GenSigSendType" ENUM  "cyclicX","spontanX","cyclicIfActiveX","spontanWithDelay","cyclicAndSpontanX","cyclicAndSpontanWithDelay","spontanWithRepitition","cyclicIfActiveAndSpontanWD","cyclicIfActiveFast","cyclicWithRepeatOnDemand","none";
+BA_DEF_ BO_  "GenMsgNrOfRepetitions" INT 0 65535;
+BA_DEF_ BO_  "GenMsgDelayTime" INT 0 65535;
+BA_DEF_ BO_  "GenMsgStartDelayTime" INT 0 65535;
+BA_DEF_ BO_  "GenMsgCycleTimeActive" INT 0 65535;
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 65535;
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "cyclicX","spontanX","cyclicIfActiveX","spontanWithDelay","cyclicAndSpontanX","cyclicAndSpontanWithDelay","spontanWithRepitition","cyclicIfActiveAndSpontanWD","cyclicIfActiveFast","cyclicWithRepeatOnDemand","none";
+BA_DEF_  "Baudrate" INT 0 1000000;
+BA_DEF_  "VersionWeek" INT 0 53;
+BA_DEF_  "VersionYear" INT 0 99;
+BA_DEF_  "Manufacturer" ENUM  "DBAG","VAG","BMWAG","PAG","GM";
+BA_DEF_DEF_  "NmBaseAddress" 0;
+BA_DEF_DEF_  "BusType" "";
+BA_DEF_DEF_  "GenMsgStartValue" "";
+BA_DEF_DEF_  "Version" 192;
+BA_DEF_DEF_  "GenSigStartValue" 0;
+BA_DEF_DEF_  "GenSigSendType" "";
+BA_DEF_DEF_  "GenMsgNrOfRepetitions" 0;
+BA_DEF_DEF_  "GenMsgDelayTime" 0;
+BA_DEF_DEF_  "GenMsgStartDelayTime" 0;
+BA_DEF_DEF_  "GenMsgCycleTimeActive" 0;
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "GenMsgSendType" "";
+BA_DEF_DEF_  "Baudrate" 500000;
+BA_DEF_DEF_  "VersionWeek" 28;
+BA_DEF_DEF_  "VersionYear" 6;
+BA_DEF_DEF_  "Manufacturer" "DBAG";
+BA_ "BusType" "CAN";
+BA_ "Version" 0;
+BA_ "Baudrate" 500000;
+BA_ "VersionWeek" 0;
+BA_ "VersionYear" 0;
+BA_ "Manufacturer" 4;
+BA_ "GenMsgSendType" BO_ 2398307702 1;
+BA_ "GenMsgCycleTime" BO_ 767 100;
+BA_ "GenMsgSendType" BO_ 767 4;
+BA_ "GenMsgStartValue" BO_ 815 "FF030700FFFFFFFFh";
+BA_ "GenMsgNrOfRepetitions" BO_ 815 0;
+BA_ "GenMsgDelayTime" BO_ 815 5;
+BA_ "GenMsgCycleTime" BO_ 815 100;
+BA_ "GenMsgSendType" BO_ 815 0;
+BA_ "GenMsgStartValue" BO_ 2 "0000h";
+BA_ "GenMsgNrOfRepetitions" BO_ 2 0;
+BA_ "GenMsgDelayTime" BO_ 2 20;
+BA_ "GenMsgCycleTimeActive" BO_ 2 20;
+BA_ "GenMsgCycleTime" BO_ 2 0;
+BA_ "GenMsgSendType" BO_ 2 2;
+BA_ "GenMsgStartValue" BO_ 885 "3F373F3F3F070000h";
+BA_ "GenMsgNrOfRepetitions" BO_ 885 0;
+BA_ "GenMsgDelayTime" BO_ 885 5;
+BA_ "GenMsgCycleTime" BO_ 885 100;
+BA_ "GenMsgSendType" BO_ 885 5;
+BA_ "GenMsgStartValue" BO_ 925 "7F00FFFFFF007000h";
+BA_ "GenMsgNrOfRepetitions" BO_ 925 0;
+BA_ "GenMsgDelayTime" BO_ 925 20;
+BA_ "GenMsgCycleTime" BO_ 925 100;
+BA_ "GenMsgSendType" BO_ 925 0;
+BA_ "GenMsgStartValue" BO_ 415 "0FFFFFFFFFFFFFFFh";
+BA_ "GenMsgNrOfRepetitions" BO_ 415 0;
+BA_ "GenMsgDelayTime" BO_ 415 100;
+BA_ "GenMsgCycleTime" BO_ 415 1000;
+BA_ "GenMsgSendType" BO_ 415 5;
+BA_ "GenMsgStartValue" BO_ 301 "0F0F000000000000h";
+BA_ "GenMsgNrOfRepetitions" BO_ 301 0;
+BA_ "GenMsgDelayTime" BO_ 301 10;
+BA_ "GenMsgCycleTime" BO_ 301 100;
+BA_ "GenMsgSendType" BO_ 301 5;
+BA_ "GenMsgStartValue" BO_ 1 "07C0FFFCFF0007FFh";
+BA_ "GenMsgNrOfRepetitions" BO_ 1 0;
+BA_ "GenMsgDelayTime" BO_ 1 5;
+BA_ "GenMsgCycleTime" BO_ 1 100;
+BA_ "GenMsgSendType" BO_ 1 5;
+BA_ "GenMsgStartValue" BO_ 841 "03FFFF3FFFFF00FFh";
+BA_ "GenMsgNrOfRepetitions" BO_ 841 0;
+BA_ "GenMsgDelayTime" BO_ 841 5;
+BA_ "GenMsgCycleTime" BO_ 841 100;
+BA_ "GenMsgSendType" BO_ 841 0;
+BA_ "GenMsgStartValue" BO_ 781 "FFFFFFFFFFFFFFFFh";
+BA_ "GenMsgNrOfRepetitions" BO_ 781 0;
+BA_ "GenMsgDelayTime" BO_ 781 20;
+BA_ "GenMsgCycleTime" BO_ 781 100;
+BA_ "GenMsgSendType" BO_ 781 0;
+BA_ "GenSigStartValue" SG_ 815 SteeringWheel_Temp 0;
+BA_ "GenSigSendType" SG_ 815 SteeringWheel_Temp 10;
+BA_ "GenSigStartValue" SG_ 2 Event_O 0;
+BA_ "GenSigSendType" SG_ 2 Event_O 2;
+BA_ "GenSigStartValue" SG_ 2 Event_N 0;
+BA_ "GenSigSendType" SG_ 2 Event_N 2;
+BA_ "GenSigStartValue" SG_ 2 Event_M 0;
+BA_ "GenSigSendType" SG_ 2 Event_M 2;
+BA_ "GenSigStartValue" SG_ 2 Event_L 0;
+BA_ "GenSigSendType" SG_ 2 Event_L 2;
+BA_ "GenSigStartValue" SG_ 2 Event_K 0;
+BA_ "GenSigSendType" SG_ 2 Event_K 2;
+BA_ "GenSigStartValue" SG_ 2 Event_I 0;
+BA_ "GenSigSendType" SG_ 2 Event_I 2;
+BA_ "GenSigStartValue" SG_ 2 Event_H 0;
+BA_ "GenSigSendType" SG_ 2 Event_H 2;
+BA_ "GenSigStartValue" SG_ 2 Event_Tgl 0;
+BA_ "GenSigSendType" SG_ 2 Event_Tgl 2;
+BA_ "GenSigStartValue" SG_ 2 Event_G 0;
+BA_ "GenSigSendType" SG_ 2 Event_G 2;
+BA_ "GenSigStartValue" SG_ 2 Event_F 0;
+BA_ "GenSigSendType" SG_ 2 Event_F 2;
+BA_ "GenSigStartValue" SG_ 2 Event_E 0;
+BA_ "GenSigSendType" SG_ 2 Event_E 2;
+BA_ "GenSigStartValue" SG_ 2 Event_D 0;
+BA_ "GenSigSendType" SG_ 2 Event_D 2;
+BA_ "GenSigStartValue" SG_ 2 Event_C 0;
+BA_ "GenSigSendType" SG_ 2 Event_C 2;
+BA_ "GenSigStartValue" SG_ 2 Event_B 0;
+BA_ "GenSigSendType" SG_ 2 Event_B 2;
+BA_ "GenSigStartValue" SG_ 2 Event_A 0;
+BA_ "GenSigSendType" SG_ 2 Event_A 2;
+BA_ "GenSigStartValue" SG_ 885 SRS_Indication_Lamp 3;
+BA_ "GenSigSendType" SG_ 885 SRS_Indication_Lamp 5;
+BA_ "GenSigStartValue" SG_ 925 SpeedUnit 0;
+BA_ "GenSigSendType" SG_ 925 SpeedUnit 0;
+BA_ "GenSigStartValue" SG_ 925 TankRange 0;
+BA_ "GenSigSendType" SG_ 925 TankRange 0;
+BA_ "GenSigStartValue" SG_ 925 Preheat 0;
+BA_ "GenSigSendType" SG_ 925 Preheat 0;
+BA_ "GenSigStartValue" SG_ 925 TankMinimum 0;
+BA_ "GenSigSendType" SG_ 925 TankMinimum 0;
+BA_ "GenSigStartValue" SG_ 925 TankDisplay 0;
+BA_ "GenSigSendType" SG_ 925 TankDisplay 0;
+BA_ "GenSigSendType" SG_ 415 AirTempOut_sport 0;
+BA_ "GenSigStartValue" SG_ 415 AirTempOut_sport 0;
+BA_ "GenSigStartValue" SG_ 415 Odo 0;
+BA_ "GenSigSendType" SG_ 415 Odo 0;
+BA_ "GenSigStartValue" SG_ 415 AirTempOut 0;
+BA_ "GenSigSendType" SG_ 415 AirTempOut 0;
+BA_ "GenSigStartValue" SG_ 415 SpeedDisplay 0;
+BA_ "GenSigSendType" SG_ 415 SpeedDisplay 5;
+BA_ "GenSigStartValue" SG_ 301 MC_Ignition_2 0;
+BA_ "GenSigSendType" SG_ 301 MC_Ignition_2 0;
+BA_ "GenSigStartValue" SG_ 301 KeyID 0;
+BA_ "GenSigSendType" SG_ 301 KeyID 5;
+BA_ "GenSigStartValue" SG_ 301 Panic_off 0;
+BA_ "GenSigSendType" SG_ 301 Panic_off 5;
+BA_ "GenSigStartValue" SG_ 301 Panic_on 0;
+BA_ "GenSigSendType" SG_ 301 Panic_on 5;
+BA_ "GenSigStartValue" SG_ 301 KeyIdent 0;
+BA_ "GenSigSendType" SG_ 301 KeyIdent 5;
+BA_ "GenSigStartValue" SG_ 1 CRC_Ignition_1 255;
+BA_ "GenSigSendType" SG_ 1 CRC_Ignition_1 10;
+BA_ "GenSigStartValue" SG_ 1 MC_Ignition_1 0;
+BA_ "GenSigSendType" SG_ 1 MC_Ignition_1 10;
+BA_ "GenSigStartValue" SG_ 1 EngineStart 0;
+BA_ "GenSigSendType" SG_ 1 EngineStart 5;
+BA_ "GenSigStartValue" SG_ 1 Ignition_on_no_Start 0;
+BA_ "GenSigSendType" SG_ 1 Ignition_on_no_Start 5;
+BA_ "GenSigStartValue" SG_ 1 IgnitionKey 7;
+BA_ "GenSigSendType" SG_ 1 IgnitionKey 5;
+BA_ "GenSigStartValue" SG_ 841 NeutralRPM_Request 0;
+BA_ "GenSigSendType" SG_ 841 NeutralRPM_Request 0;
+BA_ "GenSigStartValue" SG_ 781 EngineOilQual 0;
+BA_ "GenSigSendType" SG_ 781 EngineOilQual 0;
+BA_ "GenSigStartValue" SG_ 781 OilLevel 0;
+BA_ "GenSigSendType" SG_ 781 OilLevel 0;
+BA_ "GenSigStartValue" SG_ 781 EngineOilTemp 0;
+BA_ "GenSigSendType" SG_ 781 EngineOilTemp 0;
+BA_ "GenSigStartValue" SG_ 781 EngineCoolerTemp 0;
+BA_ "GenSigSendType" SG_ 781 EngineCoolerTemp 0;
+VAL_ 781 OilLevel 15 "Error" 5 "Maximum" 4 "Near to max" 3 "Normal" 2 "Near to Min" 1 "Minimum" ;

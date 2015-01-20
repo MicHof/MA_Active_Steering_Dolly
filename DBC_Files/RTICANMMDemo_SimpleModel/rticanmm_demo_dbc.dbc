@@ -1,0 +1,154 @@
+VERSION "HIPBNYYYYYYYYYYYYYYYYYYYYYYYYYYYNNNNNNNNNN/4/%%%/4/'%**4NNN///"
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: ECU_2 ECU
+
+
+BO_ 1986 contains16bitMessages: 8 ECU
+ SG_ BIT_0F : 63|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ BIT_0E : 62|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BIT_0D : 61|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BIT_0C : 60|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BIT_0B : 59|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BIT_0A : 58|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BIT_09 : 57|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BIT_08 : 56|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ IS16BIT_01 : 40|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ IS16BIT_02 : 24|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ IS16BIT_03 : 8|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BIT_RES : 7|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BIT_07 : 6|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BIT_06 : 5|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BIT_05 : 4|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BIT_04 : 3|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BIT_03 : 2|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BIT_02 : 1|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ BIT_01 : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 1839 is64bitmotorola: 8 ECU
+ SG_ is64bitmotorola : 7|64@0+ (1,0) [0|0] ""  ECU_2
+
+BO_ 2349940739 is64bitintel: 8 ECU
+ SG_ is64bit : 0|64@1+ (1,0) [0|0] ""  ECU_2
+
+BO_ 2316386304 contains16bitmotorola: 8 ECU
+ SG_ fuel : 56|8@1+ (0.5,0) [0|127] "Degrees"  ECU_2
+ SG_ clock_min : 48|8@1+ (1,0) [0|59] "min"  ECU_2
+ SG_ Clock_h : 40|8@1+ (1,0) [0|23] "h"  ECU_2
+ SG_ language : 32|8@1+ (1,0) [0|0] ""  ECU_2
+ SG_ air : 24|8@1+ (1,0) [0|255] ""  ECU_2
+ SG_ pressure : 15|16@0+ (1,0) [0|65535] ""  ECU_2
+ SG_ variation : 0|8@1+ (1,0) [0|255] ""  ECU_2
+
+BO_ 2651930624 modesignals: 8 ECU
+ SG_ test_5 : 56|8@1+ (1,0) [0|0] ""  ECU_2
+ SG_ isactivemode2_2 m2 : 40|8@1+ (1,0) [0|254] ""  ECU_2
+ SG_ isactivemode15_2 m15 : 33|1@1+ (1,0) [0|0] ""  ECU_2
+ SG_ isactivemode15_1 m15 : 32|1@1+ (1,0) [0|0] ""  ECU_2
+ SG_ isactivemode2_1 m2 : 32|8@1+ (1,0) [0|0] ""  ECU_2
+ SG_ modemanager M : 24|8@1+ (1,0) [0|0] ""  ECU_2
+ SG_ test_4 : 23|1@1+ (1,0) [0|0] ""  ECU_2
+ SG_ test_3 : 22|1@1+ (1,0) [0|0] ""  ECU_2
+ SG_ test_2 : 16|6@1+ (1,0) [0|0] ""  ECU_2
+ SG_ test_1 : 8|8@1+ (1,0) [0|63] ""  ECU_2
+ SG_ Modes : 0|8@1+ (1,0) [0|0] ""  ECU_2
+
+BO_ 115 standard: 8 ECU
+ SG_ CRC : 56|8@1+ (1,0) [0|0] ""  ECU_2
+ SG_ SignalOffset : 52|4@1+ (1,200) [200|215] ""  ECU_2
+ SG_ SignalFactor : 32|8@1+ (0.1,0) [0|25.4] "V"  ECU_2
+ SG_ Temperature : 24|8@1+ (1,-50) [-50|204] "Degrees Celsius"  ECU_2
+ SG_ Signed : 16|8@1- (0.5,0) [-64|63.5] "Degrees"  ECU_2
+ SG_ Bit_1 : 15|1@1+ (1,0) [0|1] ""  ECU_2
+ SG_ Bit_2 : 14|1@1+ (1,0) [0|0] ""  ECU_2
+ SG_ Bit_3 : 13|1@1+ (1,0) [0|0] ""  ECU_2
+ SG_ Bit_4 : 12|1@1+ (1,0) [0|0] ""  ECU_2
+ SG_ SignalWithError : 0|4@1+ (1,2) [2|4] ""  ECU_2
+
+
+
+CM_ SG_ 1986 BIT_0F "State variable 0Fh";
+CM_ SG_ 1986 BIT_0E "State variable 0Eh";
+CM_ SG_ 1986 BIT_0D "State variable 0Dh";
+CM_ SG_ 1986 BIT_0C "State variable 0Ch";
+CM_ SG_ 1986 BIT_0B "State variable 0Bh";
+CM_ SG_ 1986 BIT_0A "State variable 0Ah";
+CM_ SG_ 1986 BIT_09 "State variable 09h";
+CM_ SG_ 1986 BIT_08 "State variable 08h";
+CM_ SG_ 1986 IS16BIT_01 "Error message 01h";
+CM_ SG_ 1986 IS16BIT_02 "Error message 02h";
+CM_ SG_ 1986 IS16BIT_03 "Error message 03h";
+CM_ SG_ 1986 BIT_07 "State variable 07h";
+CM_ SG_ 1986 BIT_06 "State variable 06h";
+CM_ SG_ 1986 BIT_05 "State variable 05h";
+CM_ SG_ 1986 BIT_04 "State variable 04h";
+CM_ SG_ 1986 BIT_03 "State variable 03h";
+CM_ SG_ 1986 BIT_02 "State variable 02h";
+CM_ SG_ 1986 BIT_01 "State variable 01h";
+CM_ SG_ 1839 is64bitmotorola "External application to ECU";
+CM_ SG_ 2349940739 is64bit "External application to ECU";
+CM_ SG_ 2651930624 isactivemode2_1 "isactive mode 2_1";
+CM_ SG_ 2651930624 modemanager "modemanager";
+CM_ SG_ 2651930624 test_4 "test 4";
+CM_ SG_ 2651930624 test_3 "test 3";
+CM_ SG_ 2651930624 test_2 "test 2";
+CM_ SG_ 2651930624 test_1 "test 1";
+CM_ SG_ 2651930624 Modes "Network management mode";
+CM_ SG_ 115 CRC "CRC-checksum byte 1 to 7";
+BA_DEF_ BU_  "NmStationAddress" INT 0 253;
+BA_DEF_ SG_  "GenSigStartValue" INT 0 1000;
+BA_DEF_ BO_  "GenMsgDelayTime" INT 0 200;
+BA_DEF_ BO_  "GenMsgSendType" STRING ;
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 200;
+BA_DEF_DEF_  "NmStationAddress" 0;
+BA_DEF_DEF_  "GenSigStartValue" 0;
+BA_DEF_DEF_  "GenMsgDelayTime" 0;
+BA_DEF_DEF_  "GenMsgSendType" "cyclic";
+BA_DEF_DEF_  "GenMsgCycleTime" 100;
+BA_ "NmStationAddress" BU_ ECU_2 2;
+BA_ "NmStationAddress" BU_ ECU 1;
+BA_ "GenMsgCycleTime" BO_ 1986 50;
+BA_ "GenMsgCycleTime" BO_ 1839 20;
+BA_ "GenMsgSendType" BO_ 2349940739 "cyclic";
+BA_ "GenMsgCycleTime" BO_ 2349940739 50;
+BA_ "GenMsgDelayTime" BO_ 2316386304 10;
+BA_ "GenMsgCycleTime" BO_ 2316386304 100;
+BA_ "GenMsgDelayTime" BO_ 2651930624 20;
+BA_ "GenMsgSendType" BO_ 2651930624 "cyclic";
+BA_ "GenMsgCycleTime" BO_ 2651930624 50;
+BA_ "GenSigStartValue" SG_ 115 SignalOffset 15;
+BA_ "GenSigStartValue" SG_ 115 Temperature 20;
+BA_ "GenSigStartValue" SG_ 115 SignalWithError 2;
+

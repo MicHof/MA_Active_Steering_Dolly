@@ -1,0 +1,11144 @@
+-- ****************************************************************************
+--
+--  Trace file: CAN_new.trc
+--
+--  RTI1401 7.2 (02-May-2014)
+--  Tue Jan 20 10:43:32 2015
+--
+--  Used options:
+--    TRCGenerateVirtualBlocks      = 1
+--    TRCGenerateLabels             = 1
+--    TRCGenerateStates             = 0
+--    TRCGenerateDerivatives        = 0
+--    TRCGenerateParamValues        = 0
+--    TRCGenerateApplicationKeyword = 0
+--    TRCOnlyGlobals                = 0
+--    TRCIsOmitVdOn                 = 0
+--
+--  Trace file format: 2
+--
+--  (c) Copyright 2008, dSPACE GmbH. All rights reserved.
+--
+-- ****************************************************************************
+
+-- ******** Keywords **********************************************************
+
+-- _application "CAN_new.map"
+
+_genname     "RTI"
+_genversion  "7.2"
+_gendate     "01/20/2015 10:44:07"
+_description ""
+_author      "RTI1401 7.2 (02-May-2014)"
+_model       "CAN_new.mdl"
+
+-- Default data type formats
+_floating_point_type(64,IEEE)
+_integer_type(32)
+
+-- No Data Capture blocks within model: use base sample time as sampling period
+sampling_period[0]
+{
+  value:       0.001
+  alias:       "HostService"
+  increment:   0.001
+  unit:        "s"
+}
+
+
+
+-- Type definitions for arrays
+typedef CAN_new_ArrayDT5_6 uint(16)[6]
+
+
+-- ******** Simulation control variables **************************************
+
+finalTime
+{
+ type:  flt(64,IEEE)*
+ alias: "finalTime"
+ desc:  "Simulation stop time. When reached, simState switches to STOP."
+ flags:  SYSTEM|READONLY
+ unit:  "s"
+}
+
+currentTime
+{
+ type:  flt(64,IEEE)*
+ alias: "currentTime"
+ desc:  "Current simulation time. Increments with execution of Timer Task 1."
+ flags: SYSTEM|READONLY
+ unit:  "s"
+}
+
+modelStepSize
+{
+ type:  flt(64,IEEE)
+ alias: "modelStepSize"
+ desc:  "Fixed step size of the model, sample time of Timer Task 1."
+ flags: SYSTEM|READONLY
+ unit:  "s"
+}
+
+simState
+{
+ type:  int(32)
+ alias: "simState"
+ desc:  "Simulation state: STOP=0 PAUSE=1 RUN=2"
+ flags: SYSTEM
+ unit:  "-"
+}
+
+msg_last_error_no
+{
+ type:  uint(32)
+ alias: "errorNumber"
+ desc:  "Error number of last error message (zero if no error)."
+ unit:  "-"
+ flags: SYSTEM|READONLY
+}
+
+rtiAssertionMode
+{
+ type:  int(32)
+ alias: "rtiAssertionMode"
+ desc:  "Assertion Mode: OFF=0 WARN=1 STOP=2"
+ flags: SYSTEM
+ unit:  "-"
+}
+
+
+
+-- ******** Model variables ***************************************************
+
+group "Model Root"
+{
+ flags: COLLAPSED
+}
+  
+  
+	group "Angle_Sensor" -- subsystem-group
+	{
+	 flags: COLLAPSED
+	 desc:  ""
+	}
+
+
+
+		group "Bus\nSelector" -- block-group
+		{
+		 block: "BusSelector"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			p_CAN_new_B_uint8_T_4[0]
+			{
+			 type:    uint(8)*
+			 alias:   "Out1"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_4[1]
+			{
+			 type:    uint(8)*
+			 alias:   "Out2"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_real_T_0[0]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out3"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_int16_T_1[0]
+			{
+			 type:    int(16)*
+			 alias:   "Out4"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_4[2]
+			{
+			 type:    uint(8)*
+			 alias:   "Out5"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_4[3]
+			{
+			 type:    uint(8)*
+			 alias:   "Out6"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_4[4]
+			{
+			 type:    uint(8)*
+			 alias:   "Out7"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_4[5]
+			{
+			 type:    uint(8)*
+			 alias:   "Out8"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_4[6]
+			{
+			 type:    uint(8)*
+			 alias:   "Out9"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_4[7]
+			{
+			 type:    uint(8)*
+			 alias:   "Out10"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_4[8]
+			{
+			 type:    uint(8)*
+			 alias:   "Out11"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_real_T_0[1]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out12"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_int16_T_1[1]
+			{
+			 type:    int(16)*
+			 alias:   "Out13"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_real_T_0[2]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out14"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "Bus\nSelector"
+
+		group "Reset@RTICANMM\nControllerSetup" -- block-group
+		{
+		 block: "Constant"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			-- Skipping output Out1
+			p_CAN_new_P_boolean_T_3[0]
+			{
+			 type:    uint(8)*
+			 alias:   "Value"
+			 range:   < 0 ; 1 >
+			 bitmask: 0x01
+			 flags:   PARAM
+			}
+
+
+		endgroup -- block-group "Reset@RTICANMM\nControllerSetup"
+
+		group "Variation@RTICANMM\nControllerSetup" -- block-group
+		{
+		 block: "Constant"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			-- Skipping output Out1
+			p_CAN_new_P_uint8_T_2[0]
+			{
+			 type:    uint(8)*
+			 alias:   "Value"
+			 flags:   PARAM
+			}
+
+
+		endgroup -- block-group "Variation@RTICANMM\nControllerSetup"
+
+  
+  
+		group "RTICANMM\nControllerSetup" -- subsystem-group
+		{
+		 flags: COLLAPSED
+		 desc:  ""
+		}
+
+
+
+			group "VariationInput" -- block-group
+			{
+			 block: "Inport"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				-- Skipping output Out1
+
+
+			endgroup -- block-group "VariationInput"
+
+			group "Reset" -- block-group
+			{
+			 block: "Inport"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				-- Skipping output Out1
+
+
+			endgroup -- block-group "Reset"
+
+			group "Variation_DTC" -- block-group
+			{
+			 block: "DataTypeConversion"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				p_CAN_new_B_uint8_T_4[9]
+				{
+				 type:    uint(8)*
+				 alias:   "Out1"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+
+
+			endgroup -- block-group "Variation_DTC"
+
+			group "RTICANMMCHANNEL_TLC" -- block-group
+			{
+			 block: "S-Function"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+
+
+				p_CAN_new_P_real_T_0[0]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "P1"
+				 flags:   PARAM
+				}
+				p_CAN_new_P_real_T_0[1]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "P2"
+				 flags:   PARAM
+				}
+				p_CAN_new_P_real_T_0[2]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "P3"
+				 flags:   PARAM
+				}
+				p_CAN_new_P_real_T_0[3]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "P4"
+				 flags:   PARAM
+				}
+				p_CAN_new_P_real_T_0[4]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "P5"
+				 flags:   PARAM
+				}
+				p_CAN_new_P_uint16_T_1[0]
+				{
+				 type:    CAN_new_ArrayDT5_6*
+				 alias:   "P6"
+				 flags:   PARAM
+				}
+
+
+			endgroup -- block-group "RTICANMMCHANNEL_TLC"
+
+			group "sfcn" -- block-group
+			{
+			 block: "S-Function"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				p_CAN_new_B_uint8_T_4[9]
+				{
+				 type:    uint(8)*
+				 alias:   "In1"
+				 desc:    ""
+				 flags:   SINK|READONLY
+				}
+
+				-- Skipping inport In2
+
+
+
+
+			endgroup -- block-group "sfcn"
+
+  
+  
+			group "ModelClose" -- subsystem-group
+			{
+			 flags: COLLAPSED
+			 desc:  ""
+			}
+
+
+
+
+
+			endgroup -- subsystem-group "ModelClose"
+
+
+		endgroup -- subsystem-group "RTICANMM\nControllerSetup"
+  
+  
+		group "RTICANMM\nGeneralSetup" -- subsystem-group
+		{
+		 flags: COLLAPSED
+		 desc:  ""
+		}
+
+
+		endgroup -- subsystem-group "RTICANMM\nGeneralSetup"
+  
+  
+		group "RTICANMM\nMainBlock" -- subsystem-group
+		{
+		 flags: COLLAPSED
+		 desc:  ""
+		}
+
+			p_CAN_new_B_uint8_T_4[0]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray1}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_4[1]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray2}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_real_T_0[0]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "RX_Data{SubArray3}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_int16_T_1[0]
+			{
+			 type:    int(16)*
+			 alias:   "RX_Data{SubArray4}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_4[2]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray5}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_4[3]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray6}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_4[4]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray7}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_4[5]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray8}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_4[6]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray9}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_4[7]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray10}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_4[8]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray11}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_real_T_0[1]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "RX_Data{SubArray12}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_int16_T_1[1]
+			{
+			 type:    int(16)*
+			 alias:   "RX_Data{SubArray13}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_real_T_0[2]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "RX_Data{SubArray14}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+
+		endgroup -- subsystem-group "RTICANMM\nMainBlock"
+
+		p_CAN_new_B_int16_T_1[1]
+		{
+		 type:    int(16)*
+		 alias:   "<ActualRetarderPercTorque>"
+		 origin:  "CAN_new/Angle_Sensor/Bus\nSelector/Out13"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_uint8_T_4[2]
+		{
+		 type:    uint(8)*
+		 alias:   "<AlarmWarningBits>"
+		 origin:  "CAN_new/Angle_Sensor/Bus\nSelector/Out5"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_real_T_0[0]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "<Angle>"
+		 origin:  "CAN_new/Angle_Sensor/Bus\nSelector/Out3"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_uint8_T_4[6]
+		{
+		 type:    uint(8)*
+		 alias:   "<AutomTowedVehBreakActive>"
+		 origin:  "CAN_new/Angle_Sensor/Bus\nSelector/Out9"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_uint8_T_4[1]
+		{
+		 type:    uint(8)*
+		 alias:   "<MessageCounter>"
+		 origin:  "CAN_new/Angle_Sensor/Bus\nSelector/Out2"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_uint8_T_4[0]
+		{
+		 type:    uint(8)*
+		 alias:   "<PacketType>"
+		 origin:  "CAN_new/Angle_Sensor/Bus\nSelector/Out1"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_uint8_T_4[8]
+		{
+		 type:    uint(8)*
+		 alias:   "<SupplyLineBrakingRequest>"
+		 origin:  "CAN_new/Angle_Sensor/Bus\nSelector/Out11"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_int16_T_1[0]
+		{
+		 type:    int(16)*
+		 alias:   "<Temperature>"
+		 origin:  "CAN_new/Angle_Sensor/Bus\nSelector/Out4"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_uint8_T_4[7]
+		{
+		 type:    uint(8)*
+		 alias:   "<VDCActive>"
+		 origin:  "CAN_new/Angle_Sensor/Bus\nSelector/Out10"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_uint8_T_4[3]
+		{
+		 type:    uint(8)*
+		 alias:   "<VehicleABSActive>"
+		 origin:  "CAN_new/Angle_Sensor/Bus\nSelector/Out6"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_uint8_T_4[4]
+		{
+		 type:    uint(8)*
+		 alias:   "<VehicleRetarderCtrlActive>"
+		 origin:  "CAN_new/Angle_Sensor/Bus\nSelector/Out7"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_uint8_T_4[5]
+		{
+		 type:    uint(8)*
+		 alias:   "<VehicleServiceBrakeActive>"
+		 origin:  "CAN_new/Angle_Sensor/Bus\nSelector/Out8"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_real_T_0[2]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "<WheelSpeedDiffMainAxle>"
+		 origin:  "CAN_new/Angle_Sensor/Bus\nSelector/Out14"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_real_T_0[1]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "<Wheel_BasedVehicleSpeed>"
+		 origin:  "CAN_new/Angle_Sensor/Bus\nSelector/Out12"
+		 flags:   LABEL|READONLY
+		}
+
+	endgroup -- subsystem-group "Angle_Sensor"
+  
+  
+	group "Arduino" -- subsystem-group
+	{
+	 flags: COLLAPSED
+	 desc:  ""
+	}
+
+
+
+		group "Bus\nSelector" -- block-group
+		{
+		 block: "BusSelector"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			p_CAN_new_B_uint8_T_4[10]
+			{
+			 type:    uint(8)*
+			 alias:   "Out1"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "Bus\nSelector"
+
+		group "Reset@RTICANMM\nControllerSetup" -- block-group
+		{
+		 block: "Constant"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			-- Skipping output Out1
+			p_CAN_new_P_boolean_T_3[1]
+			{
+			 type:    uint(8)*
+			 alias:   "Value"
+			 range:   < 0 ; 1 >
+			 bitmask: 0x01
+			 flags:   PARAM
+			}
+
+
+		endgroup -- block-group "Reset@RTICANMM\nControllerSetup"
+
+		group "Variation@RTICANMM\nControllerSetup" -- block-group
+		{
+		 block: "Constant"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			-- Skipping output Out1
+			p_CAN_new_P_uint8_T_2[1]
+			{
+			 type:    uint(8)*
+			 alias:   "Value"
+			 flags:   PARAM
+			}
+
+
+		endgroup -- block-group "Variation@RTICANMM\nControllerSetup"
+
+  
+  
+		group "RTICANMM\nControllerSetup" -- subsystem-group
+		{
+		 flags: COLLAPSED
+		 desc:  ""
+		}
+
+
+
+			group "VariationInput" -- block-group
+			{
+			 block: "Inport"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				-- Skipping output Out1
+
+
+			endgroup -- block-group "VariationInput"
+
+			group "Reset" -- block-group
+			{
+			 block: "Inport"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				-- Skipping output Out1
+
+
+			endgroup -- block-group "Reset"
+
+			group "Variation_DTC" -- block-group
+			{
+			 block: "DataTypeConversion"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				p_CAN_new_B_uint8_T_4[11]
+				{
+				 type:    uint(8)*
+				 alias:   "Out1"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+
+
+			endgroup -- block-group "Variation_DTC"
+
+			group "RTICANMMCHANNEL_TLC" -- block-group
+			{
+			 block: "S-Function"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+
+
+				p_CAN_new_P_real_T_0[6]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "P1"
+				 flags:   PARAM
+				}
+				p_CAN_new_P_real_T_0[7]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "P2"
+				 flags:   PARAM
+				}
+				p_CAN_new_P_real_T_0[8]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "P3"
+				 flags:   PARAM
+				}
+				p_CAN_new_P_real_T_0[9]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "P4"
+				 flags:   PARAM
+				}
+				p_CAN_new_P_real_T_0[10]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "P5"
+				 flags:   PARAM
+				}
+				p_CAN_new_P_uint16_T_1[6]
+				{
+				 type:    CAN_new_ArrayDT5_6*
+				 alias:   "P6"
+				 flags:   PARAM
+				}
+
+
+			endgroup -- block-group "RTICANMMCHANNEL_TLC"
+
+			group "sfcn" -- block-group
+			{
+			 block: "S-Function"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				p_CAN_new_B_uint8_T_4[11]
+				{
+				 type:    uint(8)*
+				 alias:   "In1"
+				 desc:    ""
+				 flags:   SINK|READONLY
+				}
+
+				-- Skipping inport In2
+
+
+
+
+			endgroup -- block-group "sfcn"
+
+  
+  
+			group "ModelClose" -- subsystem-group
+			{
+			 flags: COLLAPSED
+			 desc:  ""
+			}
+
+
+
+
+
+			endgroup -- subsystem-group "ModelClose"
+
+
+		endgroup -- subsystem-group "RTICANMM\nControllerSetup"
+  
+  
+		group "RTICANMM\nMainBlock" -- subsystem-group
+		{
+		 flags: COLLAPSED
+		 desc:  ""
+		}
+
+			p_CAN_new_B_uint8_T_4[10]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+
+		endgroup -- subsystem-group "RTICANMM\nMainBlock"
+
+		p_CAN_new_B_uint8_T_4[10]
+		{
+		 type:    uint(8)*
+		 alias:   "<RTICANMMFreeRawMessage_1>"
+		 origin:  "CAN_new/Arduino/Bus\nSelector/Out1"
+		 flags:   LABEL|READONLY
+		}
+
+	endgroup -- subsystem-group "Arduino"
+  
+  
+	group "ETS_CAN1" -- subsystem-group
+	{
+	 flags: COLLAPSED
+	 desc:  ""
+	}
+
+
+
+		group "Reset@RTICANMM\nControllerSetup" -- block-group
+		{
+		 block: "Constant"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			-- Skipping output Out1
+			p_CAN_new_P_boolean_T_3[2]
+			{
+			 type:    uint(8)*
+			 alias:   "Value"
+			 range:   < 0 ; 1 >
+			 bitmask: 0x01
+			 flags:   PARAM
+			}
+
+
+		endgroup -- block-group "Reset@RTICANMM\nControllerSetup"
+
+		group "Variation@RTICANMM\nControllerSetup" -- block-group
+		{
+		 block: "Constant"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			-- Skipping output Out1
+			p_CAN_new_P_uint8_T_2[2]
+			{
+			 type:    uint(8)*
+			 alias:   "Value"
+			 flags:   PARAM
+			}
+
+
+		endgroup -- block-group "Variation@RTICANMM\nControllerSetup"
+
+  
+  
+		group "RTICANMM\nControllerSetup" -- subsystem-group
+		{
+		 flags: COLLAPSED
+		 desc:  ""
+		}
+
+
+
+			group "VariationInput" -- block-group
+			{
+			 block: "Inport"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				-- Skipping output Out1
+
+
+			endgroup -- block-group "VariationInput"
+
+			group "Reset" -- block-group
+			{
+			 block: "Inport"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				-- Skipping output Out1
+
+
+			endgroup -- block-group "Reset"
+
+			group "Variation_DTC" -- block-group
+			{
+			 block: "DataTypeConversion"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				p_CAN_new_B_uint8_T_4[12]
+				{
+				 type:    uint(8)*
+				 alias:   "Out1"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+
+
+			endgroup -- block-group "Variation_DTC"
+
+			group "RTICANMMCHANNEL_TLC" -- block-group
+			{
+			 block: "S-Function"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+
+
+				p_CAN_new_P_real_T_0[11]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "P1"
+				 flags:   PARAM
+				}
+				p_CAN_new_P_real_T_0[12]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "P2"
+				 flags:   PARAM
+				}
+				p_CAN_new_P_real_T_0[13]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "P3"
+				 flags:   PARAM
+				}
+				p_CAN_new_P_real_T_0[14]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "P4"
+				 flags:   PARAM
+				}
+				p_CAN_new_P_real_T_0[15]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "P5"
+				 flags:   PARAM
+				}
+				p_CAN_new_P_uint16_T_1[12]
+				{
+				 type:    CAN_new_ArrayDT5_6*
+				 alias:   "P6"
+				 flags:   PARAM
+				}
+
+
+			endgroup -- block-group "RTICANMMCHANNEL_TLC"
+
+			group "sfcn" -- block-group
+			{
+			 block: "S-Function"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				p_CAN_new_B_uint8_T_4[12]
+				{
+				 type:    uint(8)*
+				 alias:   "In1"
+				 desc:    ""
+				 flags:   SINK|READONLY
+				}
+
+				-- Skipping inport In2
+
+
+
+
+			endgroup -- block-group "sfcn"
+
+  
+  
+			group "ModelClose" -- subsystem-group
+			{
+			 flags: COLLAPSED
+			 desc:  ""
+			}
+
+
+
+
+
+			endgroup -- subsystem-group "ModelClose"
+
+
+		endgroup -- subsystem-group "RTICANMM\nControllerSetup"
+  
+  
+		group "RTICANMM\nMainBlock" -- subsystem-group
+		{
+		 flags: COLLAPSED
+		 desc:  ""
+		}
+
+			p_CAN_new_B_real_T_0[4]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "RX_Data{SubArray1}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_real_T_0[5]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "RX_Data{SubArray2}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_real_T_0[6]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "RX_Data{SubArray3}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_real_T_0[7]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "RX_Data{SubArray4}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_real_T_0[8]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "RX_Data{SubArray5}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_real_T_0[9]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "RX_Data{SubArray6}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_real_T_0[10]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "RX_Data{SubArray7}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_real_T_0[11]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "RX_Data{SubArray8}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_real_T_0[12]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "RX_Data{SubArray9}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_real_T_0[13]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "RX_Data{SubArray10}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_real_T_0[14]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "RX_Data{SubArray11}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_real_T_0[15]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "RX_Data{SubArray12}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_real_T_0[16]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "RX_Data{SubArray13}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_real_T_0[17]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "RX_Data{SubArray14}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_real_T_0[18]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "RX_Data{SubArray15}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_real_T_0[19]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "RX_Data{SubArray16}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_4[13]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray17}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_4[14]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray18}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_4[15]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray19}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_4[16]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray20}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_4[17]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray21}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_4[18]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray22}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_4[19]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray23}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_4[20]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray24}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_4[21]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray25}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_4[22]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray26}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_4[23]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray27}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_4[24]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray28}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_4[25]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray29}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_real_T_0[20]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "RX_Data{SubArray30}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_real_T_0[21]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "RX_Data{SubArray31}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_real_T_0[22]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "RX_Data{SubArray32}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_real_T_0[23]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "RX_Data{SubArray33}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_real_T_0[24]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "RX_Data{SubArray34}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_real_T_0[25]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "RX_Data{SubArray35}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_real_T_0[26]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "RX_Data{SubArray36}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_int16_T_1[2]
+			{
+			 type:    int(16)*
+			 alias:   "RX_Data{SubArray37}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_int16_T_1[3]
+			{
+			 type:    int(16)*
+			 alias:   "RX_Data{SubArray38}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_4[26]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray39}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_4[27]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray40}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_real_T_0[27]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "RX_Data{SubArray41}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_real_T_0[28]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "RX_Data{SubArray42}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_int16_T_1[4]
+			{
+			 type:    int(16)*
+			 alias:   "RX_Data{SubArray43}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_4[28]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray44}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint16_T_2[0]
+			{
+			 type:    uint(16)*
+			 alias:   "RX_Data{SubArray45}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_real_T_0[29]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "RX_Data{SubArray46}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_boolean_T_5[0]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray47}"
+			 desc:    ""
+			 range:   < 0 ; 1 >
+			 bitmask: 0x01
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_boolean_T_5[1]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray48}"
+			 desc:    ""
+			 range:   < 0 ; 1 >
+			 bitmask: 0x01
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_boolean_T_5[2]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray49}"
+			 desc:    ""
+			 range:   < 0 ; 1 >
+			 bitmask: 0x01
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_boolean_T_5[3]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray50}"
+			 desc:    ""
+			 range:   < 0 ; 1 >
+			 bitmask: 0x01
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_4[29]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray51}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_4[30]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray52}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_4[31]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray53}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_4[32]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray54}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_4[33]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray55}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_4[34]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray56}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_boolean_T_5[4]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray57}"
+			 desc:    ""
+			 range:   < 0 ; 1 >
+			 bitmask: 0x01
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_4[35]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray58}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_real_T_0[30]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "RX_Data{SubArray59}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_4[36]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray60}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_4[37]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray61}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_4[38]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray62}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_real_T_0[31]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "RX_Data{SubArray63}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_4[39]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray64}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_4[40]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray65}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_4[41]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray66}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_real_T_0[32]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "RX_Data{SubArray67}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_real_T_0[33]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "RX_Data{SubArray68}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_real_T_0[34]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "RX_Data{SubArray69}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_real_T_0[35]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "RX_Data{SubArray70}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_real_T_0[36]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "RX_Data{SubArray71}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_real_T_0[37]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "RX_Data{SubArray72}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_real_T_0[38]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "RX_Data{SubArray73}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_real_T_0[39]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "RX_Data{SubArray74}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_real_T_0[40]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "RX_Data{SubArray75}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_real_T_0[41]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "RX_Data{SubArray76}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_real_T_0[42]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "RX_Data{SubArray77}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_real_T_0[43]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "RX_Data{SubArray78}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_real_T_0[44]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "RX_Data{SubArray79}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_real_T_0[45]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "RX_Data{SubArray80}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_real_T_0[46]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "RX_Data{SubArray81}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_real_T_0[47]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "RX_Data{SubArray82}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_4[42]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray83}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_4[43]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray84}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_int8_T_3[0]
+			{
+			 type:    int(8)*
+			 alias:   "RX_Data{SubArray85}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_int8_T_3[1]
+			{
+			 type:    int(8)*
+			 alias:   "RX_Data{SubArray86}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_int8_T_3[2]
+			{
+			 type:    int(8)*
+			 alias:   "RX_Data{SubArray87}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_4[44]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray88}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_4[45]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray89}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_4[46]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray90}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_4[47]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray91}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_4[48]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray92}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_4[49]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray93}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_4[50]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray94}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_4[51]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray95}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_4[52]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray96}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_4[53]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray97}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+
+		endgroup -- subsystem-group "RTICANMM\nMainBlock"
+
+
+	endgroup -- subsystem-group "ETS_CAN1"
+  
+  
+	group "RTI Data" -- subsystem-group
+	{
+	 flags: COLLAPSED
+	 desc:  ""
+	}
+
+
+	endgroup -- subsystem-group "RTI Data"
+
+
+
+
+endgroup -- "Model Root"
+-- ******** Tunable Parameters ************************************************
+
+-- InlineParameters is off: no separate group for Tunable Parameters
+
+
+-- ******** State Machine Data ************************************************
+
+-- No Stateflow chart within the model.
+
+
+-- ******** Data Store Memories ***********************************************
+
+-- No Data Store Memories within the model.
+
+
+-- ******** Labels ************************************************************
+
+group "Labels"
+{
+ flags: COLLAPSED
+}
+
+endgroup
+
+-- ******** RTT Dynamic Variables *********************************************
+
+group "RTT Dynamic Variables"
+{
+ flags: COLLAPSED
+}
+
+endgroup
+
+ 
+ 
+ 
+
+group "BusSystems" -- subsystem-group
+        {
+     flags: COLLAPSED
+ }
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+
+group "CAN" -- subsystem-group
+        {
+     flags: COLLAPSED
+ }
+
+
+ 
+ 
+ 
+
+
+
+                        RTICANMM_MonitorData[0]
+            {
+             type:    UINT(32)
+             alias:   "ID"
+              flags:   OUTPUT|READONLY
+             desc:  "ID"
+             unit:  ""
+             value:  0
+            }
+
+
+
+                        RTICANMM_MonitorData[1]
+            {
+             type:    UINT(32)
+             alias:   "Service"
+              flags:   OUTPUT|READONLY
+             desc:  "Service"
+             unit:  ""
+             value:  0
+            }
+
+
+
+                        RTICANMM_MonitorData[2]
+            {
+             type:    UINT(32)
+             alias:   "Data1"
+              flags:   OUTPUT|READONLY
+             desc:  "Data1"
+             unit:  ""
+             value:  0
+            }
+
+
+
+                        RTICANMM_MonitorData[3]
+            {
+             type:    UINT(32)
+             alias:   "Data2"
+              flags:   OUTPUT|READONLY
+             desc:  "Data2"
+             unit:  ""
+             value:  0
+            }
+
+
+
+
+
+
+group "ControllerSetup_Blocks" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+
+
+group "Controller1" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+                        CANMMMonitor_Controller1
+            {
+             type:    UINT(8)
+             alias:   "Monitoring_Enable"
+              flags:   PARAM
+             desc:  "Monitoring Enable"
+             unit:  ""
+             value:  0
+            }
+
+
+
+
+                        MonitoringTimeStamp_Controller1
+            {
+             type:    flt(64,IEEE)
+             alias:   "Monitoring_TimeStamp"
+              flags:   OUTPUT|READONLY
+             desc:  "Monitoring TimeStamp"
+             unit:  "s"
+             value:  0
+            }
+
+
+
+                        CANMM_CTL_SETUP_Controller1_Variation
+            {
+             type:    UINT(8)
+             alias:   "Variation"
+              flags:   PARAM
+             desc:  "Variation used if Variation_Switch == 1"
+             unit:  ""
+             value:  1
+            }
+
+
+
+
+                        CANMM_CTL_SETUP_Controller1_VariationSwitch
+            {
+             type:    UINT(8)
+             alias:   "Variation_Switch"
+              flags:   PARAM
+             desc:  "Variation Switch: Variation changed by MODEL=0 (default) | EXPERIMENT SOFTWARE=1"
+             unit:  ""
+             value:  0
+            }
+
+
+
+
+
+
+
+endgroup -- block-group "Controller1"
+
+
+
+
+group "Controller3" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+                        CANMMMonitor_Controller3
+            {
+             type:    UINT(8)
+             alias:   "Monitoring_Enable"
+              flags:   PARAM
+             desc:  "Monitoring Enable"
+             unit:  ""
+             value:  0
+            }
+
+
+
+
+                        MonitoringTimeStamp_Controller3
+            {
+             type:    flt(64,IEEE)
+             alias:   "Monitoring_TimeStamp"
+              flags:   OUTPUT|READONLY
+             desc:  "Monitoring TimeStamp"
+             unit:  "s"
+             value:  0
+            }
+
+
+
+                        CANMM_CTL_SETUP_Controller3_Variation
+            {
+             type:    UINT(8)
+             alias:   "Variation"
+              flags:   PARAM
+             desc:  "Variation used if Variation_Switch == 1"
+             unit:  ""
+             value:  1
+            }
+
+
+
+
+                        CANMM_CTL_SETUP_Controller3_VariationSwitch
+            {
+             type:    UINT(8)
+             alias:   "Variation_Switch"
+              flags:   PARAM
+             desc:  "Variation Switch: Variation changed by MODEL=0 (default) | EXPERIMENT SOFTWARE=1"
+             unit:  ""
+             value:  0
+            }
+
+
+
+
+
+
+
+endgroup -- block-group "Controller3"
+
+
+
+
+group "Controller2" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+                        CANMMMonitor_Controller2
+            {
+             type:    UINT(8)
+             alias:   "Monitoring_Enable"
+              flags:   PARAM
+             desc:  "Monitoring Enable"
+             unit:  ""
+             value:  0
+            }
+
+
+
+
+                        MonitoringTimeStamp_Controller2
+            {
+             type:    flt(64,IEEE)
+             alias:   "Monitoring_TimeStamp"
+              flags:   OUTPUT|READONLY
+             desc:  "Monitoring TimeStamp"
+             unit:  "s"
+             value:  0
+            }
+
+
+
+                        CANMM_CTL_SETUP_Controller2_Variation
+            {
+             type:    UINT(8)
+             alias:   "Variation"
+              flags:   PARAM
+             desc:  "Variation used if Variation_Switch == 1"
+             unit:  ""
+             value:  1
+            }
+
+
+
+
+                        CANMM_CTL_SETUP_Controller2_VariationSwitch
+            {
+             type:    UINT(8)
+             alias:   "Variation_Switch"
+              flags:   PARAM
+             desc:  "Variation Switch: Variation changed by MODEL=0 (default) | EXPERIMENT SOFTWARE=1"
+             unit:  ""
+             value:  0
+            }
+
+
+
+
+
+
+
+endgroup -- block-group "Controller2"
+
+
+
+
+endgroup -- block-group "ControllerSetup_Blocks"
+
+
+
+
+
+
+-- START@RTICANMM_MAIN_CAN_DS1401_1_1_1
+
+
+
+group "CAN" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+CANMM_CTL_SETUP_Controller1_ID
+{
+type: UINT(8)
+alias: "Variation"
+flags: OUTPUT|READONLY
+desc: "current Variation of Controller1"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_NL
+{
+type: UINT(32)
+alias: "NumLostMsgs"
+flags: OUTPUT|READONLY
+desc: "Number of lost messages"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_TRAFFIC
+{
+type: UINT(8)
+alias: "Traffic"
+flags: OUTPUT|READONLY
+desc: "Traffic"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_GEIN
+{
+type: UINT(8)
+alias: "GlobalEnable"
+flags: PARAM
+desc: "Enable CAN"
+unit: ""
+range: <0; 1>
+value: 1
+}
+
+
+
+
+CANMMCAN_MAXMSGPERSTEP
+{
+type: INT(32)
+alias: "MaxMessagesPerStep"
+flags: PARAM
+desc: "MaxMessagesPerStep"
+unit: ""
+range: <0; 100>
+value: 0
+}
+
+
+
+
+
+group "AngleSensor" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+
+group "RX" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+CANMMCAN_RX_Msg_1_Sgn_1
+{
+type: UINT(8)
+alias: "PacketType"
+flags: OUTPUT|READONLY
+desc: ""
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_RX_Msg_1_Sgn_2
+{
+type: UINT(8)
+alias: "MessageCounter"
+flags: OUTPUT|READONLY
+desc: ""
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_RX_Msg_1_Sgn_3
+{
+type: flt(64,IEEE)
+alias: "Angle"
+flags: OUTPUT|READONLY
+desc: ""
+unit: "degr"
+value: -200
+}
+
+
+
+
+CANMMCAN_RX_Msg_1_Sgn_4
+{
+type: INT(16)
+alias: "Temperature"
+flags: OUTPUT|READONLY
+desc: ""
+unit: "°C"
+value: -40
+}
+
+
+
+
+CANMMCAN_RX_Msg_1_Sgn_5
+{
+type: UINT(8)
+alias: "AlarmWarningBits"
+flags: OUTPUT|READONLY
+desc: ""
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_MIDRX[1]
+{
+type: UINT(32)
+alias: "AngleSensor_ID"
+flags: OUTPUT|READONLY
+desc: "Message ID"
+unit: ""
+value: 419406392
+}
+
+
+
+
+CANMMCAN_MIDFRX[1]
+{
+type: UINT(8)
+alias: "AngleSensor_IDFormat"
+flags: OUTPUT|READONLY
+desc: "Message ID Format"
+unit: ""
+value: 1
+}
+
+
+
+
+CANMMCAN_RXLEN[1]
+{
+type: UINT(8)
+alias: "AngleSensor_Length"
+flags: OUTPUT|READONLY
+desc: "Message Length"
+unit: ""
+value: 5
+}
+
+
+
+
+CANMMCAN_RXsta[1]
+{
+type: UINT(8)
+alias: "AngleSensor_status"
+flags: OUTPUT|READONLY
+desc: "AngleSensor Status"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_RXdt[1]
+{
+type: flt(64,IEEE)
+alias: "AngleSensor_dt"
+flags: OUTPUT|READONLY
+desc: "AngleSensor DeltaTime"
+unit: "s"
+value: 0
+}
+
+
+
+
+CANMMCAN_RXt[1]
+{
+type: flt(64,IEEE)
+alias: "AngleSensor_time"
+flags: OUTPUT|READONLY
+desc: "AngleSensor Time"
+unit: "s"
+value: 0.0
+}
+
+
+
+
+
+endgroup -- block-group "RX"
+
+
+
+endgroup -- block-group "AngleSensor"
+
+
+
+group "ISO11992_EBS21" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+
+group "RX" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+CANMMCAN_RX_Msg_2_Sgn_1
+{
+type: UINT(8)
+alias: "VehicleABSActive"
+flags: OUTPUT|READONLY
+desc: ""
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_RX_Msg_2_Sgn_2
+{
+type: UINT(8)
+alias: "VehicleRetarderCtrlActive"
+flags: OUTPUT|READONLY
+desc: ""
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_RX_Msg_2_Sgn_3
+{
+type: UINT(8)
+alias: "VehicleServiceBrakeActive"
+flags: OUTPUT|READONLY
+desc: ""
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_RX_Msg_2_Sgn_4
+{
+type: UINT(8)
+alias: "AutomTowedVehBreakActive"
+flags: OUTPUT|READONLY
+desc: ""
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_RX_Msg_2_Sgn_5
+{
+type: UINT(8)
+alias: "VDCActive"
+flags: OUTPUT|READONLY
+desc: ""
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_RX_Msg_2_Sgn_6
+{
+type: UINT(8)
+alias: "SupplyLineBrakingRequest"
+flags: OUTPUT|READONLY
+desc: ""
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_RX_Msg_2_Sgn_7
+{
+type: flt(64,IEEE)
+alias: "Wheel_BasedVehicleSpeed"
+flags: OUTPUT|READONLY
+desc: ""
+unit: "km/"
+value: 0
+}
+
+
+
+
+CANMMCAN_RX_Msg_2_Sgn_8
+{
+type: INT(16)
+alias: "ActualRetarderPercTorque"
+flags: OUTPUT|READONLY
+desc: ""
+unit: "%"
+value: -125
+}
+
+
+
+
+CANMMCAN_RX_Msg_2_Sgn_9
+{
+type: flt(64,IEEE)
+alias: "WheelSpeedDiffMainAxle"
+flags: OUTPUT|READONLY
+desc: ""
+unit: "km/h"
+value: -125
+}
+
+
+
+
+CANMMCAN_MIDRX[0]
+{
+type: UINT(32)
+alias: "ISO11992_EBS21_ID"
+flags: OUTPUT|READONLY
+desc: "Message ID"
+unit: ""
+value: 201531592
+}
+
+
+
+
+CANMMCAN_MIDFRX[0]
+{
+type: UINT(8)
+alias: "ISO11992_EBS21_IDFormat"
+flags: OUTPUT|READONLY
+desc: "Message ID Format"
+unit: ""
+value: 1
+}
+
+
+
+
+CANMMCAN_RXLEN[0]
+{
+type: UINT(8)
+alias: "ISO11992_EBS21_Length"
+flags: OUTPUT|READONLY
+desc: "Message Length"
+unit: ""
+value: 8
+}
+
+
+
+
+CANMMCAN_RXsta[0]
+{
+type: UINT(8)
+alias: "ISO11992_EBS21_status"
+flags: OUTPUT|READONLY
+desc: "ISO11992_EBS21 Status"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_RXdt[0]
+{
+type: flt(64,IEEE)
+alias: "ISO11992_EBS21_dt"
+flags: OUTPUT|READONLY
+desc: "ISO11992_EBS21 DeltaTime"
+unit: "s"
+value: 0
+}
+
+
+
+
+CANMMCAN_RXt[0]
+{
+type: flt(64,IEEE)
+alias: "ISO11992_EBS21_time"
+flags: OUTPUT|READONLY
+desc: "ISO11992_EBS21 Time"
+unit: "s"
+value: 0.0
+}
+
+
+
+
+
+endgroup -- block-group "RX"
+
+
+
+endgroup -- block-group "ISO11992_EBS21"
+
+
+
+group "RT" -- subsystem-group
+{
+     flags: COLLAPSED | HIDDEN
+}
+
+
+
+group "FreeRawMessages" -- subsystem-group
+{
+     flags: COLLAPSED | HIDDEN
+}
+
+
+
+endgroup -- block-group "FreeRawMessages"
+
+
+
+endgroup -- block-group "RT"
+
+
+
+endgroup -- block-group "CAN"
+
+
+-- END@RTICANMM_MAIN_CAN_DS1401_1_1_1
+
+
+-- START@RTICANMM_MAIN_CAN_Arduino_DS1401_2_1_1
+
+
+
+group "CAN_Arduino" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+CANMM_CTL_SETUP_Controller3_ID
+{
+type: UINT(8)
+alias: "Variation"
+flags: OUTPUT|READONLY
+desc: "current Variation of Controller3"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_NL
+{
+type: UINT(32)
+alias: "NumLostMsgs"
+flags: OUTPUT|READONLY
+desc: "Number of lost messages"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_TRAFFIC
+{
+type: UINT(8)
+alias: "Traffic"
+flags: OUTPUT|READONLY
+desc: "Traffic"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_GEIN
+{
+type: UINT(8)
+alias: "GlobalEnable"
+flags: PARAM
+desc: "Enable CAN_Arduino"
+unit: ""
+range: <0; 1>
+value: 1
+}
+
+
+
+
+CANMMCAN_Arduino_TXGEIN
+{
+type: UINT(8)
+alias: "GlobalEnableTX"
+flags: PARAM
+desc: "Enable TX of CAN_Arduino"
+unit: ""
+range: <0; 1>
+value: 1
+}
+
+
+
+
+CANMMCAN_Arduino_MAXMSGPERSTEP
+{
+type: INT(32)
+alias: "MaxMessagesPerStep"
+flags: PARAM
+desc: "MaxMessagesPerStep"
+unit: ""
+range: <0; 100>
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_TXEEIE[0]
+{
+type: UINT(8)
+alias: "Simulator_Enable"
+flags: PARAM
+desc: "Enable Simulator"
+unit: ""
+range: <0; 1>
+value: 1
+}
+
+
+
+
+
+group "RTICANMMFreeRawMessage_1" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+
+group "RX" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+CANMMCAN_Arduino_RX_Msg_1_Sgn_1
+{
+type: UINT(8)
+alias: "RAW_Byte_1"
+flags: OUTPUT|READONLY
+desc: "Free Raw Message Byte 1"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_RX_Msg_1_Sgn_2
+{
+type: UINT(8)
+alias: "RAW_Byte_2"
+flags: OUTPUT|READONLY
+desc: "Free Raw Message Byte 2"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_RX_Msg_1_Sgn_3
+{
+type: UINT(8)
+alias: "RAW_Byte_3"
+flags: OUTPUT|READONLY
+desc: "Free Raw Message Byte 3"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_RX_Msg_1_Sgn_4
+{
+type: UINT(8)
+alias: "RAW_Byte_4"
+flags: OUTPUT|READONLY
+desc: "Free Raw Message Byte 4"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_RX_Msg_1_Sgn_5
+{
+type: UINT(8)
+alias: "RAW_Byte_5"
+flags: OUTPUT|READONLY
+desc: "Free Raw Message Byte 5"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_RX_Msg_1_Sgn_6
+{
+type: UINT(8)
+alias: "RAW_Byte_6"
+flags: OUTPUT|READONLY
+desc: "Free Raw Message Byte 6"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_RX_Msg_1_Sgn_7
+{
+type: UINT(8)
+alias: "RAW_Byte_7"
+flags: OUTPUT|READONLY
+desc: "Free Raw Message Byte 7"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_RX_Msg_1_Sgn_8
+{
+type: UINT(8)
+alias: "RAW_Byte_8"
+flags: OUTPUT|READONLY
+desc: "Free Raw Message Byte 8"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_MIDRX[0]
+{
+type: UINT(32)
+alias: "RTICANMMFreeRawMessage_1_ID"
+flags: OUTPUT|READONLY
+desc: "Message ID"
+unit: ""
+value: 1
+}
+
+
+
+
+CANMMCAN_Arduino_MIDFRX[0]
+{
+type: UINT(8)
+alias: "RTICANMMFreeRawMessage_1_IDFormat"
+flags: OUTPUT|READONLY
+desc: "Message ID Format"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_RXLEN[0]
+{
+type: UINT(8)
+alias: "RTICANMMFreeRawMessage_1_Length"
+flags: OUTPUT|READONLY
+desc: "Message Length"
+unit: ""
+value: 8
+}
+
+
+
+
+CANMMCAN_Arduino_RXsta[0]
+{
+type: UINT(8)
+alias: "RTICANMMFreeRawMessage_1_status"
+flags: OUTPUT|READONLY
+desc: "RTICANMMFreeRawMessage_1 Status"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_RXdt[0]
+{
+type: flt(64,IEEE)
+alias: "RTICANMMFreeRawMessage_1_dt"
+flags: OUTPUT|READONLY
+desc: "RTICANMMFreeRawMessage_1 DeltaTime"
+unit: "s"
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_RXt[0]
+{
+type: flt(64,IEEE)
+alias: "RTICANMMFreeRawMessage_1_time"
+flags: OUTPUT|READONLY
+desc: "RTICANMMFreeRawMessage_1 Time"
+unit: "s"
+value: 0.0
+}
+
+
+
+
+
+endgroup -- block-group "RX"
+
+
+
+group "TX" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+CANMMCAN_Arduino_WBS[0]
+{
+type: UINT(8)
+alias: "RTICANMMFreeRawMessage_1_CheckEnable"
+flags: OUTPUT|READONLY
+desc: "Check enabled RTICANMMFreeRawMessage_1"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_TXDT[0]
+{
+type: flt(64,IEEE)
+alias: "RTICANMMFreeRawMessage_1_DelayTime"
+flags: OUTPUT|READONLY
+desc: "DelayTime RTICANMMFreeRawMessage_1"
+unit: "s"
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_TXsta[0]
+{
+type: UINT(8)
+alias: "RTICANMMFreeRawMessage_1_status"
+flags: OUTPUT|READONLY
+desc: "RTICANMMFreeRawMessage_1 Status"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_TX_Msg_1_Sgn_1_constant
+{
+type: UINT(8)
+alias: "RAW_Byte_1"
+flags: PARAM
+desc: "Free Raw Message Byte 1"
+unit: ""
+range: <0; 255>
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_TX_Msg_1_Sgn_2_constant
+{
+type: UINT(8)
+alias: "RAW_Byte_2"
+flags: PARAM
+desc: "Free Raw Message Byte 2"
+unit: ""
+range: <0; 255>
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_TX_Msg_1_Sgn_3_constant
+{
+type: UINT(8)
+alias: "RAW_Byte_3"
+flags: PARAM
+desc: "Free Raw Message Byte 3"
+unit: ""
+range: <0; 255>
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_TX_Msg_1_Sgn_4_constant
+{
+type: UINT(8)
+alias: "RAW_Byte_4"
+flags: PARAM
+desc: "Free Raw Message Byte 4"
+unit: ""
+range: <0; 255>
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_TX_Msg_1_Sgn_5_constant
+{
+type: UINT(8)
+alias: "RAW_Byte_5"
+flags: PARAM
+desc: "Free Raw Message Byte 5"
+unit: ""
+range: <0; 255>
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_TX_Msg_1_Sgn_6_constant
+{
+type: UINT(8)
+alias: "RAW_Byte_6"
+flags: PARAM
+desc: "Free Raw Message Byte 6"
+unit: ""
+range: <0; 255>
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_TX_Msg_1_Sgn_7_constant
+{
+type: UINT(8)
+alias: "RAW_Byte_7"
+flags: PARAM
+desc: "Free Raw Message Byte 7"
+unit: ""
+range: <0; 255>
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_TX_Msg_1_Sgn_8_constant
+{
+type: UINT(8)
+alias: "RAW_Byte_8"
+flags: PARAM
+desc: "Free Raw Message Byte 8"
+unit: ""
+range: <0; 255>
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_MIDTXS[0]
+{
+type: UINT(32)
+alias: "RTICANMMFreeRawMessage_1_ID"
+flags: PARAM
+desc: "Message ID"
+unit: ""
+range: <0; 536870911>
+value: 1
+}
+
+
+
+
+CANMMCAN_Arduino_MIDFTXS[0]
+{
+type: UINT(8)
+alias: "RTICANMMFreeRawMessage_1_IDFormat"
+flags: PARAM
+desc: "Message ID Format"
+unit: ""
+range: <0; 1>
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_TXLEN[0]
+{
+type: UINT(8)
+alias: "RTICANMMFreeRawMessage_1_Length"
+flags: PARAM
+desc: "Message Length"
+unit: ""
+range: <0; 8>
+value: 8
+}
+
+
+
+
+CANMMCAN_Arduino_TXEIN[0]
+{
+type: UINT(8)
+alias: "RTICANMMFreeRawMessage_1_Enable"
+flags: PARAM
+desc: "Enable RTICANMMFreeRawMessage_1"
+unit: ""
+range: <0; 1>
+value: 1
+}
+
+
+
+
+CANMMCAN_Arduino_TXCIE[0]
+{
+type: UINT(8)
+alias: "RTICANMMFreeRawMessage_1_PeriodicalOn"
+flags: PARAM
+desc: "Activate cyclic transmission for RTICANMMFreeRawMessage_1"
+unit: ""
+range: <0; 1>
+value: 1
+}
+
+
+
+
+CANMMCAN_Arduino_TXKIEX[0]
+{
+type: UINT(8)
+alias: "RTICANMMFreeRawMessage_1_Kickout"
+flags: PARAM
+desc: "Kickout RTICANMMFreeRawMessage_1"
+unit: ""
+range: <0; 1>
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_TXCT[0]
+{
+type: flt(64,IEEE)
+alias: "RTICANMMFreeRawMessage_1_CycleTime"
+flags: PARAM
+desc: "CycleTime RTICANMMFreeRawMessage_1"
+unit: "s"
+range: <0; 1000>
+value: 0
+}
+
+
+
+
+
+endgroup -- block-group "TX"
+
+
+
+endgroup -- block-group "RTICANMMFreeRawMessage_1"
+
+
+
+group "RT" -- subsystem-group
+{
+     flags: COLLAPSED | HIDDEN
+}
+
+
+
+group "FreeRawMessages" -- subsystem-group
+{
+     flags: COLLAPSED | HIDDEN
+}
+
+
+
+endgroup -- block-group "FreeRawMessages"
+
+
+
+endgroup -- block-group "RT"
+
+
+
+endgroup -- block-group "CAN_Arduino"
+
+
+-- END@RTICANMM_MAIN_CAN_Arduino_DS1401_2_1_1
+
+
+-- START@RTICANMM_MAIN_CAN_2_DS1401_1_2_1
+
+
+
+group "CAN_2" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+CANMM_CTL_SETUP_Controller2_ID
+{
+type: UINT(8)
+alias: "Variation"
+flags: OUTPUT|READONLY
+desc: "current Variation of Controller2"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_NL
+{
+type: UINT(32)
+alias: "NumLostMsgs"
+flags: OUTPUT|READONLY
+desc: "Number of lost messages"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TRAFFIC
+{
+type: UINT(8)
+alias: "Traffic"
+flags: OUTPUT|READONLY
+desc: "Traffic"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_GEIN
+{
+type: UINT(8)
+alias: "GlobalEnable"
+flags: PARAM
+desc: "Enable CAN_2"
+unit: ""
+range: <0; 1>
+value: 1
+}
+
+
+
+
+CANMMCAN_2_TXGEIN
+{
+type: UINT(8)
+alias: "GlobalEnableTX"
+flags: PARAM
+desc: "Enable TX of CAN_2"
+unit: ""
+range: <0; 1>
+value: 1
+}
+
+
+
+
+CANMMCAN_2_MAXMSGPERSTEP
+{
+type: INT(32)
+alias: "MaxMessagesPerStep"
+flags: PARAM
+desc: "MaxMessagesPerStep"
+unit: ""
+range: <0; 100>
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TXEEIE[0]
+{
+type: UINT(8)
+alias: "Vector__XXX_Enable"
+flags: PARAM
+desc: "Enable Vector__XXX"
+unit: ""
+range: <0; 1>
+value: 1
+}
+
+
+
+
+
+group "NetworkNode" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+
+group "Vector__XXX" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+RTICANMM_MAIN_CAN_2_J1939NodeIndex[0]
+{
+type: UINT(8)
+alias: "NetworkNodeIndex"
+flags: OUTPUT|READONLY
+desc: "Network Node Index"
+unit: ""
+value: 1
+}
+
+
+
+
+RTICANMM_MAIN_CAN_2_J1939NodeSimulationMode[0]
+{
+type: UINT(8)
+alias: "NetworkNodeSimulationMode"
+flags: OUTPUT|READONLY
+desc: "Network Node Simulation Mode"
+unit: ""
+value: 3
+}
+
+
+
+
+RTICANMM_MAIN_CAN_2_J1939NodeAddress[0]
+{
+type: UINT(8)
+alias: "NetworkNodeAddress"
+flags: OUTPUT|READONLY
+desc: "Network Node Address"
+unit: ""
+value: 253
+}
+
+
+
+
+RTICANMM_MAIN_CAN_2_J1939NodeStatus[0]
+{
+type: UINT(8)
+alias: "NetworkNodeStatus"
+flags: OUTPUT|READONLY
+desc: "Network Node Status"
+unit: ""
+value: 3
+}
+
+
+
+
+CANMMCAN_2_TXEEIE[0]
+{
+type: UINT(8)
+alias: "NetworkNodeEnable"
+flags: PARAM
+desc: "Network Node Enable"
+unit: ""
+range: <0; 1>
+value: 1
+}
+
+
+
+
+
+group "J1939Identification" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+RTICANMM_MAIN_CAN_2_J1939InitNodeAddress[0]
+{
+type: UINT(8)
+alias: "InitialNetworkNodeAddress"
+flags: PARAM
+desc: "Initial Network Node Address"
+unit: ""
+range: <0; 253>
+value: 253
+}
+
+
+
+
+RTICANMM_MAIN_CAN_2_J1939ECUNAMEParts_0_ArbitraryAddressCapable
+{
+type: UINT(8)*
+alias: "ArbitraryAddressCapable"
+flags: PARAM
+desc: "Arbitrary Address Capable"
+unit: ""
+range: <0; 1>
+value: 1
+}
+
+
+
+
+RTICANMM_MAIN_CAN_2_J1939ECUNAMEParts_0_IndustryGroup
+{
+type: UINT(8)*
+alias: "IndustryGroup"
+flags: PARAM
+desc: "Industry Group"
+unit: ""
+range: <0; 7>
+value: 0
+}
+
+
+
+
+RTICANMM_MAIN_CAN_2_J1939ECUNAMEParts_0_VehicleSystemInstance
+{
+type: UINT(8)*
+alias: "VehicleSystemInstance"
+flags: PARAM
+desc: "Vehicle System Instance"
+unit: ""
+range: <0; 15>
+value: 0
+}
+
+
+
+
+RTICANMM_MAIN_CAN_2_J1939ECUNAMEParts_0_VehicleSystem
+{
+type: UINT(8)*
+alias: "VehicleSystem"
+flags: PARAM
+desc: "Vehicle System"
+unit: ""
+range: <0; 127>
+value: 0
+}
+
+
+
+
+RTICANMM_MAIN_CAN_2_J1939ECUNAMEParts_0_Function
+{
+type: UINT(8)*
+alias: "Function"
+flags: PARAM
+desc: "Function"
+unit: ""
+range: <0; 255>
+value: 129
+}
+
+
+
+
+RTICANMM_MAIN_CAN_2_J1939ECUNAMEParts_0_FunctionInstance
+{
+type: UINT(8)*
+alias: "FunctionInstance"
+flags: PARAM
+desc: "Function Instance"
+unit: ""
+range: <0; 31>
+value: 0
+}
+
+
+
+
+RTICANMM_MAIN_CAN_2_J1939ECUNAMEParts_0_ECUInstance
+{
+type: UINT(8)*
+alias: "ECUInstance"
+flags: PARAM
+desc: "ECU Instance"
+unit: ""
+range: <0; 7>
+value: 0
+}
+
+
+
+
+RTICANMM_MAIN_CAN_2_J1939ECUNAMEParts_0_ManufacturerCode
+{
+type: UINT(16)*
+alias: "ManufacturerCode"
+flags: PARAM
+desc: "Manufacturer Code"
+unit: ""
+range: <0; 2047>
+value: 2040
+}
+
+
+
+
+RTICANMM_MAIN_CAN_2_J1939ECUNAMEParts_0_IdentityNumber
+{
+type: UINT(32)*
+alias: "IdentityNumber"
+flags: PARAM
+desc: "Identity Number"
+unit: ""
+range: <0; 2097151>
+value: 2090000
+}
+
+
+
+
+
+endgroup -- block-group "J1939Identification"
+
+
+
+endgroup -- block-group "Vector__XXX"
+
+
+
+endgroup -- block-group "NetworkNode"
+
+
+
+group "AnalogInputVoltagesMessage1" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+
+group "RX" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+CANMMCAN_2_RX_Msg_1_Sgn_1
+{
+type: flt(64,IEEE)
+alias: "IAV_AIN1_FrontAngle"
+flags: OUTPUT|READONLY
+desc: ""
+unit: "V"
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RX_Msg_1_Sgn_2
+{
+type: flt(64,IEEE)
+alias: "IAV_AIN2_FrontAngleRed"
+flags: OUTPUT|READONLY
+desc: ""
+unit: "V"
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RX_Msg_1_Sgn_3
+{
+type: flt(64,IEEE)
+alias: "IAV_AIN3_RearAngle"
+flags: OUTPUT|READONLY
+desc: ""
+unit: "V"
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RX_Msg_1_Sgn_4
+{
+type: flt(64,IEEE)
+alias: "IAV_AIN4_RearAngleRed"
+flags: OUTPUT|READONLY
+desc: ""
+unit: "V"
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RXPRIO[8]
+{
+type: UINT(8)
+alias: "AnalogInputVoltagesMessage1_Prio"
+flags: OUTPUT|READONLY
+desc: "J1939 Priority"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RXPGN[8]
+{
+type: UINT(32)
+alias: "AnalogInputVoltagesMessage1_PGN"
+flags: OUTPUT|READONLY
+desc: "J1939 Parameter Group Number"
+unit: ""
+value: 65336
+}
+
+
+
+
+CANMMCAN_2_RXSNIDX[8]
+{
+type: UINT(8)
+alias: "AnalogInputVoltagesMessage1_SNIDX"
+flags: OUTPUT|READONLY
+desc: "J1939 Source Node Index"
+unit: ""
+value: 1
+}
+
+
+
+
+CANMMCAN_2_RXSA[8]
+{
+type: UINT(8)
+alias: "AnalogInputVoltagesMessage1_SA"
+flags: OUTPUT|READONLY
+desc: "J1939 Source Address"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RXDA[8]
+{
+type: UINT(8)
+alias: "AnalogInputVoltagesMessage1_DA"
+flags: OUTPUT|READONLY
+desc: "J1939 Destination Address"
+unit: ""
+value: 255
+}
+
+
+
+
+CANMMCAN_2_MIDFRX[8]
+{
+type: UINT(8)
+alias: "AnalogInputVoltagesMessage1_IDFormat"
+flags: OUTPUT|READONLY
+desc: "Message ID Format"
+unit: ""
+value: 1
+}
+
+
+
+
+CANMMCAN_2_RXLEN[8]
+{
+type: UINT(32)
+alias: "AnalogInputVoltagesMessage1_Length"
+flags: OUTPUT|READONLY
+desc: "Message Length"
+unit: ""
+value: 8
+}
+
+
+
+
+CANMMCAN_2_RXsta[8]
+{
+type: UINT(8)
+alias: "AnalogInputVoltagesMessage1_status"
+flags: OUTPUT|READONLY
+desc: "AnalogInputVoltagesMessage1 Status"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RXdt[8]
+{
+type: flt(64,IEEE)
+alias: "AnalogInputVoltagesMessage1_dt"
+flags: OUTPUT|READONLY
+desc: "AnalogInputVoltagesMessage1 DeltaTime"
+unit: "s"
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RXt[8]
+{
+type: flt(64,IEEE)
+alias: "AnalogInputVoltagesMessage1_time"
+flags: OUTPUT|READONLY
+desc: "AnalogInputVoltagesMessage1 Time"
+unit: "s"
+value: 0.0
+}
+
+
+
+
+
+endgroup -- block-group "RX"
+
+
+
+group "TX" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+CANMMCAN_2_WBS[8]
+{
+type: UINT(8)
+alias: "AnalogInputVoltagesMessage1_CheckEnable"
+flags: OUTPUT|READONLY
+desc: "Check enabled AnalogInputVoltagesMessage1"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TXDT[8]
+{
+type: flt(64,IEEE)
+alias: "AnalogInputVoltagesMessage1_DelayTime"
+flags: OUTPUT|READONLY
+desc: "DelayTime AnalogInputVoltagesMessage1"
+unit: "s"
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TXsta[8]
+{
+type: UINT(8)
+alias: "AnalogInputVoltagesMessage1_status"
+flags: OUTPUT|READONLY
+desc: "AnalogInputVoltagesMessage1 Status"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TX_Msg_1_Sgn_1_constant
+{
+type: flt(64,IEEE)
+alias: "IAV_AIN1_FrontAngle"
+flags: PARAM
+desc: ""
+unit: "V"
+range: <0; 642.55>
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TX_Msg_1_Sgn_2_constant
+{
+type: flt(64,IEEE)
+alias: "IAV_AIN2_FrontAngleRed"
+flags: PARAM
+desc: ""
+unit: "V"
+range: <0; 642.55>
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TX_Msg_1_Sgn_3_constant
+{
+type: flt(64,IEEE)
+alias: "IAV_AIN3_RearAngle"
+flags: PARAM
+desc: ""
+unit: "V"
+range: <0; 642.55>
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TX_Msg_1_Sgn_4_constant
+{
+type: flt(64,IEEE)
+alias: "IAV_AIN4_RearAngleRed"
+flags: PARAM
+desc: ""
+unit: "V"
+range: <0; 642.55>
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TXEIN[8]
+{
+type: UINT(8)
+alias: "AnalogInputVoltagesMessage1_Enable"
+flags: PARAM
+desc: "Enable AnalogInputVoltagesMessage1"
+unit: ""
+range: <0; 1>
+value: 1
+}
+
+
+
+
+CANMMCAN_2_TXCIE[8]
+{
+type: UINT(8)
+alias: "AnalogInputVoltagesMessage1_PeriodicalOn"
+flags: PARAM
+desc: "Activate cyclic transmission for AnalogInputVoltagesMessage1"
+unit: ""
+range: <0; 1>
+value: 1
+}
+
+
+
+
+CANMMCAN_2_TXKIEX[8]
+{
+type: UINT(8)
+alias: "AnalogInputVoltagesMessage1_Kickout"
+flags: PARAM
+desc: "Kickout AnalogInputVoltagesMessage1"
+unit: ""
+range: <0; 1>
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TXCT[8]
+{
+type: flt(64,IEEE)
+alias: "AnalogInputVoltagesMessage1_CycleTime"
+flags: PARAM
+desc: "CycleTime AnalogInputVoltagesMessage1"
+unit: "s"
+range: <0; 1000>
+value: 0
+}
+
+
+
+
+
+endgroup -- block-group "TX"
+
+
+
+endgroup -- block-group "AnalogInputVoltagesMessage1"
+
+
+
+group "AnalogInputVoltagesMessage2" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+
+group "RX" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+CANMMCAN_2_RX_Msg_2_Sgn_1
+{
+type: flt(64,IEEE)
+alias: "IAV_AIN5_PressureSensorX"
+flags: OUTPUT|READONLY
+desc: ""
+unit: "V"
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RX_Msg_2_Sgn_2
+{
+type: flt(64,IEEE)
+alias: "IAV_AIN6_PressureSensorY"
+flags: OUTPUT|READONLY
+desc: ""
+unit: "V"
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RX_Msg_2_Sgn_3
+{
+type: flt(64,IEEE)
+alias: "IAV_AIN7_RearAngle2"
+flags: OUTPUT|READONLY
+desc: ""
+unit: "V"
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RX_Msg_2_Sgn_4
+{
+type: flt(64,IEEE)
+alias: "IAV_AIN8_RearAngle2Red"
+flags: OUTPUT|READONLY
+desc: ""
+unit: "V"
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RXPRIO[9]
+{
+type: UINT(8)
+alias: "AnalogInputVoltagesMessage2_Prio"
+flags: OUTPUT|READONLY
+desc: "J1939 Priority"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RXPGN[9]
+{
+type: UINT(32)
+alias: "AnalogInputVoltagesMessage2_PGN"
+flags: OUTPUT|READONLY
+desc: "J1939 Parameter Group Number"
+unit: ""
+value: 65337
+}
+
+
+
+
+CANMMCAN_2_RXSNIDX[9]
+{
+type: UINT(8)
+alias: "AnalogInputVoltagesMessage2_SNIDX"
+flags: OUTPUT|READONLY
+desc: "J1939 Source Node Index"
+unit: ""
+value: 1
+}
+
+
+
+
+CANMMCAN_2_RXSA[9]
+{
+type: UINT(8)
+alias: "AnalogInputVoltagesMessage2_SA"
+flags: OUTPUT|READONLY
+desc: "J1939 Source Address"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RXDA[9]
+{
+type: UINT(8)
+alias: "AnalogInputVoltagesMessage2_DA"
+flags: OUTPUT|READONLY
+desc: "J1939 Destination Address"
+unit: ""
+value: 255
+}
+
+
+
+
+CANMMCAN_2_MIDFRX[9]
+{
+type: UINT(8)
+alias: "AnalogInputVoltagesMessage2_IDFormat"
+flags: OUTPUT|READONLY
+desc: "Message ID Format"
+unit: ""
+value: 1
+}
+
+
+
+
+CANMMCAN_2_RXLEN[9]
+{
+type: UINT(32)
+alias: "AnalogInputVoltagesMessage2_Length"
+flags: OUTPUT|READONLY
+desc: "Message Length"
+unit: ""
+value: 8
+}
+
+
+
+
+CANMMCAN_2_RXsta[9]
+{
+type: UINT(8)
+alias: "AnalogInputVoltagesMessage2_status"
+flags: OUTPUT|READONLY
+desc: "AnalogInputVoltagesMessage2 Status"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RXdt[9]
+{
+type: flt(64,IEEE)
+alias: "AnalogInputVoltagesMessage2_dt"
+flags: OUTPUT|READONLY
+desc: "AnalogInputVoltagesMessage2 DeltaTime"
+unit: "s"
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RXt[9]
+{
+type: flt(64,IEEE)
+alias: "AnalogInputVoltagesMessage2_time"
+flags: OUTPUT|READONLY
+desc: "AnalogInputVoltagesMessage2 Time"
+unit: "s"
+value: 0.0
+}
+
+
+
+
+
+endgroup -- block-group "RX"
+
+
+
+group "TX" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+CANMMCAN_2_WBS[9]
+{
+type: UINT(8)
+alias: "AnalogInputVoltagesMessage2_CheckEnable"
+flags: OUTPUT|READONLY
+desc: "Check enabled AnalogInputVoltagesMessage2"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TXDT[9]
+{
+type: flt(64,IEEE)
+alias: "AnalogInputVoltagesMessage2_DelayTime"
+flags: OUTPUT|READONLY
+desc: "DelayTime AnalogInputVoltagesMessage2"
+unit: "s"
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TXsta[9]
+{
+type: UINT(8)
+alias: "AnalogInputVoltagesMessage2_status"
+flags: OUTPUT|READONLY
+desc: "AnalogInputVoltagesMessage2 Status"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TX_Msg_2_Sgn_1_constant
+{
+type: flt(64,IEEE)
+alias: "IAV_AIN5_PressureSensorX"
+flags: PARAM
+desc: ""
+unit: "V"
+range: <0; 642.55>
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TX_Msg_2_Sgn_2_constant
+{
+type: flt(64,IEEE)
+alias: "IAV_AIN6_PressureSensorY"
+flags: PARAM
+desc: ""
+unit: "V"
+range: <0; 642.55>
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TX_Msg_2_Sgn_3_constant
+{
+type: flt(64,IEEE)
+alias: "IAV_AIN7_RearAngle2"
+flags: PARAM
+desc: ""
+unit: "V"
+range: <0; 642.55>
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TX_Msg_2_Sgn_4_constant
+{
+type: flt(64,IEEE)
+alias: "IAV_AIN8_RearAngle2Red"
+flags: PARAM
+desc: ""
+unit: "V"
+range: <0; 642.55>
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TXEIN[9]
+{
+type: UINT(8)
+alias: "AnalogInputVoltagesMessage2_Enable"
+flags: PARAM
+desc: "Enable AnalogInputVoltagesMessage2"
+unit: ""
+range: <0; 1>
+value: 1
+}
+
+
+
+
+CANMMCAN_2_TXCIE[9]
+{
+type: UINT(8)
+alias: "AnalogInputVoltagesMessage2_PeriodicalOn"
+flags: PARAM
+desc: "Activate cyclic transmission for AnalogInputVoltagesMessage2"
+unit: ""
+range: <0; 1>
+value: 1
+}
+
+
+
+
+CANMMCAN_2_TXKIEX[9]
+{
+type: UINT(8)
+alias: "AnalogInputVoltagesMessage2_Kickout"
+flags: PARAM
+desc: "Kickout AnalogInputVoltagesMessage2"
+unit: ""
+range: <0; 1>
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TXCT[9]
+{
+type: flt(64,IEEE)
+alias: "AnalogInputVoltagesMessage2_CycleTime"
+flags: PARAM
+desc: "CycleTime AnalogInputVoltagesMessage2"
+unit: "s"
+range: <0; 1000>
+value: 0
+}
+
+
+
+
+
+endgroup -- block-group "TX"
+
+
+
+endgroup -- block-group "AnalogInputVoltagesMessage2"
+
+
+
+group "CurrentMeasurementOutputs1" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+
+group "RX" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+CANMMCAN_2_RX_Msg_3_Sgn_1
+{
+type: flt(64,IEEE)
+alias: "CMO_Output1"
+flags: OUTPUT|READONLY
+desc: ""
+unit: "A"
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RX_Msg_3_Sgn_2
+{
+type: flt(64,IEEE)
+alias: "CMO_Output2"
+flags: OUTPUT|READONLY
+desc: ""
+unit: "A"
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RX_Msg_3_Sgn_3
+{
+type: flt(64,IEEE)
+alias: "CMO_Output3"
+flags: OUTPUT|READONLY
+desc: ""
+unit: "A"
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RX_Msg_3_Sgn_4
+{
+type: flt(64,IEEE)
+alias: "CMO_Output4"
+flags: OUTPUT|READONLY
+desc: ""
+unit: "A"
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RXPRIO[0]
+{
+type: UINT(8)
+alias: "CurrentMeasurementOutputs1_Prio"
+flags: OUTPUT|READONLY
+desc: "J1939 Priority"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RXPGN[0]
+{
+type: UINT(32)
+alias: "CurrentMeasurementOutputs1_PGN"
+flags: OUTPUT|READONLY
+desc: "J1939 Parameter Group Number"
+unit: ""
+value: 65296
+}
+
+
+
+
+CANMMCAN_2_RXSNIDX[0]
+{
+type: UINT(8)
+alias: "CurrentMeasurementOutputs1_SNIDX"
+flags: OUTPUT|READONLY
+desc: "J1939 Source Node Index"
+unit: ""
+value: 1
+}
+
+
+
+
+CANMMCAN_2_RXSA[0]
+{
+type: UINT(8)
+alias: "CurrentMeasurementOutputs1_SA"
+flags: OUTPUT|READONLY
+desc: "J1939 Source Address"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RXDA[0]
+{
+type: UINT(8)
+alias: "CurrentMeasurementOutputs1_DA"
+flags: OUTPUT|READONLY
+desc: "J1939 Destination Address"
+unit: ""
+value: 255
+}
+
+
+
+
+CANMMCAN_2_MIDFRX[0]
+{
+type: UINT(8)
+alias: "CurrentMeasurementOutputs1_IDFormat"
+flags: OUTPUT|READONLY
+desc: "Message ID Format"
+unit: ""
+value: 1
+}
+
+
+
+
+CANMMCAN_2_RXLEN[0]
+{
+type: UINT(32)
+alias: "CurrentMeasurementOutputs1_Length"
+flags: OUTPUT|READONLY
+desc: "Message Length"
+unit: ""
+value: 8
+}
+
+
+
+
+CANMMCAN_2_RXsta[0]
+{
+type: UINT(8)
+alias: "CurrentMeasurementOutputs1_status"
+flags: OUTPUT|READONLY
+desc: "CurrentMeasurementOutputs1 Status"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RXdt[0]
+{
+type: flt(64,IEEE)
+alias: "CurrentMeasurementOutputs1_dt"
+flags: OUTPUT|READONLY
+desc: "CurrentMeasurementOutputs1 DeltaTime"
+unit: "s"
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RXt[0]
+{
+type: flt(64,IEEE)
+alias: "CurrentMeasurementOutputs1_time"
+flags: OUTPUT|READONLY
+desc: "CurrentMeasurementOutputs1 Time"
+unit: "s"
+value: 0.0
+}
+
+
+
+
+
+endgroup -- block-group "RX"
+
+
+
+group "TX" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+CANMMCAN_2_WBS[0]
+{
+type: UINT(8)
+alias: "CurrentMeasurementOutputs1_CheckEnable"
+flags: OUTPUT|READONLY
+desc: "Check enabled CurrentMeasurementOutputs1"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TXDT[0]
+{
+type: flt(64,IEEE)
+alias: "CurrentMeasurementOutputs1_DelayTime"
+flags: OUTPUT|READONLY
+desc: "DelayTime CurrentMeasurementOutputs1"
+unit: "s"
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TXsta[0]
+{
+type: UINT(8)
+alias: "CurrentMeasurementOutputs1_status"
+flags: OUTPUT|READONLY
+desc: "CurrentMeasurementOutputs1 Status"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TX_Msg_3_Sgn_1_constant
+{
+type: flt(64,IEEE)
+alias: "CMO_Output1"
+flags: PARAM
+desc: ""
+unit: "A"
+range: <0; 64255>
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TX_Msg_3_Sgn_2_constant
+{
+type: flt(64,IEEE)
+alias: "CMO_Output2"
+flags: PARAM
+desc: ""
+unit: "A"
+range: <0; 64255>
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TX_Msg_3_Sgn_3_constant
+{
+type: flt(64,IEEE)
+alias: "CMO_Output3"
+flags: PARAM
+desc: ""
+unit: "A"
+range: <0; 64255>
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TX_Msg_3_Sgn_4_constant
+{
+type: flt(64,IEEE)
+alias: "CMO_Output4"
+flags: PARAM
+desc: ""
+unit: "A"
+range: <0; 64255>
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TXEIN[0]
+{
+type: UINT(8)
+alias: "CurrentMeasurementOutputs1_Enable"
+flags: PARAM
+desc: "Enable CurrentMeasurementOutputs1"
+unit: ""
+range: <0; 1>
+value: 1
+}
+
+
+
+
+CANMMCAN_2_TXCIE[0]
+{
+type: UINT(8)
+alias: "CurrentMeasurementOutputs1_PeriodicalOn"
+flags: PARAM
+desc: "Activate cyclic transmission for CurrentMeasurementOutputs1"
+unit: ""
+range: <0; 1>
+value: 1
+}
+
+
+
+
+CANMMCAN_2_TXKIEX[0]
+{
+type: UINT(8)
+alias: "CurrentMeasurementOutputs1_Kickout"
+flags: PARAM
+desc: "Kickout CurrentMeasurementOutputs1"
+unit: ""
+range: <0; 1>
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TXCT[0]
+{
+type: flt(64,IEEE)
+alias: "CurrentMeasurementOutputs1_CycleTime"
+flags: PARAM
+desc: "CycleTime CurrentMeasurementOutputs1"
+unit: "s"
+range: <0; 1000>
+value: 0
+}
+
+
+
+
+
+endgroup -- block-group "TX"
+
+
+
+endgroup -- block-group "CurrentMeasurementOutputs1"
+
+
+
+group "CurrentMeasurementOutputs2" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+
+group "RX" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+CANMMCAN_2_RX_Msg_4_Sgn_1
+{
+type: flt(64,IEEE)
+alias: "CMO_Output5"
+flags: OUTPUT|READONLY
+desc: ""
+unit: "A"
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RX_Msg_4_Sgn_2
+{
+type: flt(64,IEEE)
+alias: "CMO_Output6"
+flags: OUTPUT|READONLY
+desc: ""
+unit: "A"
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RX_Msg_4_Sgn_3
+{
+type: flt(64,IEEE)
+alias: "CMO_Output7"
+flags: OUTPUT|READONLY
+desc: ""
+unit: "A"
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RX_Msg_4_Sgn_4
+{
+type: flt(64,IEEE)
+alias: "CMO_Output8"
+flags: OUTPUT|READONLY
+desc: ""
+unit: "A"
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RXPRIO[1]
+{
+type: UINT(8)
+alias: "CurrentMeasurementOutputs2_Prio"
+flags: OUTPUT|READONLY
+desc: "J1939 Priority"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RXPGN[1]
+{
+type: UINT(32)
+alias: "CurrentMeasurementOutputs2_PGN"
+flags: OUTPUT|READONLY
+desc: "J1939 Parameter Group Number"
+unit: ""
+value: 65297
+}
+
+
+
+
+CANMMCAN_2_RXSNIDX[1]
+{
+type: UINT(8)
+alias: "CurrentMeasurementOutputs2_SNIDX"
+flags: OUTPUT|READONLY
+desc: "J1939 Source Node Index"
+unit: ""
+value: 1
+}
+
+
+
+
+CANMMCAN_2_RXSA[1]
+{
+type: UINT(8)
+alias: "CurrentMeasurementOutputs2_SA"
+flags: OUTPUT|READONLY
+desc: "J1939 Source Address"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RXDA[1]
+{
+type: UINT(8)
+alias: "CurrentMeasurementOutputs2_DA"
+flags: OUTPUT|READONLY
+desc: "J1939 Destination Address"
+unit: ""
+value: 255
+}
+
+
+
+
+CANMMCAN_2_MIDFRX[1]
+{
+type: UINT(8)
+alias: "CurrentMeasurementOutputs2_IDFormat"
+flags: OUTPUT|READONLY
+desc: "Message ID Format"
+unit: ""
+value: 1
+}
+
+
+
+
+CANMMCAN_2_RXLEN[1]
+{
+type: UINT(32)
+alias: "CurrentMeasurementOutputs2_Length"
+flags: OUTPUT|READONLY
+desc: "Message Length"
+unit: ""
+value: 8
+}
+
+
+
+
+CANMMCAN_2_RXsta[1]
+{
+type: UINT(8)
+alias: "CurrentMeasurementOutputs2_status"
+flags: OUTPUT|READONLY
+desc: "CurrentMeasurementOutputs2 Status"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RXdt[1]
+{
+type: flt(64,IEEE)
+alias: "CurrentMeasurementOutputs2_dt"
+flags: OUTPUT|READONLY
+desc: "CurrentMeasurementOutputs2 DeltaTime"
+unit: "s"
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RXt[1]
+{
+type: flt(64,IEEE)
+alias: "CurrentMeasurementOutputs2_time"
+flags: OUTPUT|READONLY
+desc: "CurrentMeasurementOutputs2 Time"
+unit: "s"
+value: 0.0
+}
+
+
+
+
+
+endgroup -- block-group "RX"
+
+
+
+group "TX" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+CANMMCAN_2_WBS[1]
+{
+type: UINT(8)
+alias: "CurrentMeasurementOutputs2_CheckEnable"
+flags: OUTPUT|READONLY
+desc: "Check enabled CurrentMeasurementOutputs2"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TXDT[1]
+{
+type: flt(64,IEEE)
+alias: "CurrentMeasurementOutputs2_DelayTime"
+flags: OUTPUT|READONLY
+desc: "DelayTime CurrentMeasurementOutputs2"
+unit: "s"
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TXsta[1]
+{
+type: UINT(8)
+alias: "CurrentMeasurementOutputs2_status"
+flags: OUTPUT|READONLY
+desc: "CurrentMeasurementOutputs2 Status"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TX_Msg_4_Sgn_1_constant
+{
+type: flt(64,IEEE)
+alias: "CMO_Output5"
+flags: PARAM
+desc: ""
+unit: "A"
+range: <0; 64255>
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TX_Msg_4_Sgn_2_constant
+{
+type: flt(64,IEEE)
+alias: "CMO_Output6"
+flags: PARAM
+desc: ""
+unit: "A"
+range: <0; 64255>
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TX_Msg_4_Sgn_3_constant
+{
+type: flt(64,IEEE)
+alias: "CMO_Output7"
+flags: PARAM
+desc: ""
+unit: "A"
+range: <0; 64255>
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TX_Msg_4_Sgn_4_constant
+{
+type: flt(64,IEEE)
+alias: "CMO_Output8"
+flags: PARAM
+desc: ""
+unit: "A"
+range: <0; 64255>
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TXEIN[1]
+{
+type: UINT(8)
+alias: "CurrentMeasurementOutputs2_Enable"
+flags: PARAM
+desc: "Enable CurrentMeasurementOutputs2"
+unit: ""
+range: <0; 1>
+value: 1
+}
+
+
+
+
+CANMMCAN_2_TXCIE[1]
+{
+type: UINT(8)
+alias: "CurrentMeasurementOutputs2_PeriodicalOn"
+flags: PARAM
+desc: "Activate cyclic transmission for CurrentMeasurementOutputs2"
+unit: ""
+range: <0; 1>
+value: 1
+}
+
+
+
+
+CANMMCAN_2_TXKIEX[1]
+{
+type: UINT(8)
+alias: "CurrentMeasurementOutputs2_Kickout"
+flags: PARAM
+desc: "Kickout CurrentMeasurementOutputs2"
+unit: ""
+range: <0; 1>
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TXCT[1]
+{
+type: flt(64,IEEE)
+alias: "CurrentMeasurementOutputs2_CycleTime"
+flags: PARAM
+desc: "CycleTime CurrentMeasurementOutputs2"
+unit: "s"
+range: <0; 1000>
+value: 0
+}
+
+
+
+
+
+endgroup -- block-group "TX"
+
+
+
+endgroup -- block-group "CurrentMeasurementOutputs2"
+
+
+
+group "DigitalInput" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+
+group "RX" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+CANMMCAN_2_RX_Msg_5_Sgn_1
+{
+type: UINT(8)
+alias: "DIV_DIN1"
+flags: OUTPUT|READONLY
+desc: ""
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RX_Msg_5_Sgn_2
+{
+type: UINT(8)
+alias: "DIV_DIN2"
+flags: OUTPUT|READONLY
+desc: ""
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RX_Msg_5_Sgn_3
+{
+type: UINT(8)
+alias: "DIV_DIN3"
+flags: OUTPUT|READONLY
+desc: ""
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RX_Msg_5_Sgn_4
+{
+type: UINT(8)
+alias: "DIV_DIN4"
+flags: OUTPUT|READONLY
+desc: ""
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RX_Msg_5_Sgn_5
+{
+type: UINT(8)
+alias: "DIV_DIN5"
+flags: OUTPUT|READONLY
+desc: ""
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RX_Msg_5_Sgn_6
+{
+type: UINT(8)
+alias: "DIV_DIN6"
+flags: OUTPUT|READONLY
+desc: ""
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RX_Msg_5_Sgn_7
+{
+type: UINT(8)
+alias: "DIV_DIN7"
+flags: OUTPUT|READONLY
+desc: ""
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RX_Msg_5_Sgn_8
+{
+type: UINT(8)
+alias: "DIV_DIN8"
+flags: OUTPUT|READONLY
+desc: ""
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RX_Msg_5_Sgn_9
+{
+type: UINT(8)
+alias: "DIV_DIN9"
+flags: OUTPUT|READONLY
+desc: ""
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RX_Msg_5_Sgn_10
+{
+type: UINT(8)
+alias: "DIV_DIN10"
+flags: OUTPUT|READONLY
+desc: ""
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RX_Msg_5_Sgn_11
+{
+type: UINT(8)
+alias: "DIV_DIN11"
+flags: OUTPUT|READONLY
+desc: ""
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RXPRIO[10]
+{
+type: UINT(8)
+alias: "DigitalInput_Prio"
+flags: OUTPUT|READONLY
+desc: "J1939 Priority"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RXPGN[10]
+{
+type: UINT(32)
+alias: "DigitalInput_PGN"
+flags: OUTPUT|READONLY
+desc: "J1939 Parameter Group Number"
+unit: ""
+value: 65344
+}
+
+
+
+
+CANMMCAN_2_RXSNIDX[10]
+{
+type: UINT(8)
+alias: "DigitalInput_SNIDX"
+flags: OUTPUT|READONLY
+desc: "J1939 Source Node Index"
+unit: ""
+value: 1
+}
+
+
+
+
+CANMMCAN_2_RXSA[10]
+{
+type: UINT(8)
+alias: "DigitalInput_SA"
+flags: OUTPUT|READONLY
+desc: "J1939 Source Address"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RXDA[10]
+{
+type: UINT(8)
+alias: "DigitalInput_DA"
+flags: OUTPUT|READONLY
+desc: "J1939 Destination Address"
+unit: ""
+value: 255
+}
+
+
+
+
+CANMMCAN_2_MIDFRX[10]
+{
+type: UINT(8)
+alias: "DigitalInput_IDFormat"
+flags: OUTPUT|READONLY
+desc: "Message ID Format"
+unit: ""
+value: 1
+}
+
+
+
+
+CANMMCAN_2_RXLEN[10]
+{
+type: UINT(32)
+alias: "DigitalInput_Length"
+flags: OUTPUT|READONLY
+desc: "Message Length"
+unit: ""
+value: 8
+}
+
+
+
+
+CANMMCAN_2_RXsta[10]
+{
+type: UINT(8)
+alias: "DigitalInput_status"
+flags: OUTPUT|READONLY
+desc: "DigitalInput Status"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RXdt[10]
+{
+type: flt(64,IEEE)
+alias: "DigitalInput_dt"
+flags: OUTPUT|READONLY
+desc: "DigitalInput DeltaTime"
+unit: "s"
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RXt[10]
+{
+type: flt(64,IEEE)
+alias: "DigitalInput_time"
+flags: OUTPUT|READONLY
+desc: "DigitalInput Time"
+unit: "s"
+value: 0.0
+}
+
+
+
+
+
+endgroup -- block-group "RX"
+
+
+
+group "TX" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+CANMMCAN_2_WBS[10]
+{
+type: UINT(8)
+alias: "DigitalInput_CheckEnable"
+flags: OUTPUT|READONLY
+desc: "Check enabled DigitalInput"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TXDT[10]
+{
+type: flt(64,IEEE)
+alias: "DigitalInput_DelayTime"
+flags: OUTPUT|READONLY
+desc: "DelayTime DigitalInput"
+unit: "s"
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TXsta[10]
+{
+type: UINT(8)
+alias: "DigitalInput_status"
+flags: OUTPUT|READONLY
+desc: "DigitalInput Status"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TX_Msg_5_Sgn_1_constant
+{
+type: UINT(8)
+alias: "DIV_DIN1"
+flags: PARAM
+desc: ""
+unit: ""
+range: <0; 3>
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TX_Msg_5_Sgn_2_constant
+{
+type: UINT(8)
+alias: "DIV_DIN2"
+flags: PARAM
+desc: ""
+unit: ""
+range: <0; 3>
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TX_Msg_5_Sgn_3_constant
+{
+type: UINT(8)
+alias: "DIV_DIN3"
+flags: PARAM
+desc: ""
+unit: ""
+range: <0; 3>
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TX_Msg_5_Sgn_4_constant
+{
+type: UINT(8)
+alias: "DIV_DIN4"
+flags: PARAM
+desc: ""
+unit: ""
+range: <0; 3>
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TX_Msg_5_Sgn_5_constant
+{
+type: UINT(8)
+alias: "DIV_DIN5"
+flags: PARAM
+desc: ""
+unit: ""
+range: <0; 3>
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TX_Msg_5_Sgn_6_constant
+{
+type: UINT(8)
+alias: "DIV_DIN6"
+flags: PARAM
+desc: ""
+unit: ""
+range: <0; 3>
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TX_Msg_5_Sgn_7_constant
+{
+type: UINT(8)
+alias: "DIV_DIN7"
+flags: PARAM
+desc: ""
+unit: ""
+range: <0; 3>
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TX_Msg_5_Sgn_8_constant
+{
+type: UINT(8)
+alias: "DIV_DIN8"
+flags: PARAM
+desc: ""
+unit: ""
+range: <0; 3>
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TX_Msg_5_Sgn_9_constant
+{
+type: UINT(8)
+alias: "DIV_DIN9"
+flags: PARAM
+desc: ""
+unit: ""
+range: <0; 3>
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TX_Msg_5_Sgn_10_constant
+{
+type: UINT(8)
+alias: "DIV_DIN10"
+flags: PARAM
+desc: ""
+unit: ""
+range: <0; 3>
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TX_Msg_5_Sgn_11_constant
+{
+type: UINT(8)
+alias: "DIV_DIN11"
+flags: PARAM
+desc: ""
+unit: ""
+range: <0; 3>
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TXEIN[10]
+{
+type: UINT(8)
+alias: "DigitalInput_Enable"
+flags: PARAM
+desc: "Enable DigitalInput"
+unit: ""
+range: <0; 1>
+value: 1
+}
+
+
+
+
+CANMMCAN_2_TXCIE[10]
+{
+type: UINT(8)
+alias: "DigitalInput_PeriodicalOn"
+flags: PARAM
+desc: "Activate cyclic transmission for DigitalInput"
+unit: ""
+range: <0; 1>
+value: 1
+}
+
+
+
+
+CANMMCAN_2_TXKIEX[10]
+{
+type: UINT(8)
+alias: "DigitalInput_Kickout"
+flags: PARAM
+desc: "Kickout DigitalInput"
+unit: ""
+range: <0; 1>
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TXCT[10]
+{
+type: flt(64,IEEE)
+alias: "DigitalInput_CycleTime"
+flags: PARAM
+desc: "CycleTime DigitalInput"
+unit: "s"
+range: <0; 1000>
+value: 0
+}
+
+
+
+
+
+endgroup -- block-group "TX"
+
+
+
+endgroup -- block-group "DigitalInput"
+
+
+
+group "EtsDataMessage1" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+
+group "RX" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+CANMMCAN_2_RX_Msg_6_Sgn_1
+{
+type: UINT(8)
+alias: "ETSD1_InSpeed1"
+flags: OUTPUT|READONLY
+desc: ""
+unit: "km/h"
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RX_Msg_6_Sgn_2
+{
+type: UINT(8)
+alias: "ETSD1_InSpeed2"
+flags: OUTPUT|READONLY
+desc: ""
+unit: "km/h"
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RX_Msg_6_Sgn_3
+{
+type: flt(64,IEEE)
+alias: "ETSD1_TargetAngle"
+flags: OUTPUT|READONLY
+desc: ""
+unit: "Grd"
+value: -125
+}
+
+
+
+
+CANMMCAN_2_RX_Msg_6_Sgn_4
+{
+type: flt(64,IEEE)
+alias: "ETSD1_FrontAngle"
+flags: OUTPUT|READONLY
+desc: ""
+unit: "Grd"
+value: -125
+}
+
+
+
+
+CANMMCAN_2_RX_Msg_6_Sgn_5
+{
+type: flt(64,IEEE)
+alias: "ETSD1_RearAngle"
+flags: OUTPUT|READONLY
+desc: ""
+unit: "Grd"
+value: -125
+}
+
+
+
+
+CANMMCAN_2_RXPRIO[11]
+{
+type: UINT(8)
+alias: "EtsDataMessage1_Prio"
+flags: OUTPUT|READONLY
+desc: "J1939 Priority"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RXPGN[11]
+{
+type: UINT(32)
+alias: "EtsDataMessage1_PGN"
+flags: OUTPUT|READONLY
+desc: "J1939 Parameter Group Number"
+unit: ""
+value: 65409
+}
+
+
+
+
+CANMMCAN_2_RXSNIDX[11]
+{
+type: UINT(8)
+alias: "EtsDataMessage1_SNIDX"
+flags: OUTPUT|READONLY
+desc: "J1939 Source Node Index"
+unit: ""
+value: 1
+}
+
+
+
+
+CANMMCAN_2_RXSA[11]
+{
+type: UINT(8)
+alias: "EtsDataMessage1_SA"
+flags: OUTPUT|READONLY
+desc: "J1939 Source Address"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RXDA[11]
+{
+type: UINT(8)
+alias: "EtsDataMessage1_DA"
+flags: OUTPUT|READONLY
+desc: "J1939 Destination Address"
+unit: ""
+value: 255
+}
+
+
+
+
+CANMMCAN_2_MIDFRX[11]
+{
+type: UINT(8)
+alias: "EtsDataMessage1_IDFormat"
+flags: OUTPUT|READONLY
+desc: "Message ID Format"
+unit: ""
+value: 1
+}
+
+
+
+
+CANMMCAN_2_RXLEN[11]
+{
+type: UINT(32)
+alias: "EtsDataMessage1_Length"
+flags: OUTPUT|READONLY
+desc: "Message Length"
+unit: ""
+value: 8
+}
+
+
+
+
+CANMMCAN_2_RXsta[11]
+{
+type: UINT(8)
+alias: "EtsDataMessage1_status"
+flags: OUTPUT|READONLY
+desc: "EtsDataMessage1 Status"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RXdt[11]
+{
+type: flt(64,IEEE)
+alias: "EtsDataMessage1_dt"
+flags: OUTPUT|READONLY
+desc: "EtsDataMessage1 DeltaTime"
+unit: "s"
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RXt[11]
+{
+type: flt(64,IEEE)
+alias: "EtsDataMessage1_time"
+flags: OUTPUT|READONLY
+desc: "EtsDataMessage1 Time"
+unit: "s"
+value: 0.0
+}
+
+
+
+
+
+endgroup -- block-group "RX"
+
+
+
+group "TX" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+CANMMCAN_2_WBS[11]
+{
+type: UINT(8)
+alias: "EtsDataMessage1_CheckEnable"
+flags: OUTPUT|READONLY
+desc: "Check enabled EtsDataMessage1"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TXDT[11]
+{
+type: flt(64,IEEE)
+alias: "EtsDataMessage1_DelayTime"
+flags: OUTPUT|READONLY
+desc: "DelayTime EtsDataMessage1"
+unit: "s"
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TXsta[11]
+{
+type: UINT(8)
+alias: "EtsDataMessage1_status"
+flags: OUTPUT|READONLY
+desc: "EtsDataMessage1 Status"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TX_Msg_6_Sgn_1_constant
+{
+type: UINT(8)
+alias: "ETSD1_InSpeed1"
+flags: PARAM
+desc: ""
+unit: "km/h"
+range: <0; 250>
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TX_Msg_6_Sgn_2_constant
+{
+type: UINT(8)
+alias: "ETSD1_InSpeed2"
+flags: PARAM
+desc: ""
+unit: "km/h"
+range: <0; 250>
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TX_Msg_6_Sgn_3_constant
+{
+type: flt(64,IEEE)
+alias: "ETSD1_TargetAngle"
+flags: PARAM
+desc: ""
+unit: "Grd"
+range: <-125; 125>
+value: -125
+}
+
+
+
+
+CANMMCAN_2_TX_Msg_6_Sgn_4_constant
+{
+type: flt(64,IEEE)
+alias: "ETSD1_FrontAngle"
+flags: PARAM
+desc: ""
+unit: "Grd"
+range: <-125; 125>
+value: -125
+}
+
+
+
+
+CANMMCAN_2_TX_Msg_6_Sgn_5_constant
+{
+type: flt(64,IEEE)
+alias: "ETSD1_RearAngle"
+flags: PARAM
+desc: ""
+unit: "Grd"
+range: <-125; 125>
+value: -125
+}
+
+
+
+
+CANMMCAN_2_TXEIN[11]
+{
+type: UINT(8)
+alias: "EtsDataMessage1_Enable"
+flags: PARAM
+desc: "Enable EtsDataMessage1"
+unit: ""
+range: <0; 1>
+value: 1
+}
+
+
+
+
+CANMMCAN_2_TXCIE[11]
+{
+type: UINT(8)
+alias: "EtsDataMessage1_PeriodicalOn"
+flags: PARAM
+desc: "Activate cyclic transmission for EtsDataMessage1"
+unit: ""
+range: <0; 1>
+value: 1
+}
+
+
+
+
+CANMMCAN_2_TXKIEX[11]
+{
+type: UINT(8)
+alias: "EtsDataMessage1_Kickout"
+flags: PARAM
+desc: "Kickout EtsDataMessage1"
+unit: ""
+range: <0; 1>
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TXCT[11]
+{
+type: flt(64,IEEE)
+alias: "EtsDataMessage1_CycleTime"
+flags: PARAM
+desc: "CycleTime EtsDataMessage1"
+unit: "s"
+range: <0; 1000>
+value: 0
+}
+
+
+
+
+
+endgroup -- block-group "TX"
+
+
+
+endgroup -- block-group "EtsDataMessage1"
+
+
+
+group "EtsDataMessage2" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+
+group "RX" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+CANMMCAN_2_RX_Msg_7_Sgn_1
+{
+type: flt(64,IEEE)
+alias: "ETSD2_Target2Angle"
+flags: OUTPUT|READONLY
+desc: ""
+unit: "grd"
+value: -125
+}
+
+
+
+
+CANMMCAN_2_RX_Msg_7_Sgn_2
+{
+type: flt(64,IEEE)
+alias: "ETSD2_Rear2Angle"
+flags: OUTPUT|READONLY
+desc: ""
+unit: "grd"
+value: -125
+}
+
+
+
+
+CANMMCAN_2_RX_Msg_7_Sgn_3
+{
+type: flt(64,IEEE)
+alias: "ETSD2_PxPressure"
+flags: OUTPUT|READONLY
+desc: ""
+unit: "Bar"
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RX_Msg_7_Sgn_4
+{
+type: flt(64,IEEE)
+alias: "ETSD2_PyPressure"
+flags: OUTPUT|READONLY
+desc: ""
+unit: "Bar"
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RXPRIO[13]
+{
+type: UINT(8)
+alias: "EtsDataMessage2_Prio"
+flags: OUTPUT|READONLY
+desc: "J1939 Priority"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RXPGN[13]
+{
+type: UINT(32)
+alias: "EtsDataMessage2_PGN"
+flags: OUTPUT|READONLY
+desc: "J1939 Parameter Group Number"
+unit: ""
+value: 65412
+}
+
+
+
+
+CANMMCAN_2_RXSNIDX[13]
+{
+type: UINT(8)
+alias: "EtsDataMessage2_SNIDX"
+flags: OUTPUT|READONLY
+desc: "J1939 Source Node Index"
+unit: ""
+value: 1
+}
+
+
+
+
+CANMMCAN_2_RXSA[13]
+{
+type: UINT(8)
+alias: "EtsDataMessage2_SA"
+flags: OUTPUT|READONLY
+desc: "J1939 Source Address"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RXDA[13]
+{
+type: UINT(8)
+alias: "EtsDataMessage2_DA"
+flags: OUTPUT|READONLY
+desc: "J1939 Destination Address"
+unit: ""
+value: 255
+}
+
+
+
+
+CANMMCAN_2_MIDFRX[13]
+{
+type: UINT(8)
+alias: "EtsDataMessage2_IDFormat"
+flags: OUTPUT|READONLY
+desc: "Message ID Format"
+unit: ""
+value: 1
+}
+
+
+
+
+CANMMCAN_2_RXLEN[13]
+{
+type: UINT(32)
+alias: "EtsDataMessage2_Length"
+flags: OUTPUT|READONLY
+desc: "Message Length"
+unit: ""
+value: 8
+}
+
+
+
+
+CANMMCAN_2_RXsta[13]
+{
+type: UINT(8)
+alias: "EtsDataMessage2_status"
+flags: OUTPUT|READONLY
+desc: "EtsDataMessage2 Status"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RXdt[13]
+{
+type: flt(64,IEEE)
+alias: "EtsDataMessage2_dt"
+flags: OUTPUT|READONLY
+desc: "EtsDataMessage2 DeltaTime"
+unit: "s"
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RXt[13]
+{
+type: flt(64,IEEE)
+alias: "EtsDataMessage2_time"
+flags: OUTPUT|READONLY
+desc: "EtsDataMessage2 Time"
+unit: "s"
+value: 0.0
+}
+
+
+
+
+
+endgroup -- block-group "RX"
+
+
+
+group "TX" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+CANMMCAN_2_WBS[13]
+{
+type: UINT(8)
+alias: "EtsDataMessage2_CheckEnable"
+flags: OUTPUT|READONLY
+desc: "Check enabled EtsDataMessage2"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TXDT[13]
+{
+type: flt(64,IEEE)
+alias: "EtsDataMessage2_DelayTime"
+flags: OUTPUT|READONLY
+desc: "DelayTime EtsDataMessage2"
+unit: "s"
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TXsta[13]
+{
+type: UINT(8)
+alias: "EtsDataMessage2_status"
+flags: OUTPUT|READONLY
+desc: "EtsDataMessage2 Status"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TX_Msg_7_Sgn_1_constant
+{
+type: flt(64,IEEE)
+alias: "ETSD2_Target2Angle"
+flags: PARAM
+desc: ""
+unit: "grd"
+range: <-125; 125>
+value: -125
+}
+
+
+
+
+CANMMCAN_2_TX_Msg_7_Sgn_2_constant
+{
+type: flt(64,IEEE)
+alias: "ETSD2_Rear2Angle"
+flags: PARAM
+desc: ""
+unit: "grd"
+range: <-125; 125>
+value: -125
+}
+
+
+
+
+CANMMCAN_2_TX_Msg_7_Sgn_3_constant
+{
+type: flt(64,IEEE)
+alias: "ETSD2_PxPressure"
+flags: PARAM
+desc: ""
+unit: "Bar"
+range: <0; 1310.7>
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TX_Msg_7_Sgn_4_constant
+{
+type: flt(64,IEEE)
+alias: "ETSD2_PyPressure"
+flags: PARAM
+desc: ""
+unit: "Bar"
+range: <0; 1310.7>
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TXEIN[13]
+{
+type: UINT(8)
+alias: "EtsDataMessage2_Enable"
+flags: PARAM
+desc: "Enable EtsDataMessage2"
+unit: ""
+range: <0; 1>
+value: 1
+}
+
+
+
+
+CANMMCAN_2_TXCIE[13]
+{
+type: UINT(8)
+alias: "EtsDataMessage2_PeriodicalOn"
+flags: PARAM
+desc: "Activate cyclic transmission for EtsDataMessage2"
+unit: ""
+range: <0; 1>
+value: 1
+}
+
+
+
+
+CANMMCAN_2_TXKIEX[13]
+{
+type: UINT(8)
+alias: "EtsDataMessage2_Kickout"
+flags: PARAM
+desc: "Kickout EtsDataMessage2"
+unit: ""
+range: <0; 1>
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TXCT[13]
+{
+type: flt(64,IEEE)
+alias: "EtsDataMessage2_CycleTime"
+flags: PARAM
+desc: "CycleTime EtsDataMessage2"
+unit: "s"
+range: <0; 1000>
+value: 0
+}
+
+
+
+
+
+endgroup -- block-group "TX"
+
+
+
+endgroup -- block-group "EtsDataMessage2"
+
+
+
+group "EtsDataMessage3" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+
+group "RX" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+CANMMCAN_2_RX_Msg_8_Sgn_1
+{
+type: INT(16)
+alias: "ETSD3_AmbientTemp"
+flags: OUTPUT|READONLY
+desc: ""
+unit: "grd"
+value: -40
+}
+
+
+
+
+CANMMCAN_2_RX_Msg_8_Sgn_2
+{
+type: INT(16)
+alias: "ETSD3_OilTemp"
+flags: OUTPUT|READONLY
+desc: ""
+unit: "grd"
+value: -40
+}
+
+
+
+
+CANMMCAN_2_RX_Msg_8_Sgn_3
+{
+type: UINT(8)
+alias: "ETSD3_SecMicroVersion"
+flags: OUTPUT|READONLY
+desc: ""
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RX_Msg_8_Sgn_4
+{
+type: UINT(8)
+alias: "ETSD3_NmiNumber"
+flags: OUTPUT|READONLY
+desc: ""
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RXPRIO[14]
+{
+type: UINT(8)
+alias: "EtsDataMessage3_Prio"
+flags: OUTPUT|READONLY
+desc: "J1939 Priority"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RXPGN[14]
+{
+type: UINT(32)
+alias: "EtsDataMessage3_PGN"
+flags: OUTPUT|READONLY
+desc: "J1939 Parameter Group Number"
+unit: ""
+value: 65413
+}
+
+
+
+
+CANMMCAN_2_RXSNIDX[14]
+{
+type: UINT(8)
+alias: "EtsDataMessage3_SNIDX"
+flags: OUTPUT|READONLY
+desc: "J1939 Source Node Index"
+unit: ""
+value: 1
+}
+
+
+
+
+CANMMCAN_2_RXSA[14]
+{
+type: UINT(8)
+alias: "EtsDataMessage3_SA"
+flags: OUTPUT|READONLY
+desc: "J1939 Source Address"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RXDA[14]
+{
+type: UINT(8)
+alias: "EtsDataMessage3_DA"
+flags: OUTPUT|READONLY
+desc: "J1939 Destination Address"
+unit: ""
+value: 255
+}
+
+
+
+
+CANMMCAN_2_MIDFRX[14]
+{
+type: UINT(8)
+alias: "EtsDataMessage3_IDFormat"
+flags: OUTPUT|READONLY
+desc: "Message ID Format"
+unit: ""
+value: 1
+}
+
+
+
+
+CANMMCAN_2_RXLEN[14]
+{
+type: UINT(32)
+alias: "EtsDataMessage3_Length"
+flags: OUTPUT|READONLY
+desc: "Message Length"
+unit: ""
+value: 8
+}
+
+
+
+
+CANMMCAN_2_RXsta[14]
+{
+type: UINT(8)
+alias: "EtsDataMessage3_status"
+flags: OUTPUT|READONLY
+desc: "EtsDataMessage3 Status"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RXdt[14]
+{
+type: flt(64,IEEE)
+alias: "EtsDataMessage3_dt"
+flags: OUTPUT|READONLY
+desc: "EtsDataMessage3 DeltaTime"
+unit: "s"
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RXt[14]
+{
+type: flt(64,IEEE)
+alias: "EtsDataMessage3_time"
+flags: OUTPUT|READONLY
+desc: "EtsDataMessage3 Time"
+unit: "s"
+value: 0.0
+}
+
+
+
+
+
+endgroup -- block-group "RX"
+
+
+
+group "TX" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+CANMMCAN_2_WBS[14]
+{
+type: UINT(8)
+alias: "EtsDataMessage3_CheckEnable"
+flags: OUTPUT|READONLY
+desc: "Check enabled EtsDataMessage3"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TXDT[14]
+{
+type: flt(64,IEEE)
+alias: "EtsDataMessage3_DelayTime"
+flags: OUTPUT|READONLY
+desc: "DelayTime EtsDataMessage3"
+unit: "s"
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TXsta[14]
+{
+type: UINT(8)
+alias: "EtsDataMessage3_status"
+flags: OUTPUT|READONLY
+desc: "EtsDataMessage3 Status"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TX_Msg_8_Sgn_1_constant
+{
+type: INT(16)
+alias: "ETSD3_AmbientTemp"
+flags: PARAM
+desc: ""
+unit: "grd"
+range: <-40; 210>
+value: -40
+}
+
+
+
+
+CANMMCAN_2_TX_Msg_8_Sgn_2_constant
+{
+type: INT(16)
+alias: "ETSD3_OilTemp"
+flags: PARAM
+desc: ""
+unit: "grd"
+range: <-40; 210>
+value: -40
+}
+
+
+
+
+CANMMCAN_2_TX_Msg_8_Sgn_3_constant
+{
+type: UINT(8)
+alias: "ETSD3_SecMicroVersion"
+flags: PARAM
+desc: ""
+unit: ""
+range: <0; 255>
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TX_Msg_8_Sgn_4_constant
+{
+type: UINT(8)
+alias: "ETSD3_NmiNumber"
+flags: PARAM
+desc: ""
+unit: ""
+range: <0; 255>
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TXEIN[14]
+{
+type: UINT(8)
+alias: "EtsDataMessage3_Enable"
+flags: PARAM
+desc: "Enable EtsDataMessage3"
+unit: ""
+range: <0; 1>
+value: 1
+}
+
+
+
+
+CANMMCAN_2_TXCIE[14]
+{
+type: UINT(8)
+alias: "EtsDataMessage3_PeriodicalOn"
+flags: PARAM
+desc: "Activate cyclic transmission for EtsDataMessage3"
+unit: ""
+range: <0; 1>
+value: 1
+}
+
+
+
+
+CANMMCAN_2_TXKIEX[14]
+{
+type: UINT(8)
+alias: "EtsDataMessage3_Kickout"
+flags: PARAM
+desc: "Kickout EtsDataMessage3"
+unit: ""
+range: <0; 1>
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TXCT[14]
+{
+type: flt(64,IEEE)
+alias: "EtsDataMessage3_CycleTime"
+flags: PARAM
+desc: "CycleTime EtsDataMessage3"
+unit: "s"
+range: <0; 1000>
+value: 0
+}
+
+
+
+
+
+endgroup -- block-group "TX"
+
+
+
+endgroup -- block-group "EtsDataMessage3"
+
+
+
+group "EtsDataMessage4" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+
+group "RX" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+CANMMCAN_2_RX_Msg_9_Sgn_1
+{
+type: flt(64,IEEE)
+alias: "ETSD4_CanSensorAngle"
+flags: OUTPUT|READONLY
+desc: ""
+unit: "Grd"
+value: -200
+}
+
+
+
+
+CANMMCAN_2_RX_Msg_9_Sgn_2
+{
+type: flt(64,IEEE)
+alias: "ETSD4_CanSensorEtsAngle"
+flags: OUTPUT|READONLY
+desc: ""
+unit: "Grd"
+value: -64
+}
+
+
+
+
+CANMMCAN_2_RX_Msg_9_Sgn_3
+{
+type: INT(16)
+alias: "ETSD4_CanSensorTemp"
+flags: OUTPUT|READONLY
+desc: ""
+unit: "grd/C"
+value: -40
+}
+
+
+
+
+CANMMCAN_2_RX_Msg_9_Sgn_4
+{
+type: UINT(8)
+alias: "ETSD4_CanSensorAlarm"
+flags: OUTPUT|READONLY
+desc: ""
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RXPRIO[15]
+{
+type: UINT(8)
+alias: "EtsDataMessage4_Prio"
+flags: OUTPUT|READONLY
+desc: "J1939 Priority"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RXPGN[15]
+{
+type: UINT(32)
+alias: "EtsDataMessage4_PGN"
+flags: OUTPUT|READONLY
+desc: "J1939 Parameter Group Number"
+unit: ""
+value: 65414
+}
+
+
+
+
+CANMMCAN_2_RXSNIDX[15]
+{
+type: UINT(8)
+alias: "EtsDataMessage4_SNIDX"
+flags: OUTPUT|READONLY
+desc: "J1939 Source Node Index"
+unit: ""
+value: 1
+}
+
+
+
+
+CANMMCAN_2_RXSA[15]
+{
+type: UINT(8)
+alias: "EtsDataMessage4_SA"
+flags: OUTPUT|READONLY
+desc: "J1939 Source Address"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RXDA[15]
+{
+type: UINT(8)
+alias: "EtsDataMessage4_DA"
+flags: OUTPUT|READONLY
+desc: "J1939 Destination Address"
+unit: ""
+value: 255
+}
+
+
+
+
+CANMMCAN_2_MIDFRX[15]
+{
+type: UINT(8)
+alias: "EtsDataMessage4_IDFormat"
+flags: OUTPUT|READONLY
+desc: "Message ID Format"
+unit: ""
+value: 1
+}
+
+
+
+
+CANMMCAN_2_RXLEN[15]
+{
+type: UINT(32)
+alias: "EtsDataMessage4_Length"
+flags: OUTPUT|READONLY
+desc: "Message Length"
+unit: ""
+value: 8
+}
+
+
+
+
+CANMMCAN_2_RXsta[15]
+{
+type: UINT(8)
+alias: "EtsDataMessage4_status"
+flags: OUTPUT|READONLY
+desc: "EtsDataMessage4 Status"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RXdt[15]
+{
+type: flt(64,IEEE)
+alias: "EtsDataMessage4_dt"
+flags: OUTPUT|READONLY
+desc: "EtsDataMessage4 DeltaTime"
+unit: "s"
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RXt[15]
+{
+type: flt(64,IEEE)
+alias: "EtsDataMessage4_time"
+flags: OUTPUT|READONLY
+desc: "EtsDataMessage4 Time"
+unit: "s"
+value: 0.0
+}
+
+
+
+
+
+endgroup -- block-group "RX"
+
+
+
+group "TX" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+CANMMCAN_2_WBS[15]
+{
+type: UINT(8)
+alias: "EtsDataMessage4_CheckEnable"
+flags: OUTPUT|READONLY
+desc: "Check enabled EtsDataMessage4"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TXDT[15]
+{
+type: flt(64,IEEE)
+alias: "EtsDataMessage4_DelayTime"
+flags: OUTPUT|READONLY
+desc: "DelayTime EtsDataMessage4"
+unit: "s"
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TXsta[15]
+{
+type: UINT(8)
+alias: "EtsDataMessage4_status"
+flags: OUTPUT|READONLY
+desc: "EtsDataMessage4 Status"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TX_Msg_9_Sgn_1_constant
+{
+type: flt(64,IEEE)
+alias: "ETSD4_CanSensorAngle"
+flags: PARAM
+desc: ""
+unit: "Grd"
+range: <-200; 301.99>
+value: -200
+}
+
+
+
+
+CANMMCAN_2_TX_Msg_9_Sgn_2_constant
+{
+type: flt(64,IEEE)
+alias: "ETSD4_CanSensorEtsAngle"
+flags: PARAM
+desc: ""
+unit: "Grd"
+range: <-64; 0>
+value: -64
+}
+
+
+
+
+CANMMCAN_2_TX_Msg_9_Sgn_3_constant
+{
+type: INT(16)
+alias: "ETSD4_CanSensorTemp"
+flags: PARAM
+desc: ""
+unit: "grd/C"
+range: <-40; 210>
+value: -40
+}
+
+
+
+
+CANMMCAN_2_TX_Msg_9_Sgn_4_constant
+{
+type: UINT(8)
+alias: "ETSD4_CanSensorAlarm"
+flags: PARAM
+desc: ""
+unit: ""
+range: <0; 255>
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TXEIN[15]
+{
+type: UINT(8)
+alias: "EtsDataMessage4_Enable"
+flags: PARAM
+desc: "Enable EtsDataMessage4"
+unit: ""
+range: <0; 1>
+value: 1
+}
+
+
+
+
+CANMMCAN_2_TXCIE[15]
+{
+type: UINT(8)
+alias: "EtsDataMessage4_PeriodicalOn"
+flags: PARAM
+desc: "Activate cyclic transmission for EtsDataMessage4"
+unit: ""
+range: <0; 1>
+value: 1
+}
+
+
+
+
+CANMMCAN_2_TXKIEX[15]
+{
+type: UINT(8)
+alias: "EtsDataMessage4_Kickout"
+flags: PARAM
+desc: "Kickout EtsDataMessage4"
+unit: ""
+range: <0; 1>
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TXCT[15]
+{
+type: flt(64,IEEE)
+alias: "EtsDataMessage4_CycleTime"
+flags: PARAM
+desc: "CycleTime EtsDataMessage4"
+unit: "s"
+range: <0; 1000>
+value: 0
+}
+
+
+
+
+
+endgroup -- block-group "TX"
+
+
+
+endgroup -- block-group "EtsDataMessage4"
+
+
+
+group "EtsDataMessage5" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+
+group "RX" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+CANMMCAN_2_RX_Msg_10_Sgn_1
+{
+type: UINT(16)
+alias: "ETSD5_Py2Cofa"
+flags: OUTPUT|READONLY
+desc: ""
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RX_Msg_10_Sgn_2
+{
+type: flt(64,IEEE)
+alias: "ETSD5_Py2Pressure"
+flags: OUTPUT|READONLY
+desc: ""
+unit: "Bar"
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RXPRIO[16]
+{
+type: UINT(8)
+alias: "EtsDataMessage5_Prio"
+flags: OUTPUT|READONLY
+desc: "J1939 Priority"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RXPGN[16]
+{
+type: UINT(32)
+alias: "EtsDataMessage5_PGN"
+flags: OUTPUT|READONLY
+desc: "J1939 Parameter Group Number"
+unit: ""
+value: 65416
+}
+
+
+
+
+CANMMCAN_2_RXSNIDX[16]
+{
+type: UINT(8)
+alias: "EtsDataMessage5_SNIDX"
+flags: OUTPUT|READONLY
+desc: "J1939 Source Node Index"
+unit: ""
+value: 1
+}
+
+
+
+
+CANMMCAN_2_RXSA[16]
+{
+type: UINT(8)
+alias: "EtsDataMessage5_SA"
+flags: OUTPUT|READONLY
+desc: "J1939 Source Address"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RXDA[16]
+{
+type: UINT(8)
+alias: "EtsDataMessage5_DA"
+flags: OUTPUT|READONLY
+desc: "J1939 Destination Address"
+unit: ""
+value: 255
+}
+
+
+
+
+CANMMCAN_2_MIDFRX[16]
+{
+type: UINT(8)
+alias: "EtsDataMessage5_IDFormat"
+flags: OUTPUT|READONLY
+desc: "Message ID Format"
+unit: ""
+value: 1
+}
+
+
+
+
+CANMMCAN_2_RXLEN[16]
+{
+type: UINT(32)
+alias: "EtsDataMessage5_Length"
+flags: OUTPUT|READONLY
+desc: "Message Length"
+unit: ""
+value: 8
+}
+
+
+
+
+CANMMCAN_2_RXsta[16]
+{
+type: UINT(8)
+alias: "EtsDataMessage5_status"
+flags: OUTPUT|READONLY
+desc: "EtsDataMessage5 Status"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RXdt[16]
+{
+type: flt(64,IEEE)
+alias: "EtsDataMessage5_dt"
+flags: OUTPUT|READONLY
+desc: "EtsDataMessage5 DeltaTime"
+unit: "s"
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RXt[16]
+{
+type: flt(64,IEEE)
+alias: "EtsDataMessage5_time"
+flags: OUTPUT|READONLY
+desc: "EtsDataMessage5 Time"
+unit: "s"
+value: 0.0
+}
+
+
+
+
+
+endgroup -- block-group "RX"
+
+
+
+group "TX" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+CANMMCAN_2_WBS[16]
+{
+type: UINT(8)
+alias: "EtsDataMessage5_CheckEnable"
+flags: OUTPUT|READONLY
+desc: "Check enabled EtsDataMessage5"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TXDT[16]
+{
+type: flt(64,IEEE)
+alias: "EtsDataMessage5_DelayTime"
+flags: OUTPUT|READONLY
+desc: "DelayTime EtsDataMessage5"
+unit: "s"
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TXsta[16]
+{
+type: UINT(8)
+alias: "EtsDataMessage5_status"
+flags: OUTPUT|READONLY
+desc: "EtsDataMessage5 Status"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TX_Msg_10_Sgn_1_constant
+{
+type: UINT(16)
+alias: "ETSD5_Py2Cofa"
+flags: PARAM
+desc: ""
+unit: ""
+range: <0; 65535>
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TX_Msg_10_Sgn_2_constant
+{
+type: flt(64,IEEE)
+alias: "ETSD5_Py2Pressure"
+flags: PARAM
+desc: ""
+unit: "Bar"
+range: <0; 1310.7>
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TXEIN[16]
+{
+type: UINT(8)
+alias: "EtsDataMessage5_Enable"
+flags: PARAM
+desc: "Enable EtsDataMessage5"
+unit: ""
+range: <0; 1>
+value: 1
+}
+
+
+
+
+CANMMCAN_2_TXCIE[16]
+{
+type: UINT(8)
+alias: "EtsDataMessage5_PeriodicalOn"
+flags: PARAM
+desc: "Activate cyclic transmission for EtsDataMessage5"
+unit: ""
+range: <0; 1>
+value: 1
+}
+
+
+
+
+CANMMCAN_2_TXKIEX[16]
+{
+type: UINT(8)
+alias: "EtsDataMessage5_Kickout"
+flags: PARAM
+desc: "Kickout EtsDataMessage5"
+unit: ""
+range: <0; 1>
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TXCT[16]
+{
+type: flt(64,IEEE)
+alias: "EtsDataMessage5_CycleTime"
+flags: PARAM
+desc: "CycleTime EtsDataMessage5"
+unit: "s"
+range: <0; 1000>
+value: 0
+}
+
+
+
+
+
+endgroup -- block-group "TX"
+
+
+
+endgroup -- block-group "EtsDataMessage5"
+
+
+
+group "EtsSystemMessage" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+
+group "RX" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+CANMMCAN_2_RX_Msg_11_Sgn_1
+{
+type: UINT(8)
+alias: "ETSS_SteeringState"
+flags: OUTPUT|READONLY
+desc: ""
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RX_Msg_11_Sgn_2
+{
+type: UINT(8)
+alias: "ETSS_AlarmState"
+flags: OUTPUT|READONLY
+desc: ""
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RX_Msg_11_Sgn_3
+{
+type: UINT(8)
+alias: "ETSS_DiagnosticState"
+flags: OUTPUT|READONLY
+desc: ""
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RX_Msg_11_Sgn_4
+{
+type: UINT(8)
+alias: "ETSS_CentringState"
+flags: OUTPUT|READONLY
+desc: ""
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RX_Msg_11_Sgn_5
+{
+type: UINT(8)
+alias: "ETSS_SteerMode"
+flags: OUTPUT|READONLY
+desc: ""
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RX_Msg_11_Sgn_6
+{
+type: UINT(8)
+alias: "ETSS_AlarmPriority"
+flags: OUTPUT|READONLY
+desc: ""
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RX_Msg_11_Sgn_7
+{
+type: UINT(8)
+alias: "ETSS_AlarmReaction"
+flags: OUTPUT|READONLY
+desc: ""
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RX_Msg_11_Sgn_8
+{
+type: UINT(8)
+alias: "ETSS_EtsSimpleStatus"
+flags: OUTPUT|READONLY
+desc: ""
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RX_Msg_11_Sgn_9
+{
+type: UINT(8)
+alias: "ETSS_SupplyVoltageSimpleState"
+flags: OUTPUT|READONLY
+desc: ""
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RX_Msg_11_Sgn_10
+{
+type: UINT(8)
+alias: "ETSS_SpeedSignalSimpleStatus"
+flags: OUTPUT|READONLY
+desc: ""
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RX_Msg_11_Sgn_11
+{
+type: UINT(8)
+alias: "ETSS_KL15State"
+flags: OUTPUT|READONLY
+desc: ""
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RX_Msg_11_Sgn_12
+{
+type: UINT(8)
+alias: "ETSS_TableNumber"
+flags: OUTPUT|READONLY
+desc: ""
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RXPRIO[12]
+{
+type: UINT(8)
+alias: "EtsSystemMessage_Prio"
+flags: OUTPUT|READONLY
+desc: "J1939 Priority"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RXPGN[12]
+{
+type: UINT(32)
+alias: "EtsSystemMessage_PGN"
+flags: OUTPUT|READONLY
+desc: "J1939 Parameter Group Number"
+unit: ""
+value: 65410
+}
+
+
+
+
+CANMMCAN_2_RXSNIDX[12]
+{
+type: UINT(8)
+alias: "EtsSystemMessage_SNIDX"
+flags: OUTPUT|READONLY
+desc: "J1939 Source Node Index"
+unit: ""
+value: 1
+}
+
+
+
+
+CANMMCAN_2_RXSA[12]
+{
+type: UINT(8)
+alias: "EtsSystemMessage_SA"
+flags: OUTPUT|READONLY
+desc: "J1939 Source Address"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RXDA[12]
+{
+type: UINT(8)
+alias: "EtsSystemMessage_DA"
+flags: OUTPUT|READONLY
+desc: "J1939 Destination Address"
+unit: ""
+value: 255
+}
+
+
+
+
+CANMMCAN_2_MIDFRX[12]
+{
+type: UINT(8)
+alias: "EtsSystemMessage_IDFormat"
+flags: OUTPUT|READONLY
+desc: "Message ID Format"
+unit: ""
+value: 1
+}
+
+
+
+
+CANMMCAN_2_RXLEN[12]
+{
+type: UINT(32)
+alias: "EtsSystemMessage_Length"
+flags: OUTPUT|READONLY
+desc: "Message Length"
+unit: ""
+value: 8
+}
+
+
+
+
+CANMMCAN_2_RXsta[12]
+{
+type: UINT(8)
+alias: "EtsSystemMessage_status"
+flags: OUTPUT|READONLY
+desc: "EtsSystemMessage Status"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RXdt[12]
+{
+type: flt(64,IEEE)
+alias: "EtsSystemMessage_dt"
+flags: OUTPUT|READONLY
+desc: "EtsSystemMessage DeltaTime"
+unit: "s"
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RXt[12]
+{
+type: flt(64,IEEE)
+alias: "EtsSystemMessage_time"
+flags: OUTPUT|READONLY
+desc: "EtsSystemMessage Time"
+unit: "s"
+value: 0.0
+}
+
+
+
+
+
+endgroup -- block-group "RX"
+
+
+
+group "TX" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+CANMMCAN_2_WBS[12]
+{
+type: UINT(8)
+alias: "EtsSystemMessage_CheckEnable"
+flags: OUTPUT|READONLY
+desc: "Check enabled EtsSystemMessage"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TXDT[12]
+{
+type: flt(64,IEEE)
+alias: "EtsSystemMessage_DelayTime"
+flags: OUTPUT|READONLY
+desc: "DelayTime EtsSystemMessage"
+unit: "s"
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TXsta[12]
+{
+type: UINT(8)
+alias: "EtsSystemMessage_status"
+flags: OUTPUT|READONLY
+desc: "EtsSystemMessage Status"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TX_Msg_11_Sgn_1_constant
+{
+type: UINT(8)
+alias: "ETSS_SteeringState"
+flags: PARAM
+desc: ""
+unit: ""
+range: <0; 1>
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TX_Msg_11_Sgn_2_constant
+{
+type: UINT(8)
+alias: "ETSS_AlarmState"
+flags: PARAM
+desc: ""
+unit: ""
+range: <0; 1>
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TX_Msg_11_Sgn_3_constant
+{
+type: UINT(8)
+alias: "ETSS_DiagnosticState"
+flags: PARAM
+desc: ""
+unit: ""
+range: <0; 1>
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TX_Msg_11_Sgn_4_constant
+{
+type: UINT(8)
+alias: "ETSS_CentringState"
+flags: PARAM
+desc: ""
+unit: ""
+range: <0; 1>
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TX_Msg_11_Sgn_5_constant
+{
+type: UINT(8)
+alias: "ETSS_SteerMode"
+flags: PARAM
+desc: ""
+unit: ""
+range: <0; 15>
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TX_Msg_11_Sgn_6_constant
+{
+type: UINT(8)
+alias: "ETSS_AlarmPriority"
+flags: PARAM
+desc: ""
+unit: ""
+range: <0; 255>
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TX_Msg_11_Sgn_7_constant
+{
+type: UINT(8)
+alias: "ETSS_AlarmReaction"
+flags: PARAM
+desc: ""
+unit: ""
+range: <0; 255>
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TX_Msg_11_Sgn_8_constant
+{
+type: UINT(8)
+alias: "ETSS_EtsSimpleStatus"
+flags: PARAM
+desc: ""
+unit: ""
+range: <0; 255>
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TX_Msg_11_Sgn_9_constant
+{
+type: UINT(8)
+alias: "ETSS_SupplyVoltageSimpleState"
+flags: PARAM
+desc: ""
+unit: ""
+range: <0; 15>
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TX_Msg_11_Sgn_10_constant
+{
+type: UINT(8)
+alias: "ETSS_SpeedSignalSimpleStatus"
+flags: PARAM
+desc: ""
+unit: ""
+range: <0; 15>
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TX_Msg_11_Sgn_11_constant
+{
+type: UINT(8)
+alias: "ETSS_KL15State"
+flags: PARAM
+desc: ""
+unit: ""
+range: <0; 1>
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TX_Msg_11_Sgn_12_constant
+{
+type: UINT(8)
+alias: "ETSS_TableNumber"
+flags: PARAM
+desc: ""
+unit: ""
+range: <0; 255>
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TXEIN[12]
+{
+type: UINT(8)
+alias: "EtsSystemMessage_Enable"
+flags: PARAM
+desc: "Enable EtsSystemMessage"
+unit: ""
+range: <0; 1>
+value: 1
+}
+
+
+
+
+CANMMCAN_2_TXCIE[12]
+{
+type: UINT(8)
+alias: "EtsSystemMessage_PeriodicalOn"
+flags: PARAM
+desc: "Activate cyclic transmission for EtsSystemMessage"
+unit: ""
+range: <0; 1>
+value: 1
+}
+
+
+
+
+CANMMCAN_2_TXKIEX[12]
+{
+type: UINT(8)
+alias: "EtsSystemMessage_Kickout"
+flags: PARAM
+desc: "Kickout EtsSystemMessage"
+unit: ""
+range: <0; 1>
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TXCT[12]
+{
+type: flt(64,IEEE)
+alias: "EtsSystemMessage_CycleTime"
+flags: PARAM
+desc: "CycleTime EtsSystemMessage"
+unit: "s"
+range: <0; 1000>
+value: 0
+}
+
+
+
+
+
+endgroup -- block-group "TX"
+
+
+
+endgroup -- block-group "EtsSystemMessage"
+
+
+
+group "OilSupplyAssignmentMessage" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+
+group "RX" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+CANMMCAN_2_RX_Msg_12_Sgn_1
+{
+type: flt(64,IEEE)
+alias: "OSAM_Press"
+flags: OUTPUT|READONLY
+desc: ""
+unit: "bar"
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RX_Msg_12_Sgn_2
+{
+type: UINT(8)
+alias: "OSAM_Flow"
+flags: OUTPUT|READONLY
+desc: ""
+unit: "pct"
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RX_Msg_12_Sgn_3
+{
+type: UINT(8)
+alias: "OSAM_Pump"
+flags: OUTPUT|READONLY
+desc: ""
+unit: "On/Off"
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RX_Msg_12_Sgn_4
+{
+type: UINT(8)
+alias: "OSAM_Prio"
+flags: OUTPUT|READONLY
+desc: ""
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RXPRIO[18]
+{
+type: UINT(8)
+alias: "OilSupplyAssignmentMessage_Prio"
+flags: OUTPUT|READONLY
+desc: "J1939 Priority"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RXPGN[18]
+{
+type: UINT(32)
+alias: "OilSupplyAssignmentMessage_PGN"
+flags: OUTPUT|READONLY
+desc: "J1939 Parameter Group Number"
+unit: ""
+value: 65457
+}
+
+
+
+
+CANMMCAN_2_RXSNIDX[18]
+{
+type: UINT(8)
+alias: "OilSupplyAssignmentMessage_SNIDX"
+flags: OUTPUT|READONLY
+desc: "J1939 Source Node Index"
+unit: ""
+value: 1
+}
+
+
+
+
+CANMMCAN_2_RXSA[18]
+{
+type: UINT(8)
+alias: "OilSupplyAssignmentMessage_SA"
+flags: OUTPUT|READONLY
+desc: "J1939 Source Address"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RXDA[18]
+{
+type: UINT(8)
+alias: "OilSupplyAssignmentMessage_DA"
+flags: OUTPUT|READONLY
+desc: "J1939 Destination Address"
+unit: ""
+value: 255
+}
+
+
+
+
+CANMMCAN_2_MIDFRX[18]
+{
+type: UINT(8)
+alias: "OilSupplyAssignmentMessage_IDFormat"
+flags: OUTPUT|READONLY
+desc: "Message ID Format"
+unit: ""
+value: 1
+}
+
+
+
+
+CANMMCAN_2_RXLEN[18]
+{
+type: UINT(32)
+alias: "OilSupplyAssignmentMessage_Length"
+flags: OUTPUT|READONLY
+desc: "Message Length"
+unit: ""
+value: 8
+}
+
+
+
+
+CANMMCAN_2_RXsta[18]
+{
+type: UINT(8)
+alias: "OilSupplyAssignmentMessage_status"
+flags: OUTPUT|READONLY
+desc: "OilSupplyAssignmentMessage Status"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RXdt[18]
+{
+type: flt(64,IEEE)
+alias: "OilSupplyAssignmentMessage_dt"
+flags: OUTPUT|READONLY
+desc: "OilSupplyAssignmentMessage DeltaTime"
+unit: "s"
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RXt[18]
+{
+type: flt(64,IEEE)
+alias: "OilSupplyAssignmentMessage_time"
+flags: OUTPUT|READONLY
+desc: "OilSupplyAssignmentMessage Time"
+unit: "s"
+value: 0.0
+}
+
+
+
+
+
+endgroup -- block-group "RX"
+
+
+
+group "TX" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+CANMMCAN_2_WBS[18]
+{
+type: UINT(8)
+alias: "OilSupplyAssignmentMessage_CheckEnable"
+flags: OUTPUT|READONLY
+desc: "Check enabled OilSupplyAssignmentMessage"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TXDT[18]
+{
+type: flt(64,IEEE)
+alias: "OilSupplyAssignmentMessage_DelayTime"
+flags: OUTPUT|READONLY
+desc: "DelayTime OilSupplyAssignmentMessage"
+unit: "s"
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TXsta[18]
+{
+type: UINT(8)
+alias: "OilSupplyAssignmentMessage_status"
+flags: OUTPUT|READONLY
+desc: "OilSupplyAssignmentMessage Status"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TX_Msg_12_Sgn_1_constant
+{
+type: flt(64,IEEE)
+alias: "OSAM_Press"
+flags: PARAM
+desc: ""
+unit: "bar"
+range: <0; 1310.7>
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TX_Msg_12_Sgn_2_constant
+{
+type: UINT(8)
+alias: "OSAM_Flow"
+flags: PARAM
+desc: ""
+unit: "pct"
+range: <0; 255>
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TX_Msg_12_Sgn_3_constant
+{
+type: UINT(8)
+alias: "OSAM_Pump"
+flags: PARAM
+desc: ""
+unit: "On/Off"
+range: <0; 255>
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TX_Msg_12_Sgn_4_constant
+{
+type: UINT(8)
+alias: "OSAM_Prio"
+flags: PARAM
+desc: ""
+unit: ""
+range: <0; 255>
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TXEIN[18]
+{
+type: UINT(8)
+alias: "OilSupplyAssignmentMessage_Enable"
+flags: PARAM
+desc: "Enable OilSupplyAssignmentMessage"
+unit: ""
+range: <0; 1>
+value: 1
+}
+
+
+
+
+CANMMCAN_2_TXCIE[18]
+{
+type: UINT(8)
+alias: "OilSupplyAssignmentMessage_PeriodicalOn"
+flags: PARAM
+desc: "Activate cyclic transmission for OilSupplyAssignmentMessage"
+unit: ""
+range: <0; 1>
+value: 1
+}
+
+
+
+
+CANMMCAN_2_TXKIEX[18]
+{
+type: UINT(8)
+alias: "OilSupplyAssignmentMessage_Kickout"
+flags: PARAM
+desc: "Kickout OilSupplyAssignmentMessage"
+unit: ""
+range: <0; 1>
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TXCT[18]
+{
+type: flt(64,IEEE)
+alias: "OilSupplyAssignmentMessage_CycleTime"
+flags: PARAM
+desc: "CycleTime OilSupplyAssignmentMessage"
+unit: "s"
+range: <0; 1000>
+value: 0
+}
+
+
+
+
+
+endgroup -- block-group "TX"
+
+
+
+endgroup -- block-group "OilSupplyAssignmentMessage"
+
+
+
+group "OilSupplyRequestMessage" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+
+group "RX" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+CANMMCAN_2_RX_Msg_13_Sgn_1
+{
+type: flt(64,IEEE)
+alias: "OSRM_Press"
+flags: OUTPUT|READONLY
+desc: ""
+unit: "bar"
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RX_Msg_13_Sgn_2
+{
+type: UINT(8)
+alias: "OSRM_Flow"
+flags: OUTPUT|READONLY
+desc: ""
+unit: "pct"
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RX_Msg_13_Sgn_3
+{
+type: UINT(8)
+alias: "OSRM_Pump"
+flags: OUTPUT|READONLY
+desc: ""
+unit: "On/Off"
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RX_Msg_13_Sgn_4
+{
+type: UINT(8)
+alias: "OSRM_Prio"
+flags: OUTPUT|READONLY
+desc: ""
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RXPRIO[17]
+{
+type: UINT(8)
+alias: "OilSupplyRequestMessage_Prio"
+flags: OUTPUT|READONLY
+desc: "J1939 Priority"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RXPGN[17]
+{
+type: UINT(32)
+alias: "OilSupplyRequestMessage_PGN"
+flags: OUTPUT|READONLY
+desc: "J1939 Parameter Group Number"
+unit: ""
+value: 65456
+}
+
+
+
+
+CANMMCAN_2_RXSNIDX[17]
+{
+type: UINT(8)
+alias: "OilSupplyRequestMessage_SNIDX"
+flags: OUTPUT|READONLY
+desc: "J1939 Source Node Index"
+unit: ""
+value: 1
+}
+
+
+
+
+CANMMCAN_2_RXSA[17]
+{
+type: UINT(8)
+alias: "OilSupplyRequestMessage_SA"
+flags: OUTPUT|READONLY
+desc: "J1939 Source Address"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RXDA[17]
+{
+type: UINT(8)
+alias: "OilSupplyRequestMessage_DA"
+flags: OUTPUT|READONLY
+desc: "J1939 Destination Address"
+unit: ""
+value: 255
+}
+
+
+
+
+CANMMCAN_2_MIDFRX[17]
+{
+type: UINT(8)
+alias: "OilSupplyRequestMessage_IDFormat"
+flags: OUTPUT|READONLY
+desc: "Message ID Format"
+unit: ""
+value: 1
+}
+
+
+
+
+CANMMCAN_2_RXLEN[17]
+{
+type: UINT(32)
+alias: "OilSupplyRequestMessage_Length"
+flags: OUTPUT|READONLY
+desc: "Message Length"
+unit: ""
+value: 8
+}
+
+
+
+
+CANMMCAN_2_RXsta[17]
+{
+type: UINT(8)
+alias: "OilSupplyRequestMessage_status"
+flags: OUTPUT|READONLY
+desc: "OilSupplyRequestMessage Status"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RXdt[17]
+{
+type: flt(64,IEEE)
+alias: "OilSupplyRequestMessage_dt"
+flags: OUTPUT|READONLY
+desc: "OilSupplyRequestMessage DeltaTime"
+unit: "s"
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RXt[17]
+{
+type: flt(64,IEEE)
+alias: "OilSupplyRequestMessage_time"
+flags: OUTPUT|READONLY
+desc: "OilSupplyRequestMessage Time"
+unit: "s"
+value: 0.0
+}
+
+
+
+
+
+endgroup -- block-group "RX"
+
+
+
+group "TX" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+CANMMCAN_2_WBS[17]
+{
+type: UINT(8)
+alias: "OilSupplyRequestMessage_CheckEnable"
+flags: OUTPUT|READONLY
+desc: "Check enabled OilSupplyRequestMessage"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TXDT[17]
+{
+type: flt(64,IEEE)
+alias: "OilSupplyRequestMessage_DelayTime"
+flags: OUTPUT|READONLY
+desc: "DelayTime OilSupplyRequestMessage"
+unit: "s"
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TXsta[17]
+{
+type: UINT(8)
+alias: "OilSupplyRequestMessage_status"
+flags: OUTPUT|READONLY
+desc: "OilSupplyRequestMessage Status"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TX_Msg_13_Sgn_1_constant
+{
+type: flt(64,IEEE)
+alias: "OSRM_Press"
+flags: PARAM
+desc: ""
+unit: "bar"
+range: <0; 1310.7>
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TX_Msg_13_Sgn_2_constant
+{
+type: UINT(8)
+alias: "OSRM_Flow"
+flags: PARAM
+desc: ""
+unit: "pct"
+range: <0; 255>
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TX_Msg_13_Sgn_3_constant
+{
+type: UINT(8)
+alias: "OSRM_Pump"
+flags: PARAM
+desc: ""
+unit: "On/Off"
+range: <0; 255>
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TX_Msg_13_Sgn_4_constant
+{
+type: UINT(8)
+alias: "OSRM_Prio"
+flags: PARAM
+desc: ""
+unit: ""
+range: <0; 255>
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TXEIN[17]
+{
+type: UINT(8)
+alias: "OilSupplyRequestMessage_Enable"
+flags: PARAM
+desc: "Enable OilSupplyRequestMessage"
+unit: ""
+range: <0; 1>
+value: 1
+}
+
+
+
+
+CANMMCAN_2_TXCIE[17]
+{
+type: UINT(8)
+alias: "OilSupplyRequestMessage_PeriodicalOn"
+flags: PARAM
+desc: "Activate cyclic transmission for OilSupplyRequestMessage"
+unit: ""
+range: <0; 1>
+value: 1
+}
+
+
+
+
+CANMMCAN_2_TXKIEX[17]
+{
+type: UINT(8)
+alias: "OilSupplyRequestMessage_Kickout"
+flags: PARAM
+desc: "Kickout OilSupplyRequestMessage"
+unit: ""
+range: <0; 1>
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TXCT[17]
+{
+type: flt(64,IEEE)
+alias: "OilSupplyRequestMessage_CycleTime"
+flags: PARAM
+desc: "CycleTime OilSupplyRequestMessage"
+unit: "s"
+range: <0; 1000>
+value: 0
+}
+
+
+
+
+
+endgroup -- block-group "TX"
+
+
+
+endgroup -- block-group "OilSupplyRequestMessage"
+
+
+
+group "PowersupplyVoltageMessage1" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+
+group "RX" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+CANMMCAN_2_RX_Msg_14_Sgn_1
+{
+type: flt(64,IEEE)
+alias: "PSV_SupV1_KL15"
+flags: OUTPUT|READONLY
+desc: ""
+unit: "V"
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RX_Msg_14_Sgn_2
+{
+type: flt(64,IEEE)
+alias: "PSV_SupV2_KL30"
+flags: OUTPUT|READONLY
+desc: ""
+unit: "V"
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RX_Msg_14_Sgn_3
+{
+type: flt(64,IEEE)
+alias: "PSV_SupV3_KL1530"
+flags: OUTPUT|READONLY
+desc: ""
+unit: "V"
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RX_Msg_14_Sgn_4
+{
+type: flt(64,IEEE)
+alias: "PSV_SupV4_Internal5V"
+flags: OUTPUT|READONLY
+desc: ""
+unit: "V"
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RXPRIO[6]
+{
+type: UINT(8)
+alias: "PowersupplyVoltageMessage1_Prio"
+flags: OUTPUT|READONLY
+desc: "J1939 Priority"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RXPGN[6]
+{
+type: UINT(32)
+alias: "PowersupplyVoltageMessage1_PGN"
+flags: OUTPUT|READONLY
+desc: "J1939 Parameter Group Number"
+unit: ""
+value: 65328
+}
+
+
+
+
+CANMMCAN_2_RXSNIDX[6]
+{
+type: UINT(8)
+alias: "PowersupplyVoltageMessage1_SNIDX"
+flags: OUTPUT|READONLY
+desc: "J1939 Source Node Index"
+unit: ""
+value: 1
+}
+
+
+
+
+CANMMCAN_2_RXSA[6]
+{
+type: UINT(8)
+alias: "PowersupplyVoltageMessage1_SA"
+flags: OUTPUT|READONLY
+desc: "J1939 Source Address"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RXDA[6]
+{
+type: UINT(8)
+alias: "PowersupplyVoltageMessage1_DA"
+flags: OUTPUT|READONLY
+desc: "J1939 Destination Address"
+unit: ""
+value: 255
+}
+
+
+
+
+CANMMCAN_2_MIDFRX[6]
+{
+type: UINT(8)
+alias: "PowersupplyVoltageMessage1_IDFormat"
+flags: OUTPUT|READONLY
+desc: "Message ID Format"
+unit: ""
+value: 1
+}
+
+
+
+
+CANMMCAN_2_RXLEN[6]
+{
+type: UINT(32)
+alias: "PowersupplyVoltageMessage1_Length"
+flags: OUTPUT|READONLY
+desc: "Message Length"
+unit: ""
+value: 8
+}
+
+
+
+
+CANMMCAN_2_RXsta[6]
+{
+type: UINT(8)
+alias: "PowersupplyVoltageMessage1_status"
+flags: OUTPUT|READONLY
+desc: "PowersupplyVoltageMessage1 Status"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RXdt[6]
+{
+type: flt(64,IEEE)
+alias: "PowersupplyVoltageMessage1_dt"
+flags: OUTPUT|READONLY
+desc: "PowersupplyVoltageMessage1 DeltaTime"
+unit: "s"
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RXt[6]
+{
+type: flt(64,IEEE)
+alias: "PowersupplyVoltageMessage1_time"
+flags: OUTPUT|READONLY
+desc: "PowersupplyVoltageMessage1 Time"
+unit: "s"
+value: 0.0
+}
+
+
+
+
+
+endgroup -- block-group "RX"
+
+
+
+group "TX" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+CANMMCAN_2_WBS[6]
+{
+type: UINT(8)
+alias: "PowersupplyVoltageMessage1_CheckEnable"
+flags: OUTPUT|READONLY
+desc: "Check enabled PowersupplyVoltageMessage1"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TXDT[6]
+{
+type: flt(64,IEEE)
+alias: "PowersupplyVoltageMessage1_DelayTime"
+flags: OUTPUT|READONLY
+desc: "DelayTime PowersupplyVoltageMessage1"
+unit: "s"
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TXsta[6]
+{
+type: UINT(8)
+alias: "PowersupplyVoltageMessage1_status"
+flags: OUTPUT|READONLY
+desc: "PowersupplyVoltageMessage1 Status"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TX_Msg_14_Sgn_1_constant
+{
+type: flt(64,IEEE)
+alias: "PSV_SupV1_KL15"
+flags: PARAM
+desc: ""
+unit: "V"
+range: <0; 642.55>
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TX_Msg_14_Sgn_2_constant
+{
+type: flt(64,IEEE)
+alias: "PSV_SupV2_KL30"
+flags: PARAM
+desc: ""
+unit: "V"
+range: <0; 642.55>
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TX_Msg_14_Sgn_3_constant
+{
+type: flt(64,IEEE)
+alias: "PSV_SupV3_KL1530"
+flags: PARAM
+desc: ""
+unit: "V"
+range: <0; 642.55>
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TX_Msg_14_Sgn_4_constant
+{
+type: flt(64,IEEE)
+alias: "PSV_SupV4_Internal5V"
+flags: PARAM
+desc: ""
+unit: "V"
+range: <0; 642.55>
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TXEIN[6]
+{
+type: UINT(8)
+alias: "PowersupplyVoltageMessage1_Enable"
+flags: PARAM
+desc: "Enable PowersupplyVoltageMessage1"
+unit: ""
+range: <0; 1>
+value: 1
+}
+
+
+
+
+CANMMCAN_2_TXCIE[6]
+{
+type: UINT(8)
+alias: "PowersupplyVoltageMessage1_PeriodicalOn"
+flags: PARAM
+desc: "Activate cyclic transmission for PowersupplyVoltageMessage1"
+unit: ""
+range: <0; 1>
+value: 1
+}
+
+
+
+
+CANMMCAN_2_TXKIEX[6]
+{
+type: UINT(8)
+alias: "PowersupplyVoltageMessage1_Kickout"
+flags: PARAM
+desc: "Kickout PowersupplyVoltageMessage1"
+unit: ""
+range: <0; 1>
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TXCT[6]
+{
+type: flt(64,IEEE)
+alias: "PowersupplyVoltageMessage1_CycleTime"
+flags: PARAM
+desc: "CycleTime PowersupplyVoltageMessage1"
+unit: "s"
+range: <0; 1000>
+value: 0
+}
+
+
+
+
+
+endgroup -- block-group "TX"
+
+
+
+endgroup -- block-group "PowersupplyVoltageMessage1"
+
+
+
+group "PowersupplyVoltageMessage2" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+
+group "RX" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+CANMMCAN_2_RX_Msg_15_Sgn_1
+{
+type: flt(64,IEEE)
+alias: "PSV_SupV5_Internal6V"
+flags: OUTPUT|READONLY
+desc: ""
+unit: "V"
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RX_Msg_15_Sgn_2
+{
+type: flt(64,IEEE)
+alias: "PSV_SupV6_2VRef"
+flags: OUTPUT|READONLY
+desc: ""
+unit: "V"
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RX_Msg_15_Sgn_3
+{
+type: flt(64,IEEE)
+alias: "PSV_SupV7_AngleSensor"
+flags: OUTPUT|READONLY
+desc: ""
+unit: "V"
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RX_Msg_15_Sgn_4
+{
+type: flt(64,IEEE)
+alias: "PSV_SupV8_PressureSensor"
+flags: OUTPUT|READONLY
+desc: ""
+unit: "V"
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RXPRIO[7]
+{
+type: UINT(8)
+alias: "PowersupplyVoltageMessage2_Prio"
+flags: OUTPUT|READONLY
+desc: "J1939 Priority"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RXPGN[7]
+{
+type: UINT(32)
+alias: "PowersupplyVoltageMessage2_PGN"
+flags: OUTPUT|READONLY
+desc: "J1939 Parameter Group Number"
+unit: ""
+value: 65329
+}
+
+
+
+
+CANMMCAN_2_RXSNIDX[7]
+{
+type: UINT(8)
+alias: "PowersupplyVoltageMessage2_SNIDX"
+flags: OUTPUT|READONLY
+desc: "J1939 Source Node Index"
+unit: ""
+value: 1
+}
+
+
+
+
+CANMMCAN_2_RXSA[7]
+{
+type: UINT(8)
+alias: "PowersupplyVoltageMessage2_SA"
+flags: OUTPUT|READONLY
+desc: "J1939 Source Address"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RXDA[7]
+{
+type: UINT(8)
+alias: "PowersupplyVoltageMessage2_DA"
+flags: OUTPUT|READONLY
+desc: "J1939 Destination Address"
+unit: ""
+value: 255
+}
+
+
+
+
+CANMMCAN_2_MIDFRX[7]
+{
+type: UINT(8)
+alias: "PowersupplyVoltageMessage2_IDFormat"
+flags: OUTPUT|READONLY
+desc: "Message ID Format"
+unit: ""
+value: 1
+}
+
+
+
+
+CANMMCAN_2_RXLEN[7]
+{
+type: UINT(32)
+alias: "PowersupplyVoltageMessage2_Length"
+flags: OUTPUT|READONLY
+desc: "Message Length"
+unit: ""
+value: 8
+}
+
+
+
+
+CANMMCAN_2_RXsta[7]
+{
+type: UINT(8)
+alias: "PowersupplyVoltageMessage2_status"
+flags: OUTPUT|READONLY
+desc: "PowersupplyVoltageMessage2 Status"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RXdt[7]
+{
+type: flt(64,IEEE)
+alias: "PowersupplyVoltageMessage2_dt"
+flags: OUTPUT|READONLY
+desc: "PowersupplyVoltageMessage2 DeltaTime"
+unit: "s"
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RXt[7]
+{
+type: flt(64,IEEE)
+alias: "PowersupplyVoltageMessage2_time"
+flags: OUTPUT|READONLY
+desc: "PowersupplyVoltageMessage2 Time"
+unit: "s"
+value: 0.0
+}
+
+
+
+
+
+endgroup -- block-group "RX"
+
+
+
+group "TX" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+CANMMCAN_2_WBS[7]
+{
+type: UINT(8)
+alias: "PowersupplyVoltageMessage2_CheckEnable"
+flags: OUTPUT|READONLY
+desc: "Check enabled PowersupplyVoltageMessage2"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TXDT[7]
+{
+type: flt(64,IEEE)
+alias: "PowersupplyVoltageMessage2_DelayTime"
+flags: OUTPUT|READONLY
+desc: "DelayTime PowersupplyVoltageMessage2"
+unit: "s"
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TXsta[7]
+{
+type: UINT(8)
+alias: "PowersupplyVoltageMessage2_status"
+flags: OUTPUT|READONLY
+desc: "PowersupplyVoltageMessage2 Status"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TX_Msg_15_Sgn_1_constant
+{
+type: flt(64,IEEE)
+alias: "PSV_SupV5_Internal6V"
+flags: PARAM
+desc: ""
+unit: "V"
+range: <0; 642.55>
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TX_Msg_15_Sgn_2_constant
+{
+type: flt(64,IEEE)
+alias: "PSV_SupV6_2VRef"
+flags: PARAM
+desc: ""
+unit: "V"
+range: <0; 642.55>
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TX_Msg_15_Sgn_3_constant
+{
+type: flt(64,IEEE)
+alias: "PSV_SupV7_AngleSensor"
+flags: PARAM
+desc: ""
+unit: "V"
+range: <0; 642.55>
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TX_Msg_15_Sgn_4_constant
+{
+type: flt(64,IEEE)
+alias: "PSV_SupV8_PressureSensor"
+flags: PARAM
+desc: ""
+unit: "V"
+range: <0; 642.55>
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TXEIN[7]
+{
+type: UINT(8)
+alias: "PowersupplyVoltageMessage2_Enable"
+flags: PARAM
+desc: "Enable PowersupplyVoltageMessage2"
+unit: ""
+range: <0; 1>
+value: 1
+}
+
+
+
+
+CANMMCAN_2_TXCIE[7]
+{
+type: UINT(8)
+alias: "PowersupplyVoltageMessage2_PeriodicalOn"
+flags: PARAM
+desc: "Activate cyclic transmission for PowersupplyVoltageMessage2"
+unit: ""
+range: <0; 1>
+value: 1
+}
+
+
+
+
+CANMMCAN_2_TXKIEX[7]
+{
+type: UINT(8)
+alias: "PowersupplyVoltageMessage2_Kickout"
+flags: PARAM
+desc: "Kickout PowersupplyVoltageMessage2"
+unit: ""
+range: <0; 1>
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TXCT[7]
+{
+type: flt(64,IEEE)
+alias: "PowersupplyVoltageMessage2_CycleTime"
+flags: PARAM
+desc: "CycleTime PowersupplyVoltageMessage2"
+unit: "s"
+range: <0; 1000>
+value: 0
+}
+
+
+
+
+
+endgroup -- block-group "TX"
+
+
+
+endgroup -- block-group "PowersupplyVoltageMessage2"
+
+
+
+group "ResistanceMeasurementOutputs" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+
+group "RX" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+CANMMCAN_2_RX_Msg_16_Sgn_1
+{
+type: flt(64,IEEE)
+alias: "RMO_Output1"
+flags: OUTPUT|READONLY
+desc: ""
+unit: "Ohm"
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RX_Msg_16_Sgn_2
+{
+type: flt(64,IEEE)
+alias: "RMO_Output2"
+flags: OUTPUT|READONLY
+desc: ""
+unit: "Ohm"
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RX_Msg_16_Sgn_3
+{
+type: flt(64,IEEE)
+alias: "RMO_Output3"
+flags: OUTPUT|READONLY
+desc: ""
+unit: "Ohm"
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RX_Msg_16_Sgn_4
+{
+type: flt(64,IEEE)
+alias: "RMO_Output4"
+flags: OUTPUT|READONLY
+desc: ""
+unit: "Ohm"
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RX_Msg_16_Sgn_5
+{
+type: flt(64,IEEE)
+alias: "RMO_Output5"
+flags: OUTPUT|READONLY
+desc: ""
+unit: "Ohm"
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RX_Msg_16_Sgn_6
+{
+type: flt(64,IEEE)
+alias: "RMO_Output6"
+flags: OUTPUT|READONLY
+desc: ""
+unit: "Ohm"
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RX_Msg_16_Sgn_7
+{
+type: flt(64,IEEE)
+alias: "RMO_Output7"
+flags: OUTPUT|READONLY
+desc: ""
+unit: "Ohm"
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RX_Msg_16_Sgn_8
+{
+type: flt(64,IEEE)
+alias: "RMO_Output8"
+flags: OUTPUT|READONLY
+desc: ""
+unit: "Ohm"
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RXPRIO[3]
+{
+type: UINT(8)
+alias: "ResistanceMeasurementOutputs_Prio"
+flags: OUTPUT|READONLY
+desc: "J1939 Priority"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RXPGN[3]
+{
+type: UINT(32)
+alias: "ResistanceMeasurementOutputs_PGN"
+flags: OUTPUT|READONLY
+desc: "J1939 Parameter Group Number"
+unit: ""
+value: 65304
+}
+
+
+
+
+CANMMCAN_2_RXSNIDX[3]
+{
+type: UINT(8)
+alias: "ResistanceMeasurementOutputs_SNIDX"
+flags: OUTPUT|READONLY
+desc: "J1939 Source Node Index"
+unit: ""
+value: 1
+}
+
+
+
+
+CANMMCAN_2_RXSA[3]
+{
+type: UINT(8)
+alias: "ResistanceMeasurementOutputs_SA"
+flags: OUTPUT|READONLY
+desc: "J1939 Source Address"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RXDA[3]
+{
+type: UINT(8)
+alias: "ResistanceMeasurementOutputs_DA"
+flags: OUTPUT|READONLY
+desc: "J1939 Destination Address"
+unit: ""
+value: 255
+}
+
+
+
+
+CANMMCAN_2_MIDFRX[3]
+{
+type: UINT(8)
+alias: "ResistanceMeasurementOutputs_IDFormat"
+flags: OUTPUT|READONLY
+desc: "Message ID Format"
+unit: ""
+value: 1
+}
+
+
+
+
+CANMMCAN_2_RXLEN[3]
+{
+type: UINT(32)
+alias: "ResistanceMeasurementOutputs_Length"
+flags: OUTPUT|READONLY
+desc: "Message Length"
+unit: ""
+value: 8
+}
+
+
+
+
+CANMMCAN_2_RXsta[3]
+{
+type: UINT(8)
+alias: "ResistanceMeasurementOutputs_status"
+flags: OUTPUT|READONLY
+desc: "ResistanceMeasurementOutputs Status"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RXdt[3]
+{
+type: flt(64,IEEE)
+alias: "ResistanceMeasurementOutputs_dt"
+flags: OUTPUT|READONLY
+desc: "ResistanceMeasurementOutputs DeltaTime"
+unit: "s"
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RXt[3]
+{
+type: flt(64,IEEE)
+alias: "ResistanceMeasurementOutputs_time"
+flags: OUTPUT|READONLY
+desc: "ResistanceMeasurementOutputs Time"
+unit: "s"
+value: 0.0
+}
+
+
+
+
+
+endgroup -- block-group "RX"
+
+
+
+group "TX" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+CANMMCAN_2_WBS[3]
+{
+type: UINT(8)
+alias: "ResistanceMeasurementOutputs_CheckEnable"
+flags: OUTPUT|READONLY
+desc: "Check enabled ResistanceMeasurementOutputs"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TXDT[3]
+{
+type: flt(64,IEEE)
+alias: "ResistanceMeasurementOutputs_DelayTime"
+flags: OUTPUT|READONLY
+desc: "DelayTime ResistanceMeasurementOutputs"
+unit: "s"
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TXsta[3]
+{
+type: UINT(8)
+alias: "ResistanceMeasurementOutputs_status"
+flags: OUTPUT|READONLY
+desc: "ResistanceMeasurementOutputs Status"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TX_Msg_16_Sgn_1_constant
+{
+type: flt(64,IEEE)
+alias: "RMO_Output1"
+flags: PARAM
+desc: ""
+unit: "Ohm"
+range: <0; 60>
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TX_Msg_16_Sgn_2_constant
+{
+type: flt(64,IEEE)
+alias: "RMO_Output2"
+flags: PARAM
+desc: ""
+unit: "Ohm"
+range: <0; 60>
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TX_Msg_16_Sgn_3_constant
+{
+type: flt(64,IEEE)
+alias: "RMO_Output3"
+flags: PARAM
+desc: ""
+unit: "Ohm"
+range: <0; 60>
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TX_Msg_16_Sgn_4_constant
+{
+type: flt(64,IEEE)
+alias: "RMO_Output4"
+flags: PARAM
+desc: ""
+unit: "Ohm"
+range: <0; 60>
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TX_Msg_16_Sgn_5_constant
+{
+type: flt(64,IEEE)
+alias: "RMO_Output5"
+flags: PARAM
+desc: ""
+unit: "Ohm"
+range: <0; 60>
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TX_Msg_16_Sgn_6_constant
+{
+type: flt(64,IEEE)
+alias: "RMO_Output6"
+flags: PARAM
+desc: ""
+unit: "Ohm"
+range: <0; 60>
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TX_Msg_16_Sgn_7_constant
+{
+type: flt(64,IEEE)
+alias: "RMO_Output7"
+flags: PARAM
+desc: ""
+unit: "Ohm"
+range: <0; 60>
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TX_Msg_16_Sgn_8_constant
+{
+type: flt(64,IEEE)
+alias: "RMO_Output8"
+flags: PARAM
+desc: ""
+unit: "Ohm"
+range: <0; 60>
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TXEIN[3]
+{
+type: UINT(8)
+alias: "ResistanceMeasurementOutputs_Enable"
+flags: PARAM
+desc: "Enable ResistanceMeasurementOutputs"
+unit: ""
+range: <0; 1>
+value: 1
+}
+
+
+
+
+CANMMCAN_2_TXCIE[3]
+{
+type: UINT(8)
+alias: "ResistanceMeasurementOutputs_PeriodicalOn"
+flags: PARAM
+desc: "Activate cyclic transmission for ResistanceMeasurementOutputs"
+unit: ""
+range: <0; 1>
+value: 1
+}
+
+
+
+
+CANMMCAN_2_TXKIEX[3]
+{
+type: UINT(8)
+alias: "ResistanceMeasurementOutputs_Kickout"
+flags: PARAM
+desc: "Kickout ResistanceMeasurementOutputs"
+unit: ""
+range: <0; 1>
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TXCT[3]
+{
+type: flt(64,IEEE)
+alias: "ResistanceMeasurementOutputs_CycleTime"
+flags: PARAM
+desc: "CycleTime ResistanceMeasurementOutputs"
+unit: "s"
+range: <0; 1000>
+value: 0
+}
+
+
+
+
+
+endgroup -- block-group "TX"
+
+
+
+endgroup -- block-group "ResistanceMeasurementOutputs"
+
+
+
+group "SpeedMessage" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+
+group "RX" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+CANMMCAN_2_RX_Msg_17_Sgn_1
+{
+type: UINT(8)
+alias: "SPEED_EtsSpeed"
+flags: OUTPUT|READONLY
+desc: ""
+unit: "km/h"
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RX_Msg_17_Sgn_2
+{
+type: UINT(8)
+alias: "SPEED_SecondMicroSpeed"
+flags: OUTPUT|READONLY
+desc: ""
+unit: "km/h"
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RX_Msg_17_Sgn_3
+{
+type: INT(8)
+alias: "SPEED_MidPointHysteresis"
+flags: OUTPUT|READONLY
+desc: ""
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RX_Msg_17_Sgn_4
+{
+type: INT(8)
+alias: "SPEED_SpeedValidIndication"
+flags: OUTPUT|READONLY
+desc: ""
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RX_Msg_17_Sgn_5
+{
+type: INT(8)
+alias: "SPEED_LeadSpeed"
+flags: OUTPUT|READONLY
+desc: ""
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RXPRIO[2]
+{
+type: UINT(8)
+alias: "SpeedMessage_Prio"
+flags: OUTPUT|READONLY
+desc: "J1939 Priority"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RXPGN[2]
+{
+type: UINT(32)
+alias: "SpeedMessage_PGN"
+flags: OUTPUT|READONLY
+desc: "J1939 Parameter Group Number"
+unit: ""
+value: 65298
+}
+
+
+
+
+CANMMCAN_2_RXSNIDX[2]
+{
+type: UINT(8)
+alias: "SpeedMessage_SNIDX"
+flags: OUTPUT|READONLY
+desc: "J1939 Source Node Index"
+unit: ""
+value: 1
+}
+
+
+
+
+CANMMCAN_2_RXSA[2]
+{
+type: UINT(8)
+alias: "SpeedMessage_SA"
+flags: OUTPUT|READONLY
+desc: "J1939 Source Address"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RXDA[2]
+{
+type: UINT(8)
+alias: "SpeedMessage_DA"
+flags: OUTPUT|READONLY
+desc: "J1939 Destination Address"
+unit: ""
+value: 255
+}
+
+
+
+
+CANMMCAN_2_MIDFRX[2]
+{
+type: UINT(8)
+alias: "SpeedMessage_IDFormat"
+flags: OUTPUT|READONLY
+desc: "Message ID Format"
+unit: ""
+value: 1
+}
+
+
+
+
+CANMMCAN_2_RXLEN[2]
+{
+type: UINT(32)
+alias: "SpeedMessage_Length"
+flags: OUTPUT|READONLY
+desc: "Message Length"
+unit: ""
+value: 8
+}
+
+
+
+
+CANMMCAN_2_RXsta[2]
+{
+type: UINT(8)
+alias: "SpeedMessage_status"
+flags: OUTPUT|READONLY
+desc: "SpeedMessage Status"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RXdt[2]
+{
+type: flt(64,IEEE)
+alias: "SpeedMessage_dt"
+flags: OUTPUT|READONLY
+desc: "SpeedMessage DeltaTime"
+unit: "s"
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RXt[2]
+{
+type: flt(64,IEEE)
+alias: "SpeedMessage_time"
+flags: OUTPUT|READONLY
+desc: "SpeedMessage Time"
+unit: "s"
+value: 0.0
+}
+
+
+
+
+
+endgroup -- block-group "RX"
+
+
+
+group "TX" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+CANMMCAN_2_WBS[2]
+{
+type: UINT(8)
+alias: "SpeedMessage_CheckEnable"
+flags: OUTPUT|READONLY
+desc: "Check enabled SpeedMessage"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TXDT[2]
+{
+type: flt(64,IEEE)
+alias: "SpeedMessage_DelayTime"
+flags: OUTPUT|READONLY
+desc: "DelayTime SpeedMessage"
+unit: "s"
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TXsta[2]
+{
+type: UINT(8)
+alias: "SpeedMessage_status"
+flags: OUTPUT|READONLY
+desc: "SpeedMessage Status"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TX_Msg_17_Sgn_1_constant
+{
+type: UINT(8)
+alias: "SPEED_EtsSpeed"
+flags: PARAM
+desc: ""
+unit: "km/h"
+range: <0; 250>
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TX_Msg_17_Sgn_2_constant
+{
+type: UINT(8)
+alias: "SPEED_SecondMicroSpeed"
+flags: PARAM
+desc: ""
+unit: "km/h"
+range: <0; 250>
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TX_Msg_17_Sgn_3_constant
+{
+type: INT(8)
+alias: "SPEED_MidPointHysteresis"
+flags: PARAM
+desc: ""
+unit: ""
+range: <-128; 127>
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TX_Msg_17_Sgn_4_constant
+{
+type: INT(8)
+alias: "SPEED_SpeedValidIndication"
+flags: PARAM
+desc: ""
+unit: ""
+range: <-128; 127>
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TX_Msg_17_Sgn_5_constant
+{
+type: INT(8)
+alias: "SPEED_LeadSpeed"
+flags: PARAM
+desc: ""
+unit: ""
+range: <-128; 127>
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TXEIN[2]
+{
+type: UINT(8)
+alias: "SpeedMessage_Enable"
+flags: PARAM
+desc: "Enable SpeedMessage"
+unit: ""
+range: <0; 1>
+value: 1
+}
+
+
+
+
+CANMMCAN_2_TXCIE[2]
+{
+type: UINT(8)
+alias: "SpeedMessage_PeriodicalOn"
+flags: PARAM
+desc: "Activate cyclic transmission for SpeedMessage"
+unit: ""
+range: <0; 1>
+value: 1
+}
+
+
+
+
+CANMMCAN_2_TXKIEX[2]
+{
+type: UINT(8)
+alias: "SpeedMessage_Kickout"
+flags: PARAM
+desc: "Kickout SpeedMessage"
+unit: ""
+range: <0; 1>
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TXCT[2]
+{
+type: flt(64,IEEE)
+alias: "SpeedMessage_CycleTime"
+flags: PARAM
+desc: "CycleTime SpeedMessage"
+unit: "s"
+range: <0; 1000>
+value: 0
+}
+
+
+
+
+
+endgroup -- block-group "TX"
+
+
+
+endgroup -- block-group "SpeedMessage"
+
+
+
+group "StatusHighOutputPins" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+
+group "RX" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+CANMMCAN_2_RX_Msg_18_Sgn_1
+{
+type: UINT(8)
+alias: "SHO_Output1"
+flags: OUTPUT|READONLY
+desc: ""
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RX_Msg_18_Sgn_2
+{
+type: UINT(8)
+alias: "SHO_Output2"
+flags: OUTPUT|READONLY
+desc: ""
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RX_Msg_18_Sgn_3
+{
+type: UINT(8)
+alias: "SHO_Output3"
+flags: OUTPUT|READONLY
+desc: ""
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RX_Msg_18_Sgn_4
+{
+type: UINT(8)
+alias: "SHO_Output4"
+flags: OUTPUT|READONLY
+desc: ""
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RX_Msg_18_Sgn_5
+{
+type: UINT(8)
+alias: "SHO_Output5"
+flags: OUTPUT|READONLY
+desc: ""
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RX_Msg_18_Sgn_6
+{
+type: UINT(8)
+alias: "SHO_Output6"
+flags: OUTPUT|READONLY
+desc: ""
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RX_Msg_18_Sgn_7
+{
+type: UINT(8)
+alias: "SHO_Output7"
+flags: OUTPUT|READONLY
+desc: ""
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RX_Msg_18_Sgn_8
+{
+type: UINT(8)
+alias: "SHO_Output8"
+flags: OUTPUT|READONLY
+desc: ""
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RXPRIO[4]
+{
+type: UINT(8)
+alias: "StatusHighOutputPins_Prio"
+flags: OUTPUT|READONLY
+desc: "J1939 Priority"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RXPGN[4]
+{
+type: UINT(32)
+alias: "StatusHighOutputPins_PGN"
+flags: OUTPUT|READONLY
+desc: "J1939 Parameter Group Number"
+unit: ""
+value: 65312
+}
+
+
+
+
+CANMMCAN_2_RXSNIDX[4]
+{
+type: UINT(8)
+alias: "StatusHighOutputPins_SNIDX"
+flags: OUTPUT|READONLY
+desc: "J1939 Source Node Index"
+unit: ""
+value: 1
+}
+
+
+
+
+CANMMCAN_2_RXSA[4]
+{
+type: UINT(8)
+alias: "StatusHighOutputPins_SA"
+flags: OUTPUT|READONLY
+desc: "J1939 Source Address"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RXDA[4]
+{
+type: UINT(8)
+alias: "StatusHighOutputPins_DA"
+flags: OUTPUT|READONLY
+desc: "J1939 Destination Address"
+unit: ""
+value: 255
+}
+
+
+
+
+CANMMCAN_2_MIDFRX[4]
+{
+type: UINT(8)
+alias: "StatusHighOutputPins_IDFormat"
+flags: OUTPUT|READONLY
+desc: "Message ID Format"
+unit: ""
+value: 1
+}
+
+
+
+
+CANMMCAN_2_RXLEN[4]
+{
+type: UINT(32)
+alias: "StatusHighOutputPins_Length"
+flags: OUTPUT|READONLY
+desc: "Message Length"
+unit: ""
+value: 8
+}
+
+
+
+
+CANMMCAN_2_RXsta[4]
+{
+type: UINT(8)
+alias: "StatusHighOutputPins_status"
+flags: OUTPUT|READONLY
+desc: "StatusHighOutputPins Status"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RXdt[4]
+{
+type: flt(64,IEEE)
+alias: "StatusHighOutputPins_dt"
+flags: OUTPUT|READONLY
+desc: "StatusHighOutputPins DeltaTime"
+unit: "s"
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RXt[4]
+{
+type: flt(64,IEEE)
+alias: "StatusHighOutputPins_time"
+flags: OUTPUT|READONLY
+desc: "StatusHighOutputPins Time"
+unit: "s"
+value: 0.0
+}
+
+
+
+
+
+endgroup -- block-group "RX"
+
+
+
+group "TX" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+CANMMCAN_2_WBS[4]
+{
+type: UINT(8)
+alias: "StatusHighOutputPins_CheckEnable"
+flags: OUTPUT|READONLY
+desc: "Check enabled StatusHighOutputPins"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TXDT[4]
+{
+type: flt(64,IEEE)
+alias: "StatusHighOutputPins_DelayTime"
+flags: OUTPUT|READONLY
+desc: "DelayTime StatusHighOutputPins"
+unit: "s"
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TXsta[4]
+{
+type: UINT(8)
+alias: "StatusHighOutputPins_status"
+flags: OUTPUT|READONLY
+desc: "StatusHighOutputPins Status"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TX_Msg_18_Sgn_1_constant
+{
+type: UINT(8)
+alias: "SHO_Output1"
+flags: PARAM
+desc: ""
+unit: ""
+range: <0; 255>
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TX_Msg_18_Sgn_2_constant
+{
+type: UINT(8)
+alias: "SHO_Output2"
+flags: PARAM
+desc: ""
+unit: ""
+range: <0; 255>
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TX_Msg_18_Sgn_3_constant
+{
+type: UINT(8)
+alias: "SHO_Output3"
+flags: PARAM
+desc: ""
+unit: ""
+range: <0; 255>
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TX_Msg_18_Sgn_4_constant
+{
+type: UINT(8)
+alias: "SHO_Output4"
+flags: PARAM
+desc: ""
+unit: ""
+range: <0; 255>
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TX_Msg_18_Sgn_5_constant
+{
+type: UINT(8)
+alias: "SHO_Output5"
+flags: PARAM
+desc: ""
+unit: ""
+range: <0; 255>
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TX_Msg_18_Sgn_6_constant
+{
+type: UINT(8)
+alias: "SHO_Output6"
+flags: PARAM
+desc: ""
+unit: ""
+range: <0; 255>
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TX_Msg_18_Sgn_7_constant
+{
+type: UINT(8)
+alias: "SHO_Output7"
+flags: PARAM
+desc: ""
+unit: ""
+range: <0; 255>
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TX_Msg_18_Sgn_8_constant
+{
+type: UINT(8)
+alias: "SHO_Output8"
+flags: PARAM
+desc: ""
+unit: ""
+range: <0; 255>
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TXEIN[4]
+{
+type: UINT(8)
+alias: "StatusHighOutputPins_Enable"
+flags: PARAM
+desc: "Enable StatusHighOutputPins"
+unit: ""
+range: <0; 1>
+value: 1
+}
+
+
+
+
+CANMMCAN_2_TXCIE[4]
+{
+type: UINT(8)
+alias: "StatusHighOutputPins_PeriodicalOn"
+flags: PARAM
+desc: "Activate cyclic transmission for StatusHighOutputPins"
+unit: ""
+range: <0; 1>
+value: 1
+}
+
+
+
+
+CANMMCAN_2_TXKIEX[4]
+{
+type: UINT(8)
+alias: "StatusHighOutputPins_Kickout"
+flags: PARAM
+desc: "Kickout StatusHighOutputPins"
+unit: ""
+range: <0; 1>
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TXCT[4]
+{
+type: flt(64,IEEE)
+alias: "StatusHighOutputPins_CycleTime"
+flags: PARAM
+desc: "CycleTime StatusHighOutputPins"
+unit: "s"
+range: <0; 1000>
+value: 0
+}
+
+
+
+
+
+endgroup -- block-group "TX"
+
+
+
+endgroup -- block-group "StatusHighOutputPins"
+
+
+
+group "StatusLowOutputPins" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+
+group "RX" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+CANMMCAN_2_RX_Msg_19_Sgn_1
+{
+type: UINT(8)
+alias: "SLO_Output1"
+flags: OUTPUT|READONLY
+desc: ""
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RX_Msg_19_Sgn_2
+{
+type: UINT(8)
+alias: "SLO_Output2"
+flags: OUTPUT|READONLY
+desc: ""
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RXPRIO[5]
+{
+type: UINT(8)
+alias: "StatusLowOutputPins_Prio"
+flags: OUTPUT|READONLY
+desc: "J1939 Priority"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RXPGN[5]
+{
+type: UINT(32)
+alias: "StatusLowOutputPins_PGN"
+flags: OUTPUT|READONLY
+desc: "J1939 Parameter Group Number"
+unit: ""
+value: 65320
+}
+
+
+
+
+CANMMCAN_2_RXSNIDX[5]
+{
+type: UINT(8)
+alias: "StatusLowOutputPins_SNIDX"
+flags: OUTPUT|READONLY
+desc: "J1939 Source Node Index"
+unit: ""
+value: 1
+}
+
+
+
+
+CANMMCAN_2_RXSA[5]
+{
+type: UINT(8)
+alias: "StatusLowOutputPins_SA"
+flags: OUTPUT|READONLY
+desc: "J1939 Source Address"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RXDA[5]
+{
+type: UINT(8)
+alias: "StatusLowOutputPins_DA"
+flags: OUTPUT|READONLY
+desc: "J1939 Destination Address"
+unit: ""
+value: 255
+}
+
+
+
+
+CANMMCAN_2_MIDFRX[5]
+{
+type: UINT(8)
+alias: "StatusLowOutputPins_IDFormat"
+flags: OUTPUT|READONLY
+desc: "Message ID Format"
+unit: ""
+value: 1
+}
+
+
+
+
+CANMMCAN_2_RXLEN[5]
+{
+type: UINT(32)
+alias: "StatusLowOutputPins_Length"
+flags: OUTPUT|READONLY
+desc: "Message Length"
+unit: ""
+value: 8
+}
+
+
+
+
+CANMMCAN_2_RXsta[5]
+{
+type: UINT(8)
+alias: "StatusLowOutputPins_status"
+flags: OUTPUT|READONLY
+desc: "StatusLowOutputPins Status"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RXdt[5]
+{
+type: flt(64,IEEE)
+alias: "StatusLowOutputPins_dt"
+flags: OUTPUT|READONLY
+desc: "StatusLowOutputPins DeltaTime"
+unit: "s"
+value: 0
+}
+
+
+
+
+CANMMCAN_2_RXt[5]
+{
+type: flt(64,IEEE)
+alias: "StatusLowOutputPins_time"
+flags: OUTPUT|READONLY
+desc: "StatusLowOutputPins Time"
+unit: "s"
+value: 0.0
+}
+
+
+
+
+
+endgroup -- block-group "RX"
+
+
+
+group "TX" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+CANMMCAN_2_WBS[5]
+{
+type: UINT(8)
+alias: "StatusLowOutputPins_CheckEnable"
+flags: OUTPUT|READONLY
+desc: "Check enabled StatusLowOutputPins"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TXDT[5]
+{
+type: flt(64,IEEE)
+alias: "StatusLowOutputPins_DelayTime"
+flags: OUTPUT|READONLY
+desc: "DelayTime StatusLowOutputPins"
+unit: "s"
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TXsta[5]
+{
+type: UINT(8)
+alias: "StatusLowOutputPins_status"
+flags: OUTPUT|READONLY
+desc: "StatusLowOutputPins Status"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TX_Msg_19_Sgn_1_constant
+{
+type: UINT(8)
+alias: "SLO_Output1"
+flags: PARAM
+desc: ""
+unit: ""
+range: <0; 255>
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TX_Msg_19_Sgn_2_constant
+{
+type: UINT(8)
+alias: "SLO_Output2"
+flags: PARAM
+desc: ""
+unit: ""
+range: <0; 255>
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TXEIN[5]
+{
+type: UINT(8)
+alias: "StatusLowOutputPins_Enable"
+flags: PARAM
+desc: "Enable StatusLowOutputPins"
+unit: ""
+range: <0; 1>
+value: 1
+}
+
+
+
+
+CANMMCAN_2_TXCIE[5]
+{
+type: UINT(8)
+alias: "StatusLowOutputPins_PeriodicalOn"
+flags: PARAM
+desc: "Activate cyclic transmission for StatusLowOutputPins"
+unit: ""
+range: <0; 1>
+value: 1
+}
+
+
+
+
+CANMMCAN_2_TXKIEX[5]
+{
+type: UINT(8)
+alias: "StatusLowOutputPins_Kickout"
+flags: PARAM
+desc: "Kickout StatusLowOutputPins"
+unit: ""
+range: <0; 1>
+value: 0
+}
+
+
+
+
+CANMMCAN_2_TXCT[5]
+{
+type: flt(64,IEEE)
+alias: "StatusLowOutputPins_CycleTime"
+flags: PARAM
+desc: "CycleTime StatusLowOutputPins"
+unit: "s"
+range: <0; 1000>
+value: 0
+}
+
+
+
+
+
+endgroup -- block-group "TX"
+
+
+
+endgroup -- block-group "StatusLowOutputPins"
+
+
+
+group "RT" -- subsystem-group
+{
+     flags: COLLAPSED | HIDDEN
+}
+
+
+
+group "FreeRawMessages" -- subsystem-group
+{
+     flags: COLLAPSED | HIDDEN
+}
+
+
+
+endgroup -- block-group "FreeRawMessages"
+
+
+
+endgroup -- block-group "RT"
+
+
+
+endgroup -- block-group "CAN_2"
+
+
+-- END@RTICANMM_MAIN_CAN_2_DS1401_1_2_1
+ 
+ 
+ 
+
+        endgroup -- block-group "CAN"
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+
+        endgroup -- block-group "BusSystems"
+
+
+ 
+ 
+ 
+-- ******** User variables from model_usr.trc *********************************
+
+-- RTI_USR_TRC_BEGIN
+
+-- No user file CAN_new_usr.trc found.
+
+-- RTI_USR_TRC_END
+-- ******** Task Information variables ****************************************
+
+group "Task Info"
+{
+ flags: COLLAPSED
+}
+  group "Timer Task 1"
+  {
+   flags: COLLAPSED
+  }
+
+  pRti_TIMERA_STime
+  {
+   type:  flt(64,IEEE)*
+   alias: "sampleTime"
+   flags: SYSTEM|READONLY
+  }
+  pRti_TIMERA_TTime
+  {
+   type:  flt(64,IEEE)*
+   alias: "turnaroundTime"
+   flags: SYSTEM|READONLY
+  }
+  pRti_TIMERA_TState
+  {
+   type:  int(32)*
+   alias: "state"
+   flags: SYSTEM|READONLY
+  }
+  pRti_TIMERA_OType
+  {
+   type:  int(32)*
+   alias: "overrunCheckType"
+   flags: SYSTEM|READONLY
+  }
+  pRti_TIMERA_OMax
+  {
+   type:  int(32)*
+   alias: "overrunQueueMax"
+   flags: SYSTEM|READONLY
+  }
+  pRti_TIMERA_ORpt
+  {
+   type:  int(32)*
+   alias: "overrunQueueCount"
+   flags: SYSTEM|READONLY
+  }
+  pRti_TIMERA_OCnt
+  {
+   type:  int(32)*
+   alias: "overrunCount"
+   flags: SYSTEM|READONLY
+  }
+  pRti_TIMERA_TCnt
+  {
+   type:  flt(64,IEEE)*
+   alias: "taskCallCount"
+   flags: SYSTEM|READONLY
+  }
+  pRti_TIMERA_Prio
+  {
+   type:  int(32)*
+   alias: "priority"
+   flags: SYSTEM|READONLY
+  }
+  endgroup
+
+
+endgroup
+
+-- ******** [EOF] *************************************************************
+
+
+

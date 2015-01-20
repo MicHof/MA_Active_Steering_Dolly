@@ -1,0 +1,13 @@
+ 
+ 
+ 
+
+group "CAN" -- subsystem-group
+        {
+     flags: COLLAPSED
+ }
+
+
+ 
+ 
+ 

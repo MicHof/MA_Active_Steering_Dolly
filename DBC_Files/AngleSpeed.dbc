@@ -1,0 +1,61 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_:
+
+
+BO_ 2566890040 AngleSensor: 5 Vector__XXX
+ SG_ Temperature : 24|8@1+ (1,-40) [-40|215] "°C" Vector__XXX
+ SG_ PacketType : 0|3@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ MessageCounter : 3|5@1+ (1,0) [0|31] "" Vector__XXX
+ SG_ Angle : 8|16@1+ (0.0078125,-200) [-200|311.9921875] "degr" Vector__XXX
+ SG_ AlarmWarningBits : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 2349015240 ISO11992_EBS21: 8 Vector__XXX
+ SG_ WheelSpeedDiffMainAxle : 40|16@1+ (0.00390625,-125) [-125|125] "km/h" Vector__XXX
+ SG_ ActualRetarderPercTorque : 32|8@1+ (1,-125) [-125|125] "%" Vector__XXX
+ SG_ Wheel_BasedVehicleSpeed : 16|16@1+ (0.00390625,0) [0|251] "km/" Vector__XXX
+ SG_ SupplyLineBrakingRequest : 10|2@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ VDCActive : 8|2@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ AutomTowedVehBreakActive : 6|2@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ VehicleServiceBrakeActive : 4|2@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ VehicleRetarderCtrlActive : 2|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ VehicleABSActive : 0|2@1+ (1,0) [0|1] "" Vector__XXX
+
+
+
+BA_DEF_  "BusType" STRING ;
+BA_DEF_DEF_  "BusType" "CAN";
+

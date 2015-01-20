@@ -1,0 +1,298 @@
+<Type>MainBlock</Type>
+<GenInfo>
+   <Ver>3.0.735671.4434490741</Ver>
+   <Var>1</Var>
+   <CANName>CAN</CANName>
+   <CANUniqueID>1</CANUniqueID>
+   <CapMsgs>
+      <A>OFF</A>
+   </CapMsgs>
+   <GW>OFF</GW>
+   <J1939>OFF</J1939>
+   <CRCs attCount="0"/>
+   <NoFreeIds>0</NoFreeIds>
+   <NoRTTMsgs>0</NoRTTMsgs>
+</GenInfo>
+<TRCInfos>
+   <TRCPrefixGlobal>BusSystems/CAN/CAN</TRCPrefixGlobal>
+   <TRCPrefixMsg>
+      <RX>BusSystems/CAN/CAN/%MsgName%/RX/</RX>
+      <TX>BusSystems/CAN/CAN/%MsgName%/TX/</TX>
+      <Capt>BusSystems/CAN/CAN/%MsgName%/</Capt>
+   </TRCPrefixMsg>
+</TRCInfos>
+<Settings>
+   <Global>
+      <Generic>
+         <GlobalVar attName="En">
+            <InportDefault>0</InportDefault>
+            <Logic>-</Logic>
+            <Source>TRC</Source>
+            <TN>GlobalEnable</TN>
+            <DN>GlobalEnable</DN>
+         </GlobalVar>
+         <GlobalVar attName="EnTx">
+            <InportDefault>0</InportDefault>
+            <Logic>-</Logic>
+            <Source>TRC</Source>
+            <TN>GlobalEnableTX</TN>
+            <DN>GlobalEnableTX</DN>
+         </GlobalVar>
+         <GlobalVar attName="Var">
+            <TN>Variation</TN>
+            <DN>Variation</DN>
+         </GlobalVar>
+         <GlobalVar attName="MaxMessagesPerStep">
+            <TN>MaxMessagesPerStep</TN>
+            <DN>Maximum TX Messages per SampleStep</DN>
+         </GlobalVar>
+      </Generic>
+   </Global>
+   <ECUs attCount="1">
+      <ECU>
+         <Name>Vector__XXX</Name>
+         <NodeIndex>1</NodeIndex>
+         <Generic></Generic>
+      </ECU>
+   </ECUs>
+   <Msgs attCount="2">
+      <Msg ID="419406392" Name="AngleSensor" DBCName="AngleSensor" DBCID="419406392">
+         <ECU>Vector__XXX</ECU>
+         <RECU>Vector__XXX</RECU>
+         <FreeRawMsg>OFF</FreeRawMsg>
+         <CaptureMsg>OFF</CaptureMsg>
+         <Len>5</Len>
+         <Dir>1</Dir>
+         <Vars attCount="0"/>
+         <RX>
+            <Generic>
+               <RXVar attName="StdID">
+                  <TN>AngleSensor_ID</TN>
+                  <DN>AngleSensor_ID</DN>
+               </RXVar>
+               <RXVar attName="Len">
+                  <TN>AngleSensor_Length</TN>
+                  <DN>AngleSensor_Length</DN>
+               </RXVar>
+               <RXVar attName="Status">
+                  <TN>AngleSensor_status</TN>
+                  <DN>AngleSensor_status</DN>
+               </RXVar>
+               <RXVar attName="Time">
+                  <TN>AngleSensor_time</TN>
+                  <DN>AngleSensor_time</DN>
+               </RXVar>
+               <RXVar attName="DeltaTime">
+                  <TN>AngleSensor_dt</TN>
+                  <DN>AngleSensor_dt</DN>
+               </RXVar>
+            </Generic>
+         </RX>
+         <Sgns attCount="5">
+            <Sgn attName="PacketType" attStartBit="0">
+               <Generics>
+                  <SgnTXOpt attName="Err" attValue="0"/>
+               </Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="PacketType"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="MessageCounter" attStartBit="3">
+               <Generics>
+                  <SgnTXOpt attName="Err" attValue="0"/>
+               </Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="MessageCounter"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="Angle" attStartBit="8">
+               <Generics>
+                  <SgnTXOpt attName="Err" attValue="0"/>
+               </Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="Angle"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="Temperature" attStartBit="24">
+               <Generics>
+                  <SgnTXOpt attName="Err" attValue="0"/>
+               </Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="Temperature"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="AlarmWarningBits" attStartBit="32">
+               <Generics>
+                  <SgnTXOpt attName="Err" attValue="0"/>
+               </Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="AlarmWarningBits"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+         </Sgns>
+      </Msg>
+      <Msg ID="201531592" Name="ISO11992_EBS21" DBCName="ISO11992_EBS21" DBCID="201531592">
+         <ECU>Vector__XXX</ECU>
+         <RECU>Vector__XXX</RECU>
+         <FreeRawMsg>OFF</FreeRawMsg>
+         <CaptureMsg>OFF</CaptureMsg>
+         <Len>8</Len>
+         <Dir>1</Dir>
+         <Vars attCount="0"/>
+         <RX>
+            <Generic>
+               <RXVar attName="StdID">
+                  <TN>ISO11992_EBS21_ID</TN>
+                  <DN>ISO11992_EBS21_ID</DN>
+               </RXVar>
+               <RXVar attName="Len">
+                  <TN>ISO11992_EBS21_Length</TN>
+                  <DN>ISO11992_EBS21_Length</DN>
+               </RXVar>
+               <RXVar attName="Status">
+                  <TN>ISO11992_EBS21_status</TN>
+                  <DN>ISO11992_EBS21_status</DN>
+               </RXVar>
+               <RXVar attName="Time">
+                  <TN>ISO11992_EBS21_time</TN>
+                  <DN>ISO11992_EBS21_time</DN>
+               </RXVar>
+               <RXVar attName="DeltaTime">
+                  <TN>ISO11992_EBS21_dt</TN>
+                  <DN>ISO11992_EBS21_dt</DN>
+               </RXVar>
+            </Generic>
+         </RX>
+         <Sgns attCount="9">
+            <Sgn attName="VehicleABSActive" attStartBit="0">
+               <Generics>
+                  <SgnTXOpt attName="Err" attValue="0"/>
+               </Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="VehicleABSActive"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="VehicleRetarderCtrlActive" attStartBit="2">
+               <Generics>
+                  <SgnTXOpt attName="Err" attValue="0"/>
+               </Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="VehicleRetarderCtrlActive"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="VehicleServiceBrakeActive" attStartBit="4">
+               <Generics>
+                  <SgnTXOpt attName="Err" attValue="0"/>
+               </Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="VehicleServiceBrakeActive"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="AutomTowedVehBreakActive" attStartBit="6">
+               <Generics>
+                  <SgnTXOpt attName="Err" attValue="0"/>
+               </Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="AutomTowedVehBreakActive"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="VDCActive" attStartBit="8">
+               <Generics>
+                  <SgnTXOpt attName="Err" attValue="0"/>
+               </Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="VDCActive"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="SupplyLineBrakingRequest" attStartBit="10">
+               <Generics>
+                  <SgnTXOpt attName="Err" attValue="0"/>
+               </Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="SupplyLineBrakingRequest"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="Wheel_BasedVehicleSpeed" attStartBit="16">
+               <Generics>
+                  <SgnTXOpt attName="Err" attValue="0"/>
+               </Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="Wheel_BasedVehicleSpeed"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="ActualRetarderPercTorque" attStartBit="32">
+               <Generics>
+                  <SgnTXOpt attName="Err" attValue="0"/>
+               </Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="ActualRetarderPercTorque"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="WheelSpeedDiffMainAxle" attStartBit="40">
+               <Generics>
+                  <SgnTXOpt attName="Err" attValue="0"/>
+               </Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="WheelSpeedDiffMainAxle"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+         </Sgns>
+      </Msg>
+   </Msgs>
+</Settings>

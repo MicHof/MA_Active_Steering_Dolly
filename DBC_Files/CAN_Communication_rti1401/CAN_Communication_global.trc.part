@@ -1,0 +1,145 @@
+-- ******** Tunable Parameters ************************************************
+
+-- InlineParameters is off: no separate group for Tunable Parameters
+
+
+-- ******** State Machine Data ************************************************
+
+-- No Stateflow chart within the model.
+
+
+-- ******** Data Store Memories ***********************************************
+
+-- No Data Store Memories within the model.
+
+
+-- ******** Labels ************************************************************
+
+group "Labels"
+{
+ flags: COLLAPSED
+}
+	-- Skipping label "ActualRetarderPercTorque"
+
+	-- Skipping label "AlarmWarningBits"
+
+	-- Skipping label "Angle"
+
+	-- Skipping label "AngleSensor{Occurence1}{SubArray1}"
+
+	-- Skipping label "AngleSensor{Occurence1}{SubArray2}"
+
+	-- Skipping label "AngleSensor{Occurence1}{SubArray3}"
+
+	-- Skipping label "AngleSensor{Occurence1}{SubArray4}"
+
+	-- Skipping label "AngleSensor{Occurence1}{SubArray5}"
+
+	-- Skipping label "AngleSensor{Occurence2}{SubArray1}"
+
+	-- Skipping label "AngleSensor{Occurence2}{SubArray2}"
+
+	-- Skipping label "AngleSensor{Occurence2}{SubArray3}"
+
+	-- Skipping label "AngleSensor{Occurence2}{SubArray4}"
+
+	-- Skipping label "AngleSensor{Occurence2}{SubArray5}"
+
+	-- Skipping label "AutomTowedVehBreakActive"
+
+	-- Skipping label "CAN{SubArray1}"
+
+	-- Skipping label "CAN{SubArray2}"
+
+	-- Skipping label "CAN{SubArray3}"
+
+	-- Skipping label "CAN{SubArray4}"
+
+	-- Skipping label "CAN{SubArray5}"
+
+	-- Skipping label "CAN{SubArray6}"
+
+	-- Skipping label "CAN{SubArray7}"
+
+	-- Skipping label "CAN{SubArray8}"
+
+	-- Skipping label "CAN{SubArray9}"
+
+	-- Skipping label "CAN{SubArray10}"
+
+	-- Skipping label "CAN{SubArray11}"
+
+	-- Skipping label "CAN{SubArray12}"
+
+	-- Skipping label "CAN{SubArray13}"
+
+	-- Skipping label "CAN{SubArray14}"
+
+	-- Skipping label "ISO11992_EBS21{Occurence1}{SubArray1}"
+
+	-- Skipping label "ISO11992_EBS21{Occurence1}{SubArray2}"
+
+	-- Skipping label "ISO11992_EBS21{Occurence1}{SubArray3}"
+
+	-- Skipping label "ISO11992_EBS21{Occurence1}{SubArray4}"
+
+	-- Skipping label "ISO11992_EBS21{Occurence1}{SubArray5}"
+
+	-- Skipping label "ISO11992_EBS21{Occurence1}{SubArray6}"
+
+	-- Skipping label "ISO11992_EBS21{Occurence1}{SubArray7}"
+
+	-- Skipping label "ISO11992_EBS21{Occurence1}{SubArray8}"
+
+	-- Skipping label "ISO11992_EBS21{Occurence1}{SubArray9}"
+
+	-- Skipping label "ISO11992_EBS21{Occurence2}{SubArray1}"
+
+	-- Skipping label "ISO11992_EBS21{Occurence2}{SubArray2}"
+
+	-- Skipping label "ISO11992_EBS21{Occurence2}{SubArray3}"
+
+	-- Skipping label "ISO11992_EBS21{Occurence2}{SubArray4}"
+
+	-- Skipping label "ISO11992_EBS21{Occurence2}{SubArray5}"
+
+	-- Skipping label "ISO11992_EBS21{Occurence2}{SubArray6}"
+
+	-- Skipping label "ISO11992_EBS21{Occurence2}{SubArray7}"
+
+	-- Skipping label "ISO11992_EBS21{Occurence2}{SubArray8}"
+
+	-- Skipping label "ISO11992_EBS21{Occurence2}{SubArray9}"
+
+	-- Skipping label "MessageCounter"
+
+	-- Skipping label "PacketType"
+
+	-- Skipping label "SupplyLineBrakingRequest"
+
+	-- Skipping label "Temperature"
+
+	-- Skipping label "VDCActive"
+
+	-- Skipping label "VehicleABSActive"
+
+	-- Skipping label "VehicleRetarderCtrlActive"
+
+	-- Skipping label "VehicleServiceBrakeActive"
+
+	-- Skipping label "WheelSpeedDiffMainAxle"
+
+	-- Skipping label "Wheel_BasedVehicleSpeed"
+
+
+endgroup
+
+-- ******** RTT Dynamic Variables *********************************************
+
+group "RTT Dynamic Variables"
+{
+ flags: COLLAPSED
+}
+
+endgroup
+

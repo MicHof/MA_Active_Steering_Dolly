@@ -1,0 +1,728 @@
+
+
+-- START@RTICANMM_MAIN_CAN_DS1401_1_1_1
+
+
+
+group "CAN" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+CANMM_CTL_SETUP_Controller1_ID
+{
+type: UINT(8)
+alias: "Variation"
+flags: OUTPUT|READONLY
+desc: "current Variation of Controller1"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_NL
+{
+type: UINT(32)
+alias: "NumLostMsgs"
+flags: OUTPUT|READONLY
+desc: "Number of lost messages"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_TRAFFIC
+{
+type: UINT(8)
+alias: "Traffic"
+flags: OUTPUT|READONLY
+desc: "Traffic"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_GEIN
+{
+type: UINT(8)
+alias: "GlobalEnable"
+flags: PARAM
+desc: "Enable CAN"
+unit: ""
+range: <0; 1>
+value: 1
+}
+
+
+
+
+CANMMCAN_TXGEIN
+{
+type: UINT(8)
+alias: "GlobalEnableTX"
+flags: PARAM
+desc: "Enable TX of CAN"
+unit: ""
+range: <0; 1>
+value: 1
+}
+
+
+
+
+CANMMCAN_MAXMSGPERSTEP
+{
+type: INT(32)
+alias: "MaxMessagesPerStep"
+flags: PARAM
+desc: "MaxMessagesPerStep"
+unit: ""
+range: <0; 100>
+value: 0
+}
+
+
+
+
+CANMMCAN_TXEEIE[0]
+{
+type: UINT(8)
+alias: "Vector__XXX_Enable"
+flags: PARAM
+desc: "Enable Vector__XXX"
+unit: ""
+range: <0; 1>
+value: 1
+}
+
+
+
+
+
+group "AngleSensor" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+
+group "RX" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+CANMMCAN_RX_Msg_1_Sgn_1
+{
+type: UINT(8)
+alias: "PacketType"
+flags: OUTPUT|READONLY
+desc: ""
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_RX_Msg_1_Sgn_2
+{
+type: UINT(8)
+alias: "MessageCounter"
+flags: OUTPUT|READONLY
+desc: ""
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_RX_Msg_1_Sgn_3
+{
+type: flt(64,IEEE)
+alias: "Angle"
+flags: OUTPUT|READONLY
+desc: ""
+unit: "degr"
+value: -200
+}
+
+
+
+
+CANMMCAN_RX_Msg_1_Sgn_4
+{
+type: INT(16)
+alias: "Temperature"
+flags: OUTPUT|READONLY
+desc: ""
+unit: "°C"
+value: -40
+}
+
+
+
+
+CANMMCAN_RX_Msg_1_Sgn_5
+{
+type: UINT(8)
+alias: "AlarmWarningBits"
+flags: OUTPUT|READONLY
+desc: ""
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_MIDRX[1]
+{
+type: UINT(32)
+alias: "AngleSensor_ID"
+flags: OUTPUT|READONLY
+desc: "Message ID"
+unit: ""
+value: 419406392
+}
+
+
+
+
+CANMMCAN_MIDFRX[1]
+{
+type: UINT(8)
+alias: "AngleSensor_IDFormat"
+flags: OUTPUT|READONLY
+desc: "Message ID Format"
+unit: ""
+value: 1
+}
+
+
+
+
+CANMMCAN_RXLEN[1]
+{
+type: UINT(8)
+alias: "AngleSensor_Length"
+flags: OUTPUT|READONLY
+desc: "Message Length"
+unit: ""
+value: 5
+}
+
+
+
+
+CANMMCAN_RXsta[1]
+{
+type: UINT(8)
+alias: "AngleSensor_status"
+flags: OUTPUT|READONLY
+desc: "AngleSensor Status"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_RXdt[1]
+{
+type: flt(64,IEEE)
+alias: "AngleSensor_dt"
+flags: OUTPUT|READONLY
+desc: "AngleSensor DeltaTime"
+unit: "s"
+value: 0
+}
+
+
+
+
+CANMMCAN_RXt[1]
+{
+type: flt(64,IEEE)
+alias: "AngleSensor_time"
+flags: OUTPUT|READONLY
+desc: "AngleSensor Time"
+unit: "s"
+value: 0.0
+}
+
+
+
+
+
+endgroup -- block-group "RX"
+
+
+
+group "TX" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+CANMMCAN_WBS[1]
+{
+type: UINT(8)
+alias: "AngleSensor_CheckEnable"
+flags: OUTPUT|READONLY
+desc: "Check enabled AngleSensor"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_TXDT[1]
+{
+type: flt(64,IEEE)
+alias: "AngleSensor_DelayTime"
+flags: OUTPUT|READONLY
+desc: "DelayTime AngleSensor"
+unit: "s"
+value: 0
+}
+
+
+
+
+CANMMCAN_TXsta[1]
+{
+type: UINT(8)
+alias: "AngleSensor_status"
+flags: OUTPUT|READONLY
+desc: "AngleSensor Status"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_TXEIN[1]
+{
+type: UINT(8)
+alias: "AngleSensor_Enable"
+flags: PARAM
+desc: "Enable AngleSensor"
+unit: ""
+range: <0; 1>
+value: 1
+}
+
+
+
+
+CANMMCAN_TXCIE[1]
+{
+type: UINT(8)
+alias: "AngleSensor_PeriodicalOn"
+flags: PARAM
+desc: "Activate cyclic transmission for AngleSensor"
+unit: ""
+range: <0; 1>
+value: 1
+}
+
+
+
+
+CANMMCAN_TXKIEX[1]
+{
+type: UINT(8)
+alias: "AngleSensor_Kickout"
+flags: PARAM
+desc: "Kickout AngleSensor"
+unit: ""
+range: <0; 1>
+value: 0
+}
+
+
+
+
+CANMMCAN_TXCT[1]
+{
+type: flt(64,IEEE)
+alias: "AngleSensor_CycleTime"
+flags: PARAM
+desc: "CycleTime AngleSensor"
+unit: "s"
+range: <0; 1000>
+value: 0
+}
+
+
+
+
+
+endgroup -- block-group "TX"
+
+
+
+endgroup -- block-group "AngleSensor"
+
+
+
+group "ISO11992_EBS21" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+
+group "RX" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+CANMMCAN_RX_Msg_2_Sgn_1
+{
+type: UINT(8)
+alias: "VehicleABSActive"
+flags: OUTPUT|READONLY
+desc: ""
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_RX_Msg_2_Sgn_2
+{
+type: UINT(8)
+alias: "VehicleRetarderCtrlActive"
+flags: OUTPUT|READONLY
+desc: ""
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_RX_Msg_2_Sgn_3
+{
+type: UINT(8)
+alias: "VehicleServiceBrakeActive"
+flags: OUTPUT|READONLY
+desc: ""
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_RX_Msg_2_Sgn_4
+{
+type: UINT(8)
+alias: "AutomTowedVehBreakActive"
+flags: OUTPUT|READONLY
+desc: ""
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_RX_Msg_2_Sgn_5
+{
+type: UINT(8)
+alias: "VDCActive"
+flags: OUTPUT|READONLY
+desc: ""
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_RX_Msg_2_Sgn_6
+{
+type: UINT(8)
+alias: "SupplyLineBrakingRequest"
+flags: OUTPUT|READONLY
+desc: ""
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_RX_Msg_2_Sgn_7
+{
+type: flt(64,IEEE)
+alias: "Wheel_BasedVehicleSpeed"
+flags: OUTPUT|READONLY
+desc: ""
+unit: "km/"
+value: 0
+}
+
+
+
+
+CANMMCAN_RX_Msg_2_Sgn_8
+{
+type: INT(16)
+alias: "ActualRetarderPercTorque"
+flags: OUTPUT|READONLY
+desc: ""
+unit: "%"
+value: -125
+}
+
+
+
+
+CANMMCAN_RX_Msg_2_Sgn_9
+{
+type: flt(64,IEEE)
+alias: "WheelSpeedDiffMainAxle"
+flags: OUTPUT|READONLY
+desc: ""
+unit: "km/h"
+value: -125
+}
+
+
+
+
+CANMMCAN_MIDRX[0]
+{
+type: UINT(32)
+alias: "ISO11992_EBS21_ID"
+flags: OUTPUT|READONLY
+desc: "Message ID"
+unit: ""
+value: 201531592
+}
+
+
+
+
+CANMMCAN_MIDFRX[0]
+{
+type: UINT(8)
+alias: "ISO11992_EBS21_IDFormat"
+flags: OUTPUT|READONLY
+desc: "Message ID Format"
+unit: ""
+value: 1
+}
+
+
+
+
+CANMMCAN_RXLEN[0]
+{
+type: UINT(8)
+alias: "ISO11992_EBS21_Length"
+flags: OUTPUT|READONLY
+desc: "Message Length"
+unit: ""
+value: 8
+}
+
+
+
+
+CANMMCAN_RXsta[0]
+{
+type: UINT(8)
+alias: "ISO11992_EBS21_status"
+flags: OUTPUT|READONLY
+desc: "ISO11992_EBS21 Status"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_RXdt[0]
+{
+type: flt(64,IEEE)
+alias: "ISO11992_EBS21_dt"
+flags: OUTPUT|READONLY
+desc: "ISO11992_EBS21 DeltaTime"
+unit: "s"
+value: 0
+}
+
+
+
+
+CANMMCAN_RXt[0]
+{
+type: flt(64,IEEE)
+alias: "ISO11992_EBS21_time"
+flags: OUTPUT|READONLY
+desc: "ISO11992_EBS21 Time"
+unit: "s"
+value: 0.0
+}
+
+
+
+
+
+endgroup -- block-group "RX"
+
+
+
+group "TX" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+CANMMCAN_WBS[0]
+{
+type: UINT(8)
+alias: "ISO11992_EBS21_CheckEnable"
+flags: OUTPUT|READONLY
+desc: "Check enabled ISO11992_EBS21"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_TXDT[0]
+{
+type: flt(64,IEEE)
+alias: "ISO11992_EBS21_DelayTime"
+flags: OUTPUT|READONLY
+desc: "DelayTime ISO11992_EBS21"
+unit: "s"
+value: 0
+}
+
+
+
+
+CANMMCAN_TXsta[0]
+{
+type: UINT(8)
+alias: "ISO11992_EBS21_status"
+flags: OUTPUT|READONLY
+desc: "ISO11992_EBS21 Status"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_TXEIN[0]
+{
+type: UINT(8)
+alias: "ISO11992_EBS21_Enable"
+flags: PARAM
+desc: "Enable ISO11992_EBS21"
+unit: ""
+range: <0; 1>
+value: 1
+}
+
+
+
+
+CANMMCAN_TXCIE[0]
+{
+type: UINT(8)
+alias: "ISO11992_EBS21_PeriodicalOn"
+flags: PARAM
+desc: "Activate cyclic transmission for ISO11992_EBS21"
+unit: ""
+range: <0; 1>
+value: 1
+}
+
+
+
+
+CANMMCAN_TXKIEX[0]
+{
+type: UINT(8)
+alias: "ISO11992_EBS21_Kickout"
+flags: PARAM
+desc: "Kickout ISO11992_EBS21"
+unit: ""
+range: <0; 1>
+value: 0
+}
+
+
+
+
+CANMMCAN_TXCT[0]
+{
+type: flt(64,IEEE)
+alias: "ISO11992_EBS21_CycleTime"
+flags: PARAM
+desc: "CycleTime ISO11992_EBS21"
+unit: "s"
+range: <0; 1000>
+value: 0
+}
+
+
+
+
+
+endgroup -- block-group "TX"
+
+
+
+endgroup -- block-group "ISO11992_EBS21"
+
+
+
+group "RT" -- subsystem-group
+{
+     flags: COLLAPSED | HIDDEN
+}
+
+
+
+group "FreeRawMessages" -- subsystem-group
+{
+     flags: COLLAPSED | HIDDEN
+}
+
+
+
+endgroup -- block-group "FreeRawMessages"
+
+
+
+endgroup -- block-group "RT"
+
+
+
+endgroup -- block-group "CAN"
+
+
+-- END@RTICANMM_MAIN_CAN_DS1401_1_1_1
