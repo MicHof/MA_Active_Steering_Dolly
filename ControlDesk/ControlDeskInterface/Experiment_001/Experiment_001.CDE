@@ -1,0 +1,131 @@
+<?xml version="1.0"?>
+<Root><creator type="key">ControlDesk NG 5.2</creator><experiment><Creator type="key">ControlDesk NG</Creator><Name type="key">Experiment_001.CDE</Name><DisplayName type="key">Experiment_001</DisplayName><Path type="key">.\Experiment_001</Path><Flags type="key">4096</Flags><Type type="key">2</Type><ItemInfo type="key">Location: $FPATH$
+Author: Sebastian
+Date: 15.01.2015 10:34:25
+Original location: 
+/HDR/================================
+Description:
+
+================================
+</ItemInfo><UniqueID type="key">82353641</UniqueID><EntityID type="key">{6055686D-14E3-49FE-924F-0AD2AE4CC245}</EntityID><ItemInfoDate type="key">15.01.2015 10:34:25</ItemInfoDate><ItemInfoPath type="key">$FPATH$</ItemInfoPath><ItemInfoDescr type="key"></ItemInfoDescr><ItemInfoAddInfoDb type="key"></ItemInfoAddInfoDb><ItemInfoAuthor type="key">Sebastian</ItemInfoAuthor><item><Targets type="key">experiment</Targets><Name type="key">Experiment_001</Name><DisplayName type="key">Experiment_001</DisplayName><Path type="key">..</Path><Flags type="key">4100</Flags><Type type="key">3</Type><ItemInfo type="key">Location: $FPATH$
+Author: Sebastian
+Date: 15.01.2015 10:34:25
+Original location: 
+/HDR/================================
+Description:
+
+================================
+</ItemInfo><UniqueID type="key">352582506</UniqueID><EntityID type="key">{DDB4FE8B-850B-4DBE-A12E-7A0C8CED8017}</EntityID><ItemInfoDate type="key">15.01.2015 10:34:25</ItemInfoDate><ItemInfoPath type="key">$FPATH$</ItemInfoPath><ItemInfoDescr type="key"></ItemInfoDescr><ItemInfoAddInfoDb type="key"></ItemInfoAddInfoDb><ItemInfoAuthor type="key">Sebastian</ItemInfoAuthor><item><Component type="key">Instrumentation</Component><Targets type="key">instrumentation</Targets><Name type="key">Experiment Layouts</Name><DisplayName type="key">Experiment Layouts</DisplayName><Path type="key">.</Path><ExtendedFlags type="key">128</ExtendedFlags><Type type="key">3</Type><ItemInfo type="key">Location: $FPATH$
+Author: Sebastian
+Date: 15.01.2015 10:34:25
+Original location: 
+/HDR/================================
+Description:
+
+================================
+</ItemInfo><UniqueID type="key">324381493</UniqueID><EntityID type="key">{2D1E7541-C40A-41D0-B370-0DCFB5F56076}</EntityID><ItemInfoDate type="key">15.01.2015 10:34:25</ItemInfoDate><ItemInfoPath type="key">$FPATH$</ItemInfoPath><ItemInfoDescr type="key"></ItemInfoDescr><ItemInfoAddInfoDb type="key"></ItemInfoAddInfoDb><ItemInfoAuthor type="key">Sebastian</ItemInfoAuthor><item><Name type="key">Experiment_001.cdc</Name><DisplayName type="key">Experiment_001.cdc</DisplayName><Path type="key">.\Experiment Layouts</Path><Flags type="key">4100</Flags><Type type="key">4</Type><ItemInfo type="key">Location: $FPATH$
+Author: Sebastian
+Date: 15.01.2015 10:34:28
+Original location: 
+/HDR/================================
+Description:
+
+================================
+</ItemInfo><UniqueID type="key">542673586</UniqueID><EntityID type="key">{B68FFD4F-A139-42CA-A5B8-9EFDEDADD14C}</EntityID><ItemInfoDate type="key">15.01.2015 10:34:28</ItemInfoDate><ItemInfoPath type="key">$FPATH$</ItemInfoPath><ItemInfoDescr type="key"></ItemInfoDescr><ItemInfoAddInfoDb type="key"></ItemInfoAddInfoDb><ItemInfoAuthor type="key">Sebastian</ItemInfoAuthor></item><item><Component type="key">Instrumentation</Component><Name type="key">Layout1.lay</Name><DisplayName type="key">Layout1.lay</DisplayName><Path type="key">.\Experiment Layouts</Path><Flags type="key">16448</Flags><Type type="key">10</Type><ItemInfo type="key">Location: $FPATH$
+Author: Sebastian
+Date: 15.01.2015 10:34:30
+Original location: 
+/HDR/================================
+Description:
+
+================================
+</ItemInfo><UniqueID type="key">884096194</UniqueID><EntityID type="key">{801CA709-E4A0-4624-9E77-10B759B7608F}</EntityID><ItemInfoDate type="key">15.01.2015 10:34:30</ItemInfoDate><ItemInfoPath type="key">$FPATH$</ItemInfoPath><ItemInfoDescr type="key"></ItemInfoDescr><ItemInfoAddInfoDb type="key"></ItemInfoAddInfoDb><ItemInfoAuthor type="key">Sebastian</ItemInfoAuthor></item></item><item><Targets type="key">devicemanagement,platformmanagement,diagnosticsmanagement</Targets><Name type="key">Hardware Configurations</Name><DisplayName type="key">Hardware Configurations</DisplayName><Path type="key">.</Path><Type type="key">3</Type><ItemInfo type="key">Location: $FPATH$
+Author: Sebastian
+Date: 15.01.2015 10:34:25
+Original location: 
+/HDR/================================
+Description:
+
+================================
+</ItemInfo><UniqueID type="key">41078879</UniqueID><EntityID type="key">{ED2F3525-1DB5-40F6-B81E-DE2FE48378A3}</EntityID><ItemInfoDate type="key">15.01.2015 10:34:25</ItemInfoDate><ItemInfoPath type="key">$FPATH$</ItemInfoPath><ItemInfoDescr type="key"></ItemInfoDescr><ItemInfoAddInfoDb type="key"></ItemInfoAddInfoDb><ItemInfoAuthor type="key">Sebastian</ItemInfoAuthor><item><Component type="key">PlatformManagement</Component><Targets type="key">Device::0e445f79-4de2-43d1-b2ed-4ed4946a6616</Targets><RestoreInfopmdn type="key">Platform</RestoreInfopmdn><RestoreInfopmid type="key">0e445f79-4de2-43d1-b2ed-4ed4946a6616</RestoreInfopmid><Name type="key">0e445f79-4de2-43d1-b2ed-4ed4946a6616</Name><DisplayName type="key">Platform [MicroAutoBox, assigned to 'ds1401']</DisplayName><Flags type="key">128</Flags><Type type="key">6</Type><ItemInfo type="key">Author: Sebastian
+Date: 15.01.2015 10:34:31
+Original location: 
+/HDR/================================
+Description:
+
+================================
+</ItemInfo><UniqueID type="key">969500709</UniqueID><EntityID type="key">{3189C8BF-0277-42BD-8EAB-993A48F084EA}</EntityID><ItemInfoDate type="key">15.01.2015 10:34:31</ItemInfoDate><ItemInfoDescr type="key"></ItemInfoDescr><ItemInfoAddInfoDb type="key"></ItemInfoAddInfoDb><ItemInfoAuthor type="key">Sebastian</ItemInfoAuthor><item><Component type="key">VariablesManagement</Component><Targets type="key">,VariableDescription::can_new.sdf</Targets><Flags type="key">18736</Flags><ExtendedFlags type="key">1</ExtendedFlags><UniqueID type="key">965064353</UniqueID><LinkedItem type="key">330018938</LinkedItem></item></item></item><item><Targets type="key">datasetmanager</Targets><Name type="key">Data Sets</Name><DisplayName type="key">Data Sets</DisplayName><Path type="key">.</Path><Flags type="key">4</Flags><Type type="key">3</Type><ItemInfo type="key">Location: $FPATH$
+Author: Sebastian
+Date: 15.01.2015 10:34:25
+Original location: 
+/HDR/================================
+Description:
+
+================================
+</ItemInfo><UniqueID type="key">181924425</UniqueID><EntityID type="key">{A2016076-1986-4EE0-A97D-923B8CFBD69F}</EntityID><ItemInfoDate type="key">15.01.2015 10:34:25</ItemInfoDate><ItemInfoPath type="key">$FPATH$</ItemInfoPath><ItemInfoDescr type="key"></ItemInfoDescr><ItemInfoAddInfoDb type="key"></ItemInfoAddInfoDb><ItemInfoAuthor type="key">Sebastian</ItemInfoAuthor></item><item><Targets type="key">measuredatamanagement</Targets><Name type="key">Measurement Data</Name><DisplayName type="key">Measurement Data</DisplayName><Path type="key">.</Path><ExtendedFlags type="key">128</ExtendedFlags><Type type="key">3</Type><ItemInfo type="key">Location: $FPATH$
+Author: Sebastian
+Date: 15.01.2015 10:34:25
+Original location: 
+/HDR/================================
+Description:
+
+================================
+</ItemInfo><UniqueID type="key">792671205</UniqueID><EntityID type="key">{732CFA00-C3A2-4C72-935A-3A4F573F78C0}</EntityID><ItemInfoDate type="key">15.01.2015 10:34:25</ItemInfoDate><ItemInfoPath type="key">$FPATH$</ItemInfoPath><ItemInfoDescr type="key"></ItemInfoDescr><ItemInfoAddInfoDb type="key"></ItemInfoAddInfoDb><ItemInfoAuthor type="key">Sebastian</ItemInfoAuthor><item><Component type="key">MeasureDataManagement</Component><Name type="key">cv.vxf</Name><DisplayName type="key">cv.vxf</DisplayName><Path type="key">.\Measurement Data</Path><Flags type="key">4</Flags><Type type="key">4</Type><ItemInfo type="key">Location: $FPATH$
+Author: Sebastian
+Date: 15.01.2015 10:34:31
+Original location: 
+/HDR/================================
+Description:
+
+================================
+</ItemInfo><UniqueID type="key">975146718</UniqueID><EntityID type="key">{2042100E-7479-47C9-8BA2-04F5DB625A2C}</EntityID><ItemInfoDate type="key">15.01.2015 10:34:31</ItemInfoDate><ItemInfoPath type="key">$FPATH$</ItemInfoPath><ItemInfoDescr type="key"></ItemInfoDescr><ItemInfoAddInfoDb type="key"></ItemInfoAddInfoDb><ItemInfoAuthor type="key">Sebastian</ItemInfoAuthor></item></item><item><Targets type="key">.rtf,.pdf,.html,.xml,.txt,.csv</Targets><Docs type="key">.rtf,.pdf,.html,.txt,.csv</Docs><Name type="key">Reports</Name><DisplayName type="key">Reports</DisplayName><Path type="key">.</Path><Type type="key">3</Type><ItemInfo type="key">Location: $FPATH$
+Author: Sebastian
+Date: 15.01.2015 10:34:25
+This folder lists documents of type: .rtf,.pdf,.html,.txt,.csv
+Original location: 
+/HDR/================================
+Description:
+
+================================
+</ItemInfo><UniqueID type="key">968529178</UniqueID><EntityID type="key">{BAA54349-4CDE-4FF1-9BA9-B75BB557D895}</EntityID><ItemInfoDate type="key">15.01.2015 10:34:25</ItemInfoDate><ItemInfoPath type="key">$FPATH$</ItemInfoPath><ItemInfoDocs type="key">.rtf,.pdf,.html,.txt,.csv</ItemInfoDocs><ItemInfoDescr type="key"></ItemInfoDescr><ItemInfoAddInfoDb type="key"></ItemInfoAddInfoDb><ItemInfoAuthor type="key">Sebastian</ItemInfoAuthor></item><item><Targets type="key">failuresimulation</Targets><Name type="key">Failure Simulation</Name><DisplayName type="key">Failure Simulation</DisplayName><Path type="key">.</Path><Type type="key">3</Type><ItemInfo type="key">Location: $FPATH$
+Author: Sebastian
+Date: 15.01.2015 10:34:25
+Original location: 
+/HDR/================================
+Description:
+
+================================
+</ItemInfo><UniqueID type="key">552395626</UniqueID><EntityID type="key">{B9CF5CB9-B29B-48C1-A624-916C473C60F2}</EntityID><ItemInfoDate type="key">15.01.2015 10:34:25</ItemInfoDate><ItemInfoPath type="key">$FPATH$</ItemInfoPath><ItemInfoDescr type="key"></ItemInfoDescr><ItemInfoAddInfoDb type="key"></ItemInfoAddInfoDb><ItemInfoAuthor type="key">Sebastian</ItemInfoAuthor></item><item><Targets type="key">interpreter,.py</Targets><Docs type="key">.py</Docs><Name type="key">Python Scripts</Name><DisplayName type="key">Python Scripts</DisplayName><Path type="key">.</Path><ExtendedFlags type="key">128</ExtendedFlags><Type type="key">3</Type><ItemInfo type="key">Location: $FPATH$
+Author: Sebastian
+Date: 15.01.2015 10:34:25
+This folder lists documents of type: .py
+Original location: 
+/HDR/================================
+Description:
+
+================================
+</ItemInfo><UniqueID type="key">795024850</UniqueID><EntityID type="key">{E0FD76D5-D529-4E0E-820D-D0F8F827B5D3}</EntityID><ItemInfoDate type="key">15.01.2015 10:34:25</ItemInfoDate><ItemInfoPath type="key">$FPATH$</ItemInfoPath><ItemInfoDocs type="key">.py</ItemInfoDocs><ItemInfoDescr type="key"></ItemInfoDescr><ItemInfoAddInfoDb type="key"></ItemInfoAddInfoDb><ItemInfoAuthor type="key">Sebastian</ItemInfoAuthor></item><item><Targets type="key">signaleditor</Targets><Name type="key">Signal Generators</Name><DisplayName type="key">Signal Generators</DisplayName><Path type="key">.</Path><Type type="key">3</Type><ItemInfo type="key">Location: $FPATH$
+Author: Sebastian
+Date: 15.01.2015 10:34:25
+Original location: 
+/HDR/================================
+Description:
+
+================================
+</ItemInfo><UniqueID type="key">386945009</UniqueID><EntityID type="key">{C526D6F2-E84F-4D44-B5D4-91A1FA241F4C}</EntityID><ItemInfoDate type="key">15.01.2015 10:34:25</ItemInfoDate><ItemInfoPath type="key">$FPATH$</ItemInfoPath><ItemInfoDescr type="key"></ItemInfoDescr><ItemInfoAddInfoDb type="key"></ItemInfoAddInfoDb><ItemInfoAuthor type="key">Sebastian</ItemInfoAuthor></item></item><item><Name type="key">Events</Name><DisplayName type="key">Events</DisplayName><Path type="key">.</Path><Flags type="key">4</Flags><Type type="key">3</Type><ItemInfo type="key">Location: $FPATH$
+Author: Sebastian
+Date: 15.01.2015 10:34:31
+Original location: 
+/HDR/================================
+Description:
+
+================================
+</ItemInfo><UniqueID type="key">970025141</UniqueID><EntityID type="key">{FFD4ADFA-D4D7-4FF2-ACD9-F111B5FEE3C1}</EntityID><ItemInfoDate type="key">15.01.2015 10:34:31</ItemInfoDate><ItemInfoPath type="key">$FPATH$</ItemInfoPath><ItemInfoDescr type="key"></ItemInfoDescr><ItemInfoAddInfoDb type="key"></ItemInfoAddInfoDb><ItemInfoAuthor type="key">Sebastian</ItemInfoAuthor><item><Name type="key">Experiment.events</Name><DisplayName type="key">Experiment.events</DisplayName><Path type="key">.\Events</Path><Flags type="key">4</Flags><Type type="key">52</Type><ItemInfo type="key">Location: $FPATH$
+Author: Sebastian
+Date: 15.01.2015 10:34:31
+Original location: 
+/HDR/================================
+Description:
+
+================================
+</ItemInfo><UniqueID type="key">625669834</UniqueID><EntityID type="key">{F8BF96B1-C7A5-4819-90C1-1C94E7ED9391}</EntityID><ItemInfoDate type="key">15.01.2015 10:34:31</ItemInfoDate><ItemInfoPath type="key">$FPATH$</ItemInfoPath><ItemInfoDescr type="key"></ItemInfoDescr><ItemInfoAddInfoDb type="key"></ItemInfoAddInfoDb><ItemInfoAuthor type="key">Sebastian</ItemInfoAuthor></item></item></experiment><UserManager/><Interpreter/><VariablesManagement Version="4"><LabelList/></VariablesManagement><ProjectExperiment/><MeasuredDataNavigator><SyncCursorEnabledSL type="key">0</SyncCursorEnabledSL><SyncCursorPosSL type="key">0</SyncCursorPosSL><CursorEnabledSL type="key">0</CursorEnabledSL><CursorPositionLeftSL type="key">5</CursorPositionLeftSL><CursorPositionRightSL type="key">5</CursorPositionRightSL><VisibleLengthSL type="key">10</VisibleLengthSL><LastVisibleValueSL type="key">10</LastVisibleValueSL><CompleteBufferVisibleSL type="key">0</CompleteBufferVisibleSL><GridEnabledSL type="key">0</GridEnabledSL></MeasuredDataNavigator><MeasureDataManagement Version="4"><TriggerRules><Version type="key">2</Version></TriggerRules><BookmarkTypes><BookmarkType><TypeID type="key">1</TypeID><RecordingActive type="key">1</RecordingActive><VisualizationActive type="key">1</VisualizationActive></BookmarkType><BookmarkType><TypeID type="key">2</TypeID><RecordingActive type="key">1</RecordingActive><VisualizationActive type="key">1</VisualizationActive></BookmarkType><BookmarkType><TypeID type="key">3</TypeID><RecordingActive type="key">1</RecordingActive><VisualizationActive type="key">1</VisualizationActive></BookmarkType><BookmarkType><TypeID type="key">5</TypeID><RecordingActive type="key">0</RecordingActive><VisualizationActive type="key">0</VisualizationActive></BookmarkType><BookmarkType><TypeID type="key">6</TypeID><RecordingActive type="key">0</RecordingActive><VisualizationActive type="key">0</VisualizationActive></BookmarkType><BookmarkType><TypeID type="key">8</TypeID><RecordingActive type="key">1</RecordingActive><VisualizationActive type="key">1</VisualizationActive></BookmarkType><BookmarkType><TypeID type="key">9</TypeID><RecordingActive type="key">1</RecordingActive><VisualizationActive type="key">1</VisualizationActive></BookmarkType><BookmarkType><TypeID type="key">10</TypeID><RecordingActive type="key">1</RecordingActive><VisualizationActive type="key">1</VisualizationActive></BookmarkType><BookmarkType><TypeID type="key">11</TypeID><RecordingActive type="key">1</RecordingActive><VisualizationActive type="key">1</VisualizationActive></BookmarkType><BookmarkType><TypeID type="key">12</TypeID><RecordingActive type="key">1</RecordingActive><VisualizationActive type="key">1</VisualizationActive></BookmarkType><BookmarkType><TypeID type="key">13</TypeID><RecordingActive type="key">1</RecordingActive><VisualizationActive type="key">1</VisualizationActive></BookmarkType><BookmarkType><TypeID type="key">14</TypeID><RecordingActive type="key">1</RecordingActive><VisualizationActive type="key">1</VisualizationActive></BookmarkType></BookmarkTypes><ProjectExperimentSettings><ShowMeasurementLinks type="key">0</ShowMeasurementLinks></ProjectExperimentSettings><MeasurementConfiguration><NextUniqueKey type="key">4</NextUniqueKey><SignalList/><Platforms><Platform><Name type="key">0e445f79-4de2-43d1-b2ed-4ed4946a6616</Name><DefaultRaster type="key">HostService</DefaultRaster><PlatformTriggers/><Rasters><PlatformTriggered><Name type="key">HostService</Name><AutoRepeatEnabled type="key">1</AutoRepeatEnabled><MultiCaptureHistoryEnabled type="key">0</MultiCaptureHistoryEnabled><DownsamplingFactor type="key">1</DownsamplingFactor><StartTrigger type="key">2</StartTrigger><StopTrigger type="key">3</StopTrigger></PlatformTriggered></Rasters><EnabledHardwarePollingRasters/></Platform></Platforms><DurationTriggers/><SampleCountTriggers/><Acquisition><MeasurementBufferSize type="key">60</MeasurementBufferSize><BufferOverflowWarningEnabled type="key">0</BufferOverflowWarningEnabled><BufferOverflowWarningTime type="key">10</BufferOverflowWarningTime><SaveMeasurementBuffer><AddToExperimentEnabled type="key">-1</AddToExperimentEnabled><AutomaticSaveDialogEnabled type="key">0</AutomaticSaveDialogEnabled><AutomaticExportEnabled type="key">0</AutomaticExportEnabled><AutomaticExportFileNamePrefix type="key">bufexp_</AutomaticExportFileNamePrefix><AutomaticExportFileType type="key">IDF Files (*.idf)</AutomaticExportFileType><AutomaticExportFolder type="key"></AutomaticExportFolder><AutomaticNamingEnabled type="key">-1</AutomaticNamingEnabled><AutomaticNamingMinimunDigits type="key">3</AutomaticNamingMinimunDigits><AutomaticNamingStartIndex type="key">1</AutomaticNamingStartIndex><Description type="key"></Description><FileNamePrefix type="key">buf_</FileNamePrefix><OpenInMeasurementDataPoolEnabled type="key">0</OpenInMeasurementDataPoolEnabled><RecordingFileType type="key">IDF Files (*.idf)</RecordingFileType></SaveMeasurementBuffer><SaveDisplayedData><AddToExperimentEnabled type="key">-1</AddToExperimentEnabled><AutomaticSaveDialogEnabled type="key">0</AutomaticSaveDialogEnabled><AutomaticExportEnabled type="key">0</AutomaticExportEnabled><AutomaticExportFileNamePrefix type="key">sddexp_</AutomaticExportFileNamePrefix><AutomaticExportFileType type="key">IDF Files (*.idf)</AutomaticExportFileType><AutomaticExportFolder type="key"></AutomaticExportFolder><AutomaticNamingEnabled type="key">-1</AutomaticNamingEnabled><AutomaticNamingMinimunDigits type="key">3</AutomaticNamingMinimunDigits><AutomaticNamingStartIndex type="key">1</AutomaticNamingStartIndex><Description type="key"></Description><FileNamePrefix type="key">sdd_</FileNamePrefix><OpenInMeasurementDataPoolEnabled type="key">0</OpenInMeasurementDataPoolEnabled><RecordingFileType type="key">IDF Files (*.idf)</RecordingFileType></SaveDisplayedData><SaveFlightRecorderData><AddToExperimentEnabled type="key">-1</AddToExperimentEnabled><AutomaticSaveDialogEnabled type="key">0</AutomaticSaveDialogEnabled><AutomaticExportEnabled type="key">0</AutomaticExportEnabled><AutomaticExportFileNamePrefix type="key">flightrecexp_</AutomaticExportFileNamePrefix><AutomaticExportFileType type="key">IDF Files (*.idf)</AutomaticExportFileType><AutomaticExportFolder type="key"></AutomaticExportFolder><AutomaticNamingEnabled type="key">-1</AutomaticNamingEnabled><AutomaticNamingMinimunDigits type="key">3</AutomaticNamingMinimunDigits><AutomaticNamingStartIndex type="key">1</AutomaticNamingStartIndex><Description type="key"></Description><FileNamePrefix type="key">flightrec_</FileNamePrefix><OpenInMeasurementDataPoolEnabled type="key">0</OpenInMeasurementDataPoolEnabled><RecordingFileType type="key">IDF Files (*.idf)</RecordingFileType></SaveFlightRecorderData></Acquisition><Recorders><Recorder><Name type="key">Recorder 1</Name><UniqueKey type="key">1</UniqueKey><AutomaticSignalConfigurationEnabled type="key">-1</AutomaticSignalConfigurationEnabled><WriteToFileEnabled type="key">-1</WriteToFileEnabled><MeasurementTimestampsEnabled type="key">0</MeasurementTimestampsEnabled><StartAudioSignalEnabled type="key">0</StartAudioSignalEnabled><StopAudioSignalEnabled type="key">0</StopAudioSignalEnabled><Active type="key">-1</Active><StartCondition><Enabled type="key">0</Enabled><RecordingCycleCount type="key">1</RecordingCycleCount><SelectedTriggerRule type="key"></SelectedTriggerRule><TriggerDelay type="key">0</TriggerDelay></StartCondition><StopCondition><RecordingStopWarningEnabled type="key">0</RecordingStopWarningEnabled><RecordingStopWarningTime type="key">60</RecordingStopWarningTime><SelectedTriggerRule type="key"></SelectedTriggerRule><Type type="key">0</Type><TimeLimit type="key">3600</TimeLimit><TriggerDelay type="key">0</TriggerDelay></StopCondition><StorageInformation><AddToExperimentEnabled type="key">-1</AddToExperimentEnabled><AutomaticSaveDialogEnabled type="key">0</AutomaticSaveDialogEnabled><AutomaticExportEnabled type="key">0</AutomaticExportEnabled><AutomaticExportFileNamePrefix type="key">exp1_</AutomaticExportFileNamePrefix><AutomaticExportFileType type="key">IDF Files (*.idf)</AutomaticExportFileType><AutomaticExportFolder type="key"></AutomaticExportFolder><AutomaticNamingEnabled type="key">-1</AutomaticNamingEnabled><AutomaticNamingMinimunDigits type="key">3</AutomaticNamingMinimunDigits><AutomaticNamingStartIndex type="key">1</AutomaticNamingStartIndex><Description type="key"></Description><FileNamePrefix type="key">rec1_</FileNamePrefix><OpenInMeasurementDataPoolEnabled type="key">0</OpenInMeasurementDataPoolEnabled><RecordingFileType type="key">IDF Files (*.idf)</RecordingFileType></StorageInformation><SignalList/></Recorder></Recorders></MeasurementConfiguration></MeasureDataManagement><Instrumentation><UniqueIds Version="1"><Count type="key">1</Count><File1 type="key">Layout1</File1><Id1 type="key">0</Id1></UniqueIds></Instrumentation><DiagnosticsManagement/><PlatformManagement Version="5"><SimulationTimeGroupSupported type="key">-1</SimulationTimeGroupSupported><DeviceFactory><Device><DeviceName type="key">0e445f79-4de2-43d1-b2ed-4ed4946a6616</DeviceName><DisplayName type="key">Platform</DisplayName><DeviceType type="key">110</DeviceType><DeviceConfiguration/><AssignmentConfiguration><AssignmentInfo><AliasName type="key"></AliasName><BoardName type="key"></BoardName><ConnectionType type="key">1</ConnectionType><MACAddress type="key"></MACAddress><Mode type="key">1</Mode><Children type="key">0</Children><NetClient type="key">192.168.140.1</NetClient><PlatformType type="key">0</PlatformType><PortAddress type="key">0</PortAddress><ProcessorName type="key"></ProcessorName><SerialNumber type="key"></SerialNumber><TopologyCheck type="key">0</TopologyCheck></AssignmentInfo></AssignmentConfiguration><GeneralSettings><StartOnlineCalibrationBehavior type="key">5</StartOnlineCalibrationBehavior><DeviceEnableResynchonisation type="key">1</DeviceEnableResynchonisation><MeasurementService type="key">0</MeasurementService><ResumeOnlineCalibrationBehaviour type="key">5</ResumeOnlineCalibrationBehaviour><DisplayStatusInformation type="key">-1</DisplayStatusInformation><EnablePlatform type="key">1</EnablePlatform></GeneralSettings><SubstituteFactory/></Device></DeviceFactory></PlatformManagement><DataSetManager><Version><Version type="key">2</Version></Version><Work/><ActiveWork/><Reference/><ActiveReference/><Master/><ActiveMaster/><InitialMaster/><Incomplete/><IncompleteReadonly/><DataSet/><Readonly/><LabelListFilter><LabelListFilterFile type="key"></LabelListFilterFile><LabelListFilterActive type="key">0</LabelListFilterActive></LabelListFilter><AutomaticDownload/></DataSetManager></Root>
