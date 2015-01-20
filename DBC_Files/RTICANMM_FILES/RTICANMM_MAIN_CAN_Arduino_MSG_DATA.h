@@ -117,6 +117,13 @@ unsignedTemp = unsignedTemp & 0xFF;
 CANMMCAN_Arduino_RX_Msg_1_Sgn_8 = (UInt8)1 * (UInt8)unsignedTemp + (UInt8)(0);                    
 
 ((uint8_T*) ssGetOutputPortSignal(S, 0))[0] = CANMMCAN_Arduino_RX_Msg_1_Sgn_1;
+((uint8_T*) ssGetOutputPortSignal(S, 1))[0] = CANMMCAN_Arduino_RX_Msg_1_Sgn_2;
+((uint8_T*) ssGetOutputPortSignal(S, 2))[0] = CANMMCAN_Arduino_RX_Msg_1_Sgn_3;
+((uint8_T*) ssGetOutputPortSignal(S, 3))[0] = CANMMCAN_Arduino_RX_Msg_1_Sgn_4;
+((uint8_T*) ssGetOutputPortSignal(S, 4))[0] = CANMMCAN_Arduino_RX_Msg_1_Sgn_5;
+((uint8_T*) ssGetOutputPortSignal(S, 5))[0] = CANMMCAN_Arduino_RX_Msg_1_Sgn_6;
+((uint8_T*) ssGetOutputPortSignal(S, 6))[0] = CANMMCAN_Arduino_RX_Msg_1_Sgn_7;
+((uint8_T*) ssGetOutputPortSignal(S, 7))[0] = CANMMCAN_Arduino_RX_Msg_1_Sgn_8;
 }      
 else {  /* TX ========================================================================================== */ 
 /* Init encode structure */                                 

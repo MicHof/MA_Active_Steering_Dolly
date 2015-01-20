@@ -3,9 +3,9 @@
  *
  * Code generation for model "CAN_new".
  *
- * Model version              : 1.8
+ * Model version              : 1.9
  * Simulink Coder version : 8.5 (R2013b) 08-Aug-2013
- * C source code generated on : Tue Jan 20 10:43:32 2015
+ * C source code generated on : Tue Jan 20 11:05:51 2015
  *
  * Target selection: rti1401.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping
@@ -794,13 +794,62 @@ RT_MODEL_CAN_new_T *CAN_new(void)
       {
         ssSetPortInfoForOutputs(rts,
           &CAN_new_M->NonInlinedSFcns.Sfcn2.outputPortInfo[0]);
-        _ssSetNumOutputPorts(rts, 1);
+        _ssSetNumOutputPorts(rts, 8);
 
         /* port 0 */
         {
           _ssSetOutputPortNumDimensions(rts, 0, 1);
           ssSetOutputPortWidth(rts, 0, 1);
-          ssSetOutputPortSignal(rts, 0, ((uint8_T *) &CAN_new_B.sfcn));
+          ssSetOutputPortSignal(rts, 0, ((uint8_T *) &CAN_new_B.sfcn_o1_d));
+        }
+
+        /* port 1 */
+        {
+          _ssSetOutputPortNumDimensions(rts, 1, 1);
+          ssSetOutputPortWidth(rts, 1, 1);
+          ssSetOutputPortSignal(rts, 1, ((uint8_T *) &CAN_new_B.sfcn_o2_p));
+        }
+
+        /* port 2 */
+        {
+          _ssSetOutputPortNumDimensions(rts, 2, 1);
+          ssSetOutputPortWidth(rts, 2, 1);
+          ssSetOutputPortSignal(rts, 2, ((uint8_T *) &CAN_new_B.sfcn_o3_nj));
+        }
+
+        /* port 3 */
+        {
+          _ssSetOutputPortNumDimensions(rts, 3, 1);
+          ssSetOutputPortWidth(rts, 3, 1);
+          ssSetOutputPortSignal(rts, 3, ((uint8_T *) &CAN_new_B.sfcn_o4_n));
+        }
+
+        /* port 4 */
+        {
+          _ssSetOutputPortNumDimensions(rts, 4, 1);
+          ssSetOutputPortWidth(rts, 4, 1);
+          ssSetOutputPortSignal(rts, 4, ((uint8_T *) &CAN_new_B.sfcn_o5_e));
+        }
+
+        /* port 5 */
+        {
+          _ssSetOutputPortNumDimensions(rts, 5, 1);
+          ssSetOutputPortWidth(rts, 5, 1);
+          ssSetOutputPortSignal(rts, 5, ((uint8_T *) &CAN_new_B.sfcn_o6_k));
+        }
+
+        /* port 6 */
+        {
+          _ssSetOutputPortNumDimensions(rts, 6, 1);
+          ssSetOutputPortWidth(rts, 6, 1);
+          ssSetOutputPortSignal(rts, 6, ((uint8_T *) &CAN_new_B.sfcn_o7_p));
+        }
+
+        /* port 7 */
+        {
+          _ssSetOutputPortNumDimensions(rts, 7, 1);
+          ssSetOutputPortWidth(rts, 7, 1);
+          ssSetOutputPortSignal(rts, 7, ((uint8_T *) &CAN_new_B.sfcn_o8_n));
         }
       }
 
@@ -853,7 +902,21 @@ RT_MODEL_CAN_new_T *CAN_new(void)
 
       /* Update connectivity flags for each port */
       _ssSetOutputPortConnected(rts, 0, 1);
+      _ssSetOutputPortConnected(rts, 1, 1);
+      _ssSetOutputPortConnected(rts, 2, 1);
+      _ssSetOutputPortConnected(rts, 3, 1);
+      _ssSetOutputPortConnected(rts, 4, 1);
+      _ssSetOutputPortConnected(rts, 5, 1);
+      _ssSetOutputPortConnected(rts, 6, 1);
+      _ssSetOutputPortConnected(rts, 7, 1);
       _ssSetOutputPortBeingMerged(rts, 0, 0);
+      _ssSetOutputPortBeingMerged(rts, 1, 0);
+      _ssSetOutputPortBeingMerged(rts, 2, 0);
+      _ssSetOutputPortBeingMerged(rts, 3, 0);
+      _ssSetOutputPortBeingMerged(rts, 4, 0);
+      _ssSetOutputPortBeingMerged(rts, 5, 0);
+      _ssSetOutputPortBeingMerged(rts, 6, 0);
+      _ssSetOutputPortBeingMerged(rts, 7, 0);
 
       /* Update the BufferDstPort flags for each input port */
     }
@@ -2027,7 +2090,7 @@ RT_MODEL_CAN_new_T *CAN_new(void)
   CAN_new_M->Sizes.sysDirFeedThru = (0);/* The model is not direct feedthrough */
   CAN_new_M->Sizes.numSampTimes = (1); /* Number of sample times */
   CAN_new_M->Sizes.numBlocks = (23);   /* Number of blocks */
-  CAN_new_M->Sizes.numBlockIO = (116); /* Number of block outputs */
+  CAN_new_M->Sizes.numBlockIO = (123); /* Number of block outputs */
   CAN_new_M->Sizes.numBlockPrms = (40);/* Sum of parameter "widths" */
   return CAN_new_M;
 }

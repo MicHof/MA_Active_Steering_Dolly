@@ -64,7 +64,7 @@
       </ECU>
    </ECUs>
    <Msgs attCount="1">
-      <Msg ID="1" Name="RTICANMMFreeRawMessage_1" DBCName="RTICANMMFreeRawMessage_1" DBCID="1">
+      <Msg ID="7" Name="RTICANMMFreeRawMessage_1" DBCName="RTICANMMFreeRawMessage_1" DBCID="7">
          <ECU>Simulator</ECU>
          <RECU>Simulator</RECU>
          <FreeRawMsg>ON</FreeRawMsg>

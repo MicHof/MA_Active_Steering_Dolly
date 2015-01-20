@@ -3,9 +3,9 @@
  *
  * Code generation for model "CAN_new".
  *
- * Model version              : 1.8
+ * Model version              : 1.9
  * Simulink Coder version : 8.5 (R2013b) 08-Aug-2013
- * C source code generated on : Tue Jan 20 10:43:32 2015
+ * C source code generated on : Tue Jan 20 11:05:51 2015
  *
  * Target selection: rti1401.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping
@@ -841,7 +841,14 @@ typedef struct {
   uint8_T sfcn_o10_j;                  /* '<S7>/sfcn' */
   uint8_T sfcn_o11_p;                  /* '<S7>/sfcn' */
   uint8_T Variation_DTC;               /* '<S5>/Variation_DTC' */
-  uint8_T sfcn;                        /* '<S10>/sfcn' */
+  uint8_T sfcn_o1_d;                   /* '<S10>/sfcn' */
+  uint8_T sfcn_o2_p;                   /* '<S10>/sfcn' */
+  uint8_T sfcn_o3_nj;                  /* '<S10>/sfcn' */
+  uint8_T sfcn_o4_n;                   /* '<S10>/sfcn' */
+  uint8_T sfcn_o5_e;                   /* '<S10>/sfcn' */
+  uint8_T sfcn_o6_k;                   /* '<S10>/sfcn' */
+  uint8_T sfcn_o7_p;                   /* '<S10>/sfcn' */
+  uint8_T sfcn_o8_n;                   /* '<S10>/sfcn' */
   uint8_T Variation_DTC_g;             /* '<S9>/Variation_DTC' */
   uint8_T Variation_DTC_h;             /* '<S12>/Variation_DTC' */
   uint8_T sfcn_o17;                    /* '<S13>/sfcn' */
@@ -1035,7 +1042,7 @@ struct tag_RTM_CAN_new_T {
       time_T sfcnPeriod[1];
       time_T sfcnOffset[1];
       int_T sfcnTsMap[1];
-      struct _ssPortOutputs outputPortInfo[1];
+      struct _ssPortOutputs outputPortInfo[8];
       struct _ssDWorkRecord dWork[2];
       struct _ssDWorkAuxRecord dWorkAux[2];
     } Sfcn2;

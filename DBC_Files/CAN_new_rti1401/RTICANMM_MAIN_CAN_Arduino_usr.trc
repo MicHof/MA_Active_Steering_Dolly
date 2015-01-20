@@ -230,7 +230,7 @@ alias: "RTICANMMFreeRawMessage_1_ID"
 flags: OUTPUT|READONLY
 desc: "Message ID"
 unit: ""
-value: 1
+value: 7
 }
 
 
@@ -471,7 +471,7 @@ flags: PARAM
 desc: "Message ID"
 unit: ""
 range: <0; 536870911>
-value: 1
+value: 7
 }
 
 

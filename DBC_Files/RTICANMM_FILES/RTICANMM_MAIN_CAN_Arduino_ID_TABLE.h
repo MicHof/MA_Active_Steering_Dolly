@@ -21,8 +21,8 @@
 ((UInt32*) IDPTR_MEM_R)[0] = (UInt32) RTICANMM_MAIN_CAN_Arduino_copy_RTICANMMFreeRawMessage_1;
 CANMMCAN_Arduino_MIDTXSW[0] = 1;
 CANMMCAN_Arduino_RXCNT[0] = 0;
-CANMMCAN_Arduino_MIDRX[0] = 0x1;
-CANMMCAN_Arduino_MIDTXS[0] = 0x1;
+CANMMCAN_Arduino_MIDRX[0] = 0x7;
+CANMMCAN_Arduino_MIDTXS[0] = 0x7;
 CANMMCAN_Arduino_RXMT[0] = RTICANMM_MESSAGE_TYPE_STD;
 CANMMCAN_Arduino_MIDFRX[0] = 0;  /* 0: standard, 1:extended */ 
 CANMMCAN_Arduino_MIDFTXS[0] = 0;  /* 0: standard, 1:extended */ 
