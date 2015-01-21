@@ -3,9 +3,9 @@
  *
  * Code generation for model "CAN_new".
  *
- * Model version              : 1.9
+ * Model version              : 1.12
  * Simulink Coder version : 8.5 (R2013b) 08-Aug-2013
- * C source code generated on : Tue Jan 20 11:05:51 2015
+ * C source code generated on : Tue Jan 20 15:22:07 2015
  *
  * Target selection: rti1401.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping
@@ -52,19 +52,19 @@ P_CAN_new_T CAN_new_P = {
                                         * Referenced by: '<S9>/RTICANMMCHANNEL_TLC'
                                         */
   1401.0,                              /* Expression: 1401
-                                        * Referenced by: '<S12>/RTICANMMCHANNEL_TLC'
+                                        * Referenced by: '<S14>/RTICANMMCHANNEL_TLC'
                                         */
   1.0,                                 /* Expression: 1
-                                        * Referenced by: '<S12>/RTICANMMCHANNEL_TLC'
+                                        * Referenced by: '<S14>/RTICANMMCHANNEL_TLC'
                                         */
   2.0,                                 /* Expression: 2
-                                        * Referenced by: '<S12>/RTICANMMCHANNEL_TLC'
+                                        * Referenced by: '<S14>/RTICANMMCHANNEL_TLC'
                                         */
   0.0,                                 /* Expression: 0
-                                        * Referenced by: '<S12>/RTICANMMCHANNEL_TLC'
+                                        * Referenced by: '<S14>/RTICANMMCHANNEL_TLC'
                                         */
   500.0,                               /* Expression: 500
-                                        * Referenced by: '<S12>/RTICANMMCHANNEL_TLC'
+                                        * Referenced by: '<S14>/RTICANMMCHANNEL_TLC'
                                         */
 
   /*  Computed Parameter: RTICANMMCHANNEL_TLC_P6
@@ -78,11 +78,35 @@ P_CAN_new_T CAN_new_P = {
   { 117U, 110U, 117U, 115U, 101U, 100U },
 
   /*  Computed Parameter: RTICANMMCHANNEL_TLC_P6_j
-   * Referenced by: '<S12>/RTICANMMCHANNEL_TLC'
+   * Referenced by: '<S14>/RTICANMMCHANNEL_TLC'
    */
   { 117U, 110U, 117U, 115U, 101U, 100U },
   1U,                                  /* Computed Parameter: VariationRTICANMMControllerSetu
                                         * Referenced by: '<S1>/Variation@RTICANMM ControllerSetup'
+                                        */
+  1U,                                  /* Computed Parameter: Constant_Value_i
+                                        * Referenced by: '<S13>/Constant'
+                                        */
+  1U,                                  /* Computed Parameter: Constant1_Value
+                                        * Referenced by: '<S13>/Constant1'
+                                        */
+  1U,                                  /* Computed Parameter: Constant2_Value
+                                        * Referenced by: '<S13>/Constant2'
+                                        */
+  1U,                                  /* Computed Parameter: Constant3_Value
+                                        * Referenced by: '<S13>/Constant3'
+                                        */
+  1U,                                  /* Computed Parameter: Constant4_Value
+                                        * Referenced by: '<S13>/Constant4'
+                                        */
+  1U,                                  /* Computed Parameter: Constant5_Value
+                                        * Referenced by: '<S13>/Constant5'
+                                        */
+  1U,                                  /* Computed Parameter: Constant6_Value
+                                        * Referenced by: '<S13>/Constant6'
+                                        */
+  1U,                                  /* Computed Parameter: Constant7_Value
+                                        * Referenced by: '<S13>/Constant7'
                                         */
   1U,                                  /* Computed Parameter: VariationRTICANMMControllerSe_i
                                         * Referenced by: '<S2>/Variation@RTICANMM ControllerSetup'

@@ -2,7 +2,7 @@
 #  Make include file CAN_new_rti.mk:
 #
 #   RTI1401 7.2 (02-May-2014)
-#   Tue Jan 20 11:05:51 2015
+#   Tue Jan 20 15:22:07 2015
 #
 #   Copyright (c) 1999-2002 dSPACE GmbH, GERMANY
 # =============================================================================

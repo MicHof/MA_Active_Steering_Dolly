@@ -205,7 +205,9 @@
          </RX>
          <Sgns attCount="8">
             <Sgn attName="RAW_Byte_1" attStartBit="0">
-               <Generics></Generics>
+               <Generics>
+                  <SgnTXOpt attName="IN"/>
+               </Generics>
                <STRC>
                   <TX>
                      <Generics>
@@ -225,7 +227,9 @@
                </STRC>
             </Sgn>
             <Sgn attName="RAW_Byte_2" attStartBit="8">
-               <Generics></Generics>
+               <Generics>
+                  <SgnTXOpt attName="IN"/>
+               </Generics>
                <STRC>
                   <TX>
                      <Generics>
@@ -245,7 +249,9 @@
                </STRC>
             </Sgn>
             <Sgn attName="RAW_Byte_3" attStartBit="16">
-               <Generics></Generics>
+               <Generics>
+                  <SgnTXOpt attName="IN"/>
+               </Generics>
                <STRC>
                   <TX>
                      <Generics>
@@ -265,7 +271,9 @@
                </STRC>
             </Sgn>
             <Sgn attName="RAW_Byte_4" attStartBit="24">
-               <Generics></Generics>
+               <Generics>
+                  <SgnTXOpt attName="IN"/>
+               </Generics>
                <STRC>
                   <TX>
                      <Generics>
@@ -285,7 +293,9 @@
                </STRC>
             </Sgn>
             <Sgn attName="RAW_Byte_5" attStartBit="32">
-               <Generics></Generics>
+               <Generics>
+                  <SgnTXOpt attName="IN"/>
+               </Generics>
                <STRC>
                   <TX>
                      <Generics>
@@ -305,7 +315,9 @@
                </STRC>
             </Sgn>
             <Sgn attName="RAW_Byte_6" attStartBit="40">
-               <Generics></Generics>
+               <Generics>
+                  <SgnTXOpt attName="IN"/>
+               </Generics>
                <STRC>
                   <TX>
                      <Generics>
@@ -325,7 +337,9 @@
                </STRC>
             </Sgn>
             <Sgn attName="RAW_Byte_7" attStartBit="48">
-               <Generics></Generics>
+               <Generics>
+                  <SgnTXOpt attName="IN"/>
+               </Generics>
                <STRC>
                   <TX>
                      <Generics>
@@ -345,7 +359,9 @@
                </STRC>
             </Sgn>
             <Sgn attName="RAW_Byte_8" attStartBit="56">
-               <Generics></Generics>
+               <Generics>
+                  <SgnTXOpt attName="IN"/>
+               </Generics>
                <STRC>
                   <TX>
                      <Generics>

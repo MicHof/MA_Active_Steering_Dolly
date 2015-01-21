@@ -131,28 +131,28 @@ else {  /* TX ==================================================================
 *((UInt32*)(data->pData+4)) = INT32_TO_BE(0x00000000);          
 
 /* RAW_Byte_1 */
-CANMMCAN_Arduino_TX_Msg_1_Sgn_1 = CANMMCAN_Arduino_TX_Msg_1_Sgn_1_constant;
+CANMMCAN_Arduino_TX_Msg_1_Sgn_1 = ((uint8_T*)GetInputPortSignal(S,0))[0];
 
 /* RAW_Byte_2 */
-CANMMCAN_Arduino_TX_Msg_1_Sgn_2 = CANMMCAN_Arduino_TX_Msg_1_Sgn_2_constant;
+CANMMCAN_Arduino_TX_Msg_1_Sgn_2 = ((uint8_T*)GetInputPortSignal(S,1))[0];
 
 /* RAW_Byte_3 */
-CANMMCAN_Arduino_TX_Msg_1_Sgn_3 = CANMMCAN_Arduino_TX_Msg_1_Sgn_3_constant;
+CANMMCAN_Arduino_TX_Msg_1_Sgn_3 = ((uint8_T*)GetInputPortSignal(S,2))[0];
 
 /* RAW_Byte_4 */
-CANMMCAN_Arduino_TX_Msg_1_Sgn_4 = CANMMCAN_Arduino_TX_Msg_1_Sgn_4_constant;
+CANMMCAN_Arduino_TX_Msg_1_Sgn_4 = ((uint8_T*)GetInputPortSignal(S,3))[0];
 
 /* RAW_Byte_5 */
-CANMMCAN_Arduino_TX_Msg_1_Sgn_5 = CANMMCAN_Arduino_TX_Msg_1_Sgn_5_constant;
+CANMMCAN_Arduino_TX_Msg_1_Sgn_5 = ((uint8_T*)GetInputPortSignal(S,4))[0];
 
 /* RAW_Byte_6 */
-CANMMCAN_Arduino_TX_Msg_1_Sgn_6 = CANMMCAN_Arduino_TX_Msg_1_Sgn_6_constant;
+CANMMCAN_Arduino_TX_Msg_1_Sgn_6 = ((uint8_T*)GetInputPortSignal(S,5))[0];
 
 /* RAW_Byte_7 */
-CANMMCAN_Arduino_TX_Msg_1_Sgn_7 = CANMMCAN_Arduino_TX_Msg_1_Sgn_7_constant;
+CANMMCAN_Arduino_TX_Msg_1_Sgn_7 = ((uint8_T*)GetInputPortSignal(S,6))[0];
 
 /* RAW_Byte_8 */
-CANMMCAN_Arduino_TX_Msg_1_Sgn_8 = CANMMCAN_Arduino_TX_Msg_1_Sgn_8_constant;
+CANMMCAN_Arduino_TX_Msg_1_Sgn_8 = ((uint8_T*)GetInputPortSignal(S,7))[0];
 /* RAW_Byte_1 */ 
 unsignedTemp = (CANMMCAN_Arduino_TX_Msg_1_Sgn_1 );                                
 unsignedTemp = ((UInt32)(unsignedTemp & 0xFF)) << 0;                             

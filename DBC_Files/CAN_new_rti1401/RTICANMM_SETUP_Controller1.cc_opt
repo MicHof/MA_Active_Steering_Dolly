@@ -59,8 +59,8 @@ RTICANMM_SETUP_Controller1.o03
 -JC:\PROGRA~1\MATLAB\R2013b\extern\include
 -JC:\PROGRA~1\MATLAB\R2013b\rtw\c\src
 -JC:\PROGRA~1\MATLAB\R2013b\rtw\c\src\ext_mode\common
--JC:\Users\Sebastian\Desktop\DBC_Files\CAN_new_rti1401
--JC:\Users\Sebastian\Desktop\DBC_Files
--JC:\Users\Sebastian\Desktop\DBC_Files\RTICANMM_FILES
+-JC:\Users\Sebastian\Documents\GitHub\MA_Active_Steering_Dolly\DBC_Files\CAN_new_rti1401
+-JC:\Users\Sebastian\Documents\GitHub\MA_Active_Steering_Dolly\DBC_Files
+-JC:\Users\Sebastian\Documents\GitHub\MA_Active_Steering_Dolly\DBC_Files\RTICANMM_FILES
 -J..\RTICANMM_FILES
 -JC:\PROGRA~1\DSPACE~1\MATLAB\RTICANMM\C 

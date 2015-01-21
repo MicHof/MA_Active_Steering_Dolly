@@ -30,7 +30,7 @@
 #endif /* NOT MATLAB_MEX_FILE || CANMM_HOST_DEBUG */                                                                  
                                                        
                                                        
-#define NUM_TX_INPUT                              0
+#define NUM_TX_INPUT                              8
 #define NUM_TX_MSG                                1
 #define NUM_RX_OUTPUT                             8
 #define NUM_RX_MSG                                1
