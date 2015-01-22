@@ -83,6 +83,18 @@ Original file added from ..\..\DBC_Files\can_new.sdf [2015-1-20 13:23:17 (UTC)]
 Variable description reloaded on 20.01.2015 14:30:02 (C:\Users\Sebastian\Documents\GitHub\MA_Active_Steering_Dolly\DBC_Files\can_new.sdf)
 Original file added from ..\..\DBC_Files\can_new.sdf [2015-1-20 13:29:9 (UTC)]
 
+Variable description reloaded on 20.01.2015 14:56:50 (C:\Users\Sebastian\Documents\GitHub\MA_Active_Steering_Dolly\DBC_Files\can_new.sdf)
+Original file added from ..\..\DBC_Files\can_new.sdf [2015-1-20 13:29:9 (UTC)]
+
+Variable description reloaded on 20.01.2015 15:25:01 (C:\Users\Sebastian\Documents\GitHub\MA_Active_Steering_Dolly\DBC_Files\can_new.sdf)
+Original file added from ..\..\DBC_Files\can_new.sdf [2015-1-20 14:23:12 (UTC)]
+
+Variable description reloaded on 21.01.2015 13:05:42 (C:\Users\Sebastian\Documents\GitHub\MA_Active_Steering_Dolly\DBC_Files\can_new.sdf)
+Original file added from ..\..\DBC_Files\can_new.sdf [2015-1-21 12:2:45 (UTC)]
+
+Variable description reloaded on 21.01.2015 14:10:54 (C:\Users\Sebastian\Documents\GitHub\MA_Active_Steering_Dolly\DBC_Files\can_new.sdf)
+Original file added from ..\..\DBC_Files\can_new.sdf [2015-1-21 13:2:32 (UTC)]
+
 </ItemInfo><UniqueID type="key">330018938</UniqueID><EntityID type="key">{3E162EBA-DD60-4445-9DA4-9BA2E8F2351E}</EntityID><ItemInfoDate type="key">15.01.2015 10:34:33</ItemInfoDate><ItemInfoPath type="key">$FPATH$</ItemInfoPath><ItemInfoDescr type="key"></ItemInfoDescr><ItemInfoLog type="key">
 Original file added from ..\..\..\..\..\Desktop\DBC_Files\can_new.sdf [2015-1-15 9:32:26 (UTC)]
 
@@ -106,47 +118,56 @@ Original file added from ..\..\DBC_Files\can_new.sdf [2015-1-20 13:29:9 (UTC)]
 
 Variable description reloaded on 20.01.2015 15:25:01 (C:\Users\Sebastian\Documents\GitHub\MA_Active_Steering_Dolly\DBC_Files\can_new.sdf)
 Original file added from ..\..\DBC_Files\can_new.sdf [2015-1-20 14:23:12 (UTC)]
+
+Variable description reloaded on 21.01.2015 13:05:42 (C:\Users\Sebastian\Documents\GitHub\MA_Active_Steering_Dolly\DBC_Files\can_new.sdf)
+Original file added from ..\..\DBC_Files\can_new.sdf [2015-1-21 12:2:45 (UTC)]
+
+Variable description reloaded on 21.01.2015 14:10:54 (C:\Users\Sebastian\Documents\GitHub\MA_Active_Steering_Dolly\DBC_Files\can_new.sdf)
+Original file added from ..\..\DBC_Files\can_new.sdf [2015-1-21 13:2:32 (UTC)]
+
+Variable description reloaded on 22.01.2015 10:24:56 (C:\Users\Sebastian\Documents\GitHub\MA_Active_Steering_Dolly\DBC_Files\can_new.sdf)
+Original file added from ..\..\DBC_Files\can_new.sdf [2015-1-22 9:21:28 (UTC)]
 </ItemInfoLog><ItemInfoAddInfoDb type="key"></ItemInfoAddInfoDb><ItemInfoAuthor type="key">Sebastian</ItemInfoAuthor><item><Component type="key">VariablesManagement</Component><Name type="key">can_new.trc</Name><DisplayName type="key">can_new.trc</DisplayName><Path type="key">.\Variable Descriptions\can_new.sdf</Path><Flags type="key">18692</Flags><ExtendedFlags type="key">1</ExtendedFlags><Type type="key">4</Type><ItemInfo type="key">Location: $FPATH$
 Author: Sebastian
-Date: 20.01.2015 15:25:01
+Date: 22.01.2015 10:24:56
 Original location: 
 /HDR/================================
 Description:
 
 ================================
-</ItemInfo><UniqueID type="key">408242096</UniqueID><EntityID type="key">{A74CA2E5-359D-4E9C-9F56-BEE9F81777D4}</EntityID><ItemInfoDate type="key">20.01.2015 15:25:01</ItemInfoDate><ItemInfoPath type="key">$FPATH$</ItemInfoPath><ItemInfoDescr type="key"></ItemInfoDescr><ItemInfoAddInfoDb type="key"></ItemInfoAddInfoDb><ItemInfoAuthor type="key">Sebastian</ItemInfoAuthor></item><item><Component type="key">VariablesManagement</Component><Name type="key">can_new.map</Name><DisplayName type="key">can_new.map</DisplayName><Path type="key">.\Variable Descriptions\can_new.sdf</Path><Flags type="key">18692</Flags><ExtendedFlags type="key">1</ExtendedFlags><Type type="key">4</Type><ItemInfo type="key">Location: $FPATH$
+</ItemInfo><UniqueID type="key">55729320</UniqueID><EntityID type="key">{7C880F1C-E4DA-4251-9687-D7C14916D61D}</EntityID><ItemInfoDate type="key">22.01.2015 10:24:56</ItemInfoDate><ItemInfoPath type="key">$FPATH$</ItemInfoPath><ItemInfoDescr type="key"></ItemInfoDescr><ItemInfoAddInfoDb type="key"></ItemInfoAddInfoDb><ItemInfoAuthor type="key">Sebastian</ItemInfoAuthor></item><item><Component type="key">VariablesManagement</Component><Name type="key">can_new.map</Name><DisplayName type="key">can_new.map</DisplayName><Path type="key">.\Variable Descriptions\can_new.sdf</Path><Flags type="key">18692</Flags><ExtendedFlags type="key">1</ExtendedFlags><Type type="key">4</Type><ItemInfo type="key">Location: $FPATH$
 Author: Sebastian
-Date: 20.01.2015 15:25:01
+Date: 22.01.2015 10:24:56
 Original location: 
 /HDR/================================
 Description:
 
 ================================
-</ItemInfo><UniqueID type="key">412192263</UniqueID><EntityID type="key">{5032E5BA-D862-4396-BA2F-96017533B234}</EntityID><ItemInfoDate type="key">20.01.2015 15:25:01</ItemInfoDate><ItemInfoPath type="key">$FPATH$</ItemInfoPath><ItemInfoDescr type="key"></ItemInfoDescr><ItemInfoAddInfoDb type="key"></ItemInfoAddInfoDb><ItemInfoAuthor type="key">Sebastian</ItemInfoAuthor></item><item><Component type="key">VariablesManagement</Component><Name type="key">can_new.ppc</Name><DisplayName type="key">can_new.ppc</DisplayName><Path type="key">.\Variable Descriptions\can_new.sdf</Path><Flags type="key">18692</Flags><ExtendedFlags type="key">1</ExtendedFlags><Type type="key">30</Type><ItemInfo type="key">Location: $FPATH$
+</ItemInfo><UniqueID type="key">241155863</UniqueID><EntityID type="key">{448CD5C3-FE74-46F0-9B3C-C22DB8500F0A}</EntityID><ItemInfoDate type="key">22.01.2015 10:24:56</ItemInfoDate><ItemInfoPath type="key">$FPATH$</ItemInfoPath><ItemInfoDescr type="key"></ItemInfoDescr><ItemInfoAddInfoDb type="key"></ItemInfoAddInfoDb><ItemInfoAuthor type="key">Sebastian</ItemInfoAuthor></item><item><Component type="key">VariablesManagement</Component><Name type="key">can_new.ppc</Name><DisplayName type="key">can_new.ppc</DisplayName><Path type="key">.\Variable Descriptions\can_new.sdf</Path><Flags type="key">18692</Flags><ExtendedFlags type="key">1</ExtendedFlags><Type type="key">30</Type><ItemInfo type="key">Location: $FPATH$
 Author: Sebastian
-Date: 20.01.2015 15:25:01
+Date: 22.01.2015 10:24:56
 Original location: 
 /HDR/================================
 Description:
 
 ================================
-</ItemInfo><UniqueID type="key">768376682</UniqueID><EntityID type="key">{AAD919C0-E9C0-4F97-ABB8-0F9CAA39B078}</EntityID><ItemInfoDate type="key">20.01.2015 15:25:01</ItemInfoDate><ItemInfoPath type="key">$FPATH$</ItemInfoPath><ItemInfoDescr type="key"></ItemInfoDescr><ItemInfoAddInfoDb type="key"></ItemInfoAddInfoDb><ItemInfoAuthor type="key">Sebastian</ItemInfoAuthor></item><item><Component type="key">VariablesManagement</Component><Name type="key">can_new.trz</Name><DisplayName type="key">can_new.trz</DisplayName><Path type="key">.\Variable Descriptions\can_new.sdf</Path><Flags type="key">18692</Flags><ExtendedFlags type="key">1</ExtendedFlags><Type type="key">4</Type><ItemInfo type="key">Location: $FPATH$
+</ItemInfo><UniqueID type="key">100877625</UniqueID><EntityID type="key">{49FE2619-B3B4-4022-94FA-0D4DDD276A50}</EntityID><ItemInfoDate type="key">22.01.2015 10:24:56</ItemInfoDate><ItemInfoPath type="key">$FPATH$</ItemInfoPath><ItemInfoDescr type="key"></ItemInfoDescr><ItemInfoAddInfoDb type="key"></ItemInfoAddInfoDb><ItemInfoAuthor type="key">Sebastian</ItemInfoAuthor></item><item><Component type="key">VariablesManagement</Component><Name type="key">can_new.trz</Name><DisplayName type="key">can_new.trz</DisplayName><Path type="key">.\Variable Descriptions\can_new.sdf</Path><Flags type="key">18692</Flags><ExtendedFlags type="key">1</ExtendedFlags><Type type="key">4</Type><ItemInfo type="key">Location: $FPATH$
 Author: Sebastian
-Date: 20.01.2015 15:25:01
+Date: 22.01.2015 10:24:56
 Original location: 
 /HDR/================================
 Description:
 
 ================================
-</ItemInfo><UniqueID type="key">486168597</UniqueID><EntityID type="key">{5EF85AB5-684A-4986-93CB-B4AAADD882AB}</EntityID><ItemInfoDate type="key">20.01.2015 15:25:01</ItemInfoDate><ItemInfoPath type="key">$FPATH$</ItemInfoPath><ItemInfoDescr type="key"></ItemInfoDescr><ItemInfoAddInfoDb type="key"></ItemInfoAddInfoDb><ItemInfoAuthor type="key">Sebastian</ItemInfoAuthor></item><item><Component type="key">VariablesManagement</Component><Name type="key">can_new_RTICANMM.cancfg</Name><DisplayName type="key">can_new_RTICANMM.cancfg</DisplayName><Path type="key">.\Variable Descriptions\can_new.sdf</Path><Flags type="key">18692</Flags><ExtendedFlags type="key">1</ExtendedFlags><Type type="key">4</Type><ItemInfo type="key">Location: $FPATH$
+</ItemInfo><UniqueID type="key">450281563</UniqueID><EntityID type="key">{2F1C8FA3-608F-41E9-B422-3E161E138D5B}</EntityID><ItemInfoDate type="key">22.01.2015 10:24:56</ItemInfoDate><ItemInfoPath type="key">$FPATH$</ItemInfoPath><ItemInfoDescr type="key"></ItemInfoDescr><ItemInfoAddInfoDb type="key"></ItemInfoAddInfoDb><ItemInfoAuthor type="key">Sebastian</ItemInfoAuthor></item><item><Component type="key">VariablesManagement</Component><Name type="key">can_new_RTICANMM.cancfg</Name><DisplayName type="key">can_new_RTICANMM.cancfg</DisplayName><Path type="key">.\Variable Descriptions\can_new.sdf</Path><Flags type="key">18692</Flags><ExtendedFlags type="key">1</ExtendedFlags><Type type="key">4</Type><ItemInfo type="key">Location: $FPATH$
 Author: Sebastian
-Date: 20.01.2015 15:25:01
+Date: 22.01.2015 10:24:56
 Original location: 
 /HDR/================================
 Description:
 
 ================================
-</ItemInfo><UniqueID type="key">64954360</UniqueID><EntityID type="key">{D999D0DA-DD71-491D-AD64-D70F59B2A34D}</EntityID><ItemInfoDate type="key">20.01.2015 15:25:01</ItemInfoDate><ItemInfoPath type="key">$FPATH$</ItemInfoPath><ItemInfoDescr type="key"></ItemInfoDescr><ItemInfoAddInfoDb type="key"></ItemInfoAddInfoDb><ItemInfoAuthor type="key">Sebastian</ItemInfoAuthor></item></item></item><item><Targets type="key">datasetmanager</Targets><Name type="key">Data Sets</Name><DisplayName type="key">Data Sets</DisplayName><Path type="key">.</Path><Flags type="key">4</Flags><Type type="key">29</Type><ItemInfo type="key">Location: $FPATH$
+</ItemInfo><UniqueID type="key">20727084</UniqueID><EntityID type="key">{D168289A-E286-442D-921D-DF07A0D7B686}</EntityID><ItemInfoDate type="key">22.01.2015 10:24:56</ItemInfoDate><ItemInfoPath type="key">$FPATH$</ItemInfoPath><ItemInfoDescr type="key"></ItemInfoDescr><ItemInfoAddInfoDb type="key"></ItemInfoAddInfoDb><ItemInfoAuthor type="key">Sebastian</ItemInfoAuthor></item></item></item><item><Targets type="key">datasetmanager</Targets><Name type="key">Data Sets</Name><DisplayName type="key">Data Sets</DisplayName><Path type="key">.</Path><Flags type="key">4</Flags><Type type="key">29</Type><ItemInfo type="key">Location: $FPATH$
 Author: Sebastian
 Date: 15.01.2015 10:34:24
 Original location: 

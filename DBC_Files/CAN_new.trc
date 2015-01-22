@@ -3,7 +3,7 @@
 --  Trace file: CAN_new.trc
 --
 --  RTI1401 7.2 (02-May-2014)
---  Tue Jan 20 15:22:07 2015
+--  Thu Jan 22 10:17:19 2015
 --
 --  Used options:
 --    TRCGenerateVirtualBlocks      = 1
@@ -27,7 +27,7 @@
 
 _genname     "RTI"
 _genversion  "7.2"
-_gendate     "01/20/2015 15:22:23"
+_gendate     "01/22/2015 10:18:23"
 _description ""
 _author      "RTI1401 7.2 (02-May-2014)"
 _model       "CAN_new.mdl"
@@ -131,14 +131,14 @@ group "Model Root"
 		 desc:  ""
 		 flags: BLOCK|COLLAPSED
 		}
-			p_CAN_new_B_uint8_T_4[0]
+			p_CAN_new_B_uint8_T_5[0]
 			{
 			 type:    uint(8)*
 			 alias:   "Out1"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[1]
+			p_CAN_new_B_uint8_T_5[1]
 			{
 			 type:    uint(8)*
 			 alias:   "Out2"
@@ -152,56 +152,56 @@ group "Model Root"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_int16_T_1[0]
+			p_CAN_new_B_int16_T_2[0]
 			{
 			 type:    int(16)*
 			 alias:   "Out4"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[2]
+			p_CAN_new_B_uint8_T_5[2]
 			{
 			 type:    uint(8)*
 			 alias:   "Out5"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[3]
+			p_CAN_new_B_uint8_T_5[3]
 			{
 			 type:    uint(8)*
 			 alias:   "Out6"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[4]
+			p_CAN_new_B_uint8_T_5[4]
 			{
 			 type:    uint(8)*
 			 alias:   "Out7"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[5]
+			p_CAN_new_B_uint8_T_5[5]
 			{
 			 type:    uint(8)*
 			 alias:   "Out8"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[6]
+			p_CAN_new_B_uint8_T_5[6]
 			{
 			 type:    uint(8)*
 			 alias:   "Out9"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[7]
+			p_CAN_new_B_uint8_T_5[7]
 			{
 			 type:    uint(8)*
 			 alias:   "Out10"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[8]
+			p_CAN_new_B_uint8_T_5[8]
 			{
 			 type:    uint(8)*
 			 alias:   "Out11"
@@ -215,7 +215,7 @@ group "Model Root"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_int16_T_1[1]
+			p_CAN_new_B_int16_T_2[1]
 			{
 			 type:    int(16)*
 			 alias:   "Out13"
@@ -307,7 +307,7 @@ group "Model Root"
 			 desc:  ""
 			 flags: BLOCK|COLLAPSED
 			}
-				p_CAN_new_B_uint8_T_4[9]
+				p_CAN_new_B_uint8_T_5[9]
 				{
 				 type:    uint(8)*
 				 alias:   "Out1"
@@ -372,7 +372,7 @@ group "Model Root"
 			 desc:  ""
 			 flags: BLOCK|COLLAPSED
 			}
-				p_CAN_new_B_uint8_T_4[9]
+				p_CAN_new_B_uint8_T_5[9]
 				{
 				 type:    uint(8)*
 				 alias:   "In1"
@@ -421,14 +421,14 @@ group "Model Root"
 		 desc:  ""
 		}
 
-			p_CAN_new_B_uint8_T_4[0]
+			p_CAN_new_B_uint8_T_5[0]
 			{
 			 type:    uint(8)*
 			 alias:   "RX_Data{SubArray1}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[1]
+			p_CAN_new_B_uint8_T_5[1]
 			{
 			 type:    uint(8)*
 			 alias:   "RX_Data{SubArray2}"
@@ -442,56 +442,56 @@ group "Model Root"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_int16_T_1[0]
+			p_CAN_new_B_int16_T_2[0]
 			{
 			 type:    int(16)*
 			 alias:   "RX_Data{SubArray4}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[2]
+			p_CAN_new_B_uint8_T_5[2]
 			{
 			 type:    uint(8)*
 			 alias:   "RX_Data{SubArray5}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[3]
+			p_CAN_new_B_uint8_T_5[3]
 			{
 			 type:    uint(8)*
 			 alias:   "RX_Data{SubArray6}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[4]
+			p_CAN_new_B_uint8_T_5[4]
 			{
 			 type:    uint(8)*
 			 alias:   "RX_Data{SubArray7}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[5]
+			p_CAN_new_B_uint8_T_5[5]
 			{
 			 type:    uint(8)*
 			 alias:   "RX_Data{SubArray8}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[6]
+			p_CAN_new_B_uint8_T_5[6]
 			{
 			 type:    uint(8)*
 			 alias:   "RX_Data{SubArray9}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[7]
+			p_CAN_new_B_uint8_T_5[7]
 			{
 			 type:    uint(8)*
 			 alias:   "RX_Data{SubArray10}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[8]
+			p_CAN_new_B_uint8_T_5[8]
 			{
 			 type:    uint(8)*
 			 alias:   "RX_Data{SubArray11}"
@@ -505,7 +505,7 @@ group "Model Root"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_int16_T_1[1]
+			p_CAN_new_B_int16_T_2[1]
 			{
 			 type:    int(16)*
 			 alias:   "RX_Data{SubArray13}"
@@ -522,14 +522,14 @@ group "Model Root"
 
 		endgroup -- subsystem-group "RTICANMM\nMainBlock"
 
-		p_CAN_new_B_int16_T_1[1]
+		p_CAN_new_B_int16_T_2[1]
 		{
 		 type:    int(16)*
 		 alias:   "<ActualRetarderPercTorque>"
 		 origin:  "CAN_new/Angle_Sensor/Bus\nSelector/Out13"
 		 flags:   LABEL|READONLY
 		}
-		p_CAN_new_B_uint8_T_4[2]
+		p_CAN_new_B_uint8_T_5[2]
 		{
 		 type:    uint(8)*
 		 alias:   "<AlarmWarningBits>"
@@ -543,63 +543,63 @@ group "Model Root"
 		 origin:  "CAN_new/Angle_Sensor/Bus\nSelector/Out3"
 		 flags:   LABEL|READONLY
 		}
-		p_CAN_new_B_uint8_T_4[6]
+		p_CAN_new_B_uint8_T_5[6]
 		{
 		 type:    uint(8)*
 		 alias:   "<AutomTowedVehBreakActive>"
 		 origin:  "CAN_new/Angle_Sensor/Bus\nSelector/Out9"
 		 flags:   LABEL|READONLY
 		}
-		p_CAN_new_B_uint8_T_4[1]
+		p_CAN_new_B_uint8_T_5[1]
 		{
 		 type:    uint(8)*
 		 alias:   "<MessageCounter>"
 		 origin:  "CAN_new/Angle_Sensor/Bus\nSelector/Out2"
 		 flags:   LABEL|READONLY
 		}
-		p_CAN_new_B_uint8_T_4[0]
+		p_CAN_new_B_uint8_T_5[0]
 		{
 		 type:    uint(8)*
 		 alias:   "<PacketType>"
 		 origin:  "CAN_new/Angle_Sensor/Bus\nSelector/Out1"
 		 flags:   LABEL|READONLY
 		}
-		p_CAN_new_B_uint8_T_4[8]
+		p_CAN_new_B_uint8_T_5[8]
 		{
 		 type:    uint(8)*
 		 alias:   "<SupplyLineBrakingRequest>"
 		 origin:  "CAN_new/Angle_Sensor/Bus\nSelector/Out11"
 		 flags:   LABEL|READONLY
 		}
-		p_CAN_new_B_int16_T_1[0]
+		p_CAN_new_B_int16_T_2[0]
 		{
 		 type:    int(16)*
 		 alias:   "<Temperature>"
 		 origin:  "CAN_new/Angle_Sensor/Bus\nSelector/Out4"
 		 flags:   LABEL|READONLY
 		}
-		p_CAN_new_B_uint8_T_4[7]
+		p_CAN_new_B_uint8_T_5[7]
 		{
 		 type:    uint(8)*
 		 alias:   "<VDCActive>"
 		 origin:  "CAN_new/Angle_Sensor/Bus\nSelector/Out10"
 		 flags:   LABEL|READONLY
 		}
-		p_CAN_new_B_uint8_T_4[3]
+		p_CAN_new_B_uint8_T_5[3]
 		{
 		 type:    uint(8)*
 		 alias:   "<VehicleABSActive>"
 		 origin:  "CAN_new/Angle_Sensor/Bus\nSelector/Out6"
 		 flags:   LABEL|READONLY
 		}
-		p_CAN_new_B_uint8_T_4[4]
+		p_CAN_new_B_uint8_T_5[4]
 		{
 		 type:    uint(8)*
 		 alias:   "<VehicleRetarderCtrlActive>"
 		 origin:  "CAN_new/Angle_Sensor/Bus\nSelector/Out7"
 		 flags:   LABEL|READONLY
 		}
-		p_CAN_new_B_uint8_T_4[5]
+		p_CAN_new_B_uint8_T_5[5]
 		{
 		 type:    uint(8)*
 		 alias:   "<VehicleServiceBrakeActive>"
@@ -638,59 +638,152 @@ group "Model Root"
 		 desc:  ""
 		 flags: BLOCK|COLLAPSED
 		}
-			p_CAN_new_B_uint8_T_4[10]
+			p_CAN_new_B_uint8_T_5[10]
 			{
 			 type:    uint(8)*
 			 alias:   "Out1{SubArray1}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[11]
+			p_CAN_new_B_uint8_T_5[11]
 			{
 			 type:    uint(8)*
 			 alias:   "Out1{SubArray2}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[12]
+			p_CAN_new_B_uint8_T_5[12]
 			{
 			 type:    uint(8)*
 			 alias:   "Out1{SubArray3}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[13]
+			p_CAN_new_B_uint8_T_5[13]
 			{
 			 type:    uint(8)*
 			 alias:   "Out1{SubArray4}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[14]
+			p_CAN_new_B_uint8_T_5[14]
 			{
 			 type:    uint(8)*
 			 alias:   "Out1{SubArray5}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[15]
+			p_CAN_new_B_uint8_T_5[15]
 			{
 			 type:    uint(8)*
 			 alias:   "Out1{SubArray6}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[16]
+			p_CAN_new_B_uint8_T_5[16]
 			{
 			 type:    uint(8)*
 			 alias:   "Out1{SubArray7}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[17]
+			p_CAN_new_B_uint8_T_5[17]
 			{
 			 type:    uint(8)*
 			 alias:   "Out1{SubArray8}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_boolean_T_6[0]
+			{
+			 type:    uint(8)*
+			 alias:   "Out2{SubArray1}"
+			 desc:    ""
+			 range:   < 0 ; 1 >
+			 bitmask: 0x01
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_real_T_0[4]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out2{SubArray2}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint32_T_1[0]
+			{
+			 type:    uint(32)*
+			 alias:   "Out2{SubArray3}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_5[18]
+			{
+			 type:    uint(8)*
+			 alias:   "Out2{SubArray4}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_5[19]
+			{
+			 type:    uint(8)*
+			 alias:   "Out2{SubArray5}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_5[20]
+			{
+			 type:    uint(8)*
+			 alias:   "Out2{SubArray6}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_5[21]
+			{
+			 type:    uint(8)*
+			 alias:   "Out2{SubArray7}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_5[22]
+			{
+			 type:    uint(8)*
+			 alias:   "Out2{SubArray8}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_5[23]
+			{
+			 type:    uint(8)*
+			 alias:   "Out2{SubArray9}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_5[24]
+			{
+			 type:    uint(8)*
+			 alias:   "Out2{SubArray10}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_5[25]
+			{
+			 type:    uint(8)*
+			 alias:   "Out2{SubArray11}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_5[26]
+			{
+			 type:    uint(8)*
+			 alias:   "Out2{SubArray12}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_5[27]
+			{
+			 type:    uint(8)*
+			 alias:   "Out2{SubArray13}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
@@ -724,7 +817,7 @@ group "Model Root"
 		 flags: BLOCK|COLLAPSED
 		}
 			-- Skipping output Out1
-			p_CAN_new_P_uint8_T_2[9]
+			p_CAN_new_P_uint8_T_2[1]
 			{
 			 type:    uint(8)*
 			 alias:   "Value"
@@ -733,6 +826,73 @@ group "Model Root"
 
 
 		endgroup -- block-group "Variation@RTICANMM\nControllerSetup"
+
+		group "Scope" -- block-group
+		{
+		 block: "Scope"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			p_CAN_new_B_uint8_T_5[10]
+			{
+			 type:    uint(8)*
+			 alias:   "In1{SubArray1}"
+			 desc:    ""
+			 flags:   SINK|READONLY
+			}
+			p_CAN_new_B_uint8_T_5[11]
+			{
+			 type:    uint(8)*
+			 alias:   "In1{SubArray2}"
+			 desc:    ""
+			 flags:   SINK|READONLY
+			}
+			p_CAN_new_B_uint8_T_5[12]
+			{
+			 type:    uint(8)*
+			 alias:   "In1{SubArray3}"
+			 desc:    ""
+			 flags:   SINK|READONLY
+			}
+			p_CAN_new_B_uint8_T_5[13]
+			{
+			 type:    uint(8)*
+			 alias:   "In1{SubArray4}"
+			 desc:    ""
+			 flags:   SINK|READONLY
+			}
+			p_CAN_new_B_uint8_T_5[14]
+			{
+			 type:    uint(8)*
+			 alias:   "In1{SubArray5}"
+			 desc:    ""
+			 flags:   SINK|READONLY
+			}
+			p_CAN_new_B_uint8_T_5[15]
+			{
+			 type:    uint(8)*
+			 alias:   "In1{SubArray6}"
+			 desc:    ""
+			 flags:   SINK|READONLY
+			}
+			p_CAN_new_B_uint8_T_5[16]
+			{
+			 type:    uint(8)*
+			 alias:   "In1{SubArray7}"
+			 desc:    ""
+			 flags:   SINK|READONLY
+			}
+			p_CAN_new_B_uint8_T_5[17]
+			{
+			 type:    uint(8)*
+			 alias:   "In1{SubArray8}"
+			 desc:    ""
+			 flags:   SINK|READONLY
+			}
+
+
+
+		endgroup -- block-group "Scope"
 
   
   
@@ -772,7 +932,7 @@ group "Model Root"
 			 desc:  ""
 			 flags: BLOCK|COLLAPSED
 			}
-				p_CAN_new_B_uint8_T_4[23]
+				p_CAN_new_B_uint8_T_5[98]
 				{
 				 type:    uint(8)*
 				 alias:   "Out1"
@@ -837,7 +997,7 @@ group "Model Root"
 			 desc:  ""
 			 flags: BLOCK|COLLAPSED
 			}
-				p_CAN_new_B_uint8_T_4[23]
+				p_CAN_new_B_uint8_T_5[98]
 				{
 				 type:    uint(8)*
 				 alias:   "In1"
@@ -876,59 +1036,803 @@ group "Model Root"
 		 desc:  ""
 		}
 
-			p_CAN_new_B_uint8_T_4[10]
+			p_CAN_new_B_uint8_T_5[10]
 			{
 			 type:    uint(8)*
 			 alias:   "RX_Data{SubArray1}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[11]
+			p_CAN_new_B_uint8_T_5[11]
 			{
 			 type:    uint(8)*
 			 alias:   "RX_Data{SubArray2}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[12]
+			p_CAN_new_B_uint8_T_5[12]
 			{
 			 type:    uint(8)*
 			 alias:   "RX_Data{SubArray3}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[13]
+			p_CAN_new_B_uint8_T_5[13]
 			{
 			 type:    uint(8)*
 			 alias:   "RX_Data{SubArray4}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[14]
+			p_CAN_new_B_uint8_T_5[14]
 			{
 			 type:    uint(8)*
 			 alias:   "RX_Data{SubArray5}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[15]
+			p_CAN_new_B_uint8_T_5[15]
 			{
 			 type:    uint(8)*
 			 alias:   "RX_Data{SubArray6}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[16]
+			p_CAN_new_B_uint8_T_5[16]
 			{
 			 type:    uint(8)*
 			 alias:   "RX_Data{SubArray7}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[17]
+			p_CAN_new_B_uint8_T_5[17]
 			{
 			 type:    uint(8)*
 			 alias:   "RX_Data{SubArray8}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_boolean_T_6[0]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray9}"
+			 desc:    ""
+			 range:   < 0 ; 1 >
+			 bitmask: 0x01
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_real_T_0[4]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "RX_Data{SubArray10}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint32_T_1[0]
+			{
+			 type:    uint(32)*
+			 alias:   "RX_Data{SubArray11}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_5[18]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray12}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_5[19]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray13}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_5[20]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray14}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_5[21]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray15}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_5[22]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray16}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_5[23]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray17}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_5[24]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray18}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_5[25]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray19}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_5[26]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray20}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_5[27]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray21}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_boolean_T_6[1]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray22}"
+			 desc:    ""
+			 range:   < 0 ; 1 >
+			 bitmask: 0x01
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_real_T_0[5]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "RX_Data{SubArray23}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint32_T_1[1]
+			{
+			 type:    uint(32)*
+			 alias:   "RX_Data{SubArray24}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_5[28]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray25}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_5[29]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray26}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_5[30]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray27}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_5[31]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray28}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_5[32]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray29}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_5[33]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray30}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_5[34]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray31}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_5[35]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray32}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_5[36]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray33}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_5[37]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray34}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_boolean_T_6[2]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray35}"
+			 desc:    ""
+			 range:   < 0 ; 1 >
+			 bitmask: 0x01
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_real_T_0[6]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "RX_Data{SubArray36}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint32_T_1[2]
+			{
+			 type:    uint(32)*
+			 alias:   "RX_Data{SubArray37}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_5[38]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray38}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_5[39]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray39}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_5[40]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray40}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_5[41]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray41}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_5[42]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray42}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_5[43]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray43}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_5[44]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray44}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_5[45]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray45}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_5[46]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray46}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_5[47]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray47}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_boolean_T_6[3]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray48}"
+			 desc:    ""
+			 range:   < 0 ; 1 >
+			 bitmask: 0x01
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_real_T_0[7]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "RX_Data{SubArray49}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint32_T_1[3]
+			{
+			 type:    uint(32)*
+			 alias:   "RX_Data{SubArray50}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_5[48]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray51}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_5[49]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray52}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_5[50]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray53}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_5[51]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray54}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_5[52]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray55}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_5[53]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray56}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_5[54]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray57}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_5[55]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray58}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_5[56]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray59}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_5[57]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray60}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_boolean_T_6[4]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray61}"
+			 desc:    ""
+			 range:   < 0 ; 1 >
+			 bitmask: 0x01
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_real_T_0[8]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "RX_Data{SubArray62}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint32_T_1[4]
+			{
+			 type:    uint(32)*
+			 alias:   "RX_Data{SubArray63}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_5[58]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray64}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_5[59]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray65}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_5[60]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray66}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_5[61]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray67}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_5[62]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray68}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_5[63]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray69}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_5[64]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray70}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_5[65]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray71}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_5[66]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray72}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_5[67]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray73}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_boolean_T_6[5]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray74}"
+			 desc:    ""
+			 range:   < 0 ; 1 >
+			 bitmask: 0x01
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_real_T_0[9]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "RX_Data{SubArray75}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint32_T_1[5]
+			{
+			 type:    uint(32)*
+			 alias:   "RX_Data{SubArray76}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_5[68]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray77}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_5[69]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray78}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_5[70]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray79}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_5[71]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray80}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_5[72]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray81}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_5[73]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray82}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_5[74]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray83}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_5[75]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray84}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_5[76]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray85}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_5[77]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray86}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_boolean_T_6[6]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray87}"
+			 desc:    ""
+			 range:   < 0 ; 1 >
+			 bitmask: 0x01
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_real_T_0[10]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "RX_Data{SubArray88}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint32_T_1[6]
+			{
+			 type:    uint(32)*
+			 alias:   "RX_Data{SubArray89}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_5[78]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray90}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_5[79]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray91}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_5[80]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray92}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_5[81]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray93}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_5[82]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray94}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_5[83]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray95}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_5[84]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray96}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_5[85]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray97}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_5[86]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray98}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_5[87]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray99}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_boolean_T_6[7]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray100}"
+			 desc:    ""
+			 range:   < 0 ; 1 >
+			 bitmask: 0x01
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_real_T_0[11]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "RX_Data{SubArray101}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint32_T_1[7]
+			{
+			 type:    uint(32)*
+			 alias:   "RX_Data{SubArray102}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_5[88]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray103}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_5[89]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray104}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_5[90]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray105}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_5[91]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray106}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_5[92]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray107}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_5[93]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray108}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_5[94]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray109}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_5[95]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray110}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_5[96]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray111}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_5[97]
+			{
+			 type:    uint(8)*
+			 alias:   "RX_Data{SubArray112}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
@@ -1006,171 +1910,93 @@ group "Model Root"
 
 				endgroup -- block-group "buscreator"
 
-				group "Constant" -- block-group
+				group "RAW_Byte_1" -- block-group
 				{
-				 block: "Constant"
+				 block: "Ground"
 				 desc:  ""
 				 flags: BLOCK|COLLAPSED
 				}
 					-- Skipping output Out1
-					p_CAN_new_P_uint8_T_2[1]
-					{
-					 type:    uint(8)*
-					 alias:   "Value"
-					 flags:   PARAM
-					}
 
 
-				endgroup -- block-group "Constant"
+				endgroup -- block-group "RAW_Byte_1"
 
-				group "Constant1" -- block-group
+				group "RAW_Byte_2" -- block-group
 				{
-				 block: "Constant"
+				 block: "Ground"
 				 desc:  ""
 				 flags: BLOCK|COLLAPSED
 				}
 					-- Skipping output Out1
-					p_CAN_new_P_uint8_T_2[2]
-					{
-					 type:    uint(8)*
-					 alias:   "Value"
-					 flags:   PARAM
-					}
 
 
-				endgroup -- block-group "Constant1"
+				endgroup -- block-group "RAW_Byte_2"
 
-				group "Constant2" -- block-group
+				group "RAW_Byte_3" -- block-group
 				{
-				 block: "Constant"
+				 block: "Ground"
 				 desc:  ""
 				 flags: BLOCK|COLLAPSED
 				}
 					-- Skipping output Out1
-					p_CAN_new_P_uint8_T_2[3]
-					{
-					 type:    uint(8)*
-					 alias:   "Value"
-					 flags:   PARAM
-					}
 
 
-				endgroup -- block-group "Constant2"
+				endgroup -- block-group "RAW_Byte_3"
 
-				group "Constant3" -- block-group
+				group "RAW_Byte_4" -- block-group
 				{
-				 block: "Constant"
+				 block: "Ground"
 				 desc:  ""
 				 flags: BLOCK|COLLAPSED
 				}
-					p_CAN_new_B_uint8_T_4[18]
-					{
-					 type:    uint(8)*
-					 alias:   "Out1"
-					 desc:    ""
-					 flags:   OUTPUT|READONLY
-					}
-					p_CAN_new_P_uint8_T_2[4]
-					{
-					 type:    uint(8)*
-					 alias:   "Value"
-					 flags:   PARAM
-					}
+					-- Skipping output Out1
 
 
-				endgroup -- block-group "Constant3"
+				endgroup -- block-group "RAW_Byte_4"
 
-				group "Constant4" -- block-group
+				group "RAW_Byte_5" -- block-group
 				{
-				 block: "Constant"
+				 block: "Ground"
 				 desc:  ""
 				 flags: BLOCK|COLLAPSED
 				}
-					p_CAN_new_B_uint8_T_4[19]
-					{
-					 type:    uint(8)*
-					 alias:   "Out1"
-					 desc:    ""
-					 flags:   OUTPUT|READONLY
-					}
-					p_CAN_new_P_uint8_T_2[5]
-					{
-					 type:    uint(8)*
-					 alias:   "Value"
-					 flags:   PARAM
-					}
+					-- Skipping output Out1
 
 
-				endgroup -- block-group "Constant4"
+				endgroup -- block-group "RAW_Byte_5"
 
-				group "Constant5" -- block-group
+				group "RAW_Byte_6" -- block-group
 				{
-				 block: "Constant"
+				 block: "Ground"
 				 desc:  ""
 				 flags: BLOCK|COLLAPSED
 				}
-					p_CAN_new_B_uint8_T_4[20]
-					{
-					 type:    uint(8)*
-					 alias:   "Out1"
-					 desc:    ""
-					 flags:   OUTPUT|READONLY
-					}
-					p_CAN_new_P_uint8_T_2[6]
-					{
-					 type:    uint(8)*
-					 alias:   "Value"
-					 flags:   PARAM
-					}
+					-- Skipping output Out1
 
 
-				endgroup -- block-group "Constant5"
+				endgroup -- block-group "RAW_Byte_6"
 
-				group "Constant6" -- block-group
+				group "RAW_Byte_7" -- block-group
 				{
-				 block: "Constant"
+				 block: "Ground"
 				 desc:  ""
 				 flags: BLOCK|COLLAPSED
 				}
-					p_CAN_new_B_uint8_T_4[21]
-					{
-					 type:    uint(8)*
-					 alias:   "Out1"
-					 desc:    ""
-					 flags:   OUTPUT|READONLY
-					}
-					p_CAN_new_P_uint8_T_2[7]
-					{
-					 type:    uint(8)*
-					 alias:   "Value"
-					 flags:   PARAM
-					}
+					-- Skipping output Out1
 
 
-				endgroup -- block-group "Constant6"
+				endgroup -- block-group "RAW_Byte_7"
 
-				group "Constant7" -- block-group
+				group "RAW_Byte_8" -- block-group
 				{
-				 block: "Constant"
+				 block: "Ground"
 				 desc:  ""
 				 flags: BLOCK|COLLAPSED
 				}
-					p_CAN_new_B_uint8_T_4[22]
-					{
-					 type:    uint(8)*
-					 alias:   "Out1"
-					 desc:    ""
-					 flags:   OUTPUT|READONLY
-					}
-					p_CAN_new_P_uint8_T_2[8]
-					{
-					 type:    uint(8)*
-					 alias:   "Value"
-					 flags:   PARAM
-					}
+					-- Skipping output Out1
 
 
-				endgroup -- block-group "Constant7"
+				endgroup -- block-group "RAW_Byte_8"
 
 
 				-- Skipping label "RAW_Byte_1"
@@ -1178,6 +2004,16 @@ group "Model Root"
 				-- Skipping label "RAW_Byte_2"
 
 				-- Skipping label "RAW_Byte_3"
+
+				-- Skipping label "RAW_Byte_4"
+
+				-- Skipping label "RAW_Byte_5"
+
+				-- Skipping label "RAW_Byte_6"
+
+				-- Skipping label "RAW_Byte_7"
+
+				-- Skipping label "RAW_Byte_8"
 
 				-- Skipping label "RTICANMMFreeRawMessage_1{SubArray1}"
 
@@ -1233,56 +2069,149 @@ group "Model Root"
 
 		endgroup -- subsystem-group "User2RTICANMM\nMainBlock"
 
-		p_CAN_new_B_uint8_T_4[10]
+		p_CAN_new_B_boolean_T_6[0]
+		{
+		 type:    uint(8)*
+		 alias:   "<RTICANMMCaptureMessage_1>{SubArray1}"
+		 bitmask: 0x01
+		 range:   < 0 ; 1 >
+		 origin:  "CAN_new/Arduino/Bus\nSelector/Out2"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_real_T_0[4]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "<RTICANMMCaptureMessage_1>{SubArray2}"
+		 origin:  "CAN_new/Arduino/Bus\nSelector/Out2"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_uint32_T_1[0]
+		{
+		 type:    uint(32)*
+		 alias:   "<RTICANMMCaptureMessage_1>{SubArray3}"
+		 origin:  "CAN_new/Arduino/Bus\nSelector/Out2"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_uint8_T_5[18]
+		{
+		 type:    uint(8)*
+		 alias:   "<RTICANMMCaptureMessage_1>{SubArray4}"
+		 origin:  "CAN_new/Arduino/Bus\nSelector/Out2"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_uint8_T_5[19]
+		{
+		 type:    uint(8)*
+		 alias:   "<RTICANMMCaptureMessage_1>{SubArray5}"
+		 origin:  "CAN_new/Arduino/Bus\nSelector/Out2"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_uint8_T_5[20]
+		{
+		 type:    uint(8)*
+		 alias:   "<RTICANMMCaptureMessage_1>{SubArray6}"
+		 origin:  "CAN_new/Arduino/Bus\nSelector/Out2"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_uint8_T_5[21]
+		{
+		 type:    uint(8)*
+		 alias:   "<RTICANMMCaptureMessage_1>{SubArray7}"
+		 origin:  "CAN_new/Arduino/Bus\nSelector/Out2"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_uint8_T_5[22]
+		{
+		 type:    uint(8)*
+		 alias:   "<RTICANMMCaptureMessage_1>{SubArray8}"
+		 origin:  "CAN_new/Arduino/Bus\nSelector/Out2"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_uint8_T_5[23]
+		{
+		 type:    uint(8)*
+		 alias:   "<RTICANMMCaptureMessage_1>{SubArray9}"
+		 origin:  "CAN_new/Arduino/Bus\nSelector/Out2"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_uint8_T_5[24]
+		{
+		 type:    uint(8)*
+		 alias:   "<RTICANMMCaptureMessage_1>{SubArray10}"
+		 origin:  "CAN_new/Arduino/Bus\nSelector/Out2"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_uint8_T_5[25]
+		{
+		 type:    uint(8)*
+		 alias:   "<RTICANMMCaptureMessage_1>{SubArray11}"
+		 origin:  "CAN_new/Arduino/Bus\nSelector/Out2"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_uint8_T_5[26]
+		{
+		 type:    uint(8)*
+		 alias:   "<RTICANMMCaptureMessage_1>{SubArray12}"
+		 origin:  "CAN_new/Arduino/Bus\nSelector/Out2"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_uint8_T_5[27]
+		{
+		 type:    uint(8)*
+		 alias:   "<RTICANMMCaptureMessage_1>{SubArray13}"
+		 origin:  "CAN_new/Arduino/Bus\nSelector/Out2"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_uint8_T_5[10]
 		{
 		 type:    uint(8)*
 		 alias:   "<RTICANMMFreeRawMessage_1>{SubArray1}"
 		 origin:  "CAN_new/Arduino/Bus\nSelector/Out1"
 		 flags:   LABEL|READONLY
 		}
-		p_CAN_new_B_uint8_T_4[11]
+		p_CAN_new_B_uint8_T_5[11]
 		{
 		 type:    uint(8)*
 		 alias:   "<RTICANMMFreeRawMessage_1>{SubArray2}"
 		 origin:  "CAN_new/Arduino/Bus\nSelector/Out1"
 		 flags:   LABEL|READONLY
 		}
-		p_CAN_new_B_uint8_T_4[12]
+		p_CAN_new_B_uint8_T_5[12]
 		{
 		 type:    uint(8)*
 		 alias:   "<RTICANMMFreeRawMessage_1>{SubArray3}"
 		 origin:  "CAN_new/Arduino/Bus\nSelector/Out1"
 		 flags:   LABEL|READONLY
 		}
-		p_CAN_new_B_uint8_T_4[13]
+		p_CAN_new_B_uint8_T_5[13]
 		{
 		 type:    uint(8)*
 		 alias:   "<RTICANMMFreeRawMessage_1>{SubArray4}"
 		 origin:  "CAN_new/Arduino/Bus\nSelector/Out1"
 		 flags:   LABEL|READONLY
 		}
-		p_CAN_new_B_uint8_T_4[14]
+		p_CAN_new_B_uint8_T_5[14]
 		{
 		 type:    uint(8)*
 		 alias:   "<RTICANMMFreeRawMessage_1>{SubArray5}"
 		 origin:  "CAN_new/Arduino/Bus\nSelector/Out1"
 		 flags:   LABEL|READONLY
 		}
-		p_CAN_new_B_uint8_T_4[15]
+		p_CAN_new_B_uint8_T_5[15]
 		{
 		 type:    uint(8)*
 		 alias:   "<RTICANMMFreeRawMessage_1>{SubArray6}"
 		 origin:  "CAN_new/Arduino/Bus\nSelector/Out1"
 		 flags:   LABEL|READONLY
 		}
-		p_CAN_new_B_uint8_T_4[16]
+		p_CAN_new_B_uint8_T_5[16]
 		{
 		 type:    uint(8)*
 		 alias:   "<RTICANMMFreeRawMessage_1>{SubArray7}"
 		 origin:  "CAN_new/Arduino/Bus\nSelector/Out1"
 		 flags:   LABEL|READONLY
 		}
-		p_CAN_new_B_uint8_T_4[17]
+		p_CAN_new_B_uint8_T_5[17]
 		{
 		 type:    uint(8)*
 		 alias:   "<RTICANMMFreeRawMessage_1>{SubArray8}"
@@ -1327,7 +2256,7 @@ group "Model Root"
 		 flags: BLOCK|COLLAPSED
 		}
 			-- Skipping output Out1
-			p_CAN_new_P_uint8_T_2[10]
+			p_CAN_new_P_uint8_T_2[2]
 			{
 			 type:    uint(8)*
 			 alias:   "Value"
@@ -1375,7 +2304,7 @@ group "Model Root"
 			 desc:  ""
 			 flags: BLOCK|COLLAPSED
 			}
-				p_CAN_new_B_uint8_T_4[24]
+				p_CAN_new_B_uint8_T_5[99]
 				{
 				 type:    uint(8)*
 				 alias:   "Out1"
@@ -1440,7 +2369,7 @@ group "Model Root"
 			 desc:  ""
 			 flags: BLOCK|COLLAPSED
 			}
-				p_CAN_new_B_uint8_T_4[24]
+				p_CAN_new_B_uint8_T_5[99]
 				{
 				 type:    uint(8)*
 				 alias:   "In1"
@@ -1479,329 +2408,329 @@ group "Model Root"
 		 desc:  ""
 		}
 
-			p_CAN_new_B_real_T_0[4]
+			p_CAN_new_B_real_T_0[12]
 			{
 			 type:    flt(64,IEEE)*
 			 alias:   "RX_Data{SubArray1}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_real_T_0[5]
+			p_CAN_new_B_real_T_0[13]
 			{
 			 type:    flt(64,IEEE)*
 			 alias:   "RX_Data{SubArray2}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_real_T_0[6]
+			p_CAN_new_B_real_T_0[14]
 			{
 			 type:    flt(64,IEEE)*
 			 alias:   "RX_Data{SubArray3}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_real_T_0[7]
+			p_CAN_new_B_real_T_0[15]
 			{
 			 type:    flt(64,IEEE)*
 			 alias:   "RX_Data{SubArray4}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_real_T_0[8]
+			p_CAN_new_B_real_T_0[16]
 			{
 			 type:    flt(64,IEEE)*
 			 alias:   "RX_Data{SubArray5}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_real_T_0[9]
+			p_CAN_new_B_real_T_0[17]
 			{
 			 type:    flt(64,IEEE)*
 			 alias:   "RX_Data{SubArray6}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_real_T_0[10]
+			p_CAN_new_B_real_T_0[18]
 			{
 			 type:    flt(64,IEEE)*
 			 alias:   "RX_Data{SubArray7}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_real_T_0[11]
+			p_CAN_new_B_real_T_0[19]
 			{
 			 type:    flt(64,IEEE)*
 			 alias:   "RX_Data{SubArray8}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_real_T_0[12]
+			p_CAN_new_B_real_T_0[20]
 			{
 			 type:    flt(64,IEEE)*
 			 alias:   "RX_Data{SubArray9}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_real_T_0[13]
+			p_CAN_new_B_real_T_0[21]
 			{
 			 type:    flt(64,IEEE)*
 			 alias:   "RX_Data{SubArray10}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_real_T_0[14]
+			p_CAN_new_B_real_T_0[22]
 			{
 			 type:    flt(64,IEEE)*
 			 alias:   "RX_Data{SubArray11}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_real_T_0[15]
+			p_CAN_new_B_real_T_0[23]
 			{
 			 type:    flt(64,IEEE)*
 			 alias:   "RX_Data{SubArray12}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_real_T_0[16]
+			p_CAN_new_B_real_T_0[24]
 			{
 			 type:    flt(64,IEEE)*
 			 alias:   "RX_Data{SubArray13}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_real_T_0[17]
+			p_CAN_new_B_real_T_0[25]
 			{
 			 type:    flt(64,IEEE)*
 			 alias:   "RX_Data{SubArray14}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_real_T_0[18]
+			p_CAN_new_B_real_T_0[26]
 			{
 			 type:    flt(64,IEEE)*
 			 alias:   "RX_Data{SubArray15}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_real_T_0[19]
+			p_CAN_new_B_real_T_0[27]
 			{
 			 type:    flt(64,IEEE)*
 			 alias:   "RX_Data{SubArray16}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[25]
+			p_CAN_new_B_uint8_T_5[100]
 			{
 			 type:    uint(8)*
 			 alias:   "RX_Data{SubArray17}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[26]
+			p_CAN_new_B_uint8_T_5[101]
 			{
 			 type:    uint(8)*
 			 alias:   "RX_Data{SubArray18}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[27]
+			p_CAN_new_B_uint8_T_5[102]
 			{
 			 type:    uint(8)*
 			 alias:   "RX_Data{SubArray19}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[28]
+			p_CAN_new_B_uint8_T_5[103]
 			{
 			 type:    uint(8)*
 			 alias:   "RX_Data{SubArray20}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[29]
+			p_CAN_new_B_uint8_T_5[104]
 			{
 			 type:    uint(8)*
 			 alias:   "RX_Data{SubArray21}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[30]
+			p_CAN_new_B_uint8_T_5[105]
 			{
 			 type:    uint(8)*
 			 alias:   "RX_Data{SubArray22}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[31]
+			p_CAN_new_B_uint8_T_5[106]
 			{
 			 type:    uint(8)*
 			 alias:   "RX_Data{SubArray23}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[32]
+			p_CAN_new_B_uint8_T_5[107]
 			{
 			 type:    uint(8)*
 			 alias:   "RX_Data{SubArray24}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[33]
+			p_CAN_new_B_uint8_T_5[108]
 			{
 			 type:    uint(8)*
 			 alias:   "RX_Data{SubArray25}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[34]
+			p_CAN_new_B_uint8_T_5[109]
 			{
 			 type:    uint(8)*
 			 alias:   "RX_Data{SubArray26}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[35]
+			p_CAN_new_B_uint8_T_5[110]
 			{
 			 type:    uint(8)*
 			 alias:   "RX_Data{SubArray27}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[36]
+			p_CAN_new_B_uint8_T_5[111]
 			{
 			 type:    uint(8)*
 			 alias:   "RX_Data{SubArray28}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[37]
+			p_CAN_new_B_uint8_T_5[112]
 			{
 			 type:    uint(8)*
 			 alias:   "RX_Data{SubArray29}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_real_T_0[20]
+			p_CAN_new_B_real_T_0[28]
 			{
 			 type:    flt(64,IEEE)*
 			 alias:   "RX_Data{SubArray30}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_real_T_0[21]
+			p_CAN_new_B_real_T_0[29]
 			{
 			 type:    flt(64,IEEE)*
 			 alias:   "RX_Data{SubArray31}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_real_T_0[22]
+			p_CAN_new_B_real_T_0[30]
 			{
 			 type:    flt(64,IEEE)*
 			 alias:   "RX_Data{SubArray32}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_real_T_0[23]
+			p_CAN_new_B_real_T_0[31]
 			{
 			 type:    flt(64,IEEE)*
 			 alias:   "RX_Data{SubArray33}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_real_T_0[24]
+			p_CAN_new_B_real_T_0[32]
 			{
 			 type:    flt(64,IEEE)*
 			 alias:   "RX_Data{SubArray34}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_real_T_0[25]
+			p_CAN_new_B_real_T_0[33]
 			{
 			 type:    flt(64,IEEE)*
 			 alias:   "RX_Data{SubArray35}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_real_T_0[26]
+			p_CAN_new_B_real_T_0[34]
 			{
 			 type:    flt(64,IEEE)*
 			 alias:   "RX_Data{SubArray36}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_int16_T_1[2]
+			p_CAN_new_B_int16_T_2[2]
 			{
 			 type:    int(16)*
 			 alias:   "RX_Data{SubArray37}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_int16_T_1[3]
+			p_CAN_new_B_int16_T_2[3]
 			{
 			 type:    int(16)*
 			 alias:   "RX_Data{SubArray38}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[38]
+			p_CAN_new_B_uint8_T_5[113]
 			{
 			 type:    uint(8)*
 			 alias:   "RX_Data{SubArray39}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[39]
+			p_CAN_new_B_uint8_T_5[114]
 			{
 			 type:    uint(8)*
 			 alias:   "RX_Data{SubArray40}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_real_T_0[27]
+			p_CAN_new_B_real_T_0[35]
 			{
 			 type:    flt(64,IEEE)*
 			 alias:   "RX_Data{SubArray41}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_real_T_0[28]
+			p_CAN_new_B_real_T_0[36]
 			{
 			 type:    flt(64,IEEE)*
 			 alias:   "RX_Data{SubArray42}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_int16_T_1[4]
+			p_CAN_new_B_int16_T_2[4]
 			{
 			 type:    int(16)*
 			 alias:   "RX_Data{SubArray43}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[40]
+			p_CAN_new_B_uint8_T_5[115]
 			{
 			 type:    uint(8)*
 			 alias:   "RX_Data{SubArray44}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint16_T_2[0]
+			p_CAN_new_B_uint16_T_3[0]
 			{
 			 type:    uint(16)*
 			 alias:   "RX_Data{SubArray45}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_real_T_0[29]
+			p_CAN_new_B_real_T_0[37]
 			{
 			 type:    flt(64,IEEE)*
 			 alias:   "RX_Data{SubArray46}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_boolean_T_5[0]
+			p_CAN_new_B_boolean_T_6[8]
 			{
 			 type:    uint(8)*
 			 alias:   "RX_Data{SubArray47}"
@@ -1810,7 +2739,7 @@ group "Model Root"
 			 bitmask: 0x01
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_boolean_T_5[1]
+			p_CAN_new_B_boolean_T_6[9]
 			{
 			 type:    uint(8)*
 			 alias:   "RX_Data{SubArray48}"
@@ -1819,7 +2748,7 @@ group "Model Root"
 			 bitmask: 0x01
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_boolean_T_5[2]
+			p_CAN_new_B_boolean_T_6[10]
 			{
 			 type:    uint(8)*
 			 alias:   "RX_Data{SubArray49}"
@@ -1828,7 +2757,7 @@ group "Model Root"
 			 bitmask: 0x01
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_boolean_T_5[3]
+			p_CAN_new_B_boolean_T_6[11]
 			{
 			 type:    uint(8)*
 			 alias:   "RX_Data{SubArray50}"
@@ -1837,49 +2766,49 @@ group "Model Root"
 			 bitmask: 0x01
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[41]
+			p_CAN_new_B_uint8_T_5[116]
 			{
 			 type:    uint(8)*
 			 alias:   "RX_Data{SubArray51}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[42]
+			p_CAN_new_B_uint8_T_5[117]
 			{
 			 type:    uint(8)*
 			 alias:   "RX_Data{SubArray52}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[43]
+			p_CAN_new_B_uint8_T_5[118]
 			{
 			 type:    uint(8)*
 			 alias:   "RX_Data{SubArray53}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[44]
+			p_CAN_new_B_uint8_T_5[119]
 			{
 			 type:    uint(8)*
 			 alias:   "RX_Data{SubArray54}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[45]
+			p_CAN_new_B_uint8_T_5[120]
 			{
 			 type:    uint(8)*
 			 alias:   "RX_Data{SubArray55}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[46]
+			p_CAN_new_B_uint8_T_5[121]
 			{
 			 type:    uint(8)*
 			 alias:   "RX_Data{SubArray56}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_boolean_T_5[4]
+			p_CAN_new_B_boolean_T_6[12]
 			{
 			 type:    uint(8)*
 			 alias:   "RX_Data{SubArray57}"
@@ -1888,280 +2817,280 @@ group "Model Root"
 			 bitmask: 0x01
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[47]
+			p_CAN_new_B_uint8_T_5[122]
 			{
 			 type:    uint(8)*
 			 alias:   "RX_Data{SubArray58}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_real_T_0[30]
+			p_CAN_new_B_real_T_0[38]
 			{
 			 type:    flt(64,IEEE)*
 			 alias:   "RX_Data{SubArray59}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[48]
+			p_CAN_new_B_uint8_T_5[123]
 			{
 			 type:    uint(8)*
 			 alias:   "RX_Data{SubArray60}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[49]
+			p_CAN_new_B_uint8_T_5[124]
 			{
 			 type:    uint(8)*
 			 alias:   "RX_Data{SubArray61}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[50]
+			p_CAN_new_B_uint8_T_5[125]
 			{
 			 type:    uint(8)*
 			 alias:   "RX_Data{SubArray62}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_real_T_0[31]
+			p_CAN_new_B_real_T_0[39]
 			{
 			 type:    flt(64,IEEE)*
 			 alias:   "RX_Data{SubArray63}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[51]
+			p_CAN_new_B_uint8_T_5[126]
 			{
 			 type:    uint(8)*
 			 alias:   "RX_Data{SubArray64}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[52]
+			p_CAN_new_B_uint8_T_5[127]
 			{
 			 type:    uint(8)*
 			 alias:   "RX_Data{SubArray65}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[53]
+			p_CAN_new_B_uint8_T_5[128]
 			{
 			 type:    uint(8)*
 			 alias:   "RX_Data{SubArray66}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_real_T_0[32]
+			p_CAN_new_B_real_T_0[40]
 			{
 			 type:    flt(64,IEEE)*
 			 alias:   "RX_Data{SubArray67}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_real_T_0[33]
+			p_CAN_new_B_real_T_0[41]
 			{
 			 type:    flt(64,IEEE)*
 			 alias:   "RX_Data{SubArray68}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_real_T_0[34]
+			p_CAN_new_B_real_T_0[42]
 			{
 			 type:    flt(64,IEEE)*
 			 alias:   "RX_Data{SubArray69}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_real_T_0[35]
+			p_CAN_new_B_real_T_0[43]
 			{
 			 type:    flt(64,IEEE)*
 			 alias:   "RX_Data{SubArray70}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_real_T_0[36]
+			p_CAN_new_B_real_T_0[44]
 			{
 			 type:    flt(64,IEEE)*
 			 alias:   "RX_Data{SubArray71}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_real_T_0[37]
+			p_CAN_new_B_real_T_0[45]
 			{
 			 type:    flt(64,IEEE)*
 			 alias:   "RX_Data{SubArray72}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_real_T_0[38]
+			p_CAN_new_B_real_T_0[46]
 			{
 			 type:    flt(64,IEEE)*
 			 alias:   "RX_Data{SubArray73}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_real_T_0[39]
+			p_CAN_new_B_real_T_0[47]
 			{
 			 type:    flt(64,IEEE)*
 			 alias:   "RX_Data{SubArray74}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_real_T_0[40]
+			p_CAN_new_B_real_T_0[48]
 			{
 			 type:    flt(64,IEEE)*
 			 alias:   "RX_Data{SubArray75}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_real_T_0[41]
+			p_CAN_new_B_real_T_0[49]
 			{
 			 type:    flt(64,IEEE)*
 			 alias:   "RX_Data{SubArray76}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_real_T_0[42]
+			p_CAN_new_B_real_T_0[50]
 			{
 			 type:    flt(64,IEEE)*
 			 alias:   "RX_Data{SubArray77}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_real_T_0[43]
+			p_CAN_new_B_real_T_0[51]
 			{
 			 type:    flt(64,IEEE)*
 			 alias:   "RX_Data{SubArray78}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_real_T_0[44]
+			p_CAN_new_B_real_T_0[52]
 			{
 			 type:    flt(64,IEEE)*
 			 alias:   "RX_Data{SubArray79}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_real_T_0[45]
+			p_CAN_new_B_real_T_0[53]
 			{
 			 type:    flt(64,IEEE)*
 			 alias:   "RX_Data{SubArray80}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_real_T_0[46]
+			p_CAN_new_B_real_T_0[54]
 			{
 			 type:    flt(64,IEEE)*
 			 alias:   "RX_Data{SubArray81}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_real_T_0[47]
+			p_CAN_new_B_real_T_0[55]
 			{
 			 type:    flt(64,IEEE)*
 			 alias:   "RX_Data{SubArray82}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[54]
+			p_CAN_new_B_uint8_T_5[129]
 			{
 			 type:    uint(8)*
 			 alias:   "RX_Data{SubArray83}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[55]
+			p_CAN_new_B_uint8_T_5[130]
 			{
 			 type:    uint(8)*
 			 alias:   "RX_Data{SubArray84}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_int8_T_3[0]
+			p_CAN_new_B_int8_T_4[0]
 			{
 			 type:    int(8)*
 			 alias:   "RX_Data{SubArray85}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_int8_T_3[1]
+			p_CAN_new_B_int8_T_4[1]
 			{
 			 type:    int(8)*
 			 alias:   "RX_Data{SubArray86}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_int8_T_3[2]
+			p_CAN_new_B_int8_T_4[2]
 			{
 			 type:    int(8)*
 			 alias:   "RX_Data{SubArray87}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[56]
+			p_CAN_new_B_uint8_T_5[131]
 			{
 			 type:    uint(8)*
 			 alias:   "RX_Data{SubArray88}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[57]
+			p_CAN_new_B_uint8_T_5[132]
 			{
 			 type:    uint(8)*
 			 alias:   "RX_Data{SubArray89}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[58]
+			p_CAN_new_B_uint8_T_5[133]
 			{
 			 type:    uint(8)*
 			 alias:   "RX_Data{SubArray90}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[59]
+			p_CAN_new_B_uint8_T_5[134]
 			{
 			 type:    uint(8)*
 			 alias:   "RX_Data{SubArray91}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[60]
+			p_CAN_new_B_uint8_T_5[135]
 			{
 			 type:    uint(8)*
 			 alias:   "RX_Data{SubArray92}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[61]
+			p_CAN_new_B_uint8_T_5[136]
 			{
 			 type:    uint(8)*
 			 alias:   "RX_Data{SubArray93}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[62]
+			p_CAN_new_B_uint8_T_5[137]
 			{
 			 type:    uint(8)*
 			 alias:   "RX_Data{SubArray94}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[63]
+			p_CAN_new_B_uint8_T_5[138]
 			{
 			 type:    uint(8)*
 			 alias:   "RX_Data{SubArray95}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[64]
+			p_CAN_new_B_uint8_T_5[139]
 			{
 			 type:    uint(8)*
 			 alias:   "RX_Data{SubArray96}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[65]
+			p_CAN_new_B_uint8_T_5[140]
 			{
 			 type:    uint(8)*
 			 alias:   "RX_Data{SubArray97}"
@@ -2230,6 +3159,16 @@ group "Labels"
 	-- Skipping label "RAW_Byte_2"
 
 	-- Skipping label "RAW_Byte_3"
+
+	-- Skipping label "RAW_Byte_4"
+
+	-- Skipping label "RAW_Byte_5"
+
+	-- Skipping label "RAW_Byte_6"
+
+	-- Skipping label "RAW_Byte_7"
+
+	-- Skipping label "RAW_Byte_8"
 
 	-- Skipping label "RTICANMMFreeRawMessage_1{Occurence1}{SubArray1}"
 
@@ -3505,6 +4444,1446 @@ endgroup -- block-group "TX"
 
 
 endgroup -- block-group "RTICANMMFreeRawMessage_1"
+
+
+
+group "RTICANMMCaptureMessage_1" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+CANMMCAN_Arduino_CAPS[0]
+{
+type: UINT(8)
+alias: "RTICANMMCaptureMessage_1_status"
+flags: OUTPUT|READONLY
+desc: "RTICANMMCaptureMessage_1 Status"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_CAPL[0]
+{
+type: UINT(8)
+alias: "RTICANMMCaptureMessage_1_Length"
+flags: OUTPUT|READONLY
+desc: "Message Length"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_CAPT[0]
+{
+type: flt(64,IEEE)
+alias: "RTICANMMCaptureMessage_1_time"
+flags: OUTPUT|READONLY
+desc: "RTICANMMCaptureMessage_1 Time"
+unit: "s"
+value: 0.0
+}
+
+
+
+
+CANMMCAN_Arduino_CAPID[0]
+{
+type: UINT(32)
+alias: "RTICANMMCaptureMessage_1_ID"
+flags: OUTPUT|READONLY
+desc: "Message ID"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_CAPIDF[0]
+{
+type: UINT(8)
+alias: "RTICANMMCaptureMessage_1_IDFormat"
+flags: OUTPUT|READONLY
+desc: "Message ID Format"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_CAPD_0[0]
+{
+type: UINT(8)
+alias: "RTICANMMCaptureMessage_1_RAW_byte_1"
+flags: OUTPUT|READONLY
+desc: "RTICANMMCaptureMessage_1 Byte 1"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_CAPD_1[0]
+{
+type: UINT(8)
+alias: "RTICANMMCaptureMessage_1_RAW_byte_2"
+flags: OUTPUT|READONLY
+desc: "RTICANMMCaptureMessage_1 Byte 2"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_CAPD_2[0]
+{
+type: UINT(8)
+alias: "RTICANMMCaptureMessage_1_RAW_byte_3"
+flags: OUTPUT|READONLY
+desc: "RTICANMMCaptureMessage_1 Byte 3"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_CAPD_3[0]
+{
+type: UINT(8)
+alias: "RTICANMMCaptureMessage_1_RAW_byte_4"
+flags: OUTPUT|READONLY
+desc: "RTICANMMCaptureMessage_1 Byte 4"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_CAPD_4[0]
+{
+type: UINT(8)
+alias: "RTICANMMCaptureMessage_1_RAW_byte_5"
+flags: OUTPUT|READONLY
+desc: "RTICANMMCaptureMessage_1 Byte 5"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_CAPD_5[0]
+{
+type: UINT(8)
+alias: "RTICANMMCaptureMessage_1_RAW_byte_6"
+flags: OUTPUT|READONLY
+desc: "RTICANMMCaptureMessage_1 Byte 6"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_CAPD_6[0]
+{
+type: UINT(8)
+alias: "RTICANMMCaptureMessage_1_RAW_byte_7"
+flags: OUTPUT|READONLY
+desc: "RTICANMMCaptureMessage_1 Byte 7"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_CAPD_7[0]
+{
+type: UINT(8)
+alias: "RTICANMMCaptureMessage_1_RAW_byte_8"
+flags: OUTPUT|READONLY
+desc: "RTICANMMCaptureMessage_1 Byte 8"
+unit: ""
+value: 0
+}
+
+
+
+
+
+endgroup -- block-group "RTICANMMCaptureMessage_1"
+
+
+
+group "RTICANMMCaptureMessage_2" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+CANMMCAN_Arduino_CAPS[1]
+{
+type: UINT(8)
+alias: "RTICANMMCaptureMessage_2_status"
+flags: OUTPUT|READONLY
+desc: "RTICANMMCaptureMessage_2 Status"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_CAPL[1]
+{
+type: UINT(8)
+alias: "RTICANMMCaptureMessage_2_Length"
+flags: OUTPUT|READONLY
+desc: "Message Length"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_CAPT[1]
+{
+type: flt(64,IEEE)
+alias: "RTICANMMCaptureMessage_2_time"
+flags: OUTPUT|READONLY
+desc: "RTICANMMCaptureMessage_2 Time"
+unit: "s"
+value: 0.0
+}
+
+
+
+
+CANMMCAN_Arduino_CAPID[1]
+{
+type: UINT(32)
+alias: "RTICANMMCaptureMessage_2_ID"
+flags: OUTPUT|READONLY
+desc: "Message ID"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_CAPIDF[1]
+{
+type: UINT(8)
+alias: "RTICANMMCaptureMessage_2_IDFormat"
+flags: OUTPUT|READONLY
+desc: "Message ID Format"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_CAPD_0[1]
+{
+type: UINT(8)
+alias: "RTICANMMCaptureMessage_2_RAW_byte_1"
+flags: OUTPUT|READONLY
+desc: "RTICANMMCaptureMessage_2 Byte 1"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_CAPD_1[1]
+{
+type: UINT(8)
+alias: "RTICANMMCaptureMessage_2_RAW_byte_2"
+flags: OUTPUT|READONLY
+desc: "RTICANMMCaptureMessage_2 Byte 2"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_CAPD_2[1]
+{
+type: UINT(8)
+alias: "RTICANMMCaptureMessage_2_RAW_byte_3"
+flags: OUTPUT|READONLY
+desc: "RTICANMMCaptureMessage_2 Byte 3"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_CAPD_3[1]
+{
+type: UINT(8)
+alias: "RTICANMMCaptureMessage_2_RAW_byte_4"
+flags: OUTPUT|READONLY
+desc: "RTICANMMCaptureMessage_2 Byte 4"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_CAPD_4[1]
+{
+type: UINT(8)
+alias: "RTICANMMCaptureMessage_2_RAW_byte_5"
+flags: OUTPUT|READONLY
+desc: "RTICANMMCaptureMessage_2 Byte 5"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_CAPD_5[1]
+{
+type: UINT(8)
+alias: "RTICANMMCaptureMessage_2_RAW_byte_6"
+flags: OUTPUT|READONLY
+desc: "RTICANMMCaptureMessage_2 Byte 6"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_CAPD_6[1]
+{
+type: UINT(8)
+alias: "RTICANMMCaptureMessage_2_RAW_byte_7"
+flags: OUTPUT|READONLY
+desc: "RTICANMMCaptureMessage_2 Byte 7"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_CAPD_7[1]
+{
+type: UINT(8)
+alias: "RTICANMMCaptureMessage_2_RAW_byte_8"
+flags: OUTPUT|READONLY
+desc: "RTICANMMCaptureMessage_2 Byte 8"
+unit: ""
+value: 0
+}
+
+
+
+
+
+endgroup -- block-group "RTICANMMCaptureMessage_2"
+
+
+
+group "RTICANMMCaptureMessage_3" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+CANMMCAN_Arduino_CAPS[2]
+{
+type: UINT(8)
+alias: "RTICANMMCaptureMessage_3_status"
+flags: OUTPUT|READONLY
+desc: "RTICANMMCaptureMessage_3 Status"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_CAPL[2]
+{
+type: UINT(8)
+alias: "RTICANMMCaptureMessage_3_Length"
+flags: OUTPUT|READONLY
+desc: "Message Length"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_CAPT[2]
+{
+type: flt(64,IEEE)
+alias: "RTICANMMCaptureMessage_3_time"
+flags: OUTPUT|READONLY
+desc: "RTICANMMCaptureMessage_3 Time"
+unit: "s"
+value: 0.0
+}
+
+
+
+
+CANMMCAN_Arduino_CAPID[2]
+{
+type: UINT(32)
+alias: "RTICANMMCaptureMessage_3_ID"
+flags: OUTPUT|READONLY
+desc: "Message ID"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_CAPIDF[2]
+{
+type: UINT(8)
+alias: "RTICANMMCaptureMessage_3_IDFormat"
+flags: OUTPUT|READONLY
+desc: "Message ID Format"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_CAPD_0[2]
+{
+type: UINT(8)
+alias: "RTICANMMCaptureMessage_3_RAW_byte_1"
+flags: OUTPUT|READONLY
+desc: "RTICANMMCaptureMessage_3 Byte 1"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_CAPD_1[2]
+{
+type: UINT(8)
+alias: "RTICANMMCaptureMessage_3_RAW_byte_2"
+flags: OUTPUT|READONLY
+desc: "RTICANMMCaptureMessage_3 Byte 2"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_CAPD_2[2]
+{
+type: UINT(8)
+alias: "RTICANMMCaptureMessage_3_RAW_byte_3"
+flags: OUTPUT|READONLY
+desc: "RTICANMMCaptureMessage_3 Byte 3"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_CAPD_3[2]
+{
+type: UINT(8)
+alias: "RTICANMMCaptureMessage_3_RAW_byte_4"
+flags: OUTPUT|READONLY
+desc: "RTICANMMCaptureMessage_3 Byte 4"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_CAPD_4[2]
+{
+type: UINT(8)
+alias: "RTICANMMCaptureMessage_3_RAW_byte_5"
+flags: OUTPUT|READONLY
+desc: "RTICANMMCaptureMessage_3 Byte 5"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_CAPD_5[2]
+{
+type: UINT(8)
+alias: "RTICANMMCaptureMessage_3_RAW_byte_6"
+flags: OUTPUT|READONLY
+desc: "RTICANMMCaptureMessage_3 Byte 6"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_CAPD_6[2]
+{
+type: UINT(8)
+alias: "RTICANMMCaptureMessage_3_RAW_byte_7"
+flags: OUTPUT|READONLY
+desc: "RTICANMMCaptureMessage_3 Byte 7"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_CAPD_7[2]
+{
+type: UINT(8)
+alias: "RTICANMMCaptureMessage_3_RAW_byte_8"
+flags: OUTPUT|READONLY
+desc: "RTICANMMCaptureMessage_3 Byte 8"
+unit: ""
+value: 0
+}
+
+
+
+
+
+endgroup -- block-group "RTICANMMCaptureMessage_3"
+
+
+
+group "RTICANMMCaptureMessage_4" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+CANMMCAN_Arduino_CAPS[3]
+{
+type: UINT(8)
+alias: "RTICANMMCaptureMessage_4_status"
+flags: OUTPUT|READONLY
+desc: "RTICANMMCaptureMessage_4 Status"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_CAPL[3]
+{
+type: UINT(8)
+alias: "RTICANMMCaptureMessage_4_Length"
+flags: OUTPUT|READONLY
+desc: "Message Length"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_CAPT[3]
+{
+type: flt(64,IEEE)
+alias: "RTICANMMCaptureMessage_4_time"
+flags: OUTPUT|READONLY
+desc: "RTICANMMCaptureMessage_4 Time"
+unit: "s"
+value: 0.0
+}
+
+
+
+
+CANMMCAN_Arduino_CAPID[3]
+{
+type: UINT(32)
+alias: "RTICANMMCaptureMessage_4_ID"
+flags: OUTPUT|READONLY
+desc: "Message ID"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_CAPIDF[3]
+{
+type: UINT(8)
+alias: "RTICANMMCaptureMessage_4_IDFormat"
+flags: OUTPUT|READONLY
+desc: "Message ID Format"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_CAPD_0[3]
+{
+type: UINT(8)
+alias: "RTICANMMCaptureMessage_4_RAW_byte_1"
+flags: OUTPUT|READONLY
+desc: "RTICANMMCaptureMessage_4 Byte 1"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_CAPD_1[3]
+{
+type: UINT(8)
+alias: "RTICANMMCaptureMessage_4_RAW_byte_2"
+flags: OUTPUT|READONLY
+desc: "RTICANMMCaptureMessage_4 Byte 2"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_CAPD_2[3]
+{
+type: UINT(8)
+alias: "RTICANMMCaptureMessage_4_RAW_byte_3"
+flags: OUTPUT|READONLY
+desc: "RTICANMMCaptureMessage_4 Byte 3"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_CAPD_3[3]
+{
+type: UINT(8)
+alias: "RTICANMMCaptureMessage_4_RAW_byte_4"
+flags: OUTPUT|READONLY
+desc: "RTICANMMCaptureMessage_4 Byte 4"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_CAPD_4[3]
+{
+type: UINT(8)
+alias: "RTICANMMCaptureMessage_4_RAW_byte_5"
+flags: OUTPUT|READONLY
+desc: "RTICANMMCaptureMessage_4 Byte 5"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_CAPD_5[3]
+{
+type: UINT(8)
+alias: "RTICANMMCaptureMessage_4_RAW_byte_6"
+flags: OUTPUT|READONLY
+desc: "RTICANMMCaptureMessage_4 Byte 6"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_CAPD_6[3]
+{
+type: UINT(8)
+alias: "RTICANMMCaptureMessage_4_RAW_byte_7"
+flags: OUTPUT|READONLY
+desc: "RTICANMMCaptureMessage_4 Byte 7"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_CAPD_7[3]
+{
+type: UINT(8)
+alias: "RTICANMMCaptureMessage_4_RAW_byte_8"
+flags: OUTPUT|READONLY
+desc: "RTICANMMCaptureMessage_4 Byte 8"
+unit: ""
+value: 0
+}
+
+
+
+
+
+endgroup -- block-group "RTICANMMCaptureMessage_4"
+
+
+
+group "RTICANMMCaptureMessage_5" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+CANMMCAN_Arduino_CAPS[4]
+{
+type: UINT(8)
+alias: "RTICANMMCaptureMessage_5_status"
+flags: OUTPUT|READONLY
+desc: "RTICANMMCaptureMessage_5 Status"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_CAPL[4]
+{
+type: UINT(8)
+alias: "RTICANMMCaptureMessage_5_Length"
+flags: OUTPUT|READONLY
+desc: "Message Length"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_CAPT[4]
+{
+type: flt(64,IEEE)
+alias: "RTICANMMCaptureMessage_5_time"
+flags: OUTPUT|READONLY
+desc: "RTICANMMCaptureMessage_5 Time"
+unit: "s"
+value: 0.0
+}
+
+
+
+
+CANMMCAN_Arduino_CAPID[4]
+{
+type: UINT(32)
+alias: "RTICANMMCaptureMessage_5_ID"
+flags: OUTPUT|READONLY
+desc: "Message ID"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_CAPIDF[4]
+{
+type: UINT(8)
+alias: "RTICANMMCaptureMessage_5_IDFormat"
+flags: OUTPUT|READONLY
+desc: "Message ID Format"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_CAPD_0[4]
+{
+type: UINT(8)
+alias: "RTICANMMCaptureMessage_5_RAW_byte_1"
+flags: OUTPUT|READONLY
+desc: "RTICANMMCaptureMessage_5 Byte 1"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_CAPD_1[4]
+{
+type: UINT(8)
+alias: "RTICANMMCaptureMessage_5_RAW_byte_2"
+flags: OUTPUT|READONLY
+desc: "RTICANMMCaptureMessage_5 Byte 2"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_CAPD_2[4]
+{
+type: UINT(8)
+alias: "RTICANMMCaptureMessage_5_RAW_byte_3"
+flags: OUTPUT|READONLY
+desc: "RTICANMMCaptureMessage_5 Byte 3"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_CAPD_3[4]
+{
+type: UINT(8)
+alias: "RTICANMMCaptureMessage_5_RAW_byte_4"
+flags: OUTPUT|READONLY
+desc: "RTICANMMCaptureMessage_5 Byte 4"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_CAPD_4[4]
+{
+type: UINT(8)
+alias: "RTICANMMCaptureMessage_5_RAW_byte_5"
+flags: OUTPUT|READONLY
+desc: "RTICANMMCaptureMessage_5 Byte 5"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_CAPD_5[4]
+{
+type: UINT(8)
+alias: "RTICANMMCaptureMessage_5_RAW_byte_6"
+flags: OUTPUT|READONLY
+desc: "RTICANMMCaptureMessage_5 Byte 6"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_CAPD_6[4]
+{
+type: UINT(8)
+alias: "RTICANMMCaptureMessage_5_RAW_byte_7"
+flags: OUTPUT|READONLY
+desc: "RTICANMMCaptureMessage_5 Byte 7"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_CAPD_7[4]
+{
+type: UINT(8)
+alias: "RTICANMMCaptureMessage_5_RAW_byte_8"
+flags: OUTPUT|READONLY
+desc: "RTICANMMCaptureMessage_5 Byte 8"
+unit: ""
+value: 0
+}
+
+
+
+
+
+endgroup -- block-group "RTICANMMCaptureMessage_5"
+
+
+
+group "RTICANMMCaptureMessage_6" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+CANMMCAN_Arduino_CAPS[5]
+{
+type: UINT(8)
+alias: "RTICANMMCaptureMessage_6_status"
+flags: OUTPUT|READONLY
+desc: "RTICANMMCaptureMessage_6 Status"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_CAPL[5]
+{
+type: UINT(8)
+alias: "RTICANMMCaptureMessage_6_Length"
+flags: OUTPUT|READONLY
+desc: "Message Length"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_CAPT[5]
+{
+type: flt(64,IEEE)
+alias: "RTICANMMCaptureMessage_6_time"
+flags: OUTPUT|READONLY
+desc: "RTICANMMCaptureMessage_6 Time"
+unit: "s"
+value: 0.0
+}
+
+
+
+
+CANMMCAN_Arduino_CAPID[5]
+{
+type: UINT(32)
+alias: "RTICANMMCaptureMessage_6_ID"
+flags: OUTPUT|READONLY
+desc: "Message ID"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_CAPIDF[5]
+{
+type: UINT(8)
+alias: "RTICANMMCaptureMessage_6_IDFormat"
+flags: OUTPUT|READONLY
+desc: "Message ID Format"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_CAPD_0[5]
+{
+type: UINT(8)
+alias: "RTICANMMCaptureMessage_6_RAW_byte_1"
+flags: OUTPUT|READONLY
+desc: "RTICANMMCaptureMessage_6 Byte 1"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_CAPD_1[5]
+{
+type: UINT(8)
+alias: "RTICANMMCaptureMessage_6_RAW_byte_2"
+flags: OUTPUT|READONLY
+desc: "RTICANMMCaptureMessage_6 Byte 2"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_CAPD_2[5]
+{
+type: UINT(8)
+alias: "RTICANMMCaptureMessage_6_RAW_byte_3"
+flags: OUTPUT|READONLY
+desc: "RTICANMMCaptureMessage_6 Byte 3"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_CAPD_3[5]
+{
+type: UINT(8)
+alias: "RTICANMMCaptureMessage_6_RAW_byte_4"
+flags: OUTPUT|READONLY
+desc: "RTICANMMCaptureMessage_6 Byte 4"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_CAPD_4[5]
+{
+type: UINT(8)
+alias: "RTICANMMCaptureMessage_6_RAW_byte_5"
+flags: OUTPUT|READONLY
+desc: "RTICANMMCaptureMessage_6 Byte 5"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_CAPD_5[5]
+{
+type: UINT(8)
+alias: "RTICANMMCaptureMessage_6_RAW_byte_6"
+flags: OUTPUT|READONLY
+desc: "RTICANMMCaptureMessage_6 Byte 6"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_CAPD_6[5]
+{
+type: UINT(8)
+alias: "RTICANMMCaptureMessage_6_RAW_byte_7"
+flags: OUTPUT|READONLY
+desc: "RTICANMMCaptureMessage_6 Byte 7"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_CAPD_7[5]
+{
+type: UINT(8)
+alias: "RTICANMMCaptureMessage_6_RAW_byte_8"
+flags: OUTPUT|READONLY
+desc: "RTICANMMCaptureMessage_6 Byte 8"
+unit: ""
+value: 0
+}
+
+
+
+
+
+endgroup -- block-group "RTICANMMCaptureMessage_6"
+
+
+
+group "RTICANMMCaptureMessage_7" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+CANMMCAN_Arduino_CAPS[6]
+{
+type: UINT(8)
+alias: "RTICANMMCaptureMessage_7_status"
+flags: OUTPUT|READONLY
+desc: "RTICANMMCaptureMessage_7 Status"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_CAPL[6]
+{
+type: UINT(8)
+alias: "RTICANMMCaptureMessage_7_Length"
+flags: OUTPUT|READONLY
+desc: "Message Length"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_CAPT[6]
+{
+type: flt(64,IEEE)
+alias: "RTICANMMCaptureMessage_7_time"
+flags: OUTPUT|READONLY
+desc: "RTICANMMCaptureMessage_7 Time"
+unit: "s"
+value: 0.0
+}
+
+
+
+
+CANMMCAN_Arduino_CAPID[6]
+{
+type: UINT(32)
+alias: "RTICANMMCaptureMessage_7_ID"
+flags: OUTPUT|READONLY
+desc: "Message ID"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_CAPIDF[6]
+{
+type: UINT(8)
+alias: "RTICANMMCaptureMessage_7_IDFormat"
+flags: OUTPUT|READONLY
+desc: "Message ID Format"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_CAPD_0[6]
+{
+type: UINT(8)
+alias: "RTICANMMCaptureMessage_7_RAW_byte_1"
+flags: OUTPUT|READONLY
+desc: "RTICANMMCaptureMessage_7 Byte 1"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_CAPD_1[6]
+{
+type: UINT(8)
+alias: "RTICANMMCaptureMessage_7_RAW_byte_2"
+flags: OUTPUT|READONLY
+desc: "RTICANMMCaptureMessage_7 Byte 2"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_CAPD_2[6]
+{
+type: UINT(8)
+alias: "RTICANMMCaptureMessage_7_RAW_byte_3"
+flags: OUTPUT|READONLY
+desc: "RTICANMMCaptureMessage_7 Byte 3"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_CAPD_3[6]
+{
+type: UINT(8)
+alias: "RTICANMMCaptureMessage_7_RAW_byte_4"
+flags: OUTPUT|READONLY
+desc: "RTICANMMCaptureMessage_7 Byte 4"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_CAPD_4[6]
+{
+type: UINT(8)
+alias: "RTICANMMCaptureMessage_7_RAW_byte_5"
+flags: OUTPUT|READONLY
+desc: "RTICANMMCaptureMessage_7 Byte 5"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_CAPD_5[6]
+{
+type: UINT(8)
+alias: "RTICANMMCaptureMessage_7_RAW_byte_6"
+flags: OUTPUT|READONLY
+desc: "RTICANMMCaptureMessage_7 Byte 6"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_CAPD_6[6]
+{
+type: UINT(8)
+alias: "RTICANMMCaptureMessage_7_RAW_byte_7"
+flags: OUTPUT|READONLY
+desc: "RTICANMMCaptureMessage_7 Byte 7"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_CAPD_7[6]
+{
+type: UINT(8)
+alias: "RTICANMMCaptureMessage_7_RAW_byte_8"
+flags: OUTPUT|READONLY
+desc: "RTICANMMCaptureMessage_7 Byte 8"
+unit: ""
+value: 0
+}
+
+
+
+
+
+endgroup -- block-group "RTICANMMCaptureMessage_7"
+
+
+
+group "RTICANMMCaptureMessage_8" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+CANMMCAN_Arduino_CAPS[7]
+{
+type: UINT(8)
+alias: "RTICANMMCaptureMessage_8_status"
+flags: OUTPUT|READONLY
+desc: "RTICANMMCaptureMessage_8 Status"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_CAPL[7]
+{
+type: UINT(8)
+alias: "RTICANMMCaptureMessage_8_Length"
+flags: OUTPUT|READONLY
+desc: "Message Length"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_CAPT[7]
+{
+type: flt(64,IEEE)
+alias: "RTICANMMCaptureMessage_8_time"
+flags: OUTPUT|READONLY
+desc: "RTICANMMCaptureMessage_8 Time"
+unit: "s"
+value: 0.0
+}
+
+
+
+
+CANMMCAN_Arduino_CAPID[7]
+{
+type: UINT(32)
+alias: "RTICANMMCaptureMessage_8_ID"
+flags: OUTPUT|READONLY
+desc: "Message ID"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_CAPIDF[7]
+{
+type: UINT(8)
+alias: "RTICANMMCaptureMessage_8_IDFormat"
+flags: OUTPUT|READONLY
+desc: "Message ID Format"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_CAPD_0[7]
+{
+type: UINT(8)
+alias: "RTICANMMCaptureMessage_8_RAW_byte_1"
+flags: OUTPUT|READONLY
+desc: "RTICANMMCaptureMessage_8 Byte 1"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_CAPD_1[7]
+{
+type: UINT(8)
+alias: "RTICANMMCaptureMessage_8_RAW_byte_2"
+flags: OUTPUT|READONLY
+desc: "RTICANMMCaptureMessage_8 Byte 2"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_CAPD_2[7]
+{
+type: UINT(8)
+alias: "RTICANMMCaptureMessage_8_RAW_byte_3"
+flags: OUTPUT|READONLY
+desc: "RTICANMMCaptureMessage_8 Byte 3"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_CAPD_3[7]
+{
+type: UINT(8)
+alias: "RTICANMMCaptureMessage_8_RAW_byte_4"
+flags: OUTPUT|READONLY
+desc: "RTICANMMCaptureMessage_8 Byte 4"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_CAPD_4[7]
+{
+type: UINT(8)
+alias: "RTICANMMCaptureMessage_8_RAW_byte_5"
+flags: OUTPUT|READONLY
+desc: "RTICANMMCaptureMessage_8 Byte 5"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_CAPD_5[7]
+{
+type: UINT(8)
+alias: "RTICANMMCaptureMessage_8_RAW_byte_6"
+flags: OUTPUT|READONLY
+desc: "RTICANMMCaptureMessage_8 Byte 6"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_CAPD_6[7]
+{
+type: UINT(8)
+alias: "RTICANMMCaptureMessage_8_RAW_byte_7"
+flags: OUTPUT|READONLY
+desc: "RTICANMMCaptureMessage_8 Byte 7"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_CAPD_7[7]
+{
+type: UINT(8)
+alias: "RTICANMMCaptureMessage_8_RAW_byte_8"
+flags: OUTPUT|READONLY
+desc: "RTICANMMCaptureMessage_8 Byte 8"
+unit: ""
+value: 0
+}
+
+
+
+
+
+endgroup -- block-group "RTICANMMCaptureMessage_8"
 
 
 

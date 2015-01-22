@@ -100,6 +100,34 @@ uint8_T CANMMCAN_Arduino_MIDFTX[NUM_RX_MSG];
 uint8_T CANMMCAN_Arduino_RXMT[NUM_RX_MSG];
  
 
+/* Capture data */
+uint32_T CANMMCAN_Arduino_CAPID[8];
+uint32_T CANMMCAN_Arduino_CAPOID[8];
+uint8_T CANMMCAN_Arduino_CAPIDF[8];
+uint32_T CANMMCAN_Arduino_CAPOIDF[8];
+uint32_T CANMMCAN_Arduino_COT[8];
+uint8_T CANMMCAN_Arduino_CAPL[8];
+uint32_T CANMMCAN_Arduino_COLEN[8];
+boolean_T CANMMCAN_Arduino_CAPS[8];
+volatile real_T CANMMCAN_Arduino_CAPT[8];
+uint8_T CANMMCAN_Arduino_CAPD_0[8];
+uint32_T CANMMCAN_Arduino_COIDX_0[8];
+uint8_T CANMMCAN_Arduino_CAPD_1[8];
+uint32_T CANMMCAN_Arduino_COIDX_1[8];
+uint8_T CANMMCAN_Arduino_CAPD_2[8];
+uint32_T CANMMCAN_Arduino_COIDX_2[8];
+uint8_T CANMMCAN_Arduino_CAPD_3[8];
+uint32_T CANMMCAN_Arduino_COIDX_3[8];
+uint8_T CANMMCAN_Arduino_CAPD_4[8];
+uint32_T CANMMCAN_Arduino_COIDX_4[8];
+uint8_T CANMMCAN_Arduino_CAPD_5[8];
+uint32_T CANMMCAN_Arduino_COIDX_5[8];
+uint8_T CANMMCAN_Arduino_CAPD_6[8];
+uint32_T CANMMCAN_Arduino_COIDX_6[8];
+uint8_T CANMMCAN_Arduino_CAPD_7[8];
+uint32_T CANMMCAN_Arduino_COIDX_7[8];
+
+
 volatile real_T CANMMCAN_Arduino_RXt[NUM_RX_MSG];
 volatile real_T CANMMCAN_Arduino_RXdt[NUM_RX_MSG];
 volatile boolean_T CANMMCAN_Arduino_RXsta[NUM_RX_MSG];

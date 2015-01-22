@@ -24,6 +24,43 @@ static double  doubleTemp   = 0.0;
 
 
 void RTICANMM_MAIN_CAN_Arduino_copy_RTICANMMFreeRawMessage_1(MainSetupMsgData* data, int direction, SimStruct *S);
+void CANMMCAN_Arduino_CAPF(MainSetupMsgData* data, SimStruct *S, int MsgIdx);
+/*----------------------------------------------------------------------------------------------*/    
+/* CAPTURE MESSAGES */
+
+void CANMMCAN_Arduino_CAPF(MainSetupMsgData *data, SimStruct *S, int MsgIdx)
+{                                                             
+                                                              
+  /* Set RX status when loopback timeinfo is received */      
+    CANMMCAN_Arduino_CAPS[MsgIdx] = 1;   /* set status to 1 for one step */        
+((uint32_T*) ssGetOutputPortSignal(S, CANMMCAN_Arduino_CAPOID[MsgIdx]))[0] = data->CANMsg.Id;          
+((uint8_T*) ssGetOutputPortSignal(S, CANMMCAN_Arduino_CAPOIDF[MsgIdx]))[0] = data->CANMsg.Format;       
+((real_T*) ssGetOutputPortSignal(S, CANMMCAN_Arduino_COT[MsgIdx]))[0]   = data->CANMsg.TimeStamp;   
+((uint8_T*) ssGetOutputPortSignal(S, CANMMCAN_Arduino_COLEN[MsgIdx]))[0]  = data->CANMsg.Dlc;         
+((uint8_T*) ssGetOutputPortSignal(S, CANMMCAN_Arduino_COIDX_0[MsgIdx]))[0] = data->pData[0];  
+((uint8_T*) ssGetOutputPortSignal(S, CANMMCAN_Arduino_COIDX_1[MsgIdx]))[0] = data->pData[1];  
+((uint8_T*) ssGetOutputPortSignal(S, CANMMCAN_Arduino_COIDX_2[MsgIdx]))[0] = data->pData[2];  
+((uint8_T*) ssGetOutputPortSignal(S, CANMMCAN_Arduino_COIDX_3[MsgIdx]))[0] = data->pData[3];  
+((uint8_T*) ssGetOutputPortSignal(S, CANMMCAN_Arduino_COIDX_4[MsgIdx]))[0] = data->pData[4];  
+((uint8_T*) ssGetOutputPortSignal(S, CANMMCAN_Arduino_COIDX_5[MsgIdx]))[0] = data->pData[5];  
+((uint8_T*) ssGetOutputPortSignal(S, CANMMCAN_Arduino_COIDX_6[MsgIdx]))[0] = data->pData[6];  
+((uint8_T*) ssGetOutputPortSignal(S, CANMMCAN_Arduino_COIDX_7[MsgIdx]))[0] = data->pData[7];  
+  CANMMCAN_Arduino_CAPID[MsgIdx] = data->CANMsg.Id;                              
+  CANMMCAN_Arduino_CAPIDF[MsgIdx] = data->CANMsg.Format;                          
+  CANMMCAN_Arduino_CAPT[MsgIdx] = data->CANMsg.TimeStamp;                       
+  CANMMCAN_Arduino_CAPL[MsgIdx] = data->CANMsg.Dlc;                             
+  CANMMCAN_Arduino_CAPD_0[MsgIdx] = data->pData[0];                       
+  CANMMCAN_Arduino_CAPD_1[MsgIdx] = data->pData[1];                       
+  CANMMCAN_Arduino_CAPD_2[MsgIdx] = data->pData[2];                       
+  CANMMCAN_Arduino_CAPD_3[MsgIdx] = data->pData[3];                       
+  CANMMCAN_Arduino_CAPD_4[MsgIdx] = data->pData[4];                       
+  CANMMCAN_Arduino_CAPD_5[MsgIdx] = data->pData[5];                       
+  CANMMCAN_Arduino_CAPD_6[MsgIdx] = data->pData[6];                       
+  CANMMCAN_Arduino_CAPD_7[MsgIdx] = data->pData[7];                       
+                                                              
+                                                              
+}                                                             
+                                                              
                                            
 /* Message for custom code manipulations */         
 static RTICANMMMsgStruct custCodeMsg;               

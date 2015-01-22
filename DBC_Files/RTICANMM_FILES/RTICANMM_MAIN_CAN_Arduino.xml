@@ -5,7 +5,17 @@
    <CANName>CAN_Arduino</CANName>
    <CANUniqueID>3</CANUniqueID>
    <CapMsgs>
-      <A>OFF</A>
+      <A>ON</A>
+      <MsgDetails attCount="8">
+         <Name>RTICANMMCaptureMessage_1</Name>
+         <Name>RTICANMMCaptureMessage_2</Name>
+         <Name>RTICANMMCaptureMessage_3</Name>
+         <Name>RTICANMMCaptureMessage_4</Name>
+         <Name>RTICANMMCaptureMessage_5</Name>
+         <Name>RTICANMMCaptureMessage_6</Name>
+         <Name>RTICANMMCaptureMessage_7</Name>
+         <Name>RTICANMMCaptureMessage_8</Name>
+      </MsgDetails>
    </CapMsgs>
    <GW>OFF</GW>
    <J1939>OFF</J1939>
@@ -63,7 +73,7 @@
          </Generic>
       </ECU>
    </ECUs>
-   <Msgs attCount="1">
+   <Msgs attCount="9">
       <Msg ID="7" Name="RTICANMMFreeRawMessage_1" DBCName="RTICANMMFreeRawMessage_1" DBCID="7">
          <ECU>Simulator</ECU>
          <RECU>Simulator</RECU>
@@ -376,6 +386,918 @@
                   <RX>
                      <Generics>
                         <SgnRXVar attName="Const" attValue="RAW_Byte_8"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+         </Sgns>
+      </Msg>
+      <Msg ID="0" Name="RTICANMMCaptureMessage_1">
+         <ECU></ECU>
+         <RECU></RECU>
+         <FreeRawMsg>OFF</FreeRawMsg>
+         <CaptureMsg>ON</CaptureMsg>
+         <Len>8</Len>
+         <J1939>
+            <Cont>TRUE</Cont>
+         </J1939>
+         <Dir>1</Dir>
+         <Vars attCount="0"/>
+         <RX>
+            <Generic>
+               <RXVar attName="StdID">
+                  <TN>RTICANMMCaptureMessage_1_ID</TN>
+                  <DN>ID</DN>
+               </RXVar>
+               <RXVar attName="Len">
+                  <TN>RTICANMMCaptureMessage_1_Length</TN>
+                  <DN>Length</DN>
+               </RXVar>
+               <RXVar attName="Status">
+                  <TN>RTICANMMCaptureMessage_1_status</TN>
+                  <DN>RTICANMMCaptureMessage_1_status</DN>
+               </RXVar>
+               <RXVar attName="Time">
+                  <TN>RTICANMMCaptureMessage_1_time</TN>
+                  <DN>RTICANMMCaptureMessage_1_time</DN>
+               </RXVar>
+            </Generic>
+         </RX>
+         <Sgns attCount="8">
+            <Sgn attName="RTICANMMCaptureMessage_1_RAW_byte_1" attStartBit="0">
+               <Generics></Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="RTICANMMCaptureMessage_1_RAW_byte_1"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="RTICANMMCaptureMessage_1_RAW_byte_2" attStartBit="8">
+               <Generics></Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="RTICANMMCaptureMessage_1_RAW_byte_2"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="RTICANMMCaptureMessage_1_RAW_byte_3" attStartBit="16">
+               <Generics></Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="RTICANMMCaptureMessage_1_RAW_byte_3"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="RTICANMMCaptureMessage_1_RAW_byte_4" attStartBit="24">
+               <Generics></Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="RTICANMMCaptureMessage_1_RAW_byte_4"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="RTICANMMCaptureMessage_1_RAW_byte_5" attStartBit="32">
+               <Generics></Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="RTICANMMCaptureMessage_1_RAW_byte_5"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="RTICANMMCaptureMessage_1_RAW_byte_6" attStartBit="40">
+               <Generics></Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="RTICANMMCaptureMessage_1_RAW_byte_6"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="RTICANMMCaptureMessage_1_RAW_byte_7" attStartBit="48">
+               <Generics></Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="RTICANMMCaptureMessage_1_RAW_byte_7"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="RTICANMMCaptureMessage_1_RAW_byte_8" attStartBit="56">
+               <Generics></Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="RTICANMMCaptureMessage_1_RAW_byte_8"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+         </Sgns>
+      </Msg>
+      <Msg ID="0" Name="RTICANMMCaptureMessage_2">
+         <ECU></ECU>
+         <RECU></RECU>
+         <FreeRawMsg>OFF</FreeRawMsg>
+         <CaptureMsg>ON</CaptureMsg>
+         <Len>8</Len>
+         <J1939>
+            <Cont>TRUE</Cont>
+         </J1939>
+         <Dir>1</Dir>
+         <Vars attCount="0"/>
+         <RX>
+            <Generic>
+               <RXVar attName="StdID">
+                  <TN>RTICANMMCaptureMessage_2_ID</TN>
+                  <DN>ID</DN>
+               </RXVar>
+               <RXVar attName="Len">
+                  <TN>RTICANMMCaptureMessage_2_Length</TN>
+                  <DN>Length</DN>
+               </RXVar>
+               <RXVar attName="Status">
+                  <TN>RTICANMMCaptureMessage_2_status</TN>
+                  <DN>RTICANMMCaptureMessage_2_status</DN>
+               </RXVar>
+               <RXVar attName="Time">
+                  <TN>RTICANMMCaptureMessage_2_time</TN>
+                  <DN>RTICANMMCaptureMessage_2_time</DN>
+               </RXVar>
+            </Generic>
+         </RX>
+         <Sgns attCount="8">
+            <Sgn attName="RTICANMMCaptureMessage_2_RAW_byte_1" attStartBit="0">
+               <Generics></Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="RTICANMMCaptureMessage_2_RAW_byte_1"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="RTICANMMCaptureMessage_2_RAW_byte_2" attStartBit="8">
+               <Generics></Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="RTICANMMCaptureMessage_2_RAW_byte_2"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="RTICANMMCaptureMessage_2_RAW_byte_3" attStartBit="16">
+               <Generics></Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="RTICANMMCaptureMessage_2_RAW_byte_3"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="RTICANMMCaptureMessage_2_RAW_byte_4" attStartBit="24">
+               <Generics></Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="RTICANMMCaptureMessage_2_RAW_byte_4"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="RTICANMMCaptureMessage_2_RAW_byte_5" attStartBit="32">
+               <Generics></Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="RTICANMMCaptureMessage_2_RAW_byte_5"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="RTICANMMCaptureMessage_2_RAW_byte_6" attStartBit="40">
+               <Generics></Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="RTICANMMCaptureMessage_2_RAW_byte_6"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="RTICANMMCaptureMessage_2_RAW_byte_7" attStartBit="48">
+               <Generics></Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="RTICANMMCaptureMessage_2_RAW_byte_7"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="RTICANMMCaptureMessage_2_RAW_byte_8" attStartBit="56">
+               <Generics></Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="RTICANMMCaptureMessage_2_RAW_byte_8"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+         </Sgns>
+      </Msg>
+      <Msg ID="0" Name="RTICANMMCaptureMessage_3">
+         <ECU></ECU>
+         <RECU></RECU>
+         <FreeRawMsg>OFF</FreeRawMsg>
+         <CaptureMsg>ON</CaptureMsg>
+         <Len>8</Len>
+         <J1939>
+            <Cont>TRUE</Cont>
+         </J1939>
+         <Dir>1</Dir>
+         <Vars attCount="0"/>
+         <RX>
+            <Generic>
+               <RXVar attName="StdID">
+                  <TN>RTICANMMCaptureMessage_3_ID</TN>
+                  <DN>ID</DN>
+               </RXVar>
+               <RXVar attName="Len">
+                  <TN>RTICANMMCaptureMessage_3_Length</TN>
+                  <DN>Length</DN>
+               </RXVar>
+               <RXVar attName="Status">
+                  <TN>RTICANMMCaptureMessage_3_status</TN>
+                  <DN>RTICANMMCaptureMessage_3_status</DN>
+               </RXVar>
+               <RXVar attName="Time">
+                  <TN>RTICANMMCaptureMessage_3_time</TN>
+                  <DN>RTICANMMCaptureMessage_3_time</DN>
+               </RXVar>
+            </Generic>
+         </RX>
+         <Sgns attCount="8">
+            <Sgn attName="RTICANMMCaptureMessage_3_RAW_byte_1" attStartBit="0">
+               <Generics></Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="RTICANMMCaptureMessage_3_RAW_byte_1"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="RTICANMMCaptureMessage_3_RAW_byte_2" attStartBit="8">
+               <Generics></Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="RTICANMMCaptureMessage_3_RAW_byte_2"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="RTICANMMCaptureMessage_3_RAW_byte_3" attStartBit="16">
+               <Generics></Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="RTICANMMCaptureMessage_3_RAW_byte_3"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="RTICANMMCaptureMessage_3_RAW_byte_4" attStartBit="24">
+               <Generics></Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="RTICANMMCaptureMessage_3_RAW_byte_4"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="RTICANMMCaptureMessage_3_RAW_byte_5" attStartBit="32">
+               <Generics></Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="RTICANMMCaptureMessage_3_RAW_byte_5"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="RTICANMMCaptureMessage_3_RAW_byte_6" attStartBit="40">
+               <Generics></Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="RTICANMMCaptureMessage_3_RAW_byte_6"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="RTICANMMCaptureMessage_3_RAW_byte_7" attStartBit="48">
+               <Generics></Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="RTICANMMCaptureMessage_3_RAW_byte_7"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="RTICANMMCaptureMessage_3_RAW_byte_8" attStartBit="56">
+               <Generics></Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="RTICANMMCaptureMessage_3_RAW_byte_8"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+         </Sgns>
+      </Msg>
+      <Msg ID="0" Name="RTICANMMCaptureMessage_4">
+         <ECU></ECU>
+         <RECU></RECU>
+         <FreeRawMsg>OFF</FreeRawMsg>
+         <CaptureMsg>ON</CaptureMsg>
+         <Len>8</Len>
+         <J1939>
+            <Cont>TRUE</Cont>
+         </J1939>
+         <Dir>1</Dir>
+         <Vars attCount="0"/>
+         <RX>
+            <Generic>
+               <RXVar attName="StdID">
+                  <TN>RTICANMMCaptureMessage_4_ID</TN>
+                  <DN>ID</DN>
+               </RXVar>
+               <RXVar attName="Len">
+                  <TN>RTICANMMCaptureMessage_4_Length</TN>
+                  <DN>Length</DN>
+               </RXVar>
+               <RXVar attName="Status">
+                  <TN>RTICANMMCaptureMessage_4_status</TN>
+                  <DN>RTICANMMCaptureMessage_4_status</DN>
+               </RXVar>
+               <RXVar attName="Time">
+                  <TN>RTICANMMCaptureMessage_4_time</TN>
+                  <DN>RTICANMMCaptureMessage_4_time</DN>
+               </RXVar>
+            </Generic>
+         </RX>
+         <Sgns attCount="8">
+            <Sgn attName="RTICANMMCaptureMessage_4_RAW_byte_1" attStartBit="0">
+               <Generics></Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="RTICANMMCaptureMessage_4_RAW_byte_1"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="RTICANMMCaptureMessage_4_RAW_byte_2" attStartBit="8">
+               <Generics></Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="RTICANMMCaptureMessage_4_RAW_byte_2"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="RTICANMMCaptureMessage_4_RAW_byte_3" attStartBit="16">
+               <Generics></Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="RTICANMMCaptureMessage_4_RAW_byte_3"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="RTICANMMCaptureMessage_4_RAW_byte_4" attStartBit="24">
+               <Generics></Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="RTICANMMCaptureMessage_4_RAW_byte_4"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="RTICANMMCaptureMessage_4_RAW_byte_5" attStartBit="32">
+               <Generics></Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="RTICANMMCaptureMessage_4_RAW_byte_5"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="RTICANMMCaptureMessage_4_RAW_byte_6" attStartBit="40">
+               <Generics></Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="RTICANMMCaptureMessage_4_RAW_byte_6"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="RTICANMMCaptureMessage_4_RAW_byte_7" attStartBit="48">
+               <Generics></Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="RTICANMMCaptureMessage_4_RAW_byte_7"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="RTICANMMCaptureMessage_4_RAW_byte_8" attStartBit="56">
+               <Generics></Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="RTICANMMCaptureMessage_4_RAW_byte_8"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+         </Sgns>
+      </Msg>
+      <Msg ID="0" Name="RTICANMMCaptureMessage_5">
+         <ECU></ECU>
+         <RECU></RECU>
+         <FreeRawMsg>OFF</FreeRawMsg>
+         <CaptureMsg>ON</CaptureMsg>
+         <Len>8</Len>
+         <J1939>
+            <Cont>TRUE</Cont>
+         </J1939>
+         <Dir>1</Dir>
+         <Vars attCount="0"/>
+         <RX>
+            <Generic>
+               <RXVar attName="StdID">
+                  <TN>RTICANMMCaptureMessage_5_ID</TN>
+                  <DN>ID</DN>
+               </RXVar>
+               <RXVar attName="Len">
+                  <TN>RTICANMMCaptureMessage_5_Length</TN>
+                  <DN>Length</DN>
+               </RXVar>
+               <RXVar attName="Status">
+                  <TN>RTICANMMCaptureMessage_5_status</TN>
+                  <DN>RTICANMMCaptureMessage_5_status</DN>
+               </RXVar>
+               <RXVar attName="Time">
+                  <TN>RTICANMMCaptureMessage_5_time</TN>
+                  <DN>RTICANMMCaptureMessage_5_time</DN>
+               </RXVar>
+            </Generic>
+         </RX>
+         <Sgns attCount="8">
+            <Sgn attName="RTICANMMCaptureMessage_5_RAW_byte_1" attStartBit="0">
+               <Generics></Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="RTICANMMCaptureMessage_5_RAW_byte_1"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="RTICANMMCaptureMessage_5_RAW_byte_2" attStartBit="8">
+               <Generics></Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="RTICANMMCaptureMessage_5_RAW_byte_2"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="RTICANMMCaptureMessage_5_RAW_byte_3" attStartBit="16">
+               <Generics></Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="RTICANMMCaptureMessage_5_RAW_byte_3"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="RTICANMMCaptureMessage_5_RAW_byte_4" attStartBit="24">
+               <Generics></Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="RTICANMMCaptureMessage_5_RAW_byte_4"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="RTICANMMCaptureMessage_5_RAW_byte_5" attStartBit="32">
+               <Generics></Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="RTICANMMCaptureMessage_5_RAW_byte_5"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="RTICANMMCaptureMessage_5_RAW_byte_6" attStartBit="40">
+               <Generics></Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="RTICANMMCaptureMessage_5_RAW_byte_6"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="RTICANMMCaptureMessage_5_RAW_byte_7" attStartBit="48">
+               <Generics></Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="RTICANMMCaptureMessage_5_RAW_byte_7"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="RTICANMMCaptureMessage_5_RAW_byte_8" attStartBit="56">
+               <Generics></Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="RTICANMMCaptureMessage_5_RAW_byte_8"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+         </Sgns>
+      </Msg>
+      <Msg ID="0" Name="RTICANMMCaptureMessage_6">
+         <ECU></ECU>
+         <RECU></RECU>
+         <FreeRawMsg>OFF</FreeRawMsg>
+         <CaptureMsg>ON</CaptureMsg>
+         <Len>8</Len>
+         <J1939>
+            <Cont>TRUE</Cont>
+         </J1939>
+         <Dir>1</Dir>
+         <Vars attCount="0"/>
+         <RX>
+            <Generic>
+               <RXVar attName="StdID">
+                  <TN>RTICANMMCaptureMessage_6_ID</TN>
+                  <DN>ID</DN>
+               </RXVar>
+               <RXVar attName="Len">
+                  <TN>RTICANMMCaptureMessage_6_Length</TN>
+                  <DN>Length</DN>
+               </RXVar>
+               <RXVar attName="Status">
+                  <TN>RTICANMMCaptureMessage_6_status</TN>
+                  <DN>RTICANMMCaptureMessage_6_status</DN>
+               </RXVar>
+               <RXVar attName="Time">
+                  <TN>RTICANMMCaptureMessage_6_time</TN>
+                  <DN>RTICANMMCaptureMessage_6_time</DN>
+               </RXVar>
+            </Generic>
+         </RX>
+         <Sgns attCount="8">
+            <Sgn attName="RTICANMMCaptureMessage_6_RAW_byte_1" attStartBit="0">
+               <Generics></Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="RTICANMMCaptureMessage_6_RAW_byte_1"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="RTICANMMCaptureMessage_6_RAW_byte_2" attStartBit="8">
+               <Generics></Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="RTICANMMCaptureMessage_6_RAW_byte_2"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="RTICANMMCaptureMessage_6_RAW_byte_3" attStartBit="16">
+               <Generics></Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="RTICANMMCaptureMessage_6_RAW_byte_3"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="RTICANMMCaptureMessage_6_RAW_byte_4" attStartBit="24">
+               <Generics></Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="RTICANMMCaptureMessage_6_RAW_byte_4"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="RTICANMMCaptureMessage_6_RAW_byte_5" attStartBit="32">
+               <Generics></Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="RTICANMMCaptureMessage_6_RAW_byte_5"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="RTICANMMCaptureMessage_6_RAW_byte_6" attStartBit="40">
+               <Generics></Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="RTICANMMCaptureMessage_6_RAW_byte_6"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="RTICANMMCaptureMessage_6_RAW_byte_7" attStartBit="48">
+               <Generics></Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="RTICANMMCaptureMessage_6_RAW_byte_7"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="RTICANMMCaptureMessage_6_RAW_byte_8" attStartBit="56">
+               <Generics></Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="RTICANMMCaptureMessage_6_RAW_byte_8"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+         </Sgns>
+      </Msg>
+      <Msg ID="0" Name="RTICANMMCaptureMessage_7">
+         <ECU></ECU>
+         <RECU></RECU>
+         <FreeRawMsg>OFF</FreeRawMsg>
+         <CaptureMsg>ON</CaptureMsg>
+         <Len>8</Len>
+         <J1939>
+            <Cont>TRUE</Cont>
+         </J1939>
+         <Dir>1</Dir>
+         <Vars attCount="0"/>
+         <RX>
+            <Generic>
+               <RXVar attName="StdID">
+                  <TN>RTICANMMCaptureMessage_7_ID</TN>
+                  <DN>ID</DN>
+               </RXVar>
+               <RXVar attName="Len">
+                  <TN>RTICANMMCaptureMessage_7_Length</TN>
+                  <DN>Length</DN>
+               </RXVar>
+               <RXVar attName="Status">
+                  <TN>RTICANMMCaptureMessage_7_status</TN>
+                  <DN>RTICANMMCaptureMessage_7_status</DN>
+               </RXVar>
+               <RXVar attName="Time">
+                  <TN>RTICANMMCaptureMessage_7_time</TN>
+                  <DN>RTICANMMCaptureMessage_7_time</DN>
+               </RXVar>
+            </Generic>
+         </RX>
+         <Sgns attCount="8">
+            <Sgn attName="RTICANMMCaptureMessage_7_RAW_byte_1" attStartBit="0">
+               <Generics></Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="RTICANMMCaptureMessage_7_RAW_byte_1"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="RTICANMMCaptureMessage_7_RAW_byte_2" attStartBit="8">
+               <Generics></Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="RTICANMMCaptureMessage_7_RAW_byte_2"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="RTICANMMCaptureMessage_7_RAW_byte_3" attStartBit="16">
+               <Generics></Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="RTICANMMCaptureMessage_7_RAW_byte_3"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="RTICANMMCaptureMessage_7_RAW_byte_4" attStartBit="24">
+               <Generics></Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="RTICANMMCaptureMessage_7_RAW_byte_4"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="RTICANMMCaptureMessage_7_RAW_byte_5" attStartBit="32">
+               <Generics></Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="RTICANMMCaptureMessage_7_RAW_byte_5"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="RTICANMMCaptureMessage_7_RAW_byte_6" attStartBit="40">
+               <Generics></Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="RTICANMMCaptureMessage_7_RAW_byte_6"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="RTICANMMCaptureMessage_7_RAW_byte_7" attStartBit="48">
+               <Generics></Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="RTICANMMCaptureMessage_7_RAW_byte_7"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="RTICANMMCaptureMessage_7_RAW_byte_8" attStartBit="56">
+               <Generics></Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="RTICANMMCaptureMessage_7_RAW_byte_8"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+         </Sgns>
+      </Msg>
+      <Msg ID="0" Name="RTICANMMCaptureMessage_8">
+         <ECU></ECU>
+         <RECU></RECU>
+         <FreeRawMsg>OFF</FreeRawMsg>
+         <CaptureMsg>ON</CaptureMsg>
+         <Len>8</Len>
+         <J1939>
+            <Cont>TRUE</Cont>
+         </J1939>
+         <Dir>1</Dir>
+         <Vars attCount="0"/>
+         <RX>
+            <Generic>
+               <RXVar attName="StdID">
+                  <TN>RTICANMMCaptureMessage_8_ID</TN>
+                  <DN>ID</DN>
+               </RXVar>
+               <RXVar attName="Len">
+                  <TN>RTICANMMCaptureMessage_8_Length</TN>
+                  <DN>Length</DN>
+               </RXVar>
+               <RXVar attName="Status">
+                  <TN>RTICANMMCaptureMessage_8_status</TN>
+                  <DN>RTICANMMCaptureMessage_8_status</DN>
+               </RXVar>
+               <RXVar attName="Time">
+                  <TN>RTICANMMCaptureMessage_8_time</TN>
+                  <DN>RTICANMMCaptureMessage_8_time</DN>
+               </RXVar>
+            </Generic>
+         </RX>
+         <Sgns attCount="8">
+            <Sgn attName="RTICANMMCaptureMessage_8_RAW_byte_1" attStartBit="0">
+               <Generics></Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="RTICANMMCaptureMessage_8_RAW_byte_1"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="RTICANMMCaptureMessage_8_RAW_byte_2" attStartBit="8">
+               <Generics></Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="RTICANMMCaptureMessage_8_RAW_byte_2"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="RTICANMMCaptureMessage_8_RAW_byte_3" attStartBit="16">
+               <Generics></Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="RTICANMMCaptureMessage_8_RAW_byte_3"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="RTICANMMCaptureMessage_8_RAW_byte_4" attStartBit="24">
+               <Generics></Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="RTICANMMCaptureMessage_8_RAW_byte_4"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="RTICANMMCaptureMessage_8_RAW_byte_5" attStartBit="32">
+               <Generics></Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="RTICANMMCaptureMessage_8_RAW_byte_5"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="RTICANMMCaptureMessage_8_RAW_byte_6" attStartBit="40">
+               <Generics></Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="RTICANMMCaptureMessage_8_RAW_byte_6"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="RTICANMMCaptureMessage_8_RAW_byte_7" attStartBit="48">
+               <Generics></Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="RTICANMMCaptureMessage_8_RAW_byte_7"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="RTICANMMCaptureMessage_8_RAW_byte_8" attStartBit="56">
+               <Generics></Generics>
+               <STRC>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="RTICANMMCaptureMessage_8_RAW_byte_8"/>
                      </Generics>
                   </RX>
                </STRC>

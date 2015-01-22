@@ -41,6 +41,16 @@ group "Labels"
 
 	-- Skipping label "RAW_Byte_3"
 
+	-- Skipping label "RAW_Byte_4"
+
+	-- Skipping label "RAW_Byte_5"
+
+	-- Skipping label "RAW_Byte_6"
+
+	-- Skipping label "RAW_Byte_7"
+
+	-- Skipping label "RAW_Byte_8"
+
 	-- Skipping label "RTICANMMFreeRawMessage_1{Occurence1}{SubArray1}"
 
 	-- Skipping label "RTICANMMFreeRawMessage_1{Occurence1}{SubArray2}"

@@ -32,9 +32,9 @@
                                                        
 #define NUM_TX_INPUT                              8
 #define NUM_TX_MSG                                1
-#define NUM_RX_OUTPUT                             8
+#define NUM_RX_OUTPUT                             112
 #define NUM_RX_MSG                                1
-#define NUM_RX                                    8
+#define NUM_RX                                    112
 #define NUM_TX                                    8
 #define TX_PORT_DATA_TYPES                        "RTICANMM_MAIN_CAN_Arduino_TX_PORT.h"
 #define RX_PORT_DATA_TYPES                        "RTICANMM_MAIN_CAN_Arduino_RX_PORT.h"
@@ -102,8 +102,16 @@ typedef enum CanMM_MsgTypes CanMM_MsgTypes;
 #define RX_STATUS                                 CANMMCAN_Arduino_RXsta
 #define TX_STATUS                                 CANMMCAN_Arduino_TXsta
 #define TX_MESSAGES_EXIST                         1
-#undef USE_CAPTURE                                
-#define CANMM_Q_NUM                               1
+#define CAPTURE_KNOWN_MSGS
+#define CAPTUREFCN                                CANMMCAN_Arduino_CAPF
+#define CAPTURE_INDEX_MAX                         8
+#define CAPTURE_STATUS                            CANMMCAN_Arduino_CAPS
+#define USE_CAPTURE                               
+#define CAPTUREMASK_EXT                           0
+#define CAPTUREFILTER_EXT                         0
+#define CAPTUREMASK_STD                           0
+#define CAPTUREFILTER_STD                         0
+#define CANMM_Q_NUM                               16
 
 #if (RTICANMM_FEEDTHROUGH_CHECK)        
 static const void * GetInputPortSignal(SimStruct *S, int port_num);

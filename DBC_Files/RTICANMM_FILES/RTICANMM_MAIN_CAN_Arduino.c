@@ -316,6 +316,10 @@ static void mdlOutputs(SimStruct *S, int_T tid) {
   unsigned long sampletime_halbe = 0;                                                                              
   void (*copy_func)(MainSetupMsgData*, int, SimStruct*);                                                               
                                                                                                                            
+  int docapture = 0;                                                                                                   
+  int captureQueueCountData     = 0;                                                                                   
+  int captureQueueCountTimeInfo = 0;                                                                                   
+  int captureidx = 0;                                                                                                  
                                                                                                                            
   tx_queue_level = CANMM_CTL_TX_QUEUE_LEVEL(CANMM_CONTROLLER_ID, &ctlsetup_client);                                        
                                                                                                                            
@@ -368,6 +372,9 @@ static void mdlOutputs(SimStruct *S, int_T tid) {
     for (ite = 0; ite < NUM_TX_MSG; ite++)                                                                             
       TX_STATUS[ite] = 0;                                                                                              
                                                                                                                        
+    /* Reset capture status */                                                                                         
+    for (ite = 0; ite < CAPTURE_INDEX_MAX; ite++)                                                                      
+     CAPTURE_STATUS[ite] = 0;                                                                                          
                                                                                                                            
     /* Receive all messages */                                                                                             
     while (CANMM_CTL_RX(CANMM_CONTROLLER_ID, &ctlsetup_client, &MsgData.CANMsg)) {                                            
@@ -428,6 +435,20 @@ static void mdlOutputs(SimStruct *S, int_T tid) {
         copy_func = (void (*)(MainSetupMsgData *, int, SimStruct*)) IDPtr_R(idIdx);  /* get copy function */       
         copy_func(&MsgData, RX, S);  /* copy and convert RAW Data to TRC variables */                              
   }                                                                                                                
+    /* Capture messages */                                                                                             
+      docapture = 0;                                                                                                   
+      if( (MsgData.CANMsg.Format == CANMM_MSG_FORMAT_EXT) && (((MsgData.CANMsg.Id^(long)CAPTUREFILTER_EXT)&(long)CAPTUREMASK_EXT) == 0) )
+          docapture = 1;                                                                                               
+      else if( (MsgData.CANMsg.Format == CANMM_MSG_FORMAT_STD) && (((MsgData.CANMsg.Id^(long)CAPTUREFILTER_STD)&(long)CAPTUREMASK_STD) == 0) )
+          docapture = 1;                                                                                               
+                                                                                                                       
+      if (docapture) {                                                                                                 
+          if (captureidx < CAPTURE_INDEX_MAX) {                                                                        
+            MsgData.pData = MsgData.CANMsg.Data;                                                                       
+            CAPTUREFCN(&MsgData, S, captureidx);                                                                       
+            captureidx++;                                                                                              
+          }                                                                                                            
+     }                                                                                                                 
     } /* while RX */                                                                                                       
                                                                                                                            
 #include TX_WRITE_PORT_DATA                                                                                                

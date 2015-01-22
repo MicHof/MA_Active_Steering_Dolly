@@ -3,9 +3,9 @@
  *
  * Code generation for model "CAN_new".
  *
- * Model version              : 1.12
+ * Model version              : 1.13
  * Simulink Coder version : 8.5 (R2013b) 08-Aug-2013
- * C source code generated on : Tue Jan 20 15:22:07 2015
+ * C source code generated on : Thu Jan 22 10:17:19 2015
  *
  * Target selection: rti1401.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping
@@ -83,30 +83,6 @@ P_CAN_new_T CAN_new_P = {
   { 117U, 110U, 117U, 115U, 101U, 100U },
   1U,                                  /* Computed Parameter: VariationRTICANMMControllerSetu
                                         * Referenced by: '<S1>/Variation@RTICANMM ControllerSetup'
-                                        */
-  1U,                                  /* Computed Parameter: Constant_Value_i
-                                        * Referenced by: '<S13>/Constant'
-                                        */
-  1U,                                  /* Computed Parameter: Constant1_Value
-                                        * Referenced by: '<S13>/Constant1'
-                                        */
-  1U,                                  /* Computed Parameter: Constant2_Value
-                                        * Referenced by: '<S13>/Constant2'
-                                        */
-  1U,                                  /* Computed Parameter: Constant3_Value
-                                        * Referenced by: '<S13>/Constant3'
-                                        */
-  1U,                                  /* Computed Parameter: Constant4_Value
-                                        * Referenced by: '<S13>/Constant4'
-                                        */
-  1U,                                  /* Computed Parameter: Constant5_Value
-                                        * Referenced by: '<S13>/Constant5'
-                                        */
-  1U,                                  /* Computed Parameter: Constant6_Value
-                                        * Referenced by: '<S13>/Constant6'
-                                        */
-  1U,                                  /* Computed Parameter: Constant7_Value
-                                        * Referenced by: '<S13>/Constant7'
                                         */
   1U,                                  /* Computed Parameter: VariationRTICANMMControllerSe_i
                                         * Referenced by: '<S2>/Variation@RTICANMM ControllerSetup'

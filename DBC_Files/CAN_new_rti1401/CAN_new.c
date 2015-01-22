@@ -3,9 +3,9 @@
  *
  * Code generation for model "CAN_new".
  *
- * Model version              : 1.12
+ * Model version              : 1.13
  * Simulink Coder version : 8.5 (R2013b) 08-Aug-2013
- * C source code generated on : Tue Jan 20 15:22:07 2015
+ * C source code generated on : Thu Jan 22 10:17:19 2015
  *
  * Target selection: rti1401.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping
@@ -57,21 +57,6 @@ static void CAN_new_output(void)
     SimStruct *rts = CAN_new_M->childSfunctions[2];
     sfcnOutputs(rts, 0);
   }
-
-  /* Constant: '<S13>/Constant3' */
-  CAN_new_B.Constant3 = CAN_new_P.Constant3_Value;
-
-  /* Constant: '<S13>/Constant4' */
-  CAN_new_B.Constant4 = CAN_new_P.Constant4_Value;
-
-  /* Constant: '<S13>/Constant5' */
-  CAN_new_B.Constant5 = CAN_new_P.Constant5_Value;
-
-  /* Constant: '<S13>/Constant6' */
-  CAN_new_B.Constant6 = CAN_new_P.Constant6_Value;
-
-  /* Constant: '<S13>/Constant7' */
-  CAN_new_B.Constant7 = CAN_new_P.Constant7_Value;
 
   /* DataTypeConversion: '<S9>/Variation_DTC' incorporates:
    *  Constant: '<S2>/Variation@RTICANMM ControllerSetup'
@@ -816,7 +801,7 @@ RT_MODEL_CAN_new_T *CAN_new(void)
         /* port 0 */
         {
           ssSetInputPortRequiredContiguous(rts, 0, 1);
-          ssSetInputPortSignal(rts, 0, &CAN_new_P.Constant_Value_i);
+          ssSetInputPortSignal(rts, 0, (uint8_T*)&CAN_new_U8GND);
           _ssSetInputPortNumDimensions(rts, 0, 1);
           ssSetInputPortWidth(rts, 0, 1);
         }
@@ -824,7 +809,7 @@ RT_MODEL_CAN_new_T *CAN_new(void)
         /* port 1 */
         {
           ssSetInputPortRequiredContiguous(rts, 1, 1);
-          ssSetInputPortSignal(rts, 1, &CAN_new_P.Constant1_Value);
+          ssSetInputPortSignal(rts, 1, (uint8_T*)&CAN_new_U8GND);
           _ssSetInputPortNumDimensions(rts, 1, 1);
           ssSetInputPortWidth(rts, 1, 1);
         }
@@ -832,7 +817,7 @@ RT_MODEL_CAN_new_T *CAN_new(void)
         /* port 2 */
         {
           ssSetInputPortRequiredContiguous(rts, 2, 1);
-          ssSetInputPortSignal(rts, 2, &CAN_new_P.Constant2_Value);
+          ssSetInputPortSignal(rts, 2, (uint8_T*)&CAN_new_U8GND);
           _ssSetInputPortNumDimensions(rts, 2, 1);
           ssSetInputPortWidth(rts, 2, 1);
         }
@@ -882,7 +867,7 @@ RT_MODEL_CAN_new_T *CAN_new(void)
       {
         ssSetPortInfoForOutputs(rts,
           &CAN_new_M->NonInlinedSFcns.Sfcn2.outputPortInfo[0]);
-        _ssSetNumOutputPorts(rts, 8);
+        _ssSetNumOutputPorts(rts, 112);
 
         /* port 0 */
         {
@@ -938,6 +923,734 @@ RT_MODEL_CAN_new_T *CAN_new(void)
           _ssSetOutputPortNumDimensions(rts, 7, 1);
           ssSetOutputPortWidth(rts, 7, 1);
           ssSetOutputPortSignal(rts, 7, ((uint8_T *) &CAN_new_B.sfcn_o8_n));
+        }
+
+        /* port 8 */
+        {
+          _ssSetOutputPortNumDimensions(rts, 8, 1);
+          ssSetOutputPortWidth(rts, 8, 1);
+          ssSetOutputPortSignal(rts, 8, ((boolean_T *) &CAN_new_B.sfcn_o9_c));
+        }
+
+        /* port 9 */
+        {
+          _ssSetOutputPortNumDimensions(rts, 9, 1);
+          ssSetOutputPortWidth(rts, 9, 1);
+          ssSetOutputPortSignal(rts, 9, ((real_T *) &CAN_new_B.sfcn_o10));
+        }
+
+        /* port 10 */
+        {
+          _ssSetOutputPortNumDimensions(rts, 10, 1);
+          ssSetOutputPortWidth(rts, 10, 1);
+          ssSetOutputPortSignal(rts, 10, ((uint32_T *) &CAN_new_B.sfcn_o11_i));
+        }
+
+        /* port 11 */
+        {
+          _ssSetOutputPortNumDimensions(rts, 11, 1);
+          ssSetOutputPortWidth(rts, 11, 1);
+          ssSetOutputPortSignal(rts, 11, ((uint8_T *) &CAN_new_B.sfcn_o12_d));
+        }
+
+        /* port 12 */
+        {
+          _ssSetOutputPortNumDimensions(rts, 12, 1);
+          ssSetOutputPortWidth(rts, 12, 1);
+          ssSetOutputPortSignal(rts, 12, ((uint8_T *) &CAN_new_B.sfcn_o13_n));
+        }
+
+        /* port 13 */
+        {
+          _ssSetOutputPortNumDimensions(rts, 13, 1);
+          ssSetOutputPortWidth(rts, 13, 1);
+          ssSetOutputPortSignal(rts, 13, ((uint8_T *) &CAN_new_B.sfcn_o14_b));
+        }
+
+        /* port 14 */
+        {
+          _ssSetOutputPortNumDimensions(rts, 14, 1);
+          ssSetOutputPortWidth(rts, 14, 1);
+          ssSetOutputPortSignal(rts, 14, ((uint8_T *) &CAN_new_B.sfcn_o15_m));
+        }
+
+        /* port 15 */
+        {
+          _ssSetOutputPortNumDimensions(rts, 15, 1);
+          ssSetOutputPortWidth(rts, 15, 1);
+          ssSetOutputPortSignal(rts, 15, ((uint8_T *) &CAN_new_B.sfcn_o16_o));
+        }
+
+        /* port 16 */
+        {
+          _ssSetOutputPortNumDimensions(rts, 16, 1);
+          ssSetOutputPortWidth(rts, 16, 1);
+          ssSetOutputPortSignal(rts, 16, ((uint8_T *) &CAN_new_B.sfcn_o17));
+        }
+
+        /* port 17 */
+        {
+          _ssSetOutputPortNumDimensions(rts, 17, 1);
+          ssSetOutputPortWidth(rts, 17, 1);
+          ssSetOutputPortSignal(rts, 17, ((uint8_T *) &CAN_new_B.sfcn_o18));
+        }
+
+        /* port 18 */
+        {
+          _ssSetOutputPortNumDimensions(rts, 18, 1);
+          ssSetOutputPortWidth(rts, 18, 1);
+          ssSetOutputPortSignal(rts, 18, ((uint8_T *) &CAN_new_B.sfcn_o19));
+        }
+
+        /* port 19 */
+        {
+          _ssSetOutputPortNumDimensions(rts, 19, 1);
+          ssSetOutputPortWidth(rts, 19, 1);
+          ssSetOutputPortSignal(rts, 19, ((uint8_T *) &CAN_new_B.sfcn_o20));
+        }
+
+        /* port 20 */
+        {
+          _ssSetOutputPortNumDimensions(rts, 20, 1);
+          ssSetOutputPortWidth(rts, 20, 1);
+          ssSetOutputPortSignal(rts, 20, ((uint8_T *) &CAN_new_B.sfcn_o21));
+        }
+
+        /* port 21 */
+        {
+          _ssSetOutputPortNumDimensions(rts, 21, 1);
+          ssSetOutputPortWidth(rts, 21, 1);
+          ssSetOutputPortSignal(rts, 21, ((boolean_T *) &CAN_new_B.sfcn_o22_k));
+        }
+
+        /* port 22 */
+        {
+          _ssSetOutputPortNumDimensions(rts, 22, 1);
+          ssSetOutputPortWidth(rts, 22, 1);
+          ssSetOutputPortSignal(rts, 22, ((real_T *) &CAN_new_B.sfcn_o23));
+        }
+
+        /* port 23 */
+        {
+          _ssSetOutputPortNumDimensions(rts, 23, 1);
+          ssSetOutputPortWidth(rts, 23, 1);
+          ssSetOutputPortSignal(rts, 23, ((uint32_T *) &CAN_new_B.sfcn_o24));
+        }
+
+        /* port 24 */
+        {
+          _ssSetOutputPortNumDimensions(rts, 24, 1);
+          ssSetOutputPortWidth(rts, 24, 1);
+          ssSetOutputPortSignal(rts, 24, ((uint8_T *) &CAN_new_B.sfcn_o25));
+        }
+
+        /* port 25 */
+        {
+          _ssSetOutputPortNumDimensions(rts, 25, 1);
+          ssSetOutputPortWidth(rts, 25, 1);
+          ssSetOutputPortSignal(rts, 25, ((uint8_T *) &CAN_new_B.sfcn_o26));
+        }
+
+        /* port 26 */
+        {
+          _ssSetOutputPortNumDimensions(rts, 26, 1);
+          ssSetOutputPortWidth(rts, 26, 1);
+          ssSetOutputPortSignal(rts, 26, ((uint8_T *) &CAN_new_B.sfcn_o27));
+        }
+
+        /* port 27 */
+        {
+          _ssSetOutputPortNumDimensions(rts, 27, 1);
+          ssSetOutputPortWidth(rts, 27, 1);
+          ssSetOutputPortSignal(rts, 27, ((uint8_T *) &CAN_new_B.sfcn_o28));
+        }
+
+        /* port 28 */
+        {
+          _ssSetOutputPortNumDimensions(rts, 28, 1);
+          ssSetOutputPortWidth(rts, 28, 1);
+          ssSetOutputPortSignal(rts, 28, ((uint8_T *) &CAN_new_B.sfcn_o29));
+        }
+
+        /* port 29 */
+        {
+          _ssSetOutputPortNumDimensions(rts, 29, 1);
+          ssSetOutputPortWidth(rts, 29, 1);
+          ssSetOutputPortSignal(rts, 29, ((uint8_T *) &CAN_new_B.sfcn_o30_p));
+        }
+
+        /* port 30 */
+        {
+          _ssSetOutputPortNumDimensions(rts, 30, 1);
+          ssSetOutputPortWidth(rts, 30, 1);
+          ssSetOutputPortSignal(rts, 30, ((uint8_T *) &CAN_new_B.sfcn_o31_n));
+        }
+
+        /* port 31 */
+        {
+          _ssSetOutputPortNumDimensions(rts, 31, 1);
+          ssSetOutputPortWidth(rts, 31, 1);
+          ssSetOutputPortSignal(rts, 31, ((uint8_T *) &CAN_new_B.sfcn_o32_h));
+        }
+
+        /* port 32 */
+        {
+          _ssSetOutputPortNumDimensions(rts, 32, 1);
+          ssSetOutputPortWidth(rts, 32, 1);
+          ssSetOutputPortSignal(rts, 32, ((uint8_T *) &CAN_new_B.sfcn_o33_i));
+        }
+
+        /* port 33 */
+        {
+          _ssSetOutputPortNumDimensions(rts, 33, 1);
+          ssSetOutputPortWidth(rts, 33, 1);
+          ssSetOutputPortSignal(rts, 33, ((uint8_T *) &CAN_new_B.sfcn_o34_m));
+        }
+
+        /* port 34 */
+        {
+          _ssSetOutputPortNumDimensions(rts, 34, 1);
+          ssSetOutputPortWidth(rts, 34, 1);
+          ssSetOutputPortSignal(rts, 34, ((boolean_T *) &CAN_new_B.sfcn_o35_h));
+        }
+
+        /* port 35 */
+        {
+          _ssSetOutputPortNumDimensions(rts, 35, 1);
+          ssSetOutputPortWidth(rts, 35, 1);
+          ssSetOutputPortSignal(rts, 35, ((real_T *) &CAN_new_B.sfcn_o36));
+        }
+
+        /* port 36 */
+        {
+          _ssSetOutputPortNumDimensions(rts, 36, 1);
+          ssSetOutputPortWidth(rts, 36, 1);
+          ssSetOutputPortSignal(rts, 36, ((uint32_T *) &CAN_new_B.sfcn_o37));
+        }
+
+        /* port 37 */
+        {
+          _ssSetOutputPortNumDimensions(rts, 37, 1);
+          ssSetOutputPortWidth(rts, 37, 1);
+          ssSetOutputPortSignal(rts, 37, ((uint8_T *) &CAN_new_B.sfcn_o38_i));
+        }
+
+        /* port 38 */
+        {
+          _ssSetOutputPortNumDimensions(rts, 38, 1);
+          ssSetOutputPortWidth(rts, 38, 1);
+          ssSetOutputPortSignal(rts, 38, ((uint8_T *) &CAN_new_B.sfcn_o39));
+        }
+
+        /* port 39 */
+        {
+          _ssSetOutputPortNumDimensions(rts, 39, 1);
+          ssSetOutputPortWidth(rts, 39, 1);
+          ssSetOutputPortSignal(rts, 39, ((uint8_T *) &CAN_new_B.sfcn_o40));
+        }
+
+        /* port 40 */
+        {
+          _ssSetOutputPortNumDimensions(rts, 40, 1);
+          ssSetOutputPortWidth(rts, 40, 1);
+          ssSetOutputPortSignal(rts, 40, ((uint8_T *) &CAN_new_B.sfcn_o41_p));
+        }
+
+        /* port 41 */
+        {
+          _ssSetOutputPortNumDimensions(rts, 41, 1);
+          ssSetOutputPortWidth(rts, 41, 1);
+          ssSetOutputPortSignal(rts, 41, ((uint8_T *) &CAN_new_B.sfcn_o42_e));
+        }
+
+        /* port 42 */
+        {
+          _ssSetOutputPortNumDimensions(rts, 42, 1);
+          ssSetOutputPortWidth(rts, 42, 1);
+          ssSetOutputPortSignal(rts, 42, ((uint8_T *) &CAN_new_B.sfcn_o43_e));
+        }
+
+        /* port 43 */
+        {
+          _ssSetOutputPortNumDimensions(rts, 43, 1);
+          ssSetOutputPortWidth(rts, 43, 1);
+          ssSetOutputPortSignal(rts, 43, ((uint8_T *) &CAN_new_B.sfcn_o44));
+        }
+
+        /* port 44 */
+        {
+          _ssSetOutputPortNumDimensions(rts, 44, 1);
+          ssSetOutputPortWidth(rts, 44, 1);
+          ssSetOutputPortSignal(rts, 44, ((uint8_T *) &CAN_new_B.sfcn_o45_e));
+        }
+
+        /* port 45 */
+        {
+          _ssSetOutputPortNumDimensions(rts, 45, 1);
+          ssSetOutputPortWidth(rts, 45, 1);
+          ssSetOutputPortSignal(rts, 45, ((uint8_T *) &CAN_new_B.sfcn_o46_b));
+        }
+
+        /* port 46 */
+        {
+          _ssSetOutputPortNumDimensions(rts, 46, 1);
+          ssSetOutputPortWidth(rts, 46, 1);
+          ssSetOutputPortSignal(rts, 46, ((uint8_T *) &CAN_new_B.sfcn_o47));
+        }
+
+        /* port 47 */
+        {
+          _ssSetOutputPortNumDimensions(rts, 47, 1);
+          ssSetOutputPortWidth(rts, 47, 1);
+          ssSetOutputPortSignal(rts, 47, ((boolean_T *) &CAN_new_B.sfcn_o48));
+        }
+
+        /* port 48 */
+        {
+          _ssSetOutputPortNumDimensions(rts, 48, 1);
+          ssSetOutputPortWidth(rts, 48, 1);
+          ssSetOutputPortSignal(rts, 48, ((real_T *) &CAN_new_B.sfcn_o49));
+        }
+
+        /* port 49 */
+        {
+          _ssSetOutputPortNumDimensions(rts, 49, 1);
+          ssSetOutputPortWidth(rts, 49, 1);
+          ssSetOutputPortSignal(rts, 49, ((uint32_T *) &CAN_new_B.sfcn_o50));
+        }
+
+        /* port 50 */
+        {
+          _ssSetOutputPortNumDimensions(rts, 50, 1);
+          ssSetOutputPortWidth(rts, 50, 1);
+          ssSetOutputPortSignal(rts, 50, ((uint8_T *) &CAN_new_B.sfcn_o51));
+        }
+
+        /* port 51 */
+        {
+          _ssSetOutputPortNumDimensions(rts, 51, 1);
+          ssSetOutputPortWidth(rts, 51, 1);
+          ssSetOutputPortSignal(rts, 51, ((uint8_T *) &CAN_new_B.sfcn_o52));
+        }
+
+        /* port 52 */
+        {
+          _ssSetOutputPortNumDimensions(rts, 52, 1);
+          ssSetOutputPortWidth(rts, 52, 1);
+          ssSetOutputPortSignal(rts, 52, ((uint8_T *) &CAN_new_B.sfcn_o53));
+        }
+
+        /* port 53 */
+        {
+          _ssSetOutputPortNumDimensions(rts, 53, 1);
+          ssSetOutputPortWidth(rts, 53, 1);
+          ssSetOutputPortSignal(rts, 53, ((uint8_T *) &CAN_new_B.sfcn_o54));
+        }
+
+        /* port 54 */
+        {
+          _ssSetOutputPortNumDimensions(rts, 54, 1);
+          ssSetOutputPortWidth(rts, 54, 1);
+          ssSetOutputPortSignal(rts, 54, ((uint8_T *) &CAN_new_B.sfcn_o55));
+        }
+
+        /* port 55 */
+        {
+          _ssSetOutputPortNumDimensions(rts, 55, 1);
+          ssSetOutputPortWidth(rts, 55, 1);
+          ssSetOutputPortSignal(rts, 55, ((uint8_T *) &CAN_new_B.sfcn_o56));
+        }
+
+        /* port 56 */
+        {
+          _ssSetOutputPortNumDimensions(rts, 56, 1);
+          ssSetOutputPortWidth(rts, 56, 1);
+          ssSetOutputPortSignal(rts, 56, ((uint8_T *) &CAN_new_B.sfcn_o57));
+        }
+
+        /* port 57 */
+        {
+          _ssSetOutputPortNumDimensions(rts, 57, 1);
+          ssSetOutputPortWidth(rts, 57, 1);
+          ssSetOutputPortSignal(rts, 57, ((uint8_T *) &CAN_new_B.sfcn_o58));
+        }
+
+        /* port 58 */
+        {
+          _ssSetOutputPortNumDimensions(rts, 58, 1);
+          ssSetOutputPortWidth(rts, 58, 1);
+          ssSetOutputPortSignal(rts, 58, ((uint8_T *) &CAN_new_B.sfcn_o59_a));
+        }
+
+        /* port 59 */
+        {
+          _ssSetOutputPortNumDimensions(rts, 59, 1);
+          ssSetOutputPortWidth(rts, 59, 1);
+          ssSetOutputPortSignal(rts, 59, ((uint8_T *) &CAN_new_B.sfcn_o60));
+        }
+
+        /* port 60 */
+        {
+          _ssSetOutputPortNumDimensions(rts, 60, 1);
+          ssSetOutputPortWidth(rts, 60, 1);
+          ssSetOutputPortSignal(rts, 60, ((boolean_T *) &CAN_new_B.sfcn_o61_j));
+        }
+
+        /* port 61 */
+        {
+          _ssSetOutputPortNumDimensions(rts, 61, 1);
+          ssSetOutputPortWidth(rts, 61, 1);
+          ssSetOutputPortSignal(rts, 61, ((real_T *) &CAN_new_B.sfcn_o62));
+        }
+
+        /* port 62 */
+        {
+          _ssSetOutputPortNumDimensions(rts, 62, 1);
+          ssSetOutputPortWidth(rts, 62, 1);
+          ssSetOutputPortSignal(rts, 62, ((uint32_T *) &CAN_new_B.sfcn_o63_p));
+        }
+
+        /* port 63 */
+        {
+          _ssSetOutputPortNumDimensions(rts, 63, 1);
+          ssSetOutputPortWidth(rts, 63, 1);
+          ssSetOutputPortSignal(rts, 63, ((uint8_T *) &CAN_new_B.sfcn_o64));
+        }
+
+        /* port 64 */
+        {
+          _ssSetOutputPortNumDimensions(rts, 64, 1);
+          ssSetOutputPortWidth(rts, 64, 1);
+          ssSetOutputPortSignal(rts, 64, ((uint8_T *) &CAN_new_B.sfcn_o65));
+        }
+
+        /* port 65 */
+        {
+          _ssSetOutputPortNumDimensions(rts, 65, 1);
+          ssSetOutputPortWidth(rts, 65, 1);
+          ssSetOutputPortSignal(rts, 65, ((uint8_T *) &CAN_new_B.sfcn_o66));
+        }
+
+        /* port 66 */
+        {
+          _ssSetOutputPortNumDimensions(rts, 66, 1);
+          ssSetOutputPortWidth(rts, 66, 1);
+          ssSetOutputPortSignal(rts, 66, ((uint8_T *) &CAN_new_B.sfcn_o67_b));
+        }
+
+        /* port 67 */
+        {
+          _ssSetOutputPortNumDimensions(rts, 67, 1);
+          ssSetOutputPortWidth(rts, 67, 1);
+          ssSetOutputPortSignal(rts, 67, ((uint8_T *) &CAN_new_B.sfcn_o68_e));
+        }
+
+        /* port 68 */
+        {
+          _ssSetOutputPortNumDimensions(rts, 68, 1);
+          ssSetOutputPortWidth(rts, 68, 1);
+          ssSetOutputPortSignal(rts, 68, ((uint8_T *) &CAN_new_B.sfcn_o69_l));
+        }
+
+        /* port 69 */
+        {
+          _ssSetOutputPortNumDimensions(rts, 69, 1);
+          ssSetOutputPortWidth(rts, 69, 1);
+          ssSetOutputPortSignal(rts, 69, ((uint8_T *) &CAN_new_B.sfcn_o70_j));
+        }
+
+        /* port 70 */
+        {
+          _ssSetOutputPortNumDimensions(rts, 70, 1);
+          ssSetOutputPortWidth(rts, 70, 1);
+          ssSetOutputPortSignal(rts, 70, ((uint8_T *) &CAN_new_B.sfcn_o71_j));
+        }
+
+        /* port 71 */
+        {
+          _ssSetOutputPortNumDimensions(rts, 71, 1);
+          ssSetOutputPortWidth(rts, 71, 1);
+          ssSetOutputPortSignal(rts, 71, ((uint8_T *) &CAN_new_B.sfcn_o72_k));
+        }
+
+        /* port 72 */
+        {
+          _ssSetOutputPortNumDimensions(rts, 72, 1);
+          ssSetOutputPortWidth(rts, 72, 1);
+          ssSetOutputPortSignal(rts, 72, ((uint8_T *) &CAN_new_B.sfcn_o73_c));
+        }
+
+        /* port 73 */
+        {
+          _ssSetOutputPortNumDimensions(rts, 73, 1);
+          ssSetOutputPortWidth(rts, 73, 1);
+          ssSetOutputPortSignal(rts, 73, ((boolean_T *) &CAN_new_B.sfcn_o74_o));
+        }
+
+        /* port 74 */
+        {
+          _ssSetOutputPortNumDimensions(rts, 74, 1);
+          ssSetOutputPortWidth(rts, 74, 1);
+          ssSetOutputPortSignal(rts, 74, ((real_T *) &CAN_new_B.sfcn_o75));
+        }
+
+        /* port 75 */
+        {
+          _ssSetOutputPortNumDimensions(rts, 75, 1);
+          ssSetOutputPortWidth(rts, 75, 1);
+          ssSetOutputPortSignal(rts, 75, ((uint32_T *) &CAN_new_B.sfcn_o76_f));
+        }
+
+        /* port 76 */
+        {
+          _ssSetOutputPortNumDimensions(rts, 76, 1);
+          ssSetOutputPortWidth(rts, 76, 1);
+          ssSetOutputPortSignal(rts, 76, ((uint8_T *) &CAN_new_B.sfcn_o77_p));
+        }
+
+        /* port 77 */
+        {
+          _ssSetOutputPortNumDimensions(rts, 77, 1);
+          ssSetOutputPortWidth(rts, 77, 1);
+          ssSetOutputPortSignal(rts, 77, ((uint8_T *) &CAN_new_B.sfcn_o78_b));
+        }
+
+        /* port 78 */
+        {
+          _ssSetOutputPortNumDimensions(rts, 78, 1);
+          ssSetOutputPortWidth(rts, 78, 1);
+          ssSetOutputPortSignal(rts, 78, ((uint8_T *) &CAN_new_B.sfcn_o79_l));
+        }
+
+        /* port 79 */
+        {
+          _ssSetOutputPortNumDimensions(rts, 79, 1);
+          ssSetOutputPortWidth(rts, 79, 1);
+          ssSetOutputPortSignal(rts, 79, ((uint8_T *) &CAN_new_B.sfcn_o80_o));
+        }
+
+        /* port 80 */
+        {
+          _ssSetOutputPortNumDimensions(rts, 80, 1);
+          ssSetOutputPortWidth(rts, 80, 1);
+          ssSetOutputPortSignal(rts, 80, ((uint8_T *) &CAN_new_B.sfcn_o81_b));
+        }
+
+        /* port 81 */
+        {
+          _ssSetOutputPortNumDimensions(rts, 81, 1);
+          ssSetOutputPortWidth(rts, 81, 1);
+          ssSetOutputPortSignal(rts, 81, ((uint8_T *) &CAN_new_B.sfcn_o82_m));
+        }
+
+        /* port 82 */
+        {
+          _ssSetOutputPortNumDimensions(rts, 82, 1);
+          ssSetOutputPortWidth(rts, 82, 1);
+          ssSetOutputPortSignal(rts, 82, ((uint8_T *) &CAN_new_B.sfcn_o83));
+        }
+
+        /* port 83 */
+        {
+          _ssSetOutputPortNumDimensions(rts, 83, 1);
+          ssSetOutputPortWidth(rts, 83, 1);
+          ssSetOutputPortSignal(rts, 83, ((uint8_T *) &CAN_new_B.sfcn_o84));
+        }
+
+        /* port 84 */
+        {
+          _ssSetOutputPortNumDimensions(rts, 84, 1);
+          ssSetOutputPortWidth(rts, 84, 1);
+          ssSetOutputPortSignal(rts, 84, ((uint8_T *) &CAN_new_B.sfcn_o85_c));
+        }
+
+        /* port 85 */
+        {
+          _ssSetOutputPortNumDimensions(rts, 85, 1);
+          ssSetOutputPortWidth(rts, 85, 1);
+          ssSetOutputPortSignal(rts, 85, ((uint8_T *) &CAN_new_B.sfcn_o86_d));
+        }
+
+        /* port 86 */
+        {
+          _ssSetOutputPortNumDimensions(rts, 86, 1);
+          ssSetOutputPortWidth(rts, 86, 1);
+          ssSetOutputPortSignal(rts, 86, ((boolean_T *) &CAN_new_B.sfcn_o87_j));
+        }
+
+        /* port 87 */
+        {
+          _ssSetOutputPortNumDimensions(rts, 87, 1);
+          ssSetOutputPortWidth(rts, 87, 1);
+          ssSetOutputPortSignal(rts, 87, ((real_T *) &CAN_new_B.sfcn_o88));
+        }
+
+        /* port 88 */
+        {
+          _ssSetOutputPortNumDimensions(rts, 88, 1);
+          ssSetOutputPortWidth(rts, 88, 1);
+          ssSetOutputPortSignal(rts, 88, ((uint32_T *) &CAN_new_B.sfcn_o89));
+        }
+
+        /* port 89 */
+        {
+          _ssSetOutputPortNumDimensions(rts, 89, 1);
+          ssSetOutputPortWidth(rts, 89, 1);
+          ssSetOutputPortSignal(rts, 89, ((uint8_T *) &CAN_new_B.sfcn_o90));
+        }
+
+        /* port 90 */
+        {
+          _ssSetOutputPortNumDimensions(rts, 90, 1);
+          ssSetOutputPortWidth(rts, 90, 1);
+          ssSetOutputPortSignal(rts, 90, ((uint8_T *) &CAN_new_B.sfcn_o91));
+        }
+
+        /* port 91 */
+        {
+          _ssSetOutputPortNumDimensions(rts, 91, 1);
+          ssSetOutputPortWidth(rts, 91, 1);
+          ssSetOutputPortSignal(rts, 91, ((uint8_T *) &CAN_new_B.sfcn_o92));
+        }
+
+        /* port 92 */
+        {
+          _ssSetOutputPortNumDimensions(rts, 92, 1);
+          ssSetOutputPortWidth(rts, 92, 1);
+          ssSetOutputPortSignal(rts, 92, ((uint8_T *) &CAN_new_B.sfcn_o93));
+        }
+
+        /* port 93 */
+        {
+          _ssSetOutputPortNumDimensions(rts, 93, 1);
+          ssSetOutputPortWidth(rts, 93, 1);
+          ssSetOutputPortSignal(rts, 93, ((uint8_T *) &CAN_new_B.sfcn_o94));
+        }
+
+        /* port 94 */
+        {
+          _ssSetOutputPortNumDimensions(rts, 94, 1);
+          ssSetOutputPortWidth(rts, 94, 1);
+          ssSetOutputPortSignal(rts, 94, ((uint8_T *) &CAN_new_B.sfcn_o95));
+        }
+
+        /* port 95 */
+        {
+          _ssSetOutputPortNumDimensions(rts, 95, 1);
+          ssSetOutputPortWidth(rts, 95, 1);
+          ssSetOutputPortSignal(rts, 95, ((uint8_T *) &CAN_new_B.sfcn_o96));
+        }
+
+        /* port 96 */
+        {
+          _ssSetOutputPortNumDimensions(rts, 96, 1);
+          ssSetOutputPortWidth(rts, 96, 1);
+          ssSetOutputPortSignal(rts, 96, ((uint8_T *) &CAN_new_B.sfcn_o97));
+        }
+
+        /* port 97 */
+        {
+          _ssSetOutputPortNumDimensions(rts, 97, 1);
+          ssSetOutputPortWidth(rts, 97, 1);
+          ssSetOutputPortSignal(rts, 97, ((uint8_T *) &CAN_new_B.sfcn_o98));
+        }
+
+        /* port 98 */
+        {
+          _ssSetOutputPortNumDimensions(rts, 98, 1);
+          ssSetOutputPortWidth(rts, 98, 1);
+          ssSetOutputPortSignal(rts, 98, ((uint8_T *) &CAN_new_B.sfcn_o99));
+        }
+
+        /* port 99 */
+        {
+          _ssSetOutputPortNumDimensions(rts, 99, 1);
+          ssSetOutputPortWidth(rts, 99, 1);
+          ssSetOutputPortSignal(rts, 99, ((boolean_T *) &CAN_new_B.sfcn_o100));
+        }
+
+        /* port 100 */
+        {
+          _ssSetOutputPortNumDimensions(rts, 100, 1);
+          ssSetOutputPortWidth(rts, 100, 1);
+          ssSetOutputPortSignal(rts, 100, ((real_T *) &CAN_new_B.sfcn_o101));
+        }
+
+        /* port 101 */
+        {
+          _ssSetOutputPortNumDimensions(rts, 101, 1);
+          ssSetOutputPortWidth(rts, 101, 1);
+          ssSetOutputPortSignal(rts, 101, ((uint32_T *) &CAN_new_B.sfcn_o102));
+        }
+
+        /* port 102 */
+        {
+          _ssSetOutputPortNumDimensions(rts, 102, 1);
+          ssSetOutputPortWidth(rts, 102, 1);
+          ssSetOutputPortSignal(rts, 102, ((uint8_T *) &CAN_new_B.sfcn_o103));
+        }
+
+        /* port 103 */
+        {
+          _ssSetOutputPortNumDimensions(rts, 103, 1);
+          ssSetOutputPortWidth(rts, 103, 1);
+          ssSetOutputPortSignal(rts, 103, ((uint8_T *) &CAN_new_B.sfcn_o104));
+        }
+
+        /* port 104 */
+        {
+          _ssSetOutputPortNumDimensions(rts, 104, 1);
+          ssSetOutputPortWidth(rts, 104, 1);
+          ssSetOutputPortSignal(rts, 104, ((uint8_T *) &CAN_new_B.sfcn_o105));
+        }
+
+        /* port 105 */
+        {
+          _ssSetOutputPortNumDimensions(rts, 105, 1);
+          ssSetOutputPortWidth(rts, 105, 1);
+          ssSetOutputPortSignal(rts, 105, ((uint8_T *) &CAN_new_B.sfcn_o106));
+        }
+
+        /* port 106 */
+        {
+          _ssSetOutputPortNumDimensions(rts, 106, 1);
+          ssSetOutputPortWidth(rts, 106, 1);
+          ssSetOutputPortSignal(rts, 106, ((uint8_T *) &CAN_new_B.sfcn_o107));
+        }
+
+        /* port 107 */
+        {
+          _ssSetOutputPortNumDimensions(rts, 107, 1);
+          ssSetOutputPortWidth(rts, 107, 1);
+          ssSetOutputPortSignal(rts, 107, ((uint8_T *) &CAN_new_B.sfcn_o108));
+        }
+
+        /* port 108 */
+        {
+          _ssSetOutputPortNumDimensions(rts, 108, 1);
+          ssSetOutputPortWidth(rts, 108, 1);
+          ssSetOutputPortSignal(rts, 108, ((uint8_T *) &CAN_new_B.sfcn_o109));
+        }
+
+        /* port 109 */
+        {
+          _ssSetOutputPortNumDimensions(rts, 109, 1);
+          ssSetOutputPortWidth(rts, 109, 1);
+          ssSetOutputPortSignal(rts, 109, ((uint8_T *) &CAN_new_B.sfcn_o110));
+        }
+
+        /* port 110 */
+        {
+          _ssSetOutputPortNumDimensions(rts, 110, 1);
+          ssSetOutputPortWidth(rts, 110, 1);
+          ssSetOutputPortSignal(rts, 110, ((uint8_T *) &CAN_new_B.sfcn_o111));
+        }
+
+        /* port 111 */
+        {
+          _ssSetOutputPortNumDimensions(rts, 111, 1);
+          ssSetOutputPortWidth(rts, 111, 1);
+          ssSetOutputPortSignal(rts, 111, ((uint8_T *) &CAN_new_B.sfcn_o112));
         }
       }
 
@@ -1005,6 +1718,110 @@ RT_MODEL_CAN_new_T *CAN_new(void)
       _ssSetOutputPortConnected(rts, 5, 1);
       _ssSetOutputPortConnected(rts, 6, 1);
       _ssSetOutputPortConnected(rts, 7, 1);
+      _ssSetOutputPortConnected(rts, 8, 1);
+      _ssSetOutputPortConnected(rts, 9, 1);
+      _ssSetOutputPortConnected(rts, 10, 1);
+      _ssSetOutputPortConnected(rts, 11, 1);
+      _ssSetOutputPortConnected(rts, 12, 1);
+      _ssSetOutputPortConnected(rts, 13, 1);
+      _ssSetOutputPortConnected(rts, 14, 1);
+      _ssSetOutputPortConnected(rts, 15, 1);
+      _ssSetOutputPortConnected(rts, 16, 1);
+      _ssSetOutputPortConnected(rts, 17, 1);
+      _ssSetOutputPortConnected(rts, 18, 1);
+      _ssSetOutputPortConnected(rts, 19, 1);
+      _ssSetOutputPortConnected(rts, 20, 1);
+      _ssSetOutputPortConnected(rts, 21, 1);
+      _ssSetOutputPortConnected(rts, 22, 1);
+      _ssSetOutputPortConnected(rts, 23, 1);
+      _ssSetOutputPortConnected(rts, 24, 1);
+      _ssSetOutputPortConnected(rts, 25, 1);
+      _ssSetOutputPortConnected(rts, 26, 1);
+      _ssSetOutputPortConnected(rts, 27, 1);
+      _ssSetOutputPortConnected(rts, 28, 1);
+      _ssSetOutputPortConnected(rts, 29, 1);
+      _ssSetOutputPortConnected(rts, 30, 1);
+      _ssSetOutputPortConnected(rts, 31, 1);
+      _ssSetOutputPortConnected(rts, 32, 1);
+      _ssSetOutputPortConnected(rts, 33, 1);
+      _ssSetOutputPortConnected(rts, 34, 1);
+      _ssSetOutputPortConnected(rts, 35, 1);
+      _ssSetOutputPortConnected(rts, 36, 1);
+      _ssSetOutputPortConnected(rts, 37, 1);
+      _ssSetOutputPortConnected(rts, 38, 1);
+      _ssSetOutputPortConnected(rts, 39, 1);
+      _ssSetOutputPortConnected(rts, 40, 1);
+      _ssSetOutputPortConnected(rts, 41, 1);
+      _ssSetOutputPortConnected(rts, 42, 1);
+      _ssSetOutputPortConnected(rts, 43, 1);
+      _ssSetOutputPortConnected(rts, 44, 1);
+      _ssSetOutputPortConnected(rts, 45, 1);
+      _ssSetOutputPortConnected(rts, 46, 1);
+      _ssSetOutputPortConnected(rts, 47, 1);
+      _ssSetOutputPortConnected(rts, 48, 1);
+      _ssSetOutputPortConnected(rts, 49, 1);
+      _ssSetOutputPortConnected(rts, 50, 1);
+      _ssSetOutputPortConnected(rts, 51, 1);
+      _ssSetOutputPortConnected(rts, 52, 1);
+      _ssSetOutputPortConnected(rts, 53, 1);
+      _ssSetOutputPortConnected(rts, 54, 1);
+      _ssSetOutputPortConnected(rts, 55, 1);
+      _ssSetOutputPortConnected(rts, 56, 1);
+      _ssSetOutputPortConnected(rts, 57, 1);
+      _ssSetOutputPortConnected(rts, 58, 1);
+      _ssSetOutputPortConnected(rts, 59, 1);
+      _ssSetOutputPortConnected(rts, 60, 1);
+      _ssSetOutputPortConnected(rts, 61, 1);
+      _ssSetOutputPortConnected(rts, 62, 1);
+      _ssSetOutputPortConnected(rts, 63, 1);
+      _ssSetOutputPortConnected(rts, 64, 1);
+      _ssSetOutputPortConnected(rts, 65, 1);
+      _ssSetOutputPortConnected(rts, 66, 1);
+      _ssSetOutputPortConnected(rts, 67, 1);
+      _ssSetOutputPortConnected(rts, 68, 1);
+      _ssSetOutputPortConnected(rts, 69, 1);
+      _ssSetOutputPortConnected(rts, 70, 1);
+      _ssSetOutputPortConnected(rts, 71, 1);
+      _ssSetOutputPortConnected(rts, 72, 1);
+      _ssSetOutputPortConnected(rts, 73, 1);
+      _ssSetOutputPortConnected(rts, 74, 1);
+      _ssSetOutputPortConnected(rts, 75, 1);
+      _ssSetOutputPortConnected(rts, 76, 1);
+      _ssSetOutputPortConnected(rts, 77, 1);
+      _ssSetOutputPortConnected(rts, 78, 1);
+      _ssSetOutputPortConnected(rts, 79, 1);
+      _ssSetOutputPortConnected(rts, 80, 1);
+      _ssSetOutputPortConnected(rts, 81, 1);
+      _ssSetOutputPortConnected(rts, 82, 1);
+      _ssSetOutputPortConnected(rts, 83, 1);
+      _ssSetOutputPortConnected(rts, 84, 1);
+      _ssSetOutputPortConnected(rts, 85, 1);
+      _ssSetOutputPortConnected(rts, 86, 1);
+      _ssSetOutputPortConnected(rts, 87, 1);
+      _ssSetOutputPortConnected(rts, 88, 1);
+      _ssSetOutputPortConnected(rts, 89, 1);
+      _ssSetOutputPortConnected(rts, 90, 1);
+      _ssSetOutputPortConnected(rts, 91, 1);
+      _ssSetOutputPortConnected(rts, 92, 1);
+      _ssSetOutputPortConnected(rts, 93, 1);
+      _ssSetOutputPortConnected(rts, 94, 1);
+      _ssSetOutputPortConnected(rts, 95, 1);
+      _ssSetOutputPortConnected(rts, 96, 1);
+      _ssSetOutputPortConnected(rts, 97, 1);
+      _ssSetOutputPortConnected(rts, 98, 1);
+      _ssSetOutputPortConnected(rts, 99, 1);
+      _ssSetOutputPortConnected(rts, 100, 1);
+      _ssSetOutputPortConnected(rts, 101, 1);
+      _ssSetOutputPortConnected(rts, 102, 1);
+      _ssSetOutputPortConnected(rts, 103, 1);
+      _ssSetOutputPortConnected(rts, 104, 1);
+      _ssSetOutputPortConnected(rts, 105, 1);
+      _ssSetOutputPortConnected(rts, 106, 1);
+      _ssSetOutputPortConnected(rts, 107, 1);
+      _ssSetOutputPortConnected(rts, 108, 1);
+      _ssSetOutputPortConnected(rts, 109, 1);
+      _ssSetOutputPortConnected(rts, 110, 1);
+      _ssSetOutputPortConnected(rts, 111, 1);
       _ssSetOutputPortBeingMerged(rts, 0, 0);
       _ssSetOutputPortBeingMerged(rts, 1, 0);
       _ssSetOutputPortBeingMerged(rts, 2, 0);
@@ -1013,6 +1830,110 @@ RT_MODEL_CAN_new_T *CAN_new(void)
       _ssSetOutputPortBeingMerged(rts, 5, 0);
       _ssSetOutputPortBeingMerged(rts, 6, 0);
       _ssSetOutputPortBeingMerged(rts, 7, 0);
+      _ssSetOutputPortBeingMerged(rts, 8, 0);
+      _ssSetOutputPortBeingMerged(rts, 9, 0);
+      _ssSetOutputPortBeingMerged(rts, 10, 0);
+      _ssSetOutputPortBeingMerged(rts, 11, 0);
+      _ssSetOutputPortBeingMerged(rts, 12, 0);
+      _ssSetOutputPortBeingMerged(rts, 13, 0);
+      _ssSetOutputPortBeingMerged(rts, 14, 0);
+      _ssSetOutputPortBeingMerged(rts, 15, 0);
+      _ssSetOutputPortBeingMerged(rts, 16, 0);
+      _ssSetOutputPortBeingMerged(rts, 17, 0);
+      _ssSetOutputPortBeingMerged(rts, 18, 0);
+      _ssSetOutputPortBeingMerged(rts, 19, 0);
+      _ssSetOutputPortBeingMerged(rts, 20, 0);
+      _ssSetOutputPortBeingMerged(rts, 21, 0);
+      _ssSetOutputPortBeingMerged(rts, 22, 0);
+      _ssSetOutputPortBeingMerged(rts, 23, 0);
+      _ssSetOutputPortBeingMerged(rts, 24, 0);
+      _ssSetOutputPortBeingMerged(rts, 25, 0);
+      _ssSetOutputPortBeingMerged(rts, 26, 0);
+      _ssSetOutputPortBeingMerged(rts, 27, 0);
+      _ssSetOutputPortBeingMerged(rts, 28, 0);
+      _ssSetOutputPortBeingMerged(rts, 29, 0);
+      _ssSetOutputPortBeingMerged(rts, 30, 0);
+      _ssSetOutputPortBeingMerged(rts, 31, 0);
+      _ssSetOutputPortBeingMerged(rts, 32, 0);
+      _ssSetOutputPortBeingMerged(rts, 33, 0);
+      _ssSetOutputPortBeingMerged(rts, 34, 0);
+      _ssSetOutputPortBeingMerged(rts, 35, 0);
+      _ssSetOutputPortBeingMerged(rts, 36, 0);
+      _ssSetOutputPortBeingMerged(rts, 37, 0);
+      _ssSetOutputPortBeingMerged(rts, 38, 0);
+      _ssSetOutputPortBeingMerged(rts, 39, 0);
+      _ssSetOutputPortBeingMerged(rts, 40, 0);
+      _ssSetOutputPortBeingMerged(rts, 41, 0);
+      _ssSetOutputPortBeingMerged(rts, 42, 0);
+      _ssSetOutputPortBeingMerged(rts, 43, 0);
+      _ssSetOutputPortBeingMerged(rts, 44, 0);
+      _ssSetOutputPortBeingMerged(rts, 45, 0);
+      _ssSetOutputPortBeingMerged(rts, 46, 0);
+      _ssSetOutputPortBeingMerged(rts, 47, 0);
+      _ssSetOutputPortBeingMerged(rts, 48, 0);
+      _ssSetOutputPortBeingMerged(rts, 49, 0);
+      _ssSetOutputPortBeingMerged(rts, 50, 0);
+      _ssSetOutputPortBeingMerged(rts, 51, 0);
+      _ssSetOutputPortBeingMerged(rts, 52, 0);
+      _ssSetOutputPortBeingMerged(rts, 53, 0);
+      _ssSetOutputPortBeingMerged(rts, 54, 0);
+      _ssSetOutputPortBeingMerged(rts, 55, 0);
+      _ssSetOutputPortBeingMerged(rts, 56, 0);
+      _ssSetOutputPortBeingMerged(rts, 57, 0);
+      _ssSetOutputPortBeingMerged(rts, 58, 0);
+      _ssSetOutputPortBeingMerged(rts, 59, 0);
+      _ssSetOutputPortBeingMerged(rts, 60, 0);
+      _ssSetOutputPortBeingMerged(rts, 61, 0);
+      _ssSetOutputPortBeingMerged(rts, 62, 0);
+      _ssSetOutputPortBeingMerged(rts, 63, 0);
+      _ssSetOutputPortBeingMerged(rts, 64, 0);
+      _ssSetOutputPortBeingMerged(rts, 65, 0);
+      _ssSetOutputPortBeingMerged(rts, 66, 0);
+      _ssSetOutputPortBeingMerged(rts, 67, 0);
+      _ssSetOutputPortBeingMerged(rts, 68, 0);
+      _ssSetOutputPortBeingMerged(rts, 69, 0);
+      _ssSetOutputPortBeingMerged(rts, 70, 0);
+      _ssSetOutputPortBeingMerged(rts, 71, 0);
+      _ssSetOutputPortBeingMerged(rts, 72, 0);
+      _ssSetOutputPortBeingMerged(rts, 73, 0);
+      _ssSetOutputPortBeingMerged(rts, 74, 0);
+      _ssSetOutputPortBeingMerged(rts, 75, 0);
+      _ssSetOutputPortBeingMerged(rts, 76, 0);
+      _ssSetOutputPortBeingMerged(rts, 77, 0);
+      _ssSetOutputPortBeingMerged(rts, 78, 0);
+      _ssSetOutputPortBeingMerged(rts, 79, 0);
+      _ssSetOutputPortBeingMerged(rts, 80, 0);
+      _ssSetOutputPortBeingMerged(rts, 81, 0);
+      _ssSetOutputPortBeingMerged(rts, 82, 0);
+      _ssSetOutputPortBeingMerged(rts, 83, 0);
+      _ssSetOutputPortBeingMerged(rts, 84, 0);
+      _ssSetOutputPortBeingMerged(rts, 85, 0);
+      _ssSetOutputPortBeingMerged(rts, 86, 0);
+      _ssSetOutputPortBeingMerged(rts, 87, 0);
+      _ssSetOutputPortBeingMerged(rts, 88, 0);
+      _ssSetOutputPortBeingMerged(rts, 89, 0);
+      _ssSetOutputPortBeingMerged(rts, 90, 0);
+      _ssSetOutputPortBeingMerged(rts, 91, 0);
+      _ssSetOutputPortBeingMerged(rts, 92, 0);
+      _ssSetOutputPortBeingMerged(rts, 93, 0);
+      _ssSetOutputPortBeingMerged(rts, 94, 0);
+      _ssSetOutputPortBeingMerged(rts, 95, 0);
+      _ssSetOutputPortBeingMerged(rts, 96, 0);
+      _ssSetOutputPortBeingMerged(rts, 97, 0);
+      _ssSetOutputPortBeingMerged(rts, 98, 0);
+      _ssSetOutputPortBeingMerged(rts, 99, 0);
+      _ssSetOutputPortBeingMerged(rts, 100, 0);
+      _ssSetOutputPortBeingMerged(rts, 101, 0);
+      _ssSetOutputPortBeingMerged(rts, 102, 0);
+      _ssSetOutputPortBeingMerged(rts, 103, 0);
+      _ssSetOutputPortBeingMerged(rts, 104, 0);
+      _ssSetOutputPortBeingMerged(rts, 105, 0);
+      _ssSetOutputPortBeingMerged(rts, 106, 0);
+      _ssSetOutputPortBeingMerged(rts, 107, 0);
+      _ssSetOutputPortBeingMerged(rts, 108, 0);
+      _ssSetOutputPortBeingMerged(rts, 109, 0);
+      _ssSetOutputPortBeingMerged(rts, 110, 0);
+      _ssSetOutputPortBeingMerged(rts, 111, 0);
 
       /* Update the BufferDstPort flags for each input port */
       ssSetInputPortBufferDstPort(rts, 0, -1);
@@ -1320,7 +2241,7 @@ RT_MODEL_CAN_new_T *CAN_new(void)
         {
           _ssSetOutputPortNumDimensions(rts, 9, 1);
           ssSetOutputPortWidth(rts, 9, 1);
-          ssSetOutputPortSignal(rts, 9, ((real_T *) &CAN_new_B.sfcn_o10));
+          ssSetOutputPortSignal(rts, 9, ((real_T *) &CAN_new_B.sfcn_o10_e));
         }
 
         /* port 10 */
@@ -1369,35 +2290,35 @@ RT_MODEL_CAN_new_T *CAN_new(void)
         {
           _ssSetOutputPortNumDimensions(rts, 16, 1);
           ssSetOutputPortWidth(rts, 16, 1);
-          ssSetOutputPortSignal(rts, 16, ((uint8_T *) &CAN_new_B.sfcn_o17));
+          ssSetOutputPortSignal(rts, 16, ((uint8_T *) &CAN_new_B.sfcn_o17_n));
         }
 
         /* port 17 */
         {
           _ssSetOutputPortNumDimensions(rts, 17, 1);
           ssSetOutputPortWidth(rts, 17, 1);
-          ssSetOutputPortSignal(rts, 17, ((uint8_T *) &CAN_new_B.sfcn_o18));
+          ssSetOutputPortSignal(rts, 17, ((uint8_T *) &CAN_new_B.sfcn_o18_l));
         }
 
         /* port 18 */
         {
           _ssSetOutputPortNumDimensions(rts, 18, 1);
           ssSetOutputPortWidth(rts, 18, 1);
-          ssSetOutputPortSignal(rts, 18, ((uint8_T *) &CAN_new_B.sfcn_o19));
+          ssSetOutputPortSignal(rts, 18, ((uint8_T *) &CAN_new_B.sfcn_o19_d));
         }
 
         /* port 19 */
         {
           _ssSetOutputPortNumDimensions(rts, 19, 1);
           ssSetOutputPortWidth(rts, 19, 1);
-          ssSetOutputPortSignal(rts, 19, ((uint8_T *) &CAN_new_B.sfcn_o20));
+          ssSetOutputPortSignal(rts, 19, ((uint8_T *) &CAN_new_B.sfcn_o20_m));
         }
 
         /* port 20 */
         {
           _ssSetOutputPortNumDimensions(rts, 20, 1);
           ssSetOutputPortWidth(rts, 20, 1);
-          ssSetOutputPortSignal(rts, 20, ((uint8_T *) &CAN_new_B.sfcn_o21));
+          ssSetOutputPortSignal(rts, 20, ((uint8_T *) &CAN_new_B.sfcn_o21_i));
         }
 
         /* port 21 */
@@ -1411,49 +2332,49 @@ RT_MODEL_CAN_new_T *CAN_new(void)
         {
           _ssSetOutputPortNumDimensions(rts, 22, 1);
           ssSetOutputPortWidth(rts, 22, 1);
-          ssSetOutputPortSignal(rts, 22, ((uint8_T *) &CAN_new_B.sfcn_o23));
+          ssSetOutputPortSignal(rts, 22, ((uint8_T *) &CAN_new_B.sfcn_o23_f));
         }
 
         /* port 23 */
         {
           _ssSetOutputPortNumDimensions(rts, 23, 1);
           ssSetOutputPortWidth(rts, 23, 1);
-          ssSetOutputPortSignal(rts, 23, ((uint8_T *) &CAN_new_B.sfcn_o24));
+          ssSetOutputPortSignal(rts, 23, ((uint8_T *) &CAN_new_B.sfcn_o24_m));
         }
 
         /* port 24 */
         {
           _ssSetOutputPortNumDimensions(rts, 24, 1);
           ssSetOutputPortWidth(rts, 24, 1);
-          ssSetOutputPortSignal(rts, 24, ((uint8_T *) &CAN_new_B.sfcn_o25));
+          ssSetOutputPortSignal(rts, 24, ((uint8_T *) &CAN_new_B.sfcn_o25_f));
         }
 
         /* port 25 */
         {
           _ssSetOutputPortNumDimensions(rts, 25, 1);
           ssSetOutputPortWidth(rts, 25, 1);
-          ssSetOutputPortSignal(rts, 25, ((uint8_T *) &CAN_new_B.sfcn_o26));
+          ssSetOutputPortSignal(rts, 25, ((uint8_T *) &CAN_new_B.sfcn_o26_o));
         }
 
         /* port 26 */
         {
           _ssSetOutputPortNumDimensions(rts, 26, 1);
           ssSetOutputPortWidth(rts, 26, 1);
-          ssSetOutputPortSignal(rts, 26, ((uint8_T *) &CAN_new_B.sfcn_o27));
+          ssSetOutputPortSignal(rts, 26, ((uint8_T *) &CAN_new_B.sfcn_o27_i));
         }
 
         /* port 27 */
         {
           _ssSetOutputPortNumDimensions(rts, 27, 1);
           ssSetOutputPortWidth(rts, 27, 1);
-          ssSetOutputPortSignal(rts, 27, ((uint8_T *) &CAN_new_B.sfcn_o28));
+          ssSetOutputPortSignal(rts, 27, ((uint8_T *) &CAN_new_B.sfcn_o28_f));
         }
 
         /* port 28 */
         {
           _ssSetOutputPortNumDimensions(rts, 28, 1);
           ssSetOutputPortWidth(rts, 28, 1);
-          ssSetOutputPortSignal(rts, 28, ((uint8_T *) &CAN_new_B.sfcn_o29));
+          ssSetOutputPortSignal(rts, 28, ((uint8_T *) &CAN_new_B.sfcn_o29_l));
         }
 
         /* port 29 */
@@ -1502,14 +2423,14 @@ RT_MODEL_CAN_new_T *CAN_new(void)
         {
           _ssSetOutputPortNumDimensions(rts, 35, 1);
           ssSetOutputPortWidth(rts, 35, 1);
-          ssSetOutputPortSignal(rts, 35, ((real_T *) &CAN_new_B.sfcn_o36));
+          ssSetOutputPortSignal(rts, 35, ((real_T *) &CAN_new_B.sfcn_o36_k));
         }
 
         /* port 36 */
         {
           _ssSetOutputPortNumDimensions(rts, 36, 1);
           ssSetOutputPortWidth(rts, 36, 1);
-          ssSetOutputPortSignal(rts, 36, ((int16_T *) &CAN_new_B.sfcn_o37));
+          ssSetOutputPortSignal(rts, 36, ((int16_T *) &CAN_new_B.sfcn_o37_l));
         }
 
         /* port 37 */
@@ -1523,14 +2444,14 @@ RT_MODEL_CAN_new_T *CAN_new(void)
         {
           _ssSetOutputPortNumDimensions(rts, 38, 1);
           ssSetOutputPortWidth(rts, 38, 1);
-          ssSetOutputPortSignal(rts, 38, ((uint8_T *) &CAN_new_B.sfcn_o39));
+          ssSetOutputPortSignal(rts, 38, ((uint8_T *) &CAN_new_B.sfcn_o39_a));
         }
 
         /* port 39 */
         {
           _ssSetOutputPortNumDimensions(rts, 39, 1);
           ssSetOutputPortWidth(rts, 39, 1);
-          ssSetOutputPortSignal(rts, 39, ((uint8_T *) &CAN_new_B.sfcn_o40));
+          ssSetOutputPortSignal(rts, 39, ((uint8_T *) &CAN_new_B.sfcn_o40_d));
         }
 
         /* port 40 */
@@ -1558,7 +2479,7 @@ RT_MODEL_CAN_new_T *CAN_new(void)
         {
           _ssSetOutputPortNumDimensions(rts, 43, 1);
           ssSetOutputPortWidth(rts, 43, 1);
-          ssSetOutputPortSignal(rts, 43, ((uint8_T *) &CAN_new_B.sfcn_o44));
+          ssSetOutputPortSignal(rts, 43, ((uint8_T *) &CAN_new_B.sfcn_o44_n));
         }
 
         /* port 44 */
@@ -1579,84 +2500,84 @@ RT_MODEL_CAN_new_T *CAN_new(void)
         {
           _ssSetOutputPortNumDimensions(rts, 46, 1);
           ssSetOutputPortWidth(rts, 46, 1);
-          ssSetOutputPortSignal(rts, 46, ((boolean_T *) &CAN_new_B.sfcn_o47));
+          ssSetOutputPortSignal(rts, 46, ((boolean_T *) &CAN_new_B.sfcn_o47_j));
         }
 
         /* port 47 */
         {
           _ssSetOutputPortNumDimensions(rts, 47, 1);
           ssSetOutputPortWidth(rts, 47, 1);
-          ssSetOutputPortSignal(rts, 47, ((boolean_T *) &CAN_new_B.sfcn_o48));
+          ssSetOutputPortSignal(rts, 47, ((boolean_T *) &CAN_new_B.sfcn_o48_l));
         }
 
         /* port 48 */
         {
           _ssSetOutputPortNumDimensions(rts, 48, 1);
           ssSetOutputPortWidth(rts, 48, 1);
-          ssSetOutputPortSignal(rts, 48, ((boolean_T *) &CAN_new_B.sfcn_o49));
+          ssSetOutputPortSignal(rts, 48, ((boolean_T *) &CAN_new_B.sfcn_o49_g));
         }
 
         /* port 49 */
         {
           _ssSetOutputPortNumDimensions(rts, 49, 1);
           ssSetOutputPortWidth(rts, 49, 1);
-          ssSetOutputPortSignal(rts, 49, ((boolean_T *) &CAN_new_B.sfcn_o50));
+          ssSetOutputPortSignal(rts, 49, ((boolean_T *) &CAN_new_B.sfcn_o50_g));
         }
 
         /* port 50 */
         {
           _ssSetOutputPortNumDimensions(rts, 50, 1);
           ssSetOutputPortWidth(rts, 50, 1);
-          ssSetOutputPortSignal(rts, 50, ((uint8_T *) &CAN_new_B.sfcn_o51));
+          ssSetOutputPortSignal(rts, 50, ((uint8_T *) &CAN_new_B.sfcn_o51_e));
         }
 
         /* port 51 */
         {
           _ssSetOutputPortNumDimensions(rts, 51, 1);
           ssSetOutputPortWidth(rts, 51, 1);
-          ssSetOutputPortSignal(rts, 51, ((uint8_T *) &CAN_new_B.sfcn_o52));
+          ssSetOutputPortSignal(rts, 51, ((uint8_T *) &CAN_new_B.sfcn_o52_a));
         }
 
         /* port 52 */
         {
           _ssSetOutputPortNumDimensions(rts, 52, 1);
           ssSetOutputPortWidth(rts, 52, 1);
-          ssSetOutputPortSignal(rts, 52, ((uint8_T *) &CAN_new_B.sfcn_o53));
+          ssSetOutputPortSignal(rts, 52, ((uint8_T *) &CAN_new_B.sfcn_o53_e));
         }
 
         /* port 53 */
         {
           _ssSetOutputPortNumDimensions(rts, 53, 1);
           ssSetOutputPortWidth(rts, 53, 1);
-          ssSetOutputPortSignal(rts, 53, ((uint8_T *) &CAN_new_B.sfcn_o54));
+          ssSetOutputPortSignal(rts, 53, ((uint8_T *) &CAN_new_B.sfcn_o54_a));
         }
 
         /* port 54 */
         {
           _ssSetOutputPortNumDimensions(rts, 54, 1);
           ssSetOutputPortWidth(rts, 54, 1);
-          ssSetOutputPortSignal(rts, 54, ((uint8_T *) &CAN_new_B.sfcn_o55));
+          ssSetOutputPortSignal(rts, 54, ((uint8_T *) &CAN_new_B.sfcn_o55_c));
         }
 
         /* port 55 */
         {
           _ssSetOutputPortNumDimensions(rts, 55, 1);
           ssSetOutputPortWidth(rts, 55, 1);
-          ssSetOutputPortSignal(rts, 55, ((uint8_T *) &CAN_new_B.sfcn_o56));
+          ssSetOutputPortSignal(rts, 55, ((uint8_T *) &CAN_new_B.sfcn_o56_k));
         }
 
         /* port 56 */
         {
           _ssSetOutputPortNumDimensions(rts, 56, 1);
           ssSetOutputPortWidth(rts, 56, 1);
-          ssSetOutputPortSignal(rts, 56, ((boolean_T *) &CAN_new_B.sfcn_o57));
+          ssSetOutputPortSignal(rts, 56, ((boolean_T *) &CAN_new_B.sfcn_o57_e));
         }
 
         /* port 57 */
         {
           _ssSetOutputPortNumDimensions(rts, 57, 1);
           ssSetOutputPortWidth(rts, 57, 1);
-          ssSetOutputPortSignal(rts, 57, ((uint8_T *) &CAN_new_B.sfcn_o58));
+          ssSetOutputPortSignal(rts, 57, ((uint8_T *) &CAN_new_B.sfcn_o58_i));
         }
 
         /* port 58 */
@@ -1670,7 +2591,7 @@ RT_MODEL_CAN_new_T *CAN_new(void)
         {
           _ssSetOutputPortNumDimensions(rts, 59, 1);
           ssSetOutputPortWidth(rts, 59, 1);
-          ssSetOutputPortSignal(rts, 59, ((uint8_T *) &CAN_new_B.sfcn_o60));
+          ssSetOutputPortSignal(rts, 59, ((uint8_T *) &CAN_new_B.sfcn_o60_l));
         }
 
         /* port 60 */
@@ -1684,7 +2605,7 @@ RT_MODEL_CAN_new_T *CAN_new(void)
         {
           _ssSetOutputPortNumDimensions(rts, 61, 1);
           ssSetOutputPortWidth(rts, 61, 1);
-          ssSetOutputPortSignal(rts, 61, ((uint8_T *) &CAN_new_B.sfcn_o62));
+          ssSetOutputPortSignal(rts, 61, ((uint8_T *) &CAN_new_B.sfcn_o62_n));
         }
 
         /* port 62 */
@@ -1698,21 +2619,21 @@ RT_MODEL_CAN_new_T *CAN_new(void)
         {
           _ssSetOutputPortNumDimensions(rts, 63, 1);
           ssSetOutputPortWidth(rts, 63, 1);
-          ssSetOutputPortSignal(rts, 63, ((uint8_T *) &CAN_new_B.sfcn_o64));
+          ssSetOutputPortSignal(rts, 63, ((uint8_T *) &CAN_new_B.sfcn_o64_p));
         }
 
         /* port 64 */
         {
           _ssSetOutputPortNumDimensions(rts, 64, 1);
           ssSetOutputPortWidth(rts, 64, 1);
-          ssSetOutputPortSignal(rts, 64, ((uint8_T *) &CAN_new_B.sfcn_o65));
+          ssSetOutputPortSignal(rts, 64, ((uint8_T *) &CAN_new_B.sfcn_o65_k));
         }
 
         /* port 65 */
         {
           _ssSetOutputPortNumDimensions(rts, 65, 1);
           ssSetOutputPortWidth(rts, 65, 1);
-          ssSetOutputPortSignal(rts, 65, ((uint8_T *) &CAN_new_B.sfcn_o66));
+          ssSetOutputPortSignal(rts, 65, ((uint8_T *) &CAN_new_B.sfcn_o66_p));
         }
 
         /* port 66 */
@@ -1775,7 +2696,7 @@ RT_MODEL_CAN_new_T *CAN_new(void)
         {
           _ssSetOutputPortNumDimensions(rts, 74, 1);
           ssSetOutputPortWidth(rts, 74, 1);
-          ssSetOutputPortSignal(rts, 74, ((real_T *) &CAN_new_B.sfcn_o75));
+          ssSetOutputPortSignal(rts, 74, ((real_T *) &CAN_new_B.sfcn_o75_c));
         }
 
         /* port 75 */
@@ -1831,14 +2752,14 @@ RT_MODEL_CAN_new_T *CAN_new(void)
         {
           _ssSetOutputPortNumDimensions(rts, 82, 1);
           ssSetOutputPortWidth(rts, 82, 1);
-          ssSetOutputPortSignal(rts, 82, ((uint8_T *) &CAN_new_B.sfcn_o83));
+          ssSetOutputPortSignal(rts, 82, ((uint8_T *) &CAN_new_B.sfcn_o83_p));
         }
 
         /* port 83 */
         {
           _ssSetOutputPortNumDimensions(rts, 83, 1);
           ssSetOutputPortWidth(rts, 83, 1);
-          ssSetOutputPortSignal(rts, 83, ((uint8_T *) &CAN_new_B.sfcn_o84));
+          ssSetOutputPortSignal(rts, 83, ((uint8_T *) &CAN_new_B.sfcn_o84_e));
         }
 
         /* port 84 */
@@ -1866,70 +2787,70 @@ RT_MODEL_CAN_new_T *CAN_new(void)
         {
           _ssSetOutputPortNumDimensions(rts, 87, 1);
           ssSetOutputPortWidth(rts, 87, 1);
-          ssSetOutputPortSignal(rts, 87, ((uint8_T *) &CAN_new_B.sfcn_o88));
+          ssSetOutputPortSignal(rts, 87, ((uint8_T *) &CAN_new_B.sfcn_o88_c));
         }
 
         /* port 88 */
         {
           _ssSetOutputPortNumDimensions(rts, 88, 1);
           ssSetOutputPortWidth(rts, 88, 1);
-          ssSetOutputPortSignal(rts, 88, ((uint8_T *) &CAN_new_B.sfcn_o89));
+          ssSetOutputPortSignal(rts, 88, ((uint8_T *) &CAN_new_B.sfcn_o89_j));
         }
 
         /* port 89 */
         {
           _ssSetOutputPortNumDimensions(rts, 89, 1);
           ssSetOutputPortWidth(rts, 89, 1);
-          ssSetOutputPortSignal(rts, 89, ((uint8_T *) &CAN_new_B.sfcn_o90));
+          ssSetOutputPortSignal(rts, 89, ((uint8_T *) &CAN_new_B.sfcn_o90_k));
         }
 
         /* port 90 */
         {
           _ssSetOutputPortNumDimensions(rts, 90, 1);
           ssSetOutputPortWidth(rts, 90, 1);
-          ssSetOutputPortSignal(rts, 90, ((uint8_T *) &CAN_new_B.sfcn_o91));
+          ssSetOutputPortSignal(rts, 90, ((uint8_T *) &CAN_new_B.sfcn_o91_b));
         }
 
         /* port 91 */
         {
           _ssSetOutputPortNumDimensions(rts, 91, 1);
           ssSetOutputPortWidth(rts, 91, 1);
-          ssSetOutputPortSignal(rts, 91, ((uint8_T *) &CAN_new_B.sfcn_o92));
+          ssSetOutputPortSignal(rts, 91, ((uint8_T *) &CAN_new_B.sfcn_o92_n));
         }
 
         /* port 92 */
         {
           _ssSetOutputPortNumDimensions(rts, 92, 1);
           ssSetOutputPortWidth(rts, 92, 1);
-          ssSetOutputPortSignal(rts, 92, ((uint8_T *) &CAN_new_B.sfcn_o93));
+          ssSetOutputPortSignal(rts, 92, ((uint8_T *) &CAN_new_B.sfcn_o93_n));
         }
 
         /* port 93 */
         {
           _ssSetOutputPortNumDimensions(rts, 93, 1);
           ssSetOutputPortWidth(rts, 93, 1);
-          ssSetOutputPortSignal(rts, 93, ((uint8_T *) &CAN_new_B.sfcn_o94));
+          ssSetOutputPortSignal(rts, 93, ((uint8_T *) &CAN_new_B.sfcn_o94_k));
         }
 
         /* port 94 */
         {
           _ssSetOutputPortNumDimensions(rts, 94, 1);
           ssSetOutputPortWidth(rts, 94, 1);
-          ssSetOutputPortSignal(rts, 94, ((uint8_T *) &CAN_new_B.sfcn_o95));
+          ssSetOutputPortSignal(rts, 94, ((uint8_T *) &CAN_new_B.sfcn_o95_e));
         }
 
         /* port 95 */
         {
           _ssSetOutputPortNumDimensions(rts, 95, 1);
           ssSetOutputPortWidth(rts, 95, 1);
-          ssSetOutputPortSignal(rts, 95, ((uint8_T *) &CAN_new_B.sfcn_o96));
+          ssSetOutputPortSignal(rts, 95, ((uint8_T *) &CAN_new_B.sfcn_o96_k));
         }
 
         /* port 96 */
         {
           _ssSetOutputPortNumDimensions(rts, 96, 1);
           ssSetOutputPortWidth(rts, 96, 1);
-          ssSetOutputPortSignal(rts, 96, ((uint8_T *) &CAN_new_B.sfcn_o97));
+          ssSetOutputPortSignal(rts, 96, ((uint8_T *) &CAN_new_B.sfcn_o97_a));
         }
       }
 
@@ -2193,9 +3114,9 @@ RT_MODEL_CAN_new_T *CAN_new(void)
   CAN_new_M->Sizes.numU = (0);         /* Number of model inputs */
   CAN_new_M->Sizes.sysDirFeedThru = (0);/* The model is not direct feedthrough */
   CAN_new_M->Sizes.numSampTimes = (1); /* Number of sample times */
-  CAN_new_M->Sizes.numBlocks = (31);   /* Number of blocks */
-  CAN_new_M->Sizes.numBlockIO = (128); /* Number of block outputs */
-  CAN_new_M->Sizes.numBlockPrms = (48);/* Sum of parameter "widths" */
+  CAN_new_M->Sizes.numBlocks = (24);   /* Number of blocks */
+  CAN_new_M->Sizes.numBlockIO = (227); /* Number of block outputs */
+  CAN_new_M->Sizes.numBlockPrms = (40);/* Sum of parameter "widths" */
   return CAN_new_M;
 }
 
