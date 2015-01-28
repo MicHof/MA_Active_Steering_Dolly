@@ -15,12 +15,4 @@
 /* ***************************************************************************************************************************/
 
 
-/* RTICANMMFreeRawMessage_1 */
-CANMMCAN_Arduino_MIDRX[0] = CANMMCAN_Arduino_MIDTXS[0]; 
-/* RTICANMMFreeRawMessage_1.ID Format */ 
-CANMMCAN_Arduino_MIDFTX[0] = CANMMCAN_Arduino_MIDFTXS[0]; 
-CANMMCAN_Arduino_MIDFRX[0] = CANMMCAN_Arduino_MIDFTXS[0]; 
-/* Simulator */ 
-
-/* RTICANMMFreeRawMessage_1 */
-CANMMCAN_Arduino_TXENIE[0] =  CANMMCAN_Arduino_TXEIN[0] && (CANMMCAN_Arduino_TXEEIE[0]) && CANMMCAN_Arduino_RTVE;
+/* New_Message_1 */
