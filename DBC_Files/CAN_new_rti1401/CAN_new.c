@@ -3,9 +3,9 @@
  *
  * Code generation for model "CAN_new".
  *
- * Model version              : 1.17
+ * Model version              : 1.24
  * Simulink Coder version : 8.5 (R2013b) 08-Aug-2013
- * C source code generated on : Tue Jan 27 15:24:17 2015
+ * C source code generated on : Mon Feb 02 10:16:50 2015
  *
  * Target selection: rti1401.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping
@@ -17,7 +17,7 @@
 #include "CAN_new.h"
 #include "CAN_new_private.h"
 
-const uint8_T CAN_new_U8GND = 0U;      /* uint8_T ground */
+const int16_T CAN_new_I16GND = 0;      /* int16_T ground */
 
 /* Block signals (auto storage) */
 B_CAN_new_T CAN_new_B;
@@ -58,6 +58,60 @@ static void CAN_new_output(void)
     sfcnOutputs(rts, 0);
   }
 
+  /* Sum: '<S12>/IMU_accel_corrected_x' incorporates:
+   *  Constant: '<S12>/Accelerometer_init_x'
+   */
+  CAN_new_B.IMU_accel_corrected_x = CAN_new_P.Accelerometer_init_x_Value +
+    (real_T)CAN_new_B.sfcn_o1_d;
+
+  /* Sum: '<S12>/IMU_accel_corrected_y' incorporates:
+   *  Constant: '<S12>/Accelerometer_init_y'
+   */
+  CAN_new_B.IMU_accel_corrected_y = (real_T)CAN_new_B.sfcn_o2_p +
+    CAN_new_P.Accelerometer_init_y_Value;
+
+  /* Sum: '<S12>/IMU_accel_corrected_z' incorporates:
+   *  Constant: '<S12>/Accelerometer_init_z '
+   */
+  CAN_new_B.IMU_accel_corrected_z = (real_T)CAN_new_B.sfcn_o3_nj +
+    CAN_new_P.Accelerometer_init_z_Value;
+
+  /* Sum: '<S13>/IMU_angle_corrected_x' incorporates:
+   *  Constant: '<S13>/angle_init_x'
+   */
+  CAN_new_B.IMU_angle_corrected_x = CAN_new_P.angle_init_x_Value + (real_T)
+    CAN_new_B.sfcn_o4_n;
+
+  /* Sum: '<S13>/IMU_angle_corrected_y' incorporates:
+   *  Constant: '<S13>/angle_init_y'
+   */
+  CAN_new_B.IMU_angle_corrected_y = (real_T)CAN_new_B.sfcn_o5_e +
+    CAN_new_P.angle_init_y_Value;
+
+  /* Sum: '<S13>/IMU_angle_corrected_z' incorporates:
+   *  Constant: '<S13>/angle_init_z '
+   */
+  CAN_new_B.IMU_angle_corrected_z = (real_T)CAN_new_B.sfcn_o6_k +
+    CAN_new_P.angle_init_z_Value;
+
+  /* Sum: '<S14>/IMU_gyro_corrected_x' incorporates:
+   *  Constant: '<S14>/gyro_init_x'
+   */
+  CAN_new_B.IMU_gyro_corrected_x = CAN_new_P.gyro_init_x_Value + (real_T)
+    CAN_new_B.sfcn_o7_p;
+
+  /* Sum: '<S14>/IMU_gyro_corrected_y' incorporates:
+   *  Constant: '<S14>/gyro_init_y'
+   */
+  CAN_new_B.IMU_gyro_corrected_y = (real_T)CAN_new_B.sfcn_o8_n +
+    CAN_new_P.gyro_init_y_Value;
+
+  /* Sum: '<S14>/IMU_gyro_corrected_z' incorporates:
+   *  Constant: '<S14>/gyro_init_z '
+   */
+  CAN_new_B.IMU_gyro_corrected_z = (real_T)CAN_new_B.sfcn_o9_c +
+    CAN_new_P.gyro_init_z_Value;
+
   /* DataTypeConversion: '<S9>/Variation_DTC' incorporates:
    *  Constant: '<S2>/Variation@RTICANMM ControllerSetup'
    */
@@ -69,18 +123,18 @@ static void CAN_new_output(void)
     sfcnOutputs(rts, 0);
   }
 
-  /* DataTypeConversion: '<S16>/Variation_DTC' incorporates:
-   *  Constant: '<S3>/Variation@RTICANMM ControllerSetup'
-   */
-  CAN_new_B.Variation_DTC_h = CAN_new_P.VariationRTICANMMControllerSe_h;
-
-  /* Level2 S-Function Block: '<S16>/sfcn' (RTICANMM_SETUP_Controller2) */
+  /* Level2 S-Function Block: '<S20>/sfcn' (RTICANMM_MAIN_CAN_2) */
   {
     SimStruct *rts = CAN_new_M->childSfunctions[4];
     sfcnOutputs(rts, 0);
   }
 
-  /* Level2 S-Function Block: '<S17>/sfcn' (RTICANMM_MAIN_CAN_2) */
+  /* DataTypeConversion: '<S19>/Variation_DTC' incorporates:
+   *  Constant: '<S3>/Variation@RTICANMM ControllerSetup'
+   */
+  CAN_new_B.Variation_DTC_h = CAN_new_P.VariationRTICANMMControllerSe_h;
+
+  /* Level2 S-Function Block: '<S19>/sfcn' (RTICANMM_SETUP_Controller2) */
   {
     SimStruct *rts = CAN_new_M->childSfunctions[5];
     sfcnOutputs(rts, 0);
@@ -122,7 +176,7 @@ static void CAN_new_update(void)
       return;
   }
 
-  /* Level2 S-Function Block: '<S16>/sfcn' (RTICANMM_SETUP_Controller2) */
+  /* Level2 S-Function Block: '<S20>/sfcn' (RTICANMM_MAIN_CAN_2) */
   {
     SimStruct *rts = CAN_new_M->childSfunctions[4];
     sfcnUpdate(rts, 0);
@@ -130,7 +184,7 @@ static void CAN_new_update(void)
       return;
   }
 
-  /* Level2 S-Function Block: '<S17>/sfcn' (RTICANMM_MAIN_CAN_2) */
+  /* Level2 S-Function Block: '<S19>/sfcn' (RTICANMM_SETUP_Controller2) */
   {
     SimStruct *rts = CAN_new_M->childSfunctions[5];
     sfcnUpdate(rts, 0);
@@ -199,7 +253,7 @@ void CAN_new_initialize(void)
       return;
   }
 
-  /* Level2 S-Function Block: '<S16>/sfcn' (RTICANMM_SETUP_Controller2) */
+  /* Level2 S-Function Block: '<S20>/sfcn' (RTICANMM_MAIN_CAN_2) */
   {
     SimStruct *rts = CAN_new_M->childSfunctions[4];
     sfcnStart(rts);
@@ -207,7 +261,7 @@ void CAN_new_initialize(void)
       return;
   }
 
-  /* Level2 S-Function Block: '<S17>/sfcn' (RTICANMM_MAIN_CAN_2) */
+  /* Level2 S-Function Block: '<S19>/sfcn' (RTICANMM_SETUP_Controller2) */
   {
     SimStruct *rts = CAN_new_M->childSfunctions[5];
     sfcnStart(rts);
@@ -247,7 +301,7 @@ void CAN_new_initialize(void)
       return;
   }
 
-  /* Level2 S-Function Block: '<S16>/sfcn' (RTICANMM_SETUP_Controller2) */
+  /* Level2 S-Function Block: '<S20>/sfcn' (RTICANMM_MAIN_CAN_2) */
   {
     SimStruct *rts = CAN_new_M->childSfunctions[4];
     sfcnInitializeConditions(rts);
@@ -255,7 +309,7 @@ void CAN_new_initialize(void)
       return;
   }
 
-  /* Level2 S-Function Block: '<S17>/sfcn' (RTICANMM_MAIN_CAN_2) */
+  /* Level2 S-Function Block: '<S19>/sfcn' (RTICANMM_SETUP_Controller2) */
   {
     SimStruct *rts = CAN_new_M->childSfunctions[5];
     sfcnInitializeConditions(rts);
@@ -291,13 +345,13 @@ void CAN_new_terminate(void)
     sfcnTerminate(rts);
   }
 
-  /* Level2 S-Function Block: '<S16>/sfcn' (RTICANMM_SETUP_Controller2) */
+  /* Level2 S-Function Block: '<S20>/sfcn' (RTICANMM_MAIN_CAN_2) */
   {
     SimStruct *rts = CAN_new_M->childSfunctions[4];
     sfcnTerminate(rts);
   }
 
-  /* Level2 S-Function Block: '<S17>/sfcn' (RTICANMM_MAIN_CAN_2) */
+  /* Level2 S-Function Block: '<S19>/sfcn' (RTICANMM_SETUP_Controller2) */
   {
     SimStruct *rts = CAN_new_M->childSfunctions[5];
     sfcnTerminate(rts);
@@ -794,14 +848,14 @@ RT_MODEL_CAN_new_T *CAN_new(void)
 
       /* inputs */
       {
-        _ssSetNumInputPorts(rts, 24);
+        _ssSetNumInputPorts(rts, 9);
         ssSetPortInfoForInputs(rts,
           &CAN_new_M->NonInlinedSFcns.Sfcn2.inputPortInfo[0]);
 
         /* port 0 */
         {
           ssSetInputPortRequiredContiguous(rts, 0, 1);
-          ssSetInputPortSignal(rts, 0, (uint8_T*)&CAN_new_U8GND);
+          ssSetInputPortSignal(rts, 0, (int16_T*)&CAN_new_I16GND);
           _ssSetInputPortNumDimensions(rts, 0, 1);
           ssSetInputPortWidth(rts, 0, 1);
         }
@@ -809,7 +863,7 @@ RT_MODEL_CAN_new_T *CAN_new(void)
         /* port 1 */
         {
           ssSetInputPortRequiredContiguous(rts, 1, 1);
-          ssSetInputPortSignal(rts, 1, (uint8_T*)&CAN_new_U8GND);
+          ssSetInputPortSignal(rts, 1, (int16_T*)&CAN_new_I16GND);
           _ssSetInputPortNumDimensions(rts, 1, 1);
           ssSetInputPortWidth(rts, 1, 1);
         }
@@ -817,7 +871,7 @@ RT_MODEL_CAN_new_T *CAN_new(void)
         /* port 2 */
         {
           ssSetInputPortRequiredContiguous(rts, 2, 1);
-          ssSetInputPortSignal(rts, 2, (uint8_T*)&CAN_new_U8GND);
+          ssSetInputPortSignal(rts, 2, (int16_T*)&CAN_new_I16GND);
           _ssSetInputPortNumDimensions(rts, 2, 1);
           ssSetInputPortWidth(rts, 2, 1);
         }
@@ -825,7 +879,7 @@ RT_MODEL_CAN_new_T *CAN_new(void)
         /* port 3 */
         {
           ssSetInputPortRequiredContiguous(rts, 3, 1);
-          ssSetInputPortSignal(rts, 3, (uint8_T*)&CAN_new_U8GND);
+          ssSetInputPortSignal(rts, 3, (int16_T*)&CAN_new_I16GND);
           _ssSetInputPortNumDimensions(rts, 3, 1);
           ssSetInputPortWidth(rts, 3, 1);
         }
@@ -833,7 +887,7 @@ RT_MODEL_CAN_new_T *CAN_new(void)
         /* port 4 */
         {
           ssSetInputPortRequiredContiguous(rts, 4, 1);
-          ssSetInputPortSignal(rts, 4, (uint8_T*)&CAN_new_U8GND);
+          ssSetInputPortSignal(rts, 4, (int16_T*)&CAN_new_I16GND);
           _ssSetInputPortNumDimensions(rts, 4, 1);
           ssSetInputPortWidth(rts, 4, 1);
         }
@@ -841,7 +895,7 @@ RT_MODEL_CAN_new_T *CAN_new(void)
         /* port 5 */
         {
           ssSetInputPortRequiredContiguous(rts, 5, 1);
-          ssSetInputPortSignal(rts, 5, (uint8_T*)&CAN_new_U8GND);
+          ssSetInputPortSignal(rts, 5, (int16_T*)&CAN_new_I16GND);
           _ssSetInputPortNumDimensions(rts, 5, 1);
           ssSetInputPortWidth(rts, 5, 1);
         }
@@ -849,7 +903,7 @@ RT_MODEL_CAN_new_T *CAN_new(void)
         /* port 6 */
         {
           ssSetInputPortRequiredContiguous(rts, 6, 1);
-          ssSetInputPortSignal(rts, 6, (uint8_T*)&CAN_new_U8GND);
+          ssSetInputPortSignal(rts, 6, (int16_T*)&CAN_new_I16GND);
           _ssSetInputPortNumDimensions(rts, 6, 1);
           ssSetInputPortWidth(rts, 6, 1);
         }
@@ -857,7 +911,7 @@ RT_MODEL_CAN_new_T *CAN_new(void)
         /* port 7 */
         {
           ssSetInputPortRequiredContiguous(rts, 7, 1);
-          ssSetInputPortSignal(rts, 7, (uint8_T*)&CAN_new_U8GND);
+          ssSetInputPortSignal(rts, 7, (int16_T*)&CAN_new_I16GND);
           _ssSetInputPortNumDimensions(rts, 7, 1);
           ssSetInputPortWidth(rts, 7, 1);
         }
@@ -865,129 +919,9 @@ RT_MODEL_CAN_new_T *CAN_new(void)
         /* port 8 */
         {
           ssSetInputPortRequiredContiguous(rts, 8, 1);
-          ssSetInputPortSignal(rts, 8, (uint8_T*)&CAN_new_U8GND);
+          ssSetInputPortSignal(rts, 8, (int16_T*)&CAN_new_I16GND);
           _ssSetInputPortNumDimensions(rts, 8, 1);
           ssSetInputPortWidth(rts, 8, 1);
-        }
-
-        /* port 9 */
-        {
-          ssSetInputPortRequiredContiguous(rts, 9, 1);
-          ssSetInputPortSignal(rts, 9, (uint8_T*)&CAN_new_U8GND);
-          _ssSetInputPortNumDimensions(rts, 9, 1);
-          ssSetInputPortWidth(rts, 9, 1);
-        }
-
-        /* port 10 */
-        {
-          ssSetInputPortRequiredContiguous(rts, 10, 1);
-          ssSetInputPortSignal(rts, 10, (uint8_T*)&CAN_new_U8GND);
-          _ssSetInputPortNumDimensions(rts, 10, 1);
-          ssSetInputPortWidth(rts, 10, 1);
-        }
-
-        /* port 11 */
-        {
-          ssSetInputPortRequiredContiguous(rts, 11, 1);
-          ssSetInputPortSignal(rts, 11, (uint8_T*)&CAN_new_U8GND);
-          _ssSetInputPortNumDimensions(rts, 11, 1);
-          ssSetInputPortWidth(rts, 11, 1);
-        }
-
-        /* port 12 */
-        {
-          ssSetInputPortRequiredContiguous(rts, 12, 1);
-          ssSetInputPortSignal(rts, 12, (uint8_T*)&CAN_new_U8GND);
-          _ssSetInputPortNumDimensions(rts, 12, 1);
-          ssSetInputPortWidth(rts, 12, 1);
-        }
-
-        /* port 13 */
-        {
-          ssSetInputPortRequiredContiguous(rts, 13, 1);
-          ssSetInputPortSignal(rts, 13, (uint8_T*)&CAN_new_U8GND);
-          _ssSetInputPortNumDimensions(rts, 13, 1);
-          ssSetInputPortWidth(rts, 13, 1);
-        }
-
-        /* port 14 */
-        {
-          ssSetInputPortRequiredContiguous(rts, 14, 1);
-          ssSetInputPortSignal(rts, 14, (uint8_T*)&CAN_new_U8GND);
-          _ssSetInputPortNumDimensions(rts, 14, 1);
-          ssSetInputPortWidth(rts, 14, 1);
-        }
-
-        /* port 15 */
-        {
-          ssSetInputPortRequiredContiguous(rts, 15, 1);
-          ssSetInputPortSignal(rts, 15, (uint8_T*)&CAN_new_U8GND);
-          _ssSetInputPortNumDimensions(rts, 15, 1);
-          ssSetInputPortWidth(rts, 15, 1);
-        }
-
-        /* port 16 */
-        {
-          ssSetInputPortRequiredContiguous(rts, 16, 1);
-          ssSetInputPortSignal(rts, 16, (uint8_T*)&CAN_new_U8GND);
-          _ssSetInputPortNumDimensions(rts, 16, 1);
-          ssSetInputPortWidth(rts, 16, 1);
-        }
-
-        /* port 17 */
-        {
-          ssSetInputPortRequiredContiguous(rts, 17, 1);
-          ssSetInputPortSignal(rts, 17, (uint8_T*)&CAN_new_U8GND);
-          _ssSetInputPortNumDimensions(rts, 17, 1);
-          ssSetInputPortWidth(rts, 17, 1);
-        }
-
-        /* port 18 */
-        {
-          ssSetInputPortRequiredContiguous(rts, 18, 1);
-          ssSetInputPortSignal(rts, 18, (uint8_T*)&CAN_new_U8GND);
-          _ssSetInputPortNumDimensions(rts, 18, 1);
-          ssSetInputPortWidth(rts, 18, 1);
-        }
-
-        /* port 19 */
-        {
-          ssSetInputPortRequiredContiguous(rts, 19, 1);
-          ssSetInputPortSignal(rts, 19, (uint8_T*)&CAN_new_U8GND);
-          _ssSetInputPortNumDimensions(rts, 19, 1);
-          ssSetInputPortWidth(rts, 19, 1);
-        }
-
-        /* port 20 */
-        {
-          ssSetInputPortRequiredContiguous(rts, 20, 1);
-          ssSetInputPortSignal(rts, 20, (uint8_T*)&CAN_new_U8GND);
-          _ssSetInputPortNumDimensions(rts, 20, 1);
-          ssSetInputPortWidth(rts, 20, 1);
-        }
-
-        /* port 21 */
-        {
-          ssSetInputPortRequiredContiguous(rts, 21, 1);
-          ssSetInputPortSignal(rts, 21, (uint8_T*)&CAN_new_U8GND);
-          _ssSetInputPortNumDimensions(rts, 21, 1);
-          ssSetInputPortWidth(rts, 21, 1);
-        }
-
-        /* port 22 */
-        {
-          ssSetInputPortRequiredContiguous(rts, 22, 1);
-          ssSetInputPortSignal(rts, 22, (uint8_T*)&CAN_new_U8GND);
-          _ssSetInputPortNumDimensions(rts, 22, 1);
-          ssSetInputPortWidth(rts, 22, 1);
-        }
-
-        /* port 23 */
-        {
-          ssSetInputPortRequiredContiguous(rts, 23, 1);
-          ssSetInputPortSignal(rts, 23, (uint8_T*)&CAN_new_U8GND);
-          _ssSetInputPortNumDimensions(rts, 23, 1);
-          ssSetInputPortWidth(rts, 23, 1);
         }
       }
 
@@ -995,7 +929,7 @@ RT_MODEL_CAN_new_T *CAN_new(void)
       {
         ssSetPortInfoForOutputs(rts,
           &CAN_new_M->NonInlinedSFcns.Sfcn2.outputPortInfo[0]);
-        _ssSetNumOutputPorts(rts, 25);
+        _ssSetNumOutputPorts(rts, 9);
 
         /* port 0 */
         {
@@ -1008,168 +942,56 @@ RT_MODEL_CAN_new_T *CAN_new(void)
         {
           _ssSetOutputPortNumDimensions(rts, 1, 1);
           ssSetOutputPortWidth(rts, 1, 1);
-          ssSetOutputPortSignal(rts, 1, ((uint8_T *) &CAN_new_B.sfcn_o2_p));
+          ssSetOutputPortSignal(rts, 1, ((int16_T *) &CAN_new_B.sfcn_o2_p));
         }
 
         /* port 2 */
         {
           _ssSetOutputPortNumDimensions(rts, 2, 1);
           ssSetOutputPortWidth(rts, 2, 1);
-          ssSetOutputPortSignal(rts, 2, ((uint8_T *) &CAN_new_B.sfcn_o3_nj));
+          ssSetOutputPortSignal(rts, 2, ((int16_T *) &CAN_new_B.sfcn_o3_nj));
         }
 
         /* port 3 */
         {
           _ssSetOutputPortNumDimensions(rts, 3, 1);
           ssSetOutputPortWidth(rts, 3, 1);
-          ssSetOutputPortSignal(rts, 3, ((uint8_T *) &CAN_new_B.sfcn_o4_n));
+          ssSetOutputPortSignal(rts, 3, ((int16_T *) &CAN_new_B.sfcn_o4_n));
         }
 
         /* port 4 */
         {
           _ssSetOutputPortNumDimensions(rts, 4, 1);
           ssSetOutputPortWidth(rts, 4, 1);
-          ssSetOutputPortSignal(rts, 4, ((uint8_T *) &CAN_new_B.sfcn_o5_e));
+          ssSetOutputPortSignal(rts, 4, ((int16_T *) &CAN_new_B.sfcn_o5_e));
         }
 
         /* port 5 */
         {
           _ssSetOutputPortNumDimensions(rts, 5, 1);
           ssSetOutputPortWidth(rts, 5, 1);
-          ssSetOutputPortSignal(rts, 5, ((uint8_T *) &CAN_new_B.sfcn_o6_k));
+          ssSetOutputPortSignal(rts, 5, ((int16_T *) &CAN_new_B.sfcn_o6_k));
         }
 
         /* port 6 */
         {
           _ssSetOutputPortNumDimensions(rts, 6, 1);
           ssSetOutputPortWidth(rts, 6, 1);
-          ssSetOutputPortSignal(rts, 6, ((uint8_T *) &CAN_new_B.sfcn_o7_p));
+          ssSetOutputPortSignal(rts, 6, ((int16_T *) &CAN_new_B.sfcn_o7_p));
         }
 
         /* port 7 */
         {
           _ssSetOutputPortNumDimensions(rts, 7, 1);
           ssSetOutputPortWidth(rts, 7, 1);
-          ssSetOutputPortSignal(rts, 7, ((uint8_T *) &CAN_new_B.sfcn_o8_n));
+          ssSetOutputPortSignal(rts, 7, ((int16_T *) &CAN_new_B.sfcn_o8_n));
         }
 
         /* port 8 */
         {
           _ssSetOutputPortNumDimensions(rts, 8, 1);
           ssSetOutputPortWidth(rts, 8, 1);
-          ssSetOutputPortSignal(rts, 8, ((uint8_T *) &CAN_new_B.sfcn_o9_c));
-        }
-
-        /* port 9 */
-        {
-          _ssSetOutputPortNumDimensions(rts, 9, 1);
-          ssSetOutputPortWidth(rts, 9, 1);
-          ssSetOutputPortSignal(rts, 9, ((uint8_T *) &CAN_new_B.sfcn_o10_jl));
-        }
-
-        /* port 10 */
-        {
-          _ssSetOutputPortNumDimensions(rts, 10, 1);
-          ssSetOutputPortWidth(rts, 10, 1);
-          ssSetOutputPortSignal(rts, 10, ((uint8_T *) &CAN_new_B.sfcn_o11_i));
-        }
-
-        /* port 11 */
-        {
-          _ssSetOutputPortNumDimensions(rts, 11, 1);
-          ssSetOutputPortWidth(rts, 11, 1);
-          ssSetOutputPortSignal(rts, 11, ((uint8_T *) &CAN_new_B.sfcn_o12_d));
-        }
-
-        /* port 12 */
-        {
-          _ssSetOutputPortNumDimensions(rts, 12, 1);
-          ssSetOutputPortWidth(rts, 12, 1);
-          ssSetOutputPortSignal(rts, 12, ((uint8_T *) &CAN_new_B.sfcn_o13_n));
-        }
-
-        /* port 13 */
-        {
-          _ssSetOutputPortNumDimensions(rts, 13, 1);
-          ssSetOutputPortWidth(rts, 13, 1);
-          ssSetOutputPortSignal(rts, 13, ((uint8_T *) &CAN_new_B.sfcn_o14_b));
-        }
-
-        /* port 14 */
-        {
-          _ssSetOutputPortNumDimensions(rts, 14, 1);
-          ssSetOutputPortWidth(rts, 14, 1);
-          ssSetOutputPortSignal(rts, 14, ((uint8_T *) &CAN_new_B.sfcn_o15_m));
-        }
-
-        /* port 15 */
-        {
-          _ssSetOutputPortNumDimensions(rts, 15, 1);
-          ssSetOutputPortWidth(rts, 15, 1);
-          ssSetOutputPortSignal(rts, 15, ((uint8_T *) &CAN_new_B.sfcn_o16_o));
-        }
-
-        /* port 16 */
-        {
-          _ssSetOutputPortNumDimensions(rts, 16, 1);
-          ssSetOutputPortWidth(rts, 16, 1);
-          ssSetOutputPortSignal(rts, 16, ((uint8_T *) &CAN_new_B.sfcn_o17));
-        }
-
-        /* port 17 */
-        {
-          _ssSetOutputPortNumDimensions(rts, 17, 1);
-          ssSetOutputPortWidth(rts, 17, 1);
-          ssSetOutputPortSignal(rts, 17, ((uint8_T *) &CAN_new_B.sfcn_o18));
-        }
-
-        /* port 18 */
-        {
-          _ssSetOutputPortNumDimensions(rts, 18, 1);
-          ssSetOutputPortWidth(rts, 18, 1);
-          ssSetOutputPortSignal(rts, 18, ((uint8_T *) &CAN_new_B.sfcn_o19));
-        }
-
-        /* port 19 */
-        {
-          _ssSetOutputPortNumDimensions(rts, 19, 1);
-          ssSetOutputPortWidth(rts, 19, 1);
-          ssSetOutputPortSignal(rts, 19, ((uint8_T *) &CAN_new_B.sfcn_o20));
-        }
-
-        /* port 20 */
-        {
-          _ssSetOutputPortNumDimensions(rts, 20, 1);
-          ssSetOutputPortWidth(rts, 20, 1);
-          ssSetOutputPortSignal(rts, 20, ((uint8_T *) &CAN_new_B.sfcn_o21));
-        }
-
-        /* port 21 */
-        {
-          _ssSetOutputPortNumDimensions(rts, 21, 1);
-          ssSetOutputPortWidth(rts, 21, 1);
-          ssSetOutputPortSignal(rts, 21, ((uint8_T *) &CAN_new_B.sfcn_o22));
-        }
-
-        /* port 22 */
-        {
-          _ssSetOutputPortNumDimensions(rts, 22, 1);
-          ssSetOutputPortWidth(rts, 22, 1);
-          ssSetOutputPortSignal(rts, 22, ((uint8_T *) &CAN_new_B.sfcn_o23));
-        }
-
-        /* port 23 */
-        {
-          _ssSetOutputPortNumDimensions(rts, 23, 1);
-          ssSetOutputPortWidth(rts, 23, 1);
-          ssSetOutputPortSignal(rts, 23, ((uint8_T *) &CAN_new_B.sfcn_o24));
-        }
-
-        /* port 24 */
-        {
-          _ssSetOutputPortNumDimensions(rts, 24, 1);
-          ssSetOutputPortWidth(rts, 24, 1);
-          ssSetOutputPortSignal(rts, 24, ((uint8_T *) &CAN_new_B.sfcn_o25));
+          ssSetOutputPortSignal(rts, 8, ((int16_T *) &CAN_new_B.sfcn_o9_c));
         }
       }
 
@@ -1230,21 +1052,6 @@ RT_MODEL_CAN_new_T *CAN_new(void)
       _ssSetInputPortConnected(rts, 6, 1);
       _ssSetInputPortConnected(rts, 7, 1);
       _ssSetInputPortConnected(rts, 8, 1);
-      _ssSetInputPortConnected(rts, 9, 1);
-      _ssSetInputPortConnected(rts, 10, 1);
-      _ssSetInputPortConnected(rts, 11, 1);
-      _ssSetInputPortConnected(rts, 12, 1);
-      _ssSetInputPortConnected(rts, 13, 1);
-      _ssSetInputPortConnected(rts, 14, 1);
-      _ssSetInputPortConnected(rts, 15, 1);
-      _ssSetInputPortConnected(rts, 16, 1);
-      _ssSetInputPortConnected(rts, 17, 1);
-      _ssSetInputPortConnected(rts, 18, 1);
-      _ssSetInputPortConnected(rts, 19, 1);
-      _ssSetInputPortConnected(rts, 20, 1);
-      _ssSetInputPortConnected(rts, 21, 1);
-      _ssSetInputPortConnected(rts, 22, 1);
-      _ssSetInputPortConnected(rts, 23, 1);
       _ssSetOutputPortConnected(rts, 0, 1);
       _ssSetOutputPortConnected(rts, 1, 1);
       _ssSetOutputPortConnected(rts, 2, 1);
@@ -1254,22 +1061,6 @@ RT_MODEL_CAN_new_T *CAN_new(void)
       _ssSetOutputPortConnected(rts, 6, 1);
       _ssSetOutputPortConnected(rts, 7, 1);
       _ssSetOutputPortConnected(rts, 8, 1);
-      _ssSetOutputPortConnected(rts, 9, 1);
-      _ssSetOutputPortConnected(rts, 10, 1);
-      _ssSetOutputPortConnected(rts, 11, 1);
-      _ssSetOutputPortConnected(rts, 12, 1);
-      _ssSetOutputPortConnected(rts, 13, 1);
-      _ssSetOutputPortConnected(rts, 14, 1);
-      _ssSetOutputPortConnected(rts, 15, 1);
-      _ssSetOutputPortConnected(rts, 16, 1);
-      _ssSetOutputPortConnected(rts, 17, 1);
-      _ssSetOutputPortConnected(rts, 18, 1);
-      _ssSetOutputPortConnected(rts, 19, 1);
-      _ssSetOutputPortConnected(rts, 20, 1);
-      _ssSetOutputPortConnected(rts, 21, 1);
-      _ssSetOutputPortConnected(rts, 22, 1);
-      _ssSetOutputPortConnected(rts, 23, 1);
-      _ssSetOutputPortConnected(rts, 24, 1);
       _ssSetOutputPortBeingMerged(rts, 0, 0);
       _ssSetOutputPortBeingMerged(rts, 1, 0);
       _ssSetOutputPortBeingMerged(rts, 2, 0);
@@ -1279,22 +1070,6 @@ RT_MODEL_CAN_new_T *CAN_new(void)
       _ssSetOutputPortBeingMerged(rts, 6, 0);
       _ssSetOutputPortBeingMerged(rts, 7, 0);
       _ssSetOutputPortBeingMerged(rts, 8, 0);
-      _ssSetOutputPortBeingMerged(rts, 9, 0);
-      _ssSetOutputPortBeingMerged(rts, 10, 0);
-      _ssSetOutputPortBeingMerged(rts, 11, 0);
-      _ssSetOutputPortBeingMerged(rts, 12, 0);
-      _ssSetOutputPortBeingMerged(rts, 13, 0);
-      _ssSetOutputPortBeingMerged(rts, 14, 0);
-      _ssSetOutputPortBeingMerged(rts, 15, 0);
-      _ssSetOutputPortBeingMerged(rts, 16, 0);
-      _ssSetOutputPortBeingMerged(rts, 17, 0);
-      _ssSetOutputPortBeingMerged(rts, 18, 0);
-      _ssSetOutputPortBeingMerged(rts, 19, 0);
-      _ssSetOutputPortBeingMerged(rts, 20, 0);
-      _ssSetOutputPortBeingMerged(rts, 21, 0);
-      _ssSetOutputPortBeingMerged(rts, 22, 0);
-      _ssSetOutputPortBeingMerged(rts, 23, 0);
-      _ssSetOutputPortBeingMerged(rts, 24, 0);
 
       /* Update the BufferDstPort flags for each input port */
       ssSetInputPortBufferDstPort(rts, 0, -1);
@@ -1306,21 +1081,6 @@ RT_MODEL_CAN_new_T *CAN_new(void)
       ssSetInputPortBufferDstPort(rts, 6, -1);
       ssSetInputPortBufferDstPort(rts, 7, -1);
       ssSetInputPortBufferDstPort(rts, 8, -1);
-      ssSetInputPortBufferDstPort(rts, 9, -1);
-      ssSetInputPortBufferDstPort(rts, 10, -1);
-      ssSetInputPortBufferDstPort(rts, 11, -1);
-      ssSetInputPortBufferDstPort(rts, 12, -1);
-      ssSetInputPortBufferDstPort(rts, 13, -1);
-      ssSetInputPortBufferDstPort(rts, 14, -1);
-      ssSetInputPortBufferDstPort(rts, 15, -1);
-      ssSetInputPortBufferDstPort(rts, 16, -1);
-      ssSetInputPortBufferDstPort(rts, 17, -1);
-      ssSetInputPortBufferDstPort(rts, 18, -1);
-      ssSetInputPortBufferDstPort(rts, 19, -1);
-      ssSetInputPortBufferDstPort(rts, 20, -1);
-      ssSetInputPortBufferDstPort(rts, 21, -1);
-      ssSetInputPortBufferDstPort(rts, 22, -1);
-      ssSetInputPortBufferDstPort(rts, 23, -1);
     }
 
     /* Level2 S-Function Block: CAN_new/<S9>/sfcn (RTICANMM_SETUP_Controller3) */
@@ -1415,7 +1175,7 @@ RT_MODEL_CAN_new_T *CAN_new(void)
       ssSetInputPortBufferDstPort(rts, 1, -1);
     }
 
-    /* Level2 S-Function Block: CAN_new/<S16>/sfcn (RTICANMM_SETUP_Controller2) */
+    /* Level2 S-Function Block: CAN_new/<S20>/sfcn (RTICANMM_MAIN_CAN_2) */
     {
       SimStruct *rts = CAN_new_M->childSfunctions[4];
 
@@ -1453,102 +1213,10 @@ RT_MODEL_CAN_new_T *CAN_new(void)
         ssSetStatesInfo2(rts, &CAN_new_M->NonInlinedSFcns.statesInfo2[4]);
       }
 
-      /* inputs */
-      {
-        _ssSetNumInputPorts(rts, 2);
-        ssSetPortInfoForInputs(rts,
-          &CAN_new_M->NonInlinedSFcns.Sfcn4.inputPortInfo[0]);
-
-        /* port 0 */
-        {
-          ssSetInputPortRequiredContiguous(rts, 0, 1);
-          ssSetInputPortSignal(rts, 0, &CAN_new_B.Variation_DTC_h);
-          _ssSetInputPortNumDimensions(rts, 0, 1);
-          ssSetInputPortWidth(rts, 0, 1);
-        }
-
-        /* port 1 */
-        {
-          ssSetInputPortRequiredContiguous(rts, 1, 1);
-          ssSetInputPortSignal(rts, 1,
-                               &CAN_new_P.ResetRTICANMMControllerSetup__k);
-          _ssSetInputPortNumDimensions(rts, 1, 1);
-          ssSetInputPortWidth(rts, 1, 1);
-        }
-      }
-
-      /* path info */
-      ssSetModelName(rts, "sfcn");
-      ssSetPath(rts, "CAN_new/ETS_CAN1/RTICANMM ControllerSetup/sfcn");
-      ssSetRTModel(rts,CAN_new_M);
-      ssSetParentSS(rts, (NULL));
-      ssSetRootSS(rts, rts);
-      ssSetVersion(rts, SIMSTRUCT_VERSION_LEVEL2);
-
-      /* registration */
-      RTICANMM_SETUP_Controller2(rts);
-      sfcnInitializeSizes(rts);
-      sfcnInitializeSampleTimes(rts);
-
-      /* adjust sample time */
-      ssSetSampleTime(rts, 0, 0.001);
-      ssSetOffsetTime(rts, 0, 0.0);
-      sfcnTsMap[0] = 0;
-
-      /* set compiled values of dynamic vector attributes */
-      ssSetNumNonsampledZCs(rts, 0);
-
-      /* Update connectivity flags for each port */
-      _ssSetInputPortConnected(rts, 0, 1);
-      _ssSetInputPortConnected(rts, 1, 1);
-
-      /* Update the BufferDstPort flags for each input port */
-      ssSetInputPortBufferDstPort(rts, 0, -1);
-      ssSetInputPortBufferDstPort(rts, 1, -1);
-    }
-
-    /* Level2 S-Function Block: CAN_new/<S17>/sfcn (RTICANMM_MAIN_CAN_2) */
-    {
-      SimStruct *rts = CAN_new_M->childSfunctions[5];
-
-      /* timing info */
-      time_T *sfcnPeriod = CAN_new_M->NonInlinedSFcns.Sfcn5.sfcnPeriod;
-      time_T *sfcnOffset = CAN_new_M->NonInlinedSFcns.Sfcn5.sfcnOffset;
-      int_T *sfcnTsMap = CAN_new_M->NonInlinedSFcns.Sfcn5.sfcnTsMap;
-      (void) memset((void*)sfcnPeriod, 0,
-                    sizeof(time_T)*1);
-      (void) memset((void*)sfcnOffset, 0,
-                    sizeof(time_T)*1);
-      ssSetSampleTimePtr(rts, &sfcnPeriod[0]);
-      ssSetOffsetTimePtr(rts, &sfcnOffset[0]);
-      ssSetSampleTimeTaskIDPtr(rts, sfcnTsMap);
-
-      /* Set up the mdlInfo pointer */
-      {
-        ssSetBlkInfo2Ptr(rts, &CAN_new_M->NonInlinedSFcns.blkInfo2[5]);
-      }
-
-      ssSetRTWSfcnInfo(rts, CAN_new_M->sfcnInfo);
-
-      /* Allocate memory of model methods 2 */
-      {
-        ssSetModelMethods2(rts, &CAN_new_M->NonInlinedSFcns.methods2[5]);
-      }
-
-      /* Allocate memory of model methods 3 */
-      {
-        ssSetModelMethods3(rts, &CAN_new_M->NonInlinedSFcns.methods3[5]);
-      }
-
-      /* Allocate memory for states auxilliary information */
-      {
-        ssSetStatesInfo2(rts, &CAN_new_M->NonInlinedSFcns.statesInfo2[5]);
-      }
-
       /* outputs */
       {
         ssSetPortInfoForOutputs(rts,
-          &CAN_new_M->NonInlinedSFcns.Sfcn5.outputPortInfo[0]);
+          &CAN_new_M->NonInlinedSFcns.Sfcn4.outputPortInfo[0]);
         _ssSetNumOutputPorts(rts, 97);
 
         /* port 0 */
@@ -1667,63 +1335,63 @@ RT_MODEL_CAN_new_T *CAN_new(void)
         {
           _ssSetOutputPortNumDimensions(rts, 16, 1);
           ssSetOutputPortWidth(rts, 16, 1);
-          ssSetOutputPortSignal(rts, 16, ((uint8_T *) &CAN_new_B.sfcn_o17_n));
+          ssSetOutputPortSignal(rts, 16, ((uint8_T *) &CAN_new_B.sfcn_o17));
         }
 
         /* port 17 */
         {
           _ssSetOutputPortNumDimensions(rts, 17, 1);
           ssSetOutputPortWidth(rts, 17, 1);
-          ssSetOutputPortSignal(rts, 17, ((uint8_T *) &CAN_new_B.sfcn_o18_l));
+          ssSetOutputPortSignal(rts, 17, ((uint8_T *) &CAN_new_B.sfcn_o18));
         }
 
         /* port 18 */
         {
           _ssSetOutputPortNumDimensions(rts, 18, 1);
           ssSetOutputPortWidth(rts, 18, 1);
-          ssSetOutputPortSignal(rts, 18, ((uint8_T *) &CAN_new_B.sfcn_o19_d));
+          ssSetOutputPortSignal(rts, 18, ((uint8_T *) &CAN_new_B.sfcn_o19));
         }
 
         /* port 19 */
         {
           _ssSetOutputPortNumDimensions(rts, 19, 1);
           ssSetOutputPortWidth(rts, 19, 1);
-          ssSetOutputPortSignal(rts, 19, ((uint8_T *) &CAN_new_B.sfcn_o20_m));
+          ssSetOutputPortSignal(rts, 19, ((uint8_T *) &CAN_new_B.sfcn_o20));
         }
 
         /* port 20 */
         {
           _ssSetOutputPortNumDimensions(rts, 20, 1);
           ssSetOutputPortWidth(rts, 20, 1);
-          ssSetOutputPortSignal(rts, 20, ((uint8_T *) &CAN_new_B.sfcn_o21_i));
+          ssSetOutputPortSignal(rts, 20, ((uint8_T *) &CAN_new_B.sfcn_o21));
         }
 
         /* port 21 */
         {
           _ssSetOutputPortNumDimensions(rts, 21, 1);
           ssSetOutputPortWidth(rts, 21, 1);
-          ssSetOutputPortSignal(rts, 21, ((uint8_T *) &CAN_new_B.sfcn_o22_c));
+          ssSetOutputPortSignal(rts, 21, ((uint8_T *) &CAN_new_B.sfcn_o22));
         }
 
         /* port 22 */
         {
           _ssSetOutputPortNumDimensions(rts, 22, 1);
           ssSetOutputPortWidth(rts, 22, 1);
-          ssSetOutputPortSignal(rts, 22, ((uint8_T *) &CAN_new_B.sfcn_o23_f));
+          ssSetOutputPortSignal(rts, 22, ((uint8_T *) &CAN_new_B.sfcn_o23));
         }
 
         /* port 23 */
         {
           _ssSetOutputPortNumDimensions(rts, 23, 1);
           ssSetOutputPortWidth(rts, 23, 1);
-          ssSetOutputPortSignal(rts, 23, ((uint8_T *) &CAN_new_B.sfcn_o24_m));
+          ssSetOutputPortSignal(rts, 23, ((uint8_T *) &CAN_new_B.sfcn_o24));
         }
 
         /* port 24 */
         {
           _ssSetOutputPortNumDimensions(rts, 24, 1);
           ssSetOutputPortWidth(rts, 24, 1);
-          ssSetOutputPortSignal(rts, 24, ((uint8_T *) &CAN_new_B.sfcn_o25_f));
+          ssSetOutputPortSignal(rts, 24, ((uint8_T *) &CAN_new_B.sfcn_o25));
         }
 
         /* port 25 */
@@ -2245,9 +1913,9 @@ RT_MODEL_CAN_new_T *CAN_new(void)
 
       {
         struct _ssDWorkRecord *dWorkRecord = (struct _ssDWorkRecord *)
-          &CAN_new_M->NonInlinedSFcns.Sfcn5.dWork;
+          &CAN_new_M->NonInlinedSFcns.Sfcn4.dWork;
         struct _ssDWorkAuxRecord *dWorkAuxRecord = (struct _ssDWorkAuxRecord *)
-          &CAN_new_M->NonInlinedSFcns.Sfcn5.dWorkAux;
+          &CAN_new_M->NonInlinedSFcns.Sfcn4.dWorkAux;
         ssSetSFcnDWork(rts, dWorkRecord);
         ssSetSFcnDWorkAux(rts, dWorkAuxRecord);
         _ssSetNumDWork(rts, 2);
@@ -2476,6 +2144,98 @@ RT_MODEL_CAN_new_T *CAN_new(void)
 
       /* Update the BufferDstPort flags for each input port */
     }
+
+    /* Level2 S-Function Block: CAN_new/<S19>/sfcn (RTICANMM_SETUP_Controller2) */
+    {
+      SimStruct *rts = CAN_new_M->childSfunctions[5];
+
+      /* timing info */
+      time_T *sfcnPeriod = CAN_new_M->NonInlinedSFcns.Sfcn5.sfcnPeriod;
+      time_T *sfcnOffset = CAN_new_M->NonInlinedSFcns.Sfcn5.sfcnOffset;
+      int_T *sfcnTsMap = CAN_new_M->NonInlinedSFcns.Sfcn5.sfcnTsMap;
+      (void) memset((void*)sfcnPeriod, 0,
+                    sizeof(time_T)*1);
+      (void) memset((void*)sfcnOffset, 0,
+                    sizeof(time_T)*1);
+      ssSetSampleTimePtr(rts, &sfcnPeriod[0]);
+      ssSetOffsetTimePtr(rts, &sfcnOffset[0]);
+      ssSetSampleTimeTaskIDPtr(rts, sfcnTsMap);
+
+      /* Set up the mdlInfo pointer */
+      {
+        ssSetBlkInfo2Ptr(rts, &CAN_new_M->NonInlinedSFcns.blkInfo2[5]);
+      }
+
+      ssSetRTWSfcnInfo(rts, CAN_new_M->sfcnInfo);
+
+      /* Allocate memory of model methods 2 */
+      {
+        ssSetModelMethods2(rts, &CAN_new_M->NonInlinedSFcns.methods2[5]);
+      }
+
+      /* Allocate memory of model methods 3 */
+      {
+        ssSetModelMethods3(rts, &CAN_new_M->NonInlinedSFcns.methods3[5]);
+      }
+
+      /* Allocate memory for states auxilliary information */
+      {
+        ssSetStatesInfo2(rts, &CAN_new_M->NonInlinedSFcns.statesInfo2[5]);
+      }
+
+      /* inputs */
+      {
+        _ssSetNumInputPorts(rts, 2);
+        ssSetPortInfoForInputs(rts,
+          &CAN_new_M->NonInlinedSFcns.Sfcn5.inputPortInfo[0]);
+
+        /* port 0 */
+        {
+          ssSetInputPortRequiredContiguous(rts, 0, 1);
+          ssSetInputPortSignal(rts, 0, &CAN_new_B.Variation_DTC_h);
+          _ssSetInputPortNumDimensions(rts, 0, 1);
+          ssSetInputPortWidth(rts, 0, 1);
+        }
+
+        /* port 1 */
+        {
+          ssSetInputPortRequiredContiguous(rts, 1, 1);
+          ssSetInputPortSignal(rts, 1,
+                               &CAN_new_P.ResetRTICANMMControllerSetup__k);
+          _ssSetInputPortNumDimensions(rts, 1, 1);
+          ssSetInputPortWidth(rts, 1, 1);
+        }
+      }
+
+      /* path info */
+      ssSetModelName(rts, "sfcn");
+      ssSetPath(rts, "CAN_new/ETS_CAN1/RTICANMM ControllerSetup/sfcn");
+      ssSetRTModel(rts,CAN_new_M);
+      ssSetParentSS(rts, (NULL));
+      ssSetRootSS(rts, rts);
+      ssSetVersion(rts, SIMSTRUCT_VERSION_LEVEL2);
+
+      /* registration */
+      RTICANMM_SETUP_Controller2(rts);
+      sfcnInitializeSizes(rts);
+      sfcnInitializeSampleTimes(rts);
+
+      /* adjust sample time */
+      ssSetSampleTime(rts, 0, 0.001);
+      ssSetOffsetTime(rts, 0, 0.0);
+      sfcnTsMap[0] = 0;
+
+      /* set compiled values of dynamic vector attributes */
+      ssSetNumNonsampledZCs(rts, 0);
+
+      /* Update connectivity flags for each port */
+      _ssSetInputPortConnected(rts, 0, 1);
+      _ssSetInputPortConnected(rts, 1, 1);
+
+      /* Update the BufferDstPort flags for each input port */
+      ssSetInputPortBufferDstPort(rts, 0, -1);
+      ssSetInputPortBufferDstPort(rts, 1, -1);
+    }
   }
 
   {
@@ -2491,9 +2251,9 @@ RT_MODEL_CAN_new_T *CAN_new(void)
   CAN_new_M->Sizes.numU = (0);         /* Number of model inputs */
   CAN_new_M->Sizes.sysDirFeedThru = (0);/* The model is not direct feedthrough */
   CAN_new_M->Sizes.numSampTimes = (1); /* Number of sample times */
-  CAN_new_M->Sizes.numBlocks = (25);   /* Number of blocks */
-  CAN_new_M->Sizes.numBlockIO = (140); /* Number of block outputs */
-  CAN_new_M->Sizes.numBlockPrms = (40);/* Sum of parameter "widths" */
+  CAN_new_M->Sizes.numBlocks = (41);   /* Number of blocks */
+  CAN_new_M->Sizes.numBlockIO = (133); /* Number of block outputs */
+  CAN_new_M->Sizes.numBlockPrms = (49);/* Sum of parameter "widths" */
   return CAN_new_M;
 }
 

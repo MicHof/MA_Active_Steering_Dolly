@@ -487,14 +487,3 @@ static void mdlTerminate(SimStruct *S)
     #include "cg_sfun.h"       /* Code generation registration function */                                                 
 #endif                                                                                                                     
  
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 

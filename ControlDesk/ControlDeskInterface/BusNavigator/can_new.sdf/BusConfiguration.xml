@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <BNVSerialization xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" NavigatorTreeType="Default">
   <XMLVersion>2.0.0</XMLVersion>
-  <Monitor RingBufferMode="Continious" UseJ1939PGNResolving="false" UpdateRate="100" UniqueObjectIdentifier="b8185c2d-7b80-48a0-9b83-a5a6215f5ac3" Accessor="&lt;Accessor Version=&quot;2&quot; Identifier=&quot;BusNavigator/BusConfigurations/0e445f79-4de2-43d1-b2ed-4ed4946a6616/Processors/Master/Hardwares/CAN/Controllers/Controller3/&quot; Type=&quot;Path&quot; /&gt;" ViewVisible="false" Name="Monitor1_Controller3" SyncMonitoringWithParent="true" ProtocolType="CAN" RingBufferSizeValue="10000">
+  <Monitor RingBufferMode="Continious" UseJ1939PGNResolving="false" UpdateRate="100" UniqueObjectIdentifier="41334c39-9974-4ad9-9f1a-1bd2c9a4ef2f" Accessor="&lt;Accessor Version=&quot;2&quot; Identifier=&quot;BusNavigator/BusConfigurations/0e445f79-4de2-43d1-b2ed-4ed4946a6616/Processors/Master/Hardwares/CAN/Controllers/Controller3/&quot; Type=&quot;Path&quot; /&gt;" ViewVisible="false" Name="Monitor1_Controller3" SyncMonitoringWithParent="true" ProtocolType="CAN" RingBufferSizeValue="10000">
     <MonitoringViewSettings KernelSubViewMode="FrameSignals" ScrollMode="Tail" KernelViewMode="StaticView" ProtocolType="CAN" Version="1">
       <ConfiguredColumns>
-        <ColumnSetting ID="Identifier" Width="190" SortOrder="None" IsConfigured="true" />
+        <ColumnSetting ID="Identifier" Width="190" SortOrder="Ascending" IsConfigured="true" />
         <ColumnSetting ID="MonitorTimestamp" Width="95" SortOrder="None" IsConfigured="true" />
         <ColumnSetting ID="Id" Width="71" SortOrder="None" IsConfigured="true" />
         <ColumnSetting ID="ControllerID" Width="90" SortOrder="None" IsConfigured="true" />
-        <ColumnSetting ID="Name" Width="204" SortOrder="Ascending" IsConfigured="true" />
+        <ColumnSetting ID="Name" Width="253" SortOrder="None" IsConfigured="true" />
         <ColumnSetting ID="Direction" Width="34" SortOrder="None" IsConfigured="true" />
         <ColumnSetting ID="DataLengthCode" Width="27" SortOrder="None" IsConfigured="true" />
-        <ColumnSetting ID="RawBytes" Width="185" SortOrder="None" IsConfigured="true" />
         <ColumnSetting ID="Deltatime" Width="83" SortOrder="None" IsConfigured="true" />
+        <ColumnSetting ID="RawBytes" Width="185" SortOrder="None" IsConfigured="true" />
         <ColumnSetting ID="IdFormat" Width="43" SortOrder="None" IsConfigured="false" />
         <ColumnSetting ID="BusStatus" Width="75" SortOrder="None" IsConfigured="false" />
         <ColumnSetting ID="OnlineTimestamp" Width="75" SortOrder="None" IsConfigured="false" />

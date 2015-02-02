@@ -36,8 +36,41 @@ BS_:
 BU_:
 
 
-BO_ 3 New_Message_1: 2 Vector__XXX
- SG_ New_Signal_3 : 0|16@1- (1,0) [0|0] "" Vector__XXX
+BO_ 9 IMU_angle_corrected_z: 2 Vector__XXX
+ SG_ IMU_angle_corrected_z : 0|16@1- (0.001,0) [0|0] "" Vector__XXX
+
+BO_ 262 IMU_acceleration_z: 2 Vector__XXX
+ SG_ IMU_acceleration_z : 0|16@1- (1,0) [0|0] "" Vector__XXX
+
+BO_ 261 IMU_acceleration_y: 2 Vector__XXX
+ SG_ IMU_acceleration_y : 0|16@1- (1,0) [0|0] "" Vector__XXX
+
+BO_ 260 IMU_acceleration_x: 2 Vector__XXX
+ SG_ IMU_acceleration_x : 0|16@1- (1,0) [0|0] "" Vector__XXX
+
+BO_ 7 IMU_angle_corrected_x: 2 Vector__XXX
+ SG_ IMU_angle_corrected_x : 0|16@1- (0.001,0) [0|0] "" Vector__XXX
+
+BO_ 8 IMU_angle_corrected_y: 2 Vector__XXX
+ SG_ IMU_angle_corrected_y : 0|16@1- (0.001,0) [0|0] "" Vector__XXX
+
+BO_ 6 IMU_accelerometer_raw_z: 2 Vector__XXX
+ SG_ IMU_accelerometer_raw_z : 0|16@1- (1,0) [0|0] "" Vector__XXX
+
+BO_ 5 IMU_accelerometer_raw_y: 2 Vector__XXX
+ SG_ IMU_accelerometer_raw_y : 0|16@1- (1,0) [0|0] "" Vector__XXX
+
+BO_ 4 IMU_accelerometer_raw_x: 2 Vector__XXX
+ SG_ IMU_accelerometer_raw_x : 0|16@1- (1,0) [0|0] "" Vector__XXX
+
+BO_ 1 IMU_gyro_x: 2 Vector__XXX
+ SG_ IMU_gyro_x : 0|16@1- (1,0) [0|0] "" Vector__XXX
+
+BO_ 2 IMU_gyro_y: 2 Vector__XXX
+ SG_ IMU_gyro_y : 0|16@1- (1,0) [0|0] "" Vector__XXX
+
+BO_ 3 IMU_gyro_z: 2 Vector__XXX
+ SG_ IMU_gyro_z : 0|16@1- (1,0) [0|0] "" Vector__XXX
 
 
 

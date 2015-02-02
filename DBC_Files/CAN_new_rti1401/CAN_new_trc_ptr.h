@@ -5,7 +5,7 @@
    Declaration of function that initializes the global TRC pointers
 
    RTI1401 7.2 (02-May-2014)
-   Tue Jan 27 15:24:17 2015
+   Mon Feb 02 10:16:50 2015
 
    (c) Copyright 2008, dSPACE GmbH. All rights reserved.
 
@@ -52,6 +52,6 @@
               p_CAN_new_P_uint16_T_1 = &CAN_new_P.RTICANMMCHANNEL_TLC_P6[0];\
               p_CAN_new_P_uint8_T_2 = &CAN_new_P.VariationRTICANMMControllerSetu;\
               p_CAN_new_P_boolean_T_3 = &CAN_new_P.ResetRTICANMMControllerSetup_Va;\
-              p_CAN_new_DW_real_T_0 = &CAN_new_DW.sfcn_RWORK;\
+              p_CAN_new_DW_real_T_0 = &CAN_new_DW.IMU_accel_corrected_x_DWORK1;\
 
    #endif                       /* RTI_HEADER_CAN_new_trc_ptr_h_ */

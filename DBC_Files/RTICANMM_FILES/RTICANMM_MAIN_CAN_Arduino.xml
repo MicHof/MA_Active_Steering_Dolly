@@ -52,51 +52,591 @@
       <ECU>
          <Name>Vector__XXX</Name>
          <NodeIndex>1</NodeIndex>
-         <Generic></Generic>
+         <Generic>
+            <ECUVar attName="En">
+               <InportDefault>0</InportDefault>
+               <Logic>-</Logic>
+               <Source>TRC</Source>
+               <TN>Vector__XXX_Enable</TN>
+               <DN>Vector__XXX</DN>
+            </ECUVar>
+         </Generic>
       </ECU>
    </ECUs>
-   <Msgs attCount="1">
-      <Msg ID="3" Name="New_Message_1" DBCName="New_Message_1" DBCID="3">
+   <Msgs attCount="3">
+      <Msg ID="1" Name="IMU_accelerometer" DBCName="IMU_accelerometer" DBCID="1">
          <ECU>Vector__XXX</ECU>
          <RECU>Vector__XXX</RECU>
          <FreeRawMsg>OFF</FreeRawMsg>
          <CaptureMsg>OFF</CaptureMsg>
-         <Len>2</Len>
-         <Dir>1</Dir>
+         <Len>6</Len>
+         <Dir>3</Dir>
          <Vars attCount="0"/>
+         <TX>
+            <Generic>
+               <TXVar attName="CEn">
+                  <TN>IMU_accelerometer_CheckEnable</TN>
+                  <DN>CheckEnable</DN>
+               </TXVar>
+               <TXVar attName="En">
+                  <InportDefault>0</InportDefault>
+                  <Logic>-</Logic>
+                  <Source>TRC</Source>
+                  <TN>IMU_accelerometer_Enable</TN>
+                  <DN>Enable</DN>
+               </TXVar>
+               <TXVar attName="Cyclic">
+                  <InportDefault>0</InportDefault>
+                  <Logic>-</Logic>
+                  <Source>TRC</Source>
+                  <TN>IMU_accelerometer_PeriodicalOn</TN>
+                  <DN>PeriodicalOn</DN>
+               </TXVar>
+               <TXVar attName="Kout">
+                  <TN>IMU_accelerometer_Kickout</TN>
+                  <DN>Kickout</DN>
+                  <Type>Button</Type>
+               </TXVar>
+               <TXVar attName="Delay">
+                  <TN>IMU_accelerometer_DelayTime</TN>
+                  <DN>DelayTime</DN>
+                  <Type>Display</Type>
+               </TXVar>
+               <TXVar attName="Status">
+                  <TN>IMU_accelerometer_status</TN>
+                  <DN>IMU_accelerometer_status</DN>
+                  <Type>Display</Type>
+               </TXVar>
+               <TXVar attName="CycleTime">
+                  <TN>IMU_accelerometer_CycleTime</TN>
+                  <DN>CycleTime</DN>
+                  <Type>Input</Type>
+               </TXVar>
+            </Generic>
+            <ERD>
+               <A>OFF</A>
+               <ERDTRC>
+                  <A>OFF</A>
+                  <ByteMap attIdx="1">
+                     <TN>IMU_accelerometer_RAW_byte_1</TN>
+                     <DN>RAWswitch_1</DN>
+                  </ByteMap>
+                  <ByteMap attIdx="2">
+                     <TN>IMU_accelerometer_RAW_byte_2</TN>
+                     <DN>RAWswitch_2</DN>
+                  </ByteMap>
+                  <ByteMap attIdx="3">
+                     <TN>IMU_accelerometer_RAW_byte_3</TN>
+                     <DN>RAWswitch_3</DN>
+                  </ByteMap>
+                  <ByteMap attIdx="4">
+                     <TN>IMU_accelerometer_RAW_byte_4</TN>
+                     <DN>RAWswitch_4</DN>
+                  </ByteMap>
+                  <ByteMap attIdx="5">
+                     <TN>IMU_accelerometer_RAW_byte_5</TN>
+                     <DN>RAWswitch_5</DN>
+                  </ByteMap>
+                  <ByteMap attIdx="6">
+                     <TN>IMU_accelerometer_RAW_byte_6</TN>
+                     <DN>RAWswitch_6</DN>
+                  </ByteMap>
+                  <ByteMap attIdx="7">
+                     <TN>IMU_accelerometer_RAW_byte_7</TN>
+                     <DN>RAWswitch_7</DN>
+                  </ByteMap>
+                  <ByteMap attIdx="8">
+                     <TN>IMU_accelerometer_RAW_byte_8</TN>
+                     <DN>RAWswitch_8</DN>
+                  </ByteMap>
+               </ERDTRC>
+               <Switch>
+                  <A>OFF</A>
+                  <TN>IMU_accelerometer_RAW_switch</TN>
+                  <DN>RAWswitch</DN>
+               </Switch>
+            </ERD>
+            <RDD>
+               <A>OFF</A>
+            </RDD>
+         </TX>
          <RX>
             <Generic>
                <RXVar attName="StdID">
-                  <TN>New_Message_1_ID</TN>
-                  <DN>New_Message_1_ID</DN>
+                  <TN>IMU_accelerometer_ID</TN>
+                  <DN>IMU_accelerometer_ID</DN>
                </RXVar>
                <RXVar attName="Len">
-                  <TN>New_Message_1_Length</TN>
-                  <DN>New_Message_1_Length</DN>
+                  <TN>IMU_accelerometer_Length</TN>
+                  <DN>IMU_accelerometer_Length</DN>
                </RXVar>
                <RXVar attName="Status">
-                  <TN>New_Message_1_status</TN>
-                  <DN>New_Message_1_status</DN>
+                  <TN>IMU_accelerometer_status</TN>
+                  <DN>IMU_accelerometer_status</DN>
                </RXVar>
                <RXVar attName="Time">
-                  <TN>New_Message_1_time</TN>
-                  <DN>New_Message_1_time</DN>
+                  <TN>IMU_accelerometer_time</TN>
+                  <DN>IMU_accelerometer_time</DN>
                </RXVar>
                <RXVar attName="DeltaTime">
-                  <TN>New_Message_1_dt</TN>
-                  <DN>New_Message_1_dt</DN>
+                  <TN>IMU_accelerometer_dt</TN>
+                  <DN>IMU_accelerometer_dt</DN>
+               </RXVar>
+               <RXVar attName="CycleTime">
+                  <TN>IMU_accelerometer_CycleTime</TN>
+                  <DN>CycleTime</DN>
                </RXVar>
             </Generic>
          </RX>
-         <Sgns attCount="1">
-            <Sgn attName="New_Signal_3" attStartBit="0">
+         <Sgns attCount="3">
+            <Sgn attName="x" attStartBit="0">
                <Generics>
-                  <SgnTXOpt attName="Err" attValue="0"/>
+                  <SgnTXOpt attName="IN"/>
                </Generics>
                <STRC>
+                  <TX>
+                     <Generics>
+                        <SgnTXVar attName="Const" attValue="x"/>
+                        <SgnTXVar attName="GW" attValue="x_GW"/>
+                        <SgnTXVar attName="GWSw" attValue="x_GwSwitch"/>
+                        <SgnTXVar attName="Sw" attValue="x_Switch"/>
+                        <SgnTXVar attName="DynVal" attValue="x_dynvalue"/>
+                        <SgnTXVar attName="DynValCntd" attValue="x_dyncount"/>
+                     </Generics>
+                  </TX>
                   <RX>
                      <Generics>
-                        <SgnRXVar attName="Const" attValue="New_Signal_3"/>
+                        <SgnRXVar attName="Const" attValue="IMU_accelerometer_x"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="y" attStartBit="16">
+               <Generics>
+                  <SgnTXOpt attName="IN"/>
+               </Generics>
+               <STRC>
+                  <TX>
+                     <Generics>
+                        <SgnTXVar attName="Const" attValue="y"/>
+                        <SgnTXVar attName="GW" attValue="y_GW"/>
+                        <SgnTXVar attName="GWSw" attValue="y_GwSwitch"/>
+                        <SgnTXVar attName="Sw" attValue="y_Switch"/>
+                        <SgnTXVar attName="DynVal" attValue="y_dynvalue"/>
+                        <SgnTXVar attName="DynValCntd" attValue="y_dyncount"/>
+                     </Generics>
+                  </TX>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="IMU_accelerometer_y"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="z" attStartBit="32">
+               <Generics>
+                  <SgnTXOpt attName="IN"/>
+               </Generics>
+               <STRC>
+                  <TX>
+                     <Generics>
+                        <SgnTXVar attName="Const" attValue="z"/>
+                        <SgnTXVar attName="GW" attValue="z_GW"/>
+                        <SgnTXVar attName="GWSw" attValue="z_GwSwitch"/>
+                        <SgnTXVar attName="Sw" attValue="z_Switch"/>
+                        <SgnTXVar attName="DynVal" attValue="z_dynvalue"/>
+                        <SgnTXVar attName="DynValCntd" attValue="z_dyncount"/>
+                     </Generics>
+                  </TX>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="IMU_accelerometer_z"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+         </Sgns>
+      </Msg>
+      <Msg ID="3" Name="IMU_angels_corrected" DBCName="IMU_angels_corrected" DBCID="3">
+         <ECU>Vector__XXX</ECU>
+         <RECU>Vector__XXX</RECU>
+         <FreeRawMsg>OFF</FreeRawMsg>
+         <CaptureMsg>OFF</CaptureMsg>
+         <Len>6</Len>
+         <Dir>3</Dir>
+         <Vars attCount="0"/>
+         <TX>
+            <Generic>
+               <TXVar attName="CEn">
+                  <TN>IMU_angels_corrected_CheckEnable</TN>
+                  <DN>CheckEnable</DN>
+               </TXVar>
+               <TXVar attName="En">
+                  <InportDefault>0</InportDefault>
+                  <Logic>-</Logic>
+                  <Source>TRC</Source>
+                  <TN>IMU_angels_corrected_Enable</TN>
+                  <DN>Enable</DN>
+               </TXVar>
+               <TXVar attName="Cyclic">
+                  <InportDefault>0</InportDefault>
+                  <Logic>-</Logic>
+                  <Source>TRC</Source>
+                  <TN>IMU_angels_corrected_PeriodicalOn</TN>
+                  <DN>PeriodicalOn</DN>
+               </TXVar>
+               <TXVar attName="Kout">
+                  <TN>IMU_angels_corrected_Kickout</TN>
+                  <DN>Kickout</DN>
+                  <Type>Button</Type>
+               </TXVar>
+               <TXVar attName="Delay">
+                  <TN>IMU_angels_corrected_DelayTime</TN>
+                  <DN>DelayTime</DN>
+                  <Type>Display</Type>
+               </TXVar>
+               <TXVar attName="Status">
+                  <TN>IMU_angels_corrected_status</TN>
+                  <DN>IMU_angels_corrected_status</DN>
+                  <Type>Display</Type>
+               </TXVar>
+               <TXVar attName="CycleTime">
+                  <TN>IMU_angels_corrected_CycleTime</TN>
+                  <DN>CycleTime</DN>
+                  <Type>Input</Type>
+               </TXVar>
+            </Generic>
+            <ERD>
+               <A>OFF</A>
+               <ERDTRC>
+                  <A>OFF</A>
+                  <ByteMap attIdx="1">
+                     <TN>IMU_angels_corrected_RAW_byte_1</TN>
+                     <DN>RAWswitch_1</DN>
+                  </ByteMap>
+                  <ByteMap attIdx="2">
+                     <TN>IMU_angels_corrected_RAW_byte_2</TN>
+                     <DN>RAWswitch_2</DN>
+                  </ByteMap>
+                  <ByteMap attIdx="3">
+                     <TN>IMU_angels_corrected_RAW_byte_3</TN>
+                     <DN>RAWswitch_3</DN>
+                  </ByteMap>
+                  <ByteMap attIdx="4">
+                     <TN>IMU_angels_corrected_RAW_byte_4</TN>
+                     <DN>RAWswitch_4</DN>
+                  </ByteMap>
+                  <ByteMap attIdx="5">
+                     <TN>IMU_angels_corrected_RAW_byte_5</TN>
+                     <DN>RAWswitch_5</DN>
+                  </ByteMap>
+                  <ByteMap attIdx="6">
+                     <TN>IMU_angels_corrected_RAW_byte_6</TN>
+                     <DN>RAWswitch_6</DN>
+                  </ByteMap>
+                  <ByteMap attIdx="7">
+                     <TN>IMU_angels_corrected_RAW_byte_7</TN>
+                     <DN>RAWswitch_7</DN>
+                  </ByteMap>
+                  <ByteMap attIdx="8">
+                     <TN>IMU_angels_corrected_RAW_byte_8</TN>
+                     <DN>RAWswitch_8</DN>
+                  </ByteMap>
+               </ERDTRC>
+               <Switch>
+                  <A>OFF</A>
+                  <TN>IMU_angels_corrected_RAW_switch</TN>
+                  <DN>RAWswitch</DN>
+               </Switch>
+            </ERD>
+            <RDD>
+               <A>OFF</A>
+            </RDD>
+         </TX>
+         <RX>
+            <Generic>
+               <RXVar attName="StdID">
+                  <TN>IMU_angels_corrected_ID</TN>
+                  <DN>IMU_angels_corrected_ID</DN>
+               </RXVar>
+               <RXVar attName="Len">
+                  <TN>IMU_angels_corrected_Length</TN>
+                  <DN>IMU_angels_corrected_Length</DN>
+               </RXVar>
+               <RXVar attName="Status">
+                  <TN>IMU_angels_corrected_status</TN>
+                  <DN>IMU_angels_corrected_status</DN>
+               </RXVar>
+               <RXVar attName="Time">
+                  <TN>IMU_angels_corrected_time</TN>
+                  <DN>IMU_angels_corrected_time</DN>
+               </RXVar>
+               <RXVar attName="DeltaTime">
+                  <TN>IMU_angels_corrected_dt</TN>
+                  <DN>IMU_angels_corrected_dt</DN>
+               </RXVar>
+               <RXVar attName="CycleTime">
+                  <TN>IMU_angels_corrected_CycleTime</TN>
+                  <DN>CycleTime</DN>
+               </RXVar>
+            </Generic>
+         </RX>
+         <Sgns attCount="3">
+            <Sgn attName="x" attStartBit="0">
+               <Generics>
+                  <SgnTXOpt attName="IN"/>
+               </Generics>
+               <STRC>
+                  <TX>
+                     <Generics>
+                        <SgnTXVar attName="Const" attValue="x"/>
+                        <SgnTXVar attName="GW" attValue="x_GW"/>
+                        <SgnTXVar attName="GWSw" attValue="x_GwSwitch"/>
+                        <SgnTXVar attName="Sw" attValue="x_Switch"/>
+                        <SgnTXVar attName="DynVal" attValue="x_dynvalue"/>
+                        <SgnTXVar attName="DynValCntd" attValue="x_dyncount"/>
+                     </Generics>
+                  </TX>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="IMU_angels_corrected_x"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="y" attStartBit="16">
+               <Generics>
+                  <SgnTXOpt attName="IN"/>
+               </Generics>
+               <STRC>
+                  <TX>
+                     <Generics>
+                        <SgnTXVar attName="Const" attValue="y"/>
+                        <SgnTXVar attName="GW" attValue="y_GW"/>
+                        <SgnTXVar attName="GWSw" attValue="y_GwSwitch"/>
+                        <SgnTXVar attName="Sw" attValue="y_Switch"/>
+                        <SgnTXVar attName="DynVal" attValue="y_dynvalue"/>
+                        <SgnTXVar attName="DynValCntd" attValue="y_dyncount"/>
+                     </Generics>
+                  </TX>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="IMU_angels_corrected_y"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="z" attStartBit="32">
+               <Generics>
+                  <SgnTXOpt attName="IN"/>
+               </Generics>
+               <STRC>
+                  <TX>
+                     <Generics>
+                        <SgnTXVar attName="Const" attValue="z"/>
+                        <SgnTXVar attName="GW" attValue="z_GW"/>
+                        <SgnTXVar attName="GWSw" attValue="z_GwSwitch"/>
+                        <SgnTXVar attName="Sw" attValue="z_Switch"/>
+                        <SgnTXVar attName="DynVal" attValue="z_dynvalue"/>
+                        <SgnTXVar attName="DynValCntd" attValue="z_dyncount"/>
+                     </Generics>
+                  </TX>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="IMU_angels_corrected_z"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+         </Sgns>
+      </Msg>
+      <Msg ID="2" Name="IMU_gyroskop" DBCName="IMU_gyroskop" DBCID="2">
+         <ECU>Vector__XXX</ECU>
+         <RECU>Vector__XXX</RECU>
+         <FreeRawMsg>OFF</FreeRawMsg>
+         <CaptureMsg>OFF</CaptureMsg>
+         <Len>6</Len>
+         <Dir>3</Dir>
+         <Vars attCount="0"/>
+         <TX>
+            <Generic>
+               <TXVar attName="CEn">
+                  <TN>IMU_gyroskop_CheckEnable</TN>
+                  <DN>CheckEnable</DN>
+               </TXVar>
+               <TXVar attName="En">
+                  <InportDefault>0</InportDefault>
+                  <Logic>-</Logic>
+                  <Source>TRC</Source>
+                  <TN>IMU_gyroskop_Enable</TN>
+                  <DN>Enable</DN>
+               </TXVar>
+               <TXVar attName="Cyclic">
+                  <InportDefault>0</InportDefault>
+                  <Logic>-</Logic>
+                  <Source>TRC</Source>
+                  <TN>IMU_gyroskop_PeriodicalOn</TN>
+                  <DN>PeriodicalOn</DN>
+               </TXVar>
+               <TXVar attName="Kout">
+                  <TN>IMU_gyroskop_Kickout</TN>
+                  <DN>Kickout</DN>
+                  <Type>Button</Type>
+               </TXVar>
+               <TXVar attName="Delay">
+                  <TN>IMU_gyroskop_DelayTime</TN>
+                  <DN>DelayTime</DN>
+                  <Type>Display</Type>
+               </TXVar>
+               <TXVar attName="Status">
+                  <TN>IMU_gyroskop_status</TN>
+                  <DN>IMU_gyroskop_status</DN>
+                  <Type>Display</Type>
+               </TXVar>
+               <TXVar attName="CycleTime">
+                  <TN>IMU_gyroskop_CycleTime</TN>
+                  <DN>CycleTime</DN>
+                  <Type>Input</Type>
+               </TXVar>
+            </Generic>
+            <ERD>
+               <A>OFF</A>
+               <ERDTRC>
+                  <A>OFF</A>
+                  <ByteMap attIdx="1">
+                     <TN>IMU_gyroskop_RAW_byte_1</TN>
+                     <DN>RAWswitch_1</DN>
+                  </ByteMap>
+                  <ByteMap attIdx="2">
+                     <TN>IMU_gyroskop_RAW_byte_2</TN>
+                     <DN>RAWswitch_2</DN>
+                  </ByteMap>
+                  <ByteMap attIdx="3">
+                     <TN>IMU_gyroskop_RAW_byte_3</TN>
+                     <DN>RAWswitch_3</DN>
+                  </ByteMap>
+                  <ByteMap attIdx="4">
+                     <TN>IMU_gyroskop_RAW_byte_4</TN>
+                     <DN>RAWswitch_4</DN>
+                  </ByteMap>
+                  <ByteMap attIdx="5">
+                     <TN>IMU_gyroskop_RAW_byte_5</TN>
+                     <DN>RAWswitch_5</DN>
+                  </ByteMap>
+                  <ByteMap attIdx="6">
+                     <TN>IMU_gyroskop_RAW_byte_6</TN>
+                     <DN>RAWswitch_6</DN>
+                  </ByteMap>
+                  <ByteMap attIdx="7">
+                     <TN>IMU_gyroskop_RAW_byte_7</TN>
+                     <DN>RAWswitch_7</DN>
+                  </ByteMap>
+                  <ByteMap attIdx="8">
+                     <TN>IMU_gyroskop_RAW_byte_8</TN>
+                     <DN>RAWswitch_8</DN>
+                  </ByteMap>
+               </ERDTRC>
+               <Switch>
+                  <A>OFF</A>
+                  <TN>IMU_gyroskop_RAW_switch</TN>
+                  <DN>RAWswitch</DN>
+               </Switch>
+            </ERD>
+            <RDD>
+               <A>OFF</A>
+            </RDD>
+         </TX>
+         <RX>
+            <Generic>
+               <RXVar attName="StdID">
+                  <TN>IMU_gyroskop_ID</TN>
+                  <DN>IMU_gyroskop_ID</DN>
+               </RXVar>
+               <RXVar attName="Len">
+                  <TN>IMU_gyroskop_Length</TN>
+                  <DN>IMU_gyroskop_Length</DN>
+               </RXVar>
+               <RXVar attName="Status">
+                  <TN>IMU_gyroskop_status</TN>
+                  <DN>IMU_gyroskop_status</DN>
+               </RXVar>
+               <RXVar attName="Time">
+                  <TN>IMU_gyroskop_time</TN>
+                  <DN>IMU_gyroskop_time</DN>
+               </RXVar>
+               <RXVar attName="DeltaTime">
+                  <TN>IMU_gyroskop_dt</TN>
+                  <DN>IMU_gyroskop_dt</DN>
+               </RXVar>
+               <RXVar attName="CycleTime">
+                  <TN>IMU_gyroskop_CycleTime</TN>
+                  <DN>CycleTime</DN>
+               </RXVar>
+            </Generic>
+         </RX>
+         <Sgns attCount="3">
+            <Sgn attName="x" attStartBit="0">
+               <Generics>
+                  <SgnTXOpt attName="IN"/>
+               </Generics>
+               <STRC>
+                  <TX>
+                     <Generics>
+                        <SgnTXVar attName="Const" attValue="x"/>
+                        <SgnTXVar attName="GW" attValue="x_GW"/>
+                        <SgnTXVar attName="GWSw" attValue="x_GwSwitch"/>
+                        <SgnTXVar attName="Sw" attValue="x_Switch"/>
+                        <SgnTXVar attName="DynVal" attValue="x_dynvalue"/>
+                        <SgnTXVar attName="DynValCntd" attValue="x_dyncount"/>
+                     </Generics>
+                  </TX>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="IMU_gyroskop_x"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="y" attStartBit="16">
+               <Generics>
+                  <SgnTXOpt attName="IN"/>
+               </Generics>
+               <STRC>
+                  <TX>
+                     <Generics>
+                        <SgnTXVar attName="Const" attValue="y"/>
+                        <SgnTXVar attName="GW" attValue="y_GW"/>
+                        <SgnTXVar attName="GWSw" attValue="y_GwSwitch"/>
+                        <SgnTXVar attName="Sw" attValue="y_Switch"/>
+                        <SgnTXVar attName="DynVal" attValue="y_dynvalue"/>
+                        <SgnTXVar attName="DynValCntd" attValue="y_dyncount"/>
+                     </Generics>
+                  </TX>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="IMU_gyroskop_y"/>
+                     </Generics>
+                  </RX>
+               </STRC>
+            </Sgn>
+            <Sgn attName="z" attStartBit="32">
+               <Generics>
+                  <SgnTXOpt attName="IN"/>
+               </Generics>
+               <STRC>
+                  <TX>
+                     <Generics>
+                        <SgnTXVar attName="Const" attValue="z"/>
+                        <SgnTXVar attName="GW" attValue="z_GW"/>
+                        <SgnTXVar attName="GWSw" attValue="z_GwSwitch"/>
+                        <SgnTXVar attName="Sw" attValue="z_Switch"/>
+                        <SgnTXVar attName="DynVal" attValue="z_dynvalue"/>
+                        <SgnTXVar attName="DynValCntd" attValue="z_dyncount"/>
+                     </Generics>
+                  </TX>
+                  <RX>
+                     <Generics>
+                        <SgnRXVar attName="Const" attValue="IMU_gyroskop_z"/>
                      </Generics>
                   </RX>
                </STRC>

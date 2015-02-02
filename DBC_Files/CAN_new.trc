@@ -3,7 +3,7 @@
 --  Trace file: CAN_new.trc
 --
 --  RTI1401 7.2 (02-May-2014)
---  Tue Jan 27 15:24:17 2015
+--  Mon Feb 02 10:16:50 2015
 --
 --  Used options:
 --    TRCGenerateVirtualBlocks      = 1
@@ -27,7 +27,7 @@
 
 _genname     "RTI"
 _genversion  "7.2"
-_gendate     "01/27/2015 15:25:08"
+_gendate     "02/02/2015 10:21:00"
 _description ""
 _author      "RTI1401 7.2 (02-May-2014)"
 _model       "CAN_new.mdl"
@@ -638,178 +638,66 @@ group "Model Root"
 		 desc:  ""
 		 flags: BLOCK|COLLAPSED
 		}
-			p_CAN_new_B_uint8_T_4[10]
+			p_CAN_new_B_int16_T_1[2]
 			{
-			 type:    uint(8)*
+			 type:    int(16)*
 			 alias:   "Out1{SubArray1}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[11]
+			p_CAN_new_B_int16_T_1[3]
 			{
-			 type:    uint(8)*
+			 type:    int(16)*
 			 alias:   "Out1{SubArray2}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[12]
+			p_CAN_new_B_int16_T_1[4]
 			{
-			 type:    uint(8)*
+			 type:    int(16)*
 			 alias:   "Out1{SubArray3}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[13]
+			p_CAN_new_B_int16_T_1[5]
 			{
-			 type:    uint(8)*
-			 alias:   "Out1{SubArray4}"
-			 desc:    ""
-			 flags:   OUTPUT|READONLY
-			}
-			p_CAN_new_B_uint8_T_4[14]
-			{
-			 type:    uint(8)*
-			 alias:   "Out1{SubArray5}"
-			 desc:    ""
-			 flags:   OUTPUT|READONLY
-			}
-			p_CAN_new_B_uint8_T_4[15]
-			{
-			 type:    uint(8)*
-			 alias:   "Out1{SubArray6}"
-			 desc:    ""
-			 flags:   OUTPUT|READONLY
-			}
-			p_CAN_new_B_uint8_T_4[16]
-			{
-			 type:    uint(8)*
-			 alias:   "Out1{SubArray7}"
-			 desc:    ""
-			 flags:   OUTPUT|READONLY
-			}
-			p_CAN_new_B_uint8_T_4[17]
-			{
-			 type:    uint(8)*
-			 alias:   "Out1{SubArray8}"
-			 desc:    ""
-			 flags:   OUTPUT|READONLY
-			}
-			p_CAN_new_B_uint8_T_4[18]
-			{
-			 type:    uint(8)*
+			 type:    int(16)*
 			 alias:   "Out2{SubArray1}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[19]
+			p_CAN_new_B_int16_T_1[6]
 			{
-			 type:    uint(8)*
+			 type:    int(16)*
 			 alias:   "Out2{SubArray2}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[20]
+			p_CAN_new_B_int16_T_1[7]
 			{
-			 type:    uint(8)*
+			 type:    int(16)*
 			 alias:   "Out2{SubArray3}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[21]
+			p_CAN_new_B_int16_T_1[8]
 			{
-			 type:    uint(8)*
-			 alias:   "Out2{SubArray4}"
-			 desc:    ""
-			 flags:   OUTPUT|READONLY
-			}
-			p_CAN_new_B_uint8_T_4[22]
-			{
-			 type:    uint(8)*
-			 alias:   "Out2{SubArray5}"
-			 desc:    ""
-			 flags:   OUTPUT|READONLY
-			}
-			p_CAN_new_B_uint8_T_4[23]
-			{
-			 type:    uint(8)*
-			 alias:   "Out2{SubArray6}"
-			 desc:    ""
-			 flags:   OUTPUT|READONLY
-			}
-			p_CAN_new_B_uint8_T_4[24]
-			{
-			 type:    uint(8)*
-			 alias:   "Out2{SubArray7}"
-			 desc:    ""
-			 flags:   OUTPUT|READONLY
-			}
-			p_CAN_new_B_uint8_T_4[25]
-			{
-			 type:    uint(8)*
-			 alias:   "Out2{SubArray8}"
-			 desc:    ""
-			 flags:   OUTPUT|READONLY
-			}
-			p_CAN_new_B_uint8_T_4[26]
-			{
-			 type:    uint(8)*
+			 type:    int(16)*
 			 alias:   "Out3{SubArray1}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[27]
+			p_CAN_new_B_int16_T_1[9]
 			{
-			 type:    uint(8)*
+			 type:    int(16)*
 			 alias:   "Out3{SubArray2}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[28]
-			{
-			 type:    uint(8)*
-			 alias:   "Out3{SubArray3}"
-			 desc:    ""
-			 flags:   OUTPUT|READONLY
-			}
-			p_CAN_new_B_uint8_T_4[29]
-			{
-			 type:    uint(8)*
-			 alias:   "Out3{SubArray4}"
-			 desc:    ""
-			 flags:   OUTPUT|READONLY
-			}
-			p_CAN_new_B_uint8_T_4[30]
-			{
-			 type:    uint(8)*
-			 alias:   "Out3{SubArray5}"
-			 desc:    ""
-			 flags:   OUTPUT|READONLY
-			}
-			p_CAN_new_B_uint8_T_4[31]
-			{
-			 type:    uint(8)*
-			 alias:   "Out3{SubArray6}"
-			 desc:    ""
-			 flags:   OUTPUT|READONLY
-			}
-			p_CAN_new_B_uint8_T_4[32]
-			{
-			 type:    uint(8)*
-			 alias:   "Out3{SubArray7}"
-			 desc:    ""
-			 flags:   OUTPUT|READONLY
-			}
-			p_CAN_new_B_uint8_T_4[33]
-			{
-			 type:    uint(8)*
-			 alias:   "Out3{SubArray8}"
-			 desc:    ""
-			 flags:   OUTPUT|READONLY
-			}
-			p_CAN_new_B_int16_T_1[2]
+			p_CAN_new_B_int16_T_1[10]
 			{
 			 type:    int(16)*
-			 alias:   "Out4"
+			 alias:   "Out3{SubArray3}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
@@ -853,91 +741,6 @@ group "Model Root"
 
 		endgroup -- block-group "Variation@RTICANMM\nControllerSetup"
 
-		group "Scope" -- block-group
-		{
-		 block: "Scope"
-		 desc:  ""
-		 flags: BLOCK|COLLAPSED
-		}
-			p_CAN_new_B_uint8_T_4[10]
-			{
-			 type:    uint(8)*
-			 alias:   "In1{SubArray1}"
-			 desc:    ""
-			 flags:   SINK|READONLY
-			}
-			p_CAN_new_B_uint8_T_4[11]
-			{
-			 type:    uint(8)*
-			 alias:   "In1{SubArray2}"
-			 desc:    ""
-			 flags:   SINK|READONLY
-			}
-			p_CAN_new_B_uint8_T_4[12]
-			{
-			 type:    uint(8)*
-			 alias:   "In1{SubArray3}"
-			 desc:    ""
-			 flags:   SINK|READONLY
-			}
-			p_CAN_new_B_uint8_T_4[13]
-			{
-			 type:    uint(8)*
-			 alias:   "In1{SubArray4}"
-			 desc:    ""
-			 flags:   SINK|READONLY
-			}
-			p_CAN_new_B_uint8_T_4[14]
-			{
-			 type:    uint(8)*
-			 alias:   "In1{SubArray5}"
-			 desc:    ""
-			 flags:   SINK|READONLY
-			}
-			p_CAN_new_B_uint8_T_4[15]
-			{
-			 type:    uint(8)*
-			 alias:   "In1{SubArray6}"
-			 desc:    ""
-			 flags:   SINK|READONLY
-			}
-			p_CAN_new_B_uint8_T_4[16]
-			{
-			 type:    uint(8)*
-			 alias:   "In1{SubArray7}"
-			 desc:    ""
-			 flags:   SINK|READONLY
-			}
-			p_CAN_new_B_uint8_T_4[17]
-			{
-			 type:    uint(8)*
-			 alias:   "In1{SubArray8}"
-			 desc:    ""
-			 flags:   SINK|READONLY
-			}
-
-
-
-		endgroup -- block-group "Scope"
-
-		group "Scope1" -- block-group
-		{
-		 block: "Scope"
-		 desc:  ""
-		 flags: BLOCK|COLLAPSED
-		}
-			p_CAN_new_B_int16_T_1[2]
-			{
-			 type:    int(16)*
-			 alias:   "In1"
-			 desc:    ""
-			 flags:   SINK|READONLY
-			}
-
-
-
-		endgroup -- block-group "Scope1"
-
   
   
 		group "RTICANMM\nControllerSetup" -- subsystem-group
@@ -976,7 +779,7 @@ group "Model Root"
 			 desc:  ""
 			 flags: BLOCK|COLLAPSED
 			}
-				p_CAN_new_B_uint8_T_4[34]
+				p_CAN_new_B_uint8_T_4[10]
 				{
 				 type:    uint(8)*
 				 alias:   "Out1"
@@ -995,31 +798,31 @@ group "Model Root"
 			}
 
 
-				p_CAN_new_P_real_T_0[6]
+				p_CAN_new_P_real_T_0[15]
 				{
 				 type:    flt(64,IEEE)*
 				 alias:   "P1"
 				 flags:   PARAM
 				}
-				p_CAN_new_P_real_T_0[7]
+				p_CAN_new_P_real_T_0[16]
 				{
 				 type:    flt(64,IEEE)*
 				 alias:   "P2"
 				 flags:   PARAM
 				}
-				p_CAN_new_P_real_T_0[8]
+				p_CAN_new_P_real_T_0[17]
 				{
 				 type:    flt(64,IEEE)*
 				 alias:   "P3"
 				 flags:   PARAM
 				}
-				p_CAN_new_P_real_T_0[9]
+				p_CAN_new_P_real_T_0[18]
 				{
 				 type:    flt(64,IEEE)*
 				 alias:   "P4"
 				 flags:   PARAM
 				}
-				p_CAN_new_P_real_T_0[10]
+				p_CAN_new_P_real_T_0[19]
 				{
 				 type:    flt(64,IEEE)*
 				 alias:   "P5"
@@ -1041,7 +844,7 @@ group "Model Root"
 			 desc:  ""
 			 flags: BLOCK|COLLAPSED
 			}
-				p_CAN_new_B_uint8_T_4[34]
+				p_CAN_new_B_uint8_T_4[10]
 				{
 				 type:    uint(8)*
 				 alias:   "In1"
@@ -1087,171 +890,59 @@ group "Model Root"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[10]
+			p_CAN_new_B_int16_T_1[3]
 			{
-			 type:    uint(8)*
+			 type:    int(16)*
 			 alias:   "RX_Data{SubArray2}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[11]
+			p_CAN_new_B_int16_T_1[4]
 			{
-			 type:    uint(8)*
+			 type:    int(16)*
 			 alias:   "RX_Data{SubArray3}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[12]
+			p_CAN_new_B_int16_T_1[5]
 			{
-			 type:    uint(8)*
+			 type:    int(16)*
 			 alias:   "RX_Data{SubArray4}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[13]
+			p_CAN_new_B_int16_T_1[6]
 			{
-			 type:    uint(8)*
+			 type:    int(16)*
 			 alias:   "RX_Data{SubArray5}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[14]
+			p_CAN_new_B_int16_T_1[7]
 			{
-			 type:    uint(8)*
+			 type:    int(16)*
 			 alias:   "RX_Data{SubArray6}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[15]
+			p_CAN_new_B_int16_T_1[8]
 			{
-			 type:    uint(8)*
+			 type:    int(16)*
 			 alias:   "RX_Data{SubArray7}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[16]
+			p_CAN_new_B_int16_T_1[9]
 			{
-			 type:    uint(8)*
+			 type:    int(16)*
 			 alias:   "RX_Data{SubArray8}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[17]
+			p_CAN_new_B_int16_T_1[10]
 			{
-			 type:    uint(8)*
+			 type:    int(16)*
 			 alias:   "RX_Data{SubArray9}"
-			 desc:    ""
-			 flags:   OUTPUT|READONLY
-			}
-			p_CAN_new_B_uint8_T_4[18]
-			{
-			 type:    uint(8)*
-			 alias:   "RX_Data{SubArray10}"
-			 desc:    ""
-			 flags:   OUTPUT|READONLY
-			}
-			p_CAN_new_B_uint8_T_4[19]
-			{
-			 type:    uint(8)*
-			 alias:   "RX_Data{SubArray11}"
-			 desc:    ""
-			 flags:   OUTPUT|READONLY
-			}
-			p_CAN_new_B_uint8_T_4[20]
-			{
-			 type:    uint(8)*
-			 alias:   "RX_Data{SubArray12}"
-			 desc:    ""
-			 flags:   OUTPUT|READONLY
-			}
-			p_CAN_new_B_uint8_T_4[21]
-			{
-			 type:    uint(8)*
-			 alias:   "RX_Data{SubArray13}"
-			 desc:    ""
-			 flags:   OUTPUT|READONLY
-			}
-			p_CAN_new_B_uint8_T_4[22]
-			{
-			 type:    uint(8)*
-			 alias:   "RX_Data{SubArray14}"
-			 desc:    ""
-			 flags:   OUTPUT|READONLY
-			}
-			p_CAN_new_B_uint8_T_4[23]
-			{
-			 type:    uint(8)*
-			 alias:   "RX_Data{SubArray15}"
-			 desc:    ""
-			 flags:   OUTPUT|READONLY
-			}
-			p_CAN_new_B_uint8_T_4[24]
-			{
-			 type:    uint(8)*
-			 alias:   "RX_Data{SubArray16}"
-			 desc:    ""
-			 flags:   OUTPUT|READONLY
-			}
-			p_CAN_new_B_uint8_T_4[25]
-			{
-			 type:    uint(8)*
-			 alias:   "RX_Data{SubArray17}"
-			 desc:    ""
-			 flags:   OUTPUT|READONLY
-			}
-			p_CAN_new_B_uint8_T_4[26]
-			{
-			 type:    uint(8)*
-			 alias:   "RX_Data{SubArray18}"
-			 desc:    ""
-			 flags:   OUTPUT|READONLY
-			}
-			p_CAN_new_B_uint8_T_4[27]
-			{
-			 type:    uint(8)*
-			 alias:   "RX_Data{SubArray19}"
-			 desc:    ""
-			 flags:   OUTPUT|READONLY
-			}
-			p_CAN_new_B_uint8_T_4[28]
-			{
-			 type:    uint(8)*
-			 alias:   "RX_Data{SubArray20}"
-			 desc:    ""
-			 flags:   OUTPUT|READONLY
-			}
-			p_CAN_new_B_uint8_T_4[29]
-			{
-			 type:    uint(8)*
-			 alias:   "RX_Data{SubArray21}"
-			 desc:    ""
-			 flags:   OUTPUT|READONLY
-			}
-			p_CAN_new_B_uint8_T_4[30]
-			{
-			 type:    uint(8)*
-			 alias:   "RX_Data{SubArray22}"
-			 desc:    ""
-			 flags:   OUTPUT|READONLY
-			}
-			p_CAN_new_B_uint8_T_4[31]
-			{
-			 type:    uint(8)*
-			 alias:   "RX_Data{SubArray23}"
-			 desc:    ""
-			 flags:   OUTPUT|READONLY
-			}
-			p_CAN_new_B_uint8_T_4[32]
-			{
-			 type:    uint(8)*
-			 alias:   "RX_Data{SubArray24}"
-			 desc:    ""
-			 flags:   OUTPUT|READONLY
-			}
-			p_CAN_new_B_uint8_T_4[33]
-			{
-			 type:    uint(8)*
-			 alias:   "RX_Data{SubArray25}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
@@ -1274,21 +965,6 @@ group "Model Root"
 			-- Skipping output out{SubArray7}
 			-- Skipping output out{SubArray8}
 			-- Skipping output out{SubArray9}
-			-- Skipping output out{SubArray10}
-			-- Skipping output out{SubArray11}
-			-- Skipping output out{SubArray12}
-			-- Skipping output out{SubArray13}
-			-- Skipping output out{SubArray14}
-			-- Skipping output out{SubArray15}
-			-- Skipping output out{SubArray16}
-			-- Skipping output out{SubArray17}
-			-- Skipping output out{SubArray18}
-			-- Skipping output out{SubArray19}
-			-- Skipping output out{SubArray20}
-			-- Skipping output out{SubArray21}
-			-- Skipping output out{SubArray22}
-			-- Skipping output out{SubArray23}
-			-- Skipping output out{SubArray24}
 
 
 			group "buscreator" -- block-group
@@ -1306,28 +982,13 @@ group "Model Root"
 				-- Skipping output Out1{SubArray7}
 				-- Skipping output Out1{SubArray8}
 				-- Skipping output Out1{SubArray9}
-				-- Skipping output Out1{SubArray10}
-				-- Skipping output Out1{SubArray11}
-				-- Skipping output Out1{SubArray12}
-				-- Skipping output Out1{SubArray13}
-				-- Skipping output Out1{SubArray14}
-				-- Skipping output Out1{SubArray15}
-				-- Skipping output Out1{SubArray16}
-				-- Skipping output Out1{SubArray17}
-				-- Skipping output Out1{SubArray18}
-				-- Skipping output Out1{SubArray19}
-				-- Skipping output Out1{SubArray20}
-				-- Skipping output Out1{SubArray21}
-				-- Skipping output Out1{SubArray22}
-				-- Skipping output Out1{SubArray23}
-				-- Skipping output Out1{SubArray24}
 
 
 			endgroup -- block-group "buscreator"
 
   
   
-			group "RTICANMMFreeRawMessage_1" -- subsystem-group
+			group "IMU_accelerometer" -- subsystem-group
 			{
 			 flags: COLLAPSED
 			 desc:  ""
@@ -1336,11 +997,6 @@ group "Model Root"
 				-- Skipping output out{SubArray1}
 				-- Skipping output out{SubArray2}
 				-- Skipping output out{SubArray3}
-				-- Skipping output out{SubArray4}
-				-- Skipping output out{SubArray5}
-				-- Skipping output out{SubArray6}
-				-- Skipping output out{SubArray7}
-				-- Skipping output out{SubArray8}
 
 
 				group "buscreator" -- block-group
@@ -1352,16 +1008,11 @@ group "Model Root"
 					-- Skipping output Out1{SubArray1}
 					-- Skipping output Out1{SubArray2}
 					-- Skipping output Out1{SubArray3}
-					-- Skipping output Out1{SubArray4}
-					-- Skipping output Out1{SubArray5}
-					-- Skipping output Out1{SubArray6}
-					-- Skipping output Out1{SubArray7}
-					-- Skipping output Out1{SubArray8}
 
 
 				endgroup -- block-group "buscreator"
 
-				group "RAW_Byte_1" -- block-group
+				group "x" -- block-group
 				{
 				 block: "Ground"
 				 desc:  ""
@@ -1370,9 +1021,9 @@ group "Model Root"
 					-- Skipping output Out1
 
 
-				endgroup -- block-group "RAW_Byte_1"
+				endgroup -- block-group "x"
 
-				group "RAW_Byte_2" -- block-group
+				group "y" -- block-group
 				{
 				 block: "Ground"
 				 desc:  ""
@@ -1381,9 +1032,9 @@ group "Model Root"
 					-- Skipping output Out1
 
 
-				endgroup -- block-group "RAW_Byte_2"
+				endgroup -- block-group "y"
 
-				group "RAW_Byte_3" -- block-group
+				group "z" -- block-group
 				{
 				 block: "Ground"
 				 desc:  ""
@@ -1392,101 +1043,26 @@ group "Model Root"
 					-- Skipping output Out1
 
 
-				endgroup -- block-group "RAW_Byte_3"
-
-				group "RAW_Byte_4" -- block-group
-				{
-				 block: "Ground"
-				 desc:  ""
-				 flags: BLOCK|COLLAPSED
-				}
-					-- Skipping output Out1
+				endgroup -- block-group "z"
 
 
-				endgroup -- block-group "RAW_Byte_4"
+				-- Skipping label "IMU_accelerometer{SubArray1}"
 
-				group "RAW_Byte_5" -- block-group
-				{
-				 block: "Ground"
-				 desc:  ""
-				 flags: BLOCK|COLLAPSED
-				}
-					-- Skipping output Out1
+				-- Skipping label "IMU_accelerometer{SubArray2}"
 
+				-- Skipping label "IMU_accelerometer{SubArray3}"
 
-				endgroup -- block-group "RAW_Byte_5"
+				-- Skipping label "x"
 
-				group "RAW_Byte_6" -- block-group
-				{
-				 block: "Ground"
-				 desc:  ""
-				 flags: BLOCK|COLLAPSED
-				}
-					-- Skipping output Out1
+				-- Skipping label "y"
+
+				-- Skipping label "z"
 
 
-				endgroup -- block-group "RAW_Byte_6"
-
-				group "RAW_Byte_7" -- block-group
-				{
-				 block: "Ground"
-				 desc:  ""
-				 flags: BLOCK|COLLAPSED
-				}
-					-- Skipping output Out1
-
-
-				endgroup -- block-group "RAW_Byte_7"
-
-				group "RAW_Byte_8" -- block-group
-				{
-				 block: "Ground"
-				 desc:  ""
-				 flags: BLOCK|COLLAPSED
-				}
-					-- Skipping output Out1
-
-
-				endgroup -- block-group "RAW_Byte_8"
-
-
-				-- Skipping label "RAW_Byte_1"
-
-				-- Skipping label "RAW_Byte_2"
-
-				-- Skipping label "RAW_Byte_3"
-
-				-- Skipping label "RAW_Byte_4"
-
-				-- Skipping label "RAW_Byte_5"
-
-				-- Skipping label "RAW_Byte_6"
-
-				-- Skipping label "RAW_Byte_7"
-
-				-- Skipping label "RAW_Byte_8"
-
-				-- Skipping label "RTICANMMFreeRawMessage_1{SubArray1}"
-
-				-- Skipping label "RTICANMMFreeRawMessage_1{SubArray2}"
-
-				-- Skipping label "RTICANMMFreeRawMessage_1{SubArray3}"
-
-				-- Skipping label "RTICANMMFreeRawMessage_1{SubArray4}"
-
-				-- Skipping label "RTICANMMFreeRawMessage_1{SubArray5}"
-
-				-- Skipping label "RTICANMMFreeRawMessage_1{SubArray6}"
-
-				-- Skipping label "RTICANMMFreeRawMessage_1{SubArray7}"
-
-				-- Skipping label "RTICANMMFreeRawMessage_1{SubArray8}"
-
-
-			endgroup -- subsystem-group "RTICANMMFreeRawMessage_1"
+			endgroup -- subsystem-group "IMU_accelerometer"
   
   
-			group "RTICANMMFreeRawMessage_2" -- subsystem-group
+			group "IMU_angels_corrected" -- subsystem-group
 			{
 			 flags: COLLAPSED
 			 desc:  ""
@@ -1495,11 +1071,6 @@ group "Model Root"
 				-- Skipping output out{SubArray1}
 				-- Skipping output out{SubArray2}
 				-- Skipping output out{SubArray3}
-				-- Skipping output out{SubArray4}
-				-- Skipping output out{SubArray5}
-				-- Skipping output out{SubArray6}
-				-- Skipping output out{SubArray7}
-				-- Skipping output out{SubArray8}
 
 
 				group "buscreator" -- block-group
@@ -1511,16 +1082,11 @@ group "Model Root"
 					-- Skipping output Out1{SubArray1}
 					-- Skipping output Out1{SubArray2}
 					-- Skipping output Out1{SubArray3}
-					-- Skipping output Out1{SubArray4}
-					-- Skipping output Out1{SubArray5}
-					-- Skipping output Out1{SubArray6}
-					-- Skipping output Out1{SubArray7}
-					-- Skipping output Out1{SubArray8}
 
 
 				endgroup -- block-group "buscreator"
 
-				group "RAW_Byte_1" -- block-group
+				group "x" -- block-group
 				{
 				 block: "Ground"
 				 desc:  ""
@@ -1529,9 +1095,9 @@ group "Model Root"
 					-- Skipping output Out1
 
 
-				endgroup -- block-group "RAW_Byte_1"
+				endgroup -- block-group "x"
 
-				group "RAW_Byte_2" -- block-group
+				group "y" -- block-group
 				{
 				 block: "Ground"
 				 desc:  ""
@@ -1540,9 +1106,9 @@ group "Model Root"
 					-- Skipping output Out1
 
 
-				endgroup -- block-group "RAW_Byte_2"
+				endgroup -- block-group "y"
 
-				group "RAW_Byte_3" -- block-group
+				group "z" -- block-group
 				{
 				 block: "Ground"
 				 desc:  ""
@@ -1551,101 +1117,26 @@ group "Model Root"
 					-- Skipping output Out1
 
 
-				endgroup -- block-group "RAW_Byte_3"
-
-				group "RAW_Byte_4" -- block-group
-				{
-				 block: "Ground"
-				 desc:  ""
-				 flags: BLOCK|COLLAPSED
-				}
-					-- Skipping output Out1
+				endgroup -- block-group "z"
 
 
-				endgroup -- block-group "RAW_Byte_4"
+				-- Skipping label "IMU_angels_corrected{SubArray1}"
 
-				group "RAW_Byte_5" -- block-group
-				{
-				 block: "Ground"
-				 desc:  ""
-				 flags: BLOCK|COLLAPSED
-				}
-					-- Skipping output Out1
+				-- Skipping label "IMU_angels_corrected{SubArray2}"
 
+				-- Skipping label "IMU_angels_corrected{SubArray3}"
 
-				endgroup -- block-group "RAW_Byte_5"
+				-- Skipping label "x"
 
-				group "RAW_Byte_6" -- block-group
-				{
-				 block: "Ground"
-				 desc:  ""
-				 flags: BLOCK|COLLAPSED
-				}
-					-- Skipping output Out1
+				-- Skipping label "y"
+
+				-- Skipping label "z"
 
 
-				endgroup -- block-group "RAW_Byte_6"
-
-				group "RAW_Byte_7" -- block-group
-				{
-				 block: "Ground"
-				 desc:  ""
-				 flags: BLOCK|COLLAPSED
-				}
-					-- Skipping output Out1
-
-
-				endgroup -- block-group "RAW_Byte_7"
-
-				group "RAW_Byte_8" -- block-group
-				{
-				 block: "Ground"
-				 desc:  ""
-				 flags: BLOCK|COLLAPSED
-				}
-					-- Skipping output Out1
-
-
-				endgroup -- block-group "RAW_Byte_8"
-
-
-				-- Skipping label "RAW_Byte_1"
-
-				-- Skipping label "RAW_Byte_2"
-
-				-- Skipping label "RAW_Byte_3"
-
-				-- Skipping label "RAW_Byte_4"
-
-				-- Skipping label "RAW_Byte_5"
-
-				-- Skipping label "RAW_Byte_6"
-
-				-- Skipping label "RAW_Byte_7"
-
-				-- Skipping label "RAW_Byte_8"
-
-				-- Skipping label "RTICANMMFreeRawMessage_2{SubArray1}"
-
-				-- Skipping label "RTICANMMFreeRawMessage_2{SubArray2}"
-
-				-- Skipping label "RTICANMMFreeRawMessage_2{SubArray3}"
-
-				-- Skipping label "RTICANMMFreeRawMessage_2{SubArray4}"
-
-				-- Skipping label "RTICANMMFreeRawMessage_2{SubArray5}"
-
-				-- Skipping label "RTICANMMFreeRawMessage_2{SubArray6}"
-
-				-- Skipping label "RTICANMMFreeRawMessage_2{SubArray7}"
-
-				-- Skipping label "RTICANMMFreeRawMessage_2{SubArray8}"
-
-
-			endgroup -- subsystem-group "RTICANMMFreeRawMessage_2"
+			endgroup -- subsystem-group "IMU_angels_corrected"
   
   
-			group "RTICANMMFreeRawMessage_3" -- subsystem-group
+			group "IMU_gyroskop" -- subsystem-group
 			{
 			 flags: COLLAPSED
 			 desc:  ""
@@ -1654,11 +1145,6 @@ group "Model Root"
 				-- Skipping output out{SubArray1}
 				-- Skipping output out{SubArray2}
 				-- Skipping output out{SubArray3}
-				-- Skipping output out{SubArray4}
-				-- Skipping output out{SubArray5}
-				-- Skipping output out{SubArray6}
-				-- Skipping output out{SubArray7}
-				-- Skipping output out{SubArray8}
 
 
 				group "buscreator" -- block-group
@@ -1670,16 +1156,11 @@ group "Model Root"
 					-- Skipping output Out1{SubArray1}
 					-- Skipping output Out1{SubArray2}
 					-- Skipping output Out1{SubArray3}
-					-- Skipping output Out1{SubArray4}
-					-- Skipping output Out1{SubArray5}
-					-- Skipping output Out1{SubArray6}
-					-- Skipping output Out1{SubArray7}
-					-- Skipping output Out1{SubArray8}
 
 
 				endgroup -- block-group "buscreator"
 
-				group "RAW_Byte_1" -- block-group
+				group "x" -- block-group
 				{
 				 block: "Ground"
 				 desc:  ""
@@ -1688,9 +1169,9 @@ group "Model Root"
 					-- Skipping output Out1
 
 
-				endgroup -- block-group "RAW_Byte_1"
+				endgroup -- block-group "x"
 
-				group "RAW_Byte_2" -- block-group
+				group "y" -- block-group
 				{
 				 block: "Ground"
 				 desc:  ""
@@ -1699,9 +1180,9 @@ group "Model Root"
 					-- Skipping output Out1
 
 
-				endgroup -- block-group "RAW_Byte_2"
+				endgroup -- block-group "y"
 
-				group "RAW_Byte_3" -- block-group
+				group "z" -- block-group
 				{
 				 block: "Ground"
 				 desc:  ""
@@ -1710,98 +1191,23 @@ group "Model Root"
 					-- Skipping output Out1
 
 
-				endgroup -- block-group "RAW_Byte_3"
-
-				group "RAW_Byte_4" -- block-group
-				{
-				 block: "Ground"
-				 desc:  ""
-				 flags: BLOCK|COLLAPSED
-				}
-					-- Skipping output Out1
+				endgroup -- block-group "z"
 
 
-				endgroup -- block-group "RAW_Byte_4"
+				-- Skipping label "IMU_gyroskop{SubArray1}"
 
-				group "RAW_Byte_5" -- block-group
-				{
-				 block: "Ground"
-				 desc:  ""
-				 flags: BLOCK|COLLAPSED
-				}
-					-- Skipping output Out1
+				-- Skipping label "IMU_gyroskop{SubArray2}"
 
+				-- Skipping label "IMU_gyroskop{SubArray3}"
 
-				endgroup -- block-group "RAW_Byte_5"
+				-- Skipping label "x"
 
-				group "RAW_Byte_6" -- block-group
-				{
-				 block: "Ground"
-				 desc:  ""
-				 flags: BLOCK|COLLAPSED
-				}
-					-- Skipping output Out1
+				-- Skipping label "y"
+
+				-- Skipping label "z"
 
 
-				endgroup -- block-group "RAW_Byte_6"
-
-				group "RAW_Byte_7" -- block-group
-				{
-				 block: "Ground"
-				 desc:  ""
-				 flags: BLOCK|COLLAPSED
-				}
-					-- Skipping output Out1
-
-
-				endgroup -- block-group "RAW_Byte_7"
-
-				group "RAW_Byte_8" -- block-group
-				{
-				 block: "Ground"
-				 desc:  ""
-				 flags: BLOCK|COLLAPSED
-				}
-					-- Skipping output Out1
-
-
-				endgroup -- block-group "RAW_Byte_8"
-
-
-				-- Skipping label "RAW_Byte_1"
-
-				-- Skipping label "RAW_Byte_2"
-
-				-- Skipping label "RAW_Byte_3"
-
-				-- Skipping label "RAW_Byte_4"
-
-				-- Skipping label "RAW_Byte_5"
-
-				-- Skipping label "RAW_Byte_6"
-
-				-- Skipping label "RAW_Byte_7"
-
-				-- Skipping label "RAW_Byte_8"
-
-				-- Skipping label "RTICANMMFreeRawMessage_3{SubArray1}"
-
-				-- Skipping label "RTICANMMFreeRawMessage_3{SubArray2}"
-
-				-- Skipping label "RTICANMMFreeRawMessage_3{SubArray3}"
-
-				-- Skipping label "RTICANMMFreeRawMessage_3{SubArray4}"
-
-				-- Skipping label "RTICANMMFreeRawMessage_3{SubArray5}"
-
-				-- Skipping label "RTICANMMFreeRawMessage_3{SubArray6}"
-
-				-- Skipping label "RTICANMMFreeRawMessage_3{SubArray7}"
-
-				-- Skipping label "RTICANMMFreeRawMessage_3{SubArray8}"
-
-
-			endgroup -- subsystem-group "RTICANMMFreeRawMessage_3"
+			endgroup -- subsystem-group "IMU_gyroskop"
 
 			-- Skipping label "CAN{SubArray1}"
 
@@ -1821,259 +1227,807 @@ group "Model Root"
 
 			-- Skipping label "CAN{SubArray9}"
 
-			-- Skipping label "CAN{SubArray10}"
+			-- Skipping label "IMU_accelerometer{SubArray1}"
 
-			-- Skipping label "CAN{SubArray11}"
+			-- Skipping label "IMU_accelerometer{SubArray2}"
 
-			-- Skipping label "CAN{SubArray12}"
+			-- Skipping label "IMU_accelerometer{SubArray3}"
 
-			-- Skipping label "CAN{SubArray13}"
+			-- Skipping label "IMU_angels_corrected{SubArray1}"
 
-			-- Skipping label "CAN{SubArray14}"
+			-- Skipping label "IMU_angels_corrected{SubArray2}"
 
-			-- Skipping label "CAN{SubArray15}"
+			-- Skipping label "IMU_angels_corrected{SubArray3}"
 
-			-- Skipping label "CAN{SubArray16}"
+			-- Skipping label "IMU_gyroskop{SubArray1}"
 
-			-- Skipping label "CAN{SubArray17}"
+			-- Skipping label "IMU_gyroskop{SubArray2}"
 
-			-- Skipping label "CAN{SubArray18}"
-
-			-- Skipping label "CAN{SubArray19}"
-
-			-- Skipping label "CAN{SubArray20}"
-
-			-- Skipping label "CAN{SubArray21}"
-
-			-- Skipping label "CAN{SubArray22}"
-
-			-- Skipping label "CAN{SubArray23}"
-
-			-- Skipping label "CAN{SubArray24}"
-
-			-- Skipping label "RTICANMMFreeRawMessage_1{SubArray1}"
-
-			-- Skipping label "RTICANMMFreeRawMessage_1{SubArray2}"
-
-			-- Skipping label "RTICANMMFreeRawMessage_1{SubArray3}"
-
-			-- Skipping label "RTICANMMFreeRawMessage_1{SubArray4}"
-
-			-- Skipping label "RTICANMMFreeRawMessage_1{SubArray5}"
-
-			-- Skipping label "RTICANMMFreeRawMessage_1{SubArray6}"
-
-			-- Skipping label "RTICANMMFreeRawMessage_1{SubArray7}"
-
-			-- Skipping label "RTICANMMFreeRawMessage_1{SubArray8}"
-
-			-- Skipping label "RTICANMMFreeRawMessage_2{SubArray1}"
-
-			-- Skipping label "RTICANMMFreeRawMessage_2{SubArray2}"
-
-			-- Skipping label "RTICANMMFreeRawMessage_2{SubArray3}"
-
-			-- Skipping label "RTICANMMFreeRawMessage_2{SubArray4}"
-
-			-- Skipping label "RTICANMMFreeRawMessage_2{SubArray5}"
-
-			-- Skipping label "RTICANMMFreeRawMessage_2{SubArray6}"
-
-			-- Skipping label "RTICANMMFreeRawMessage_2{SubArray7}"
-
-			-- Skipping label "RTICANMMFreeRawMessage_2{SubArray8}"
-
-			-- Skipping label "RTICANMMFreeRawMessage_3{SubArray1}"
-
-			-- Skipping label "RTICANMMFreeRawMessage_3{SubArray2}"
-
-			-- Skipping label "RTICANMMFreeRawMessage_3{SubArray3}"
-
-			-- Skipping label "RTICANMMFreeRawMessage_3{SubArray4}"
-
-			-- Skipping label "RTICANMMFreeRawMessage_3{SubArray5}"
-
-			-- Skipping label "RTICANMMFreeRawMessage_3{SubArray6}"
-
-			-- Skipping label "RTICANMMFreeRawMessage_3{SubArray7}"
-
-			-- Skipping label "RTICANMMFreeRawMessage_3{SubArray8}"
+			-- Skipping label "IMU_gyroskop{SubArray3}"
 
 
 		endgroup -- subsystem-group "User2RTICANMM\nMainBlock"
+  
+  
+		group "accel_zeroing" -- subsystem-group
+		{
+		 flags: COLLAPSED
+		 desc:  ""
+		}
+
+			p_CAN_new_B_real_T_0[4]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "x_accel"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_real_T_0[5]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "y_accel\n"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_real_T_0[6]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "z_accel"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+
+
+			group "accel_raw" -- block-group
+			{
+			 block: "Inport"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				p_CAN_new_B_int16_T_1[2]
+				{
+				 type:    int(16)*
+				 alias:   "Out1{SubArray1}"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+				p_CAN_new_B_int16_T_1[3]
+				{
+				 type:    int(16)*
+				 alias:   "Out1{SubArray2}"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+				p_CAN_new_B_int16_T_1[4]
+				{
+				 type:    int(16)*
+				 alias:   "Out1{SubArray3}"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+
+
+			endgroup -- block-group "accel_raw"
+
+			group "Bus\nSelector1" -- block-group
+			{
+			 block: "BusSelector"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				p_CAN_new_B_int16_T_1[2]
+				{
+				 type:    int(16)*
+				 alias:   "Out1"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+				p_CAN_new_B_int16_T_1[3]
+				{
+				 type:    int(16)*
+				 alias:   "Out2"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+				p_CAN_new_B_int16_T_1[4]
+				{
+				 type:    int(16)*
+				 alias:   "Out3"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+
+
+			endgroup -- block-group "Bus\nSelector1"
+
+			group "Accelerometer_init_x" -- block-group
+			{
+			 block: "Constant"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				-- Skipping output Out1
+				p_CAN_new_P_real_T_0[6]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "Value"
+				 flags:   PARAM
+				}
+
+
+			endgroup -- block-group "Accelerometer_init_x"
+
+			group "Accelerometer_init_y" -- block-group
+			{
+			 block: "Constant"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				-- Skipping output Out1
+				p_CAN_new_P_real_T_0[7]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "Value"
+				 flags:   PARAM
+				}
+
+
+			endgroup -- block-group "Accelerometer_init_y"
+
+			group "Accelerometer_init_z\n" -- block-group
+			{
+			 block: "Constant"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				-- Skipping output Out1
+				p_CAN_new_P_real_T_0[8]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "Value"
+				 flags:   PARAM
+				}
+
+
+			endgroup -- block-group "Accelerometer_init_z\n"
+
+			group "IMU_accel_corrected_x" -- block-group
+			{
+			 block: "Sum"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				p_CAN_new_B_real_T_0[4]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "Out1"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+
+
+			endgroup -- block-group "IMU_accel_corrected_x"
+
+			group "IMU_accel_corrected_y" -- block-group
+			{
+			 block: "Sum"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				p_CAN_new_B_real_T_0[5]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "Out1"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+
+
+			endgroup -- block-group "IMU_accel_corrected_y"
+
+			group "IMU_accel_corrected_z" -- block-group
+			{
+			 block: "Sum"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				p_CAN_new_B_real_T_0[6]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "Out1"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+
+
+			endgroup -- block-group "IMU_accel_corrected_z"
+
+
+			p_CAN_new_B_int16_T_1[2]
+			{
+			 type:    int(16)*
+			 alias:   "<IMU_accelerometer>{SubArray1}"
+			 origin:  "CAN_new/Arduino/accel_zeroing/accel_raw/Out1"
+			 flags:   LABEL|READONLY
+			}
+			p_CAN_new_B_int16_T_1[3]
+			{
+			 type:    int(16)*
+			 alias:   "<IMU_accelerometer>{SubArray2}"
+			 origin:  "CAN_new/Arduino/accel_zeroing/accel_raw/Out1"
+			 flags:   LABEL|READONLY
+			}
+			p_CAN_new_B_int16_T_1[4]
+			{
+			 type:    int(16)*
+			 alias:   "<IMU_accelerometer>{SubArray3}"
+			 origin:  "CAN_new/Arduino/accel_zeroing/accel_raw/Out1"
+			 flags:   LABEL|READONLY
+			}
+			p_CAN_new_B_int16_T_1[2]
+			{
+			 type:    int(16)*
+			 alias:   "<x>"
+			 origin:  "CAN_new/Arduino/accel_zeroing/Bus\nSelector1/Out1"
+			 flags:   LABEL|READONLY
+			}
+			p_CAN_new_B_int16_T_1[3]
+			{
+			 type:    int(16)*
+			 alias:   "<y>"
+			 origin:  "CAN_new/Arduino/accel_zeroing/Bus\nSelector1/Out2"
+			 flags:   LABEL|READONLY
+			}
+			p_CAN_new_B_int16_T_1[4]
+			{
+			 type:    int(16)*
+			 alias:   "<z>"
+			 origin:  "CAN_new/Arduino/accel_zeroing/Bus\nSelector1/Out3"
+			 flags:   LABEL|READONLY
+			}
+
+		endgroup -- subsystem-group "accel_zeroing"
+  
+  
+		group "angle_zeroing" -- subsystem-group
+		{
+		 flags: COLLAPSED
+		 desc:  ""
+		}
+
+			p_CAN_new_B_real_T_0[7]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "x_angle"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_real_T_0[8]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "y_angle"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_real_T_0[9]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "z_angle"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+
+
+			group "angle_raw" -- block-group
+			{
+			 block: "Inport"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				p_CAN_new_B_int16_T_1[5]
+				{
+				 type:    int(16)*
+				 alias:   "Out1{SubArray1}"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+				p_CAN_new_B_int16_T_1[6]
+				{
+				 type:    int(16)*
+				 alias:   "Out1{SubArray2}"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+				p_CAN_new_B_int16_T_1[7]
+				{
+				 type:    int(16)*
+				 alias:   "Out1{SubArray3}"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+
+
+			endgroup -- block-group "angle_raw"
+
+			group "Bus\nSelector1" -- block-group
+			{
+			 block: "BusSelector"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				p_CAN_new_B_int16_T_1[5]
+				{
+				 type:    int(16)*
+				 alias:   "Out1"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+				p_CAN_new_B_int16_T_1[6]
+				{
+				 type:    int(16)*
+				 alias:   "Out2"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+				p_CAN_new_B_int16_T_1[7]
+				{
+				 type:    int(16)*
+				 alias:   "Out3"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+
+
+			endgroup -- block-group "Bus\nSelector1"
+
+			group "angle_init_x" -- block-group
+			{
+			 block: "Constant"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				-- Skipping output Out1
+				p_CAN_new_P_real_T_0[9]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "Value"
+				 flags:   PARAM
+				}
+
+
+			endgroup -- block-group "angle_init_x"
+
+			group "angle_init_y" -- block-group
+			{
+			 block: "Constant"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				-- Skipping output Out1
+				p_CAN_new_P_real_T_0[10]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "Value"
+				 flags:   PARAM
+				}
+
+
+			endgroup -- block-group "angle_init_y"
+
+			group "angle_init_z\n" -- block-group
+			{
+			 block: "Constant"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				-- Skipping output Out1
+				p_CAN_new_P_real_T_0[11]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "Value"
+				 flags:   PARAM
+				}
+
+
+			endgroup -- block-group "angle_init_z\n"
+
+			group "IMU_angle_corrected_x" -- block-group
+			{
+			 block: "Sum"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				p_CAN_new_B_real_T_0[7]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "Out1"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+
+
+			endgroup -- block-group "IMU_angle_corrected_x"
+
+			group "IMU_angle_corrected_y" -- block-group
+			{
+			 block: "Sum"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				p_CAN_new_B_real_T_0[8]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "Out1"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+
+
+			endgroup -- block-group "IMU_angle_corrected_y"
+
+			group "IMU_angle_corrected_z" -- block-group
+			{
+			 block: "Sum"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				p_CAN_new_B_real_T_0[9]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "Out1"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+
+
+			endgroup -- block-group "IMU_angle_corrected_z"
+
+
+			p_CAN_new_B_int16_T_1[5]
+			{
+			 type:    int(16)*
+			 alias:   "<IMU_angels_corrected>{SubArray1}"
+			 origin:  "CAN_new/Arduino/angle_zeroing/angle_raw/Out1"
+			 flags:   LABEL|READONLY
+			}
+			p_CAN_new_B_int16_T_1[6]
+			{
+			 type:    int(16)*
+			 alias:   "<IMU_angels_corrected>{SubArray2}"
+			 origin:  "CAN_new/Arduino/angle_zeroing/angle_raw/Out1"
+			 flags:   LABEL|READONLY
+			}
+			p_CAN_new_B_int16_T_1[7]
+			{
+			 type:    int(16)*
+			 alias:   "<IMU_angels_corrected>{SubArray3}"
+			 origin:  "CAN_new/Arduino/angle_zeroing/angle_raw/Out1"
+			 flags:   LABEL|READONLY
+			}
+			p_CAN_new_B_int16_T_1[5]
+			{
+			 type:    int(16)*
+			 alias:   "<x>"
+			 origin:  "CAN_new/Arduino/angle_zeroing/Bus\nSelector1/Out1"
+			 flags:   LABEL|READONLY
+			}
+			p_CAN_new_B_int16_T_1[6]
+			{
+			 type:    int(16)*
+			 alias:   "<y>"
+			 origin:  "CAN_new/Arduino/angle_zeroing/Bus\nSelector1/Out2"
+			 flags:   LABEL|READONLY
+			}
+			p_CAN_new_B_int16_T_1[7]
+			{
+			 type:    int(16)*
+			 alias:   "<z>"
+			 origin:  "CAN_new/Arduino/angle_zeroing/Bus\nSelector1/Out3"
+			 flags:   LABEL|READONLY
+			}
+
+		endgroup -- subsystem-group "angle_zeroing"
+  
+  
+		group "gyro_zeroing" -- subsystem-group
+		{
+		 flags: COLLAPSED
+		 desc:  ""
+		}
+
+			p_CAN_new_B_real_T_0[10]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "x_gyro"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_real_T_0[11]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "y_gyro"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_real_T_0[12]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "z_gyro"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+
+
+			group "gyrol_raw" -- block-group
+			{
+			 block: "Inport"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				p_CAN_new_B_int16_T_1[8]
+				{
+				 type:    int(16)*
+				 alias:   "Out1{SubArray1}"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+				p_CAN_new_B_int16_T_1[9]
+				{
+				 type:    int(16)*
+				 alias:   "Out1{SubArray2}"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+				p_CAN_new_B_int16_T_1[10]
+				{
+				 type:    int(16)*
+				 alias:   "Out1{SubArray3}"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+
+
+			endgroup -- block-group "gyrol_raw"
+
+			group "Bus\nSelector1" -- block-group
+			{
+			 block: "BusSelector"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				p_CAN_new_B_int16_T_1[8]
+				{
+				 type:    int(16)*
+				 alias:   "Out1"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+				p_CAN_new_B_int16_T_1[9]
+				{
+				 type:    int(16)*
+				 alias:   "Out2"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+				p_CAN_new_B_int16_T_1[10]
+				{
+				 type:    int(16)*
+				 alias:   "Out3"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+
+
+			endgroup -- block-group "Bus\nSelector1"
+
+			group "gyro_init_x" -- block-group
+			{
+			 block: "Constant"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				-- Skipping output Out1
+				p_CAN_new_P_real_T_0[12]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "Value"
+				 flags:   PARAM
+				}
+
+
+			endgroup -- block-group "gyro_init_x"
+
+			group "gyro_init_y" -- block-group
+			{
+			 block: "Constant"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				-- Skipping output Out1
+				p_CAN_new_P_real_T_0[13]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "Value"
+				 flags:   PARAM
+				}
+
+
+			endgroup -- block-group "gyro_init_y"
+
+			group "gyro_init_z\n" -- block-group
+			{
+			 block: "Constant"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				-- Skipping output Out1
+				p_CAN_new_P_real_T_0[14]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "Value"
+				 flags:   PARAM
+				}
+
+
+			endgroup -- block-group "gyro_init_z\n"
+
+			group "IMU_gyro_corrected_x" -- block-group
+			{
+			 block: "Sum"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				p_CAN_new_B_real_T_0[10]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "Out1"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+
+
+			endgroup -- block-group "IMU_gyro_corrected_x"
+
+			group "IMU_gyro_corrected_y" -- block-group
+			{
+			 block: "Sum"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				p_CAN_new_B_real_T_0[11]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "Out1"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+
+
+			endgroup -- block-group "IMU_gyro_corrected_y"
+
+			group "IMU_gyro_corrected_z" -- block-group
+			{
+			 block: "Sum"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				p_CAN_new_B_real_T_0[12]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "Out1"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+
+
+			endgroup -- block-group "IMU_gyro_corrected_z"
+
+
+			p_CAN_new_B_int16_T_1[8]
+			{
+			 type:    int(16)*
+			 alias:   "<IMU_gyroskop>{SubArray1}"
+			 origin:  "CAN_new/Arduino/gyro_zeroing/gyrol_raw/Out1"
+			 flags:   LABEL|READONLY
+			}
+			p_CAN_new_B_int16_T_1[9]
+			{
+			 type:    int(16)*
+			 alias:   "<IMU_gyroskop>{SubArray2}"
+			 origin:  "CAN_new/Arduino/gyro_zeroing/gyrol_raw/Out1"
+			 flags:   LABEL|READONLY
+			}
+			p_CAN_new_B_int16_T_1[10]
+			{
+			 type:    int(16)*
+			 alias:   "<IMU_gyroskop>{SubArray3}"
+			 origin:  "CAN_new/Arduino/gyro_zeroing/gyrol_raw/Out1"
+			 flags:   LABEL|READONLY
+			}
+			p_CAN_new_B_int16_T_1[8]
+			{
+			 type:    int(16)*
+			 alias:   "<x>"
+			 origin:  "CAN_new/Arduino/gyro_zeroing/Bus\nSelector1/Out1"
+			 flags:   LABEL|READONLY
+			}
+			p_CAN_new_B_int16_T_1[9]
+			{
+			 type:    int(16)*
+			 alias:   "<y>"
+			 origin:  "CAN_new/Arduino/gyro_zeroing/Bus\nSelector1/Out2"
+			 flags:   LABEL|READONLY
+			}
+			p_CAN_new_B_int16_T_1[10]
+			{
+			 type:    int(16)*
+			 alias:   "<z>"
+			 origin:  "CAN_new/Arduino/gyro_zeroing/Bus\nSelector1/Out3"
+			 flags:   LABEL|READONLY
+			}
+
+		endgroup -- subsystem-group "gyro_zeroing"
 
 		p_CAN_new_B_int16_T_1[2]
 		{
 		 type:    int(16)*
-		 alias:   "<New_Message_1>"
-		 origin:  "CAN_new/Arduino/Bus\nSelector/Out4"
-		 flags:   LABEL|READONLY
-		}
-		p_CAN_new_B_uint8_T_4[10]
-		{
-		 type:    uint(8)*
-		 alias:   "<RTICANMMFreeRawMessage_1>{SubArray1}"
+		 alias:   "<IMU_accelerometer>{SubArray1}"
 		 origin:  "CAN_new/Arduino/Bus\nSelector/Out1"
 		 flags:   LABEL|READONLY
 		}
-		p_CAN_new_B_uint8_T_4[11]
+		p_CAN_new_B_int16_T_1[3]
 		{
-		 type:    uint(8)*
-		 alias:   "<RTICANMMFreeRawMessage_1>{SubArray2}"
+		 type:    int(16)*
+		 alias:   "<IMU_accelerometer>{SubArray2}"
 		 origin:  "CAN_new/Arduino/Bus\nSelector/Out1"
 		 flags:   LABEL|READONLY
 		}
-		p_CAN_new_B_uint8_T_4[12]
+		p_CAN_new_B_int16_T_1[4]
 		{
-		 type:    uint(8)*
-		 alias:   "<RTICANMMFreeRawMessage_1>{SubArray3}"
+		 type:    int(16)*
+		 alias:   "<IMU_accelerometer>{SubArray3}"
 		 origin:  "CAN_new/Arduino/Bus\nSelector/Out1"
 		 flags:   LABEL|READONLY
 		}
-		p_CAN_new_B_uint8_T_4[13]
+		p_CAN_new_B_int16_T_1[5]
 		{
-		 type:    uint(8)*
-		 alias:   "<RTICANMMFreeRawMessage_1>{SubArray4}"
-		 origin:  "CAN_new/Arduino/Bus\nSelector/Out1"
-		 flags:   LABEL|READONLY
-		}
-		p_CAN_new_B_uint8_T_4[14]
-		{
-		 type:    uint(8)*
-		 alias:   "<RTICANMMFreeRawMessage_1>{SubArray5}"
-		 origin:  "CAN_new/Arduino/Bus\nSelector/Out1"
-		 flags:   LABEL|READONLY
-		}
-		p_CAN_new_B_uint8_T_4[15]
-		{
-		 type:    uint(8)*
-		 alias:   "<RTICANMMFreeRawMessage_1>{SubArray6}"
-		 origin:  "CAN_new/Arduino/Bus\nSelector/Out1"
-		 flags:   LABEL|READONLY
-		}
-		p_CAN_new_B_uint8_T_4[16]
-		{
-		 type:    uint(8)*
-		 alias:   "<RTICANMMFreeRawMessage_1>{SubArray7}"
-		 origin:  "CAN_new/Arduino/Bus\nSelector/Out1"
-		 flags:   LABEL|READONLY
-		}
-		p_CAN_new_B_uint8_T_4[17]
-		{
-		 type:    uint(8)*
-		 alias:   "<RTICANMMFreeRawMessage_1>{SubArray8}"
-		 origin:  "CAN_new/Arduino/Bus\nSelector/Out1"
-		 flags:   LABEL|READONLY
-		}
-		p_CAN_new_B_uint8_T_4[18]
-		{
-		 type:    uint(8)*
-		 alias:   "<RTICANMMFreeRawMessage_2>{SubArray1}"
+		 type:    int(16)*
+		 alias:   "<IMU_angels_corrected>{SubArray1}"
 		 origin:  "CAN_new/Arduino/Bus\nSelector/Out2"
 		 flags:   LABEL|READONLY
 		}
-		p_CAN_new_B_uint8_T_4[19]
+		p_CAN_new_B_int16_T_1[6]
 		{
-		 type:    uint(8)*
-		 alias:   "<RTICANMMFreeRawMessage_2>{SubArray2}"
+		 type:    int(16)*
+		 alias:   "<IMU_angels_corrected>{SubArray2}"
 		 origin:  "CAN_new/Arduino/Bus\nSelector/Out2"
 		 flags:   LABEL|READONLY
 		}
-		p_CAN_new_B_uint8_T_4[20]
+		p_CAN_new_B_int16_T_1[7]
 		{
-		 type:    uint(8)*
-		 alias:   "<RTICANMMFreeRawMessage_2>{SubArray3}"
+		 type:    int(16)*
+		 alias:   "<IMU_angels_corrected>{SubArray3}"
 		 origin:  "CAN_new/Arduino/Bus\nSelector/Out2"
 		 flags:   LABEL|READONLY
 		}
-		p_CAN_new_B_uint8_T_4[21]
+		p_CAN_new_B_int16_T_1[8]
 		{
-		 type:    uint(8)*
-		 alias:   "<RTICANMMFreeRawMessage_2>{SubArray4}"
-		 origin:  "CAN_new/Arduino/Bus\nSelector/Out2"
-		 flags:   LABEL|READONLY
-		}
-		p_CAN_new_B_uint8_T_4[22]
-		{
-		 type:    uint(8)*
-		 alias:   "<RTICANMMFreeRawMessage_2>{SubArray5}"
-		 origin:  "CAN_new/Arduino/Bus\nSelector/Out2"
-		 flags:   LABEL|READONLY
-		}
-		p_CAN_new_B_uint8_T_4[23]
-		{
-		 type:    uint(8)*
-		 alias:   "<RTICANMMFreeRawMessage_2>{SubArray6}"
-		 origin:  "CAN_new/Arduino/Bus\nSelector/Out2"
-		 flags:   LABEL|READONLY
-		}
-		p_CAN_new_B_uint8_T_4[24]
-		{
-		 type:    uint(8)*
-		 alias:   "<RTICANMMFreeRawMessage_2>{SubArray7}"
-		 origin:  "CAN_new/Arduino/Bus\nSelector/Out2"
-		 flags:   LABEL|READONLY
-		}
-		p_CAN_new_B_uint8_T_4[25]
-		{
-		 type:    uint(8)*
-		 alias:   "<RTICANMMFreeRawMessage_2>{SubArray8}"
-		 origin:  "CAN_new/Arduino/Bus\nSelector/Out2"
-		 flags:   LABEL|READONLY
-		}
-		p_CAN_new_B_uint8_T_4[26]
-		{
-		 type:    uint(8)*
-		 alias:   "<RTICANMMFreeRawMessage_3>{SubArray1}"
+		 type:    int(16)*
+		 alias:   "<IMU_gyroskop>{SubArray1}"
 		 origin:  "CAN_new/Arduino/Bus\nSelector/Out3"
 		 flags:   LABEL|READONLY
 		}
-		p_CAN_new_B_uint8_T_4[27]
+		p_CAN_new_B_int16_T_1[9]
 		{
-		 type:    uint(8)*
-		 alias:   "<RTICANMMFreeRawMessage_3>{SubArray2}"
+		 type:    int(16)*
+		 alias:   "<IMU_gyroskop>{SubArray2}"
 		 origin:  "CAN_new/Arduino/Bus\nSelector/Out3"
 		 flags:   LABEL|READONLY
 		}
-		p_CAN_new_B_uint8_T_4[28]
+		p_CAN_new_B_int16_T_1[10]
 		{
-		 type:    uint(8)*
-		 alias:   "<RTICANMMFreeRawMessage_3>{SubArray3}"
-		 origin:  "CAN_new/Arduino/Bus\nSelector/Out3"
-		 flags:   LABEL|READONLY
-		}
-		p_CAN_new_B_uint8_T_4[29]
-		{
-		 type:    uint(8)*
-		 alias:   "<RTICANMMFreeRawMessage_3>{SubArray4}"
-		 origin:  "CAN_new/Arduino/Bus\nSelector/Out3"
-		 flags:   LABEL|READONLY
-		}
-		p_CAN_new_B_uint8_T_4[30]
-		{
-		 type:    uint(8)*
-		 alias:   "<RTICANMMFreeRawMessage_3>{SubArray5}"
-		 origin:  "CAN_new/Arduino/Bus\nSelector/Out3"
-		 flags:   LABEL|READONLY
-		}
-		p_CAN_new_B_uint8_T_4[31]
-		{
-		 type:    uint(8)*
-		 alias:   "<RTICANMMFreeRawMessage_3>{SubArray6}"
-		 origin:  "CAN_new/Arduino/Bus\nSelector/Out3"
-		 flags:   LABEL|READONLY
-		}
-		p_CAN_new_B_uint8_T_4[32]
-		{
-		 type:    uint(8)*
-		 alias:   "<RTICANMMFreeRawMessage_3>{SubArray7}"
-		 origin:  "CAN_new/Arduino/Bus\nSelector/Out3"
-		 flags:   LABEL|READONLY
-		}
-		p_CAN_new_B_uint8_T_4[33]
-		{
-		 type:    uint(8)*
-		 alias:   "<RTICANMMFreeRawMessage_3>{SubArray8}"
+		 type:    int(16)*
+		 alias:   "<IMU_gyroskop>{SubArray3}"
 		 origin:  "CAN_new/Arduino/Bus\nSelector/Out3"
 		 flags:   LABEL|READONLY
 		}
@@ -2088,6 +2042,705 @@ group "Model Root"
 	}
 
 
+
+		group "Bus\nSelector" -- block-group
+		{
+		 block: "BusSelector"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			p_CAN_new_B_real_T_0[13]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out1{SubArray1}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_real_T_0[14]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out1{SubArray2}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_real_T_0[15]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out1{SubArray3}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_real_T_0[16]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out1{SubArray4}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_real_T_0[17]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out2{SubArray1}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_real_T_0[18]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out2{SubArray2}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_real_T_0[19]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out2{SubArray3}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_real_T_0[20]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out2{SubArray4}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_real_T_0[21]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out3{SubArray1}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_real_T_0[22]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out3{SubArray2}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_real_T_0[23]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out3{SubArray3}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_real_T_0[24]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out3{SubArray4}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_real_T_0[25]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out4{SubArray1}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_real_T_0[26]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out4{SubArray2}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_real_T_0[27]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out4{SubArray3}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_real_T_0[28]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out4{SubArray4}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_4[11]
+			{
+			 type:    uint(8)*
+			 alias:   "Out5{SubArray1}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_4[12]
+			{
+			 type:    uint(8)*
+			 alias:   "Out5{SubArray2}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_4[13]
+			{
+			 type:    uint(8)*
+			 alias:   "Out5{SubArray3}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_4[14]
+			{
+			 type:    uint(8)*
+			 alias:   "Out5{SubArray4}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_4[15]
+			{
+			 type:    uint(8)*
+			 alias:   "Out5{SubArray5}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_4[16]
+			{
+			 type:    uint(8)*
+			 alias:   "Out5{SubArray6}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_4[17]
+			{
+			 type:    uint(8)*
+			 alias:   "Out5{SubArray7}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_4[18]
+			{
+			 type:    uint(8)*
+			 alias:   "Out5{SubArray8}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_4[19]
+			{
+			 type:    uint(8)*
+			 alias:   "Out5{SubArray9}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_4[20]
+			{
+			 type:    uint(8)*
+			 alias:   "Out5{SubArray10}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_4[21]
+			{
+			 type:    uint(8)*
+			 alias:   "Out5{SubArray11}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_4[22]
+			{
+			 type:    uint(8)*
+			 alias:   "Out6{SubArray1}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_4[23]
+			{
+			 type:    uint(8)*
+			 alias:   "Out6{SubArray2}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_real_T_0[29]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out6{SubArray3}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_real_T_0[30]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out6{SubArray4}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_real_T_0[31]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out6{SubArray5}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_real_T_0[32]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out7{SubArray1}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_real_T_0[33]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out7{SubArray2}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_real_T_0[34]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out7{SubArray3}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_real_T_0[35]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out7{SubArray4}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_int16_T_1[11]
+			{
+			 type:    int(16)*
+			 alias:   "Out8{SubArray1}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_int16_T_1[12]
+			{
+			 type:    int(16)*
+			 alias:   "Out8{SubArray2}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_4[24]
+			{
+			 type:    uint(8)*
+			 alias:   "Out8{SubArray3}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_4[25]
+			{
+			 type:    uint(8)*
+			 alias:   "Out8{SubArray4}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_real_T_0[36]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out9{SubArray1}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_real_T_0[37]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out9{SubArray2}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_int16_T_1[13]
+			{
+			 type:    int(16)*
+			 alias:   "Out9{SubArray3}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_4[26]
+			{
+			 type:    uint(8)*
+			 alias:   "Out9{SubArray4}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint16_T_2[0]
+			{
+			 type:    uint(16)*
+			 alias:   "Out10{SubArray1}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_real_T_0[38]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out10{SubArray2}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_boolean_T_5[0]
+			{
+			 type:    uint(8)*
+			 alias:   "Out11{SubArray1}"
+			 desc:    ""
+			 range:   < 0 ; 1 >
+			 bitmask: 0x01
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_boolean_T_5[1]
+			{
+			 type:    uint(8)*
+			 alias:   "Out11{SubArray2}"
+			 desc:    ""
+			 range:   < 0 ; 1 >
+			 bitmask: 0x01
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_boolean_T_5[2]
+			{
+			 type:    uint(8)*
+			 alias:   "Out11{SubArray3}"
+			 desc:    ""
+			 range:   < 0 ; 1 >
+			 bitmask: 0x01
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_boolean_T_5[3]
+			{
+			 type:    uint(8)*
+			 alias:   "Out11{SubArray4}"
+			 desc:    ""
+			 range:   < 0 ; 1 >
+			 bitmask: 0x01
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_4[27]
+			{
+			 type:    uint(8)*
+			 alias:   "Out11{SubArray5}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_4[28]
+			{
+			 type:    uint(8)*
+			 alias:   "Out11{SubArray6}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_4[29]
+			{
+			 type:    uint(8)*
+			 alias:   "Out11{SubArray7}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_4[30]
+			{
+			 type:    uint(8)*
+			 alias:   "Out11{SubArray8}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_4[31]
+			{
+			 type:    uint(8)*
+			 alias:   "Out11{SubArray9}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_4[32]
+			{
+			 type:    uint(8)*
+			 alias:   "Out11{SubArray10}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_boolean_T_5[4]
+			{
+			 type:    uint(8)*
+			 alias:   "Out11{SubArray11}"
+			 desc:    ""
+			 range:   < 0 ; 1 >
+			 bitmask: 0x01
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_4[33]
+			{
+			 type:    uint(8)*
+			 alias:   "Out11{SubArray12}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_real_T_0[39]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out12{SubArray1}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_4[34]
+			{
+			 type:    uint(8)*
+			 alias:   "Out12{SubArray2}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_4[35]
+			{
+			 type:    uint(8)*
+			 alias:   "Out12{SubArray3}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_4[36]
+			{
+			 type:    uint(8)*
+			 alias:   "Out12{SubArray4}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_real_T_0[40]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out13{SubArray1}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_4[37]
+			{
+			 type:    uint(8)*
+			 alias:   "Out13{SubArray2}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_4[38]
+			{
+			 type:    uint(8)*
+			 alias:   "Out13{SubArray3}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_4[39]
+			{
+			 type:    uint(8)*
+			 alias:   "Out13{SubArray4}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_real_T_0[41]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out14{SubArray1}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_real_T_0[42]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out14{SubArray2}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_real_T_0[43]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out14{SubArray3}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_real_T_0[44]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out14{SubArray4}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_real_T_0[45]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out15{SubArray1}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_real_T_0[46]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out15{SubArray2}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_real_T_0[47]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out15{SubArray3}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_real_T_0[48]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out15{SubArray4}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_real_T_0[49]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out16{SubArray1}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_real_T_0[50]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out16{SubArray2}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_real_T_0[51]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out16{SubArray3}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_real_T_0[52]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out16{SubArray4}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_real_T_0[53]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out16{SubArray5}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_real_T_0[54]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out16{SubArray6}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_real_T_0[55]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out16{SubArray7}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_real_T_0[56]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out16{SubArray8}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_4[40]
+			{
+			 type:    uint(8)*
+			 alias:   "Out17{SubArray1}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_4[41]
+			{
+			 type:    uint(8)*
+			 alias:   "Out17{SubArray2}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_int8_T_3[0]
+			{
+			 type:    int(8)*
+			 alias:   "Out17{SubArray3}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_int8_T_3[1]
+			{
+			 type:    int(8)*
+			 alias:   "Out17{SubArray4}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_int8_T_3[2]
+			{
+			 type:    int(8)*
+			 alias:   "Out17{SubArray5}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_4[42]
+			{
+			 type:    uint(8)*
+			 alias:   "Out18{SubArray1}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_4[43]
+			{
+			 type:    uint(8)*
+			 alias:   "Out18{SubArray2}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_4[44]
+			{
+			 type:    uint(8)*
+			 alias:   "Out18{SubArray3}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_4[45]
+			{
+			 type:    uint(8)*
+			 alias:   "Out18{SubArray4}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_4[46]
+			{
+			 type:    uint(8)*
+			 alias:   "Out18{SubArray5}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_4[47]
+			{
+			 type:    uint(8)*
+			 alias:   "Out18{SubArray6}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_4[48]
+			{
+			 type:    uint(8)*
+			 alias:   "Out18{SubArray7}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_4[49]
+			{
+			 type:    uint(8)*
+			 alias:   "Out18{SubArray8}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_4[50]
+			{
+			 type:    uint(8)*
+			 alias:   "Out19{SubArray1}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_CAN_new_B_uint8_T_4[51]
+			{
+			 type:    uint(8)*
+			 alias:   "Out19{SubArray2}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "Bus\nSelector"
 
 		group "Reset@RTICANMM\nControllerSetup" -- block-group
 		{
@@ -2163,7 +2816,7 @@ group "Model Root"
 			 desc:  ""
 			 flags: BLOCK|COLLAPSED
 			}
-				p_CAN_new_B_uint8_T_4[35]
+				p_CAN_new_B_uint8_T_4[52]
 				{
 				 type:    uint(8)*
 				 alias:   "Out1"
@@ -2182,31 +2835,31 @@ group "Model Root"
 			}
 
 
-				p_CAN_new_P_real_T_0[11]
+				p_CAN_new_P_real_T_0[20]
 				{
 				 type:    flt(64,IEEE)*
 				 alias:   "P1"
 				 flags:   PARAM
 				}
-				p_CAN_new_P_real_T_0[12]
+				p_CAN_new_P_real_T_0[21]
 				{
 				 type:    flt(64,IEEE)*
 				 alias:   "P2"
 				 flags:   PARAM
 				}
-				p_CAN_new_P_real_T_0[13]
+				p_CAN_new_P_real_T_0[22]
 				{
 				 type:    flt(64,IEEE)*
 				 alias:   "P3"
 				 flags:   PARAM
 				}
-				p_CAN_new_P_real_T_0[14]
+				p_CAN_new_P_real_T_0[23]
 				{
 				 type:    flt(64,IEEE)*
 				 alias:   "P4"
 				 flags:   PARAM
 				}
-				p_CAN_new_P_real_T_0[15]
+				p_CAN_new_P_real_T_0[24]
 				{
 				 type:    flt(64,IEEE)*
 				 alias:   "P5"
@@ -2228,7 +2881,7 @@ group "Model Root"
 			 desc:  ""
 			 flags: BLOCK|COLLAPSED
 			}
-				p_CAN_new_B_uint8_T_4[35]
+				p_CAN_new_B_uint8_T_4[52]
 				{
 				 type:    uint(8)*
 				 alias:   "In1"
@@ -2267,308 +2920,308 @@ group "Model Root"
 		 desc:  ""
 		}
 
-			p_CAN_new_B_real_T_0[4]
+			p_CAN_new_B_real_T_0[13]
 			{
 			 type:    flt(64,IEEE)*
 			 alias:   "RX_Data{SubArray1}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_real_T_0[5]
+			p_CAN_new_B_real_T_0[14]
 			{
 			 type:    flt(64,IEEE)*
 			 alias:   "RX_Data{SubArray2}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_real_T_0[6]
+			p_CAN_new_B_real_T_0[15]
 			{
 			 type:    flt(64,IEEE)*
 			 alias:   "RX_Data{SubArray3}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_real_T_0[7]
+			p_CAN_new_B_real_T_0[16]
 			{
 			 type:    flt(64,IEEE)*
 			 alias:   "RX_Data{SubArray4}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_real_T_0[8]
+			p_CAN_new_B_real_T_0[17]
 			{
 			 type:    flt(64,IEEE)*
 			 alias:   "RX_Data{SubArray5}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_real_T_0[9]
+			p_CAN_new_B_real_T_0[18]
 			{
 			 type:    flt(64,IEEE)*
 			 alias:   "RX_Data{SubArray6}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_real_T_0[10]
+			p_CAN_new_B_real_T_0[19]
 			{
 			 type:    flt(64,IEEE)*
 			 alias:   "RX_Data{SubArray7}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_real_T_0[11]
+			p_CAN_new_B_real_T_0[20]
 			{
 			 type:    flt(64,IEEE)*
 			 alias:   "RX_Data{SubArray8}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_real_T_0[12]
+			p_CAN_new_B_real_T_0[21]
 			{
 			 type:    flt(64,IEEE)*
 			 alias:   "RX_Data{SubArray9}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_real_T_0[13]
+			p_CAN_new_B_real_T_0[22]
 			{
 			 type:    flt(64,IEEE)*
 			 alias:   "RX_Data{SubArray10}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_real_T_0[14]
+			p_CAN_new_B_real_T_0[23]
 			{
 			 type:    flt(64,IEEE)*
 			 alias:   "RX_Data{SubArray11}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_real_T_0[15]
+			p_CAN_new_B_real_T_0[24]
 			{
 			 type:    flt(64,IEEE)*
 			 alias:   "RX_Data{SubArray12}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_real_T_0[16]
+			p_CAN_new_B_real_T_0[25]
 			{
 			 type:    flt(64,IEEE)*
 			 alias:   "RX_Data{SubArray13}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_real_T_0[17]
+			p_CAN_new_B_real_T_0[26]
 			{
 			 type:    flt(64,IEEE)*
 			 alias:   "RX_Data{SubArray14}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_real_T_0[18]
+			p_CAN_new_B_real_T_0[27]
 			{
 			 type:    flt(64,IEEE)*
 			 alias:   "RX_Data{SubArray15}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_real_T_0[19]
+			p_CAN_new_B_real_T_0[28]
 			{
 			 type:    flt(64,IEEE)*
 			 alias:   "RX_Data{SubArray16}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[36]
+			p_CAN_new_B_uint8_T_4[11]
 			{
 			 type:    uint(8)*
 			 alias:   "RX_Data{SubArray17}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[37]
+			p_CAN_new_B_uint8_T_4[12]
 			{
 			 type:    uint(8)*
 			 alias:   "RX_Data{SubArray18}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[38]
+			p_CAN_new_B_uint8_T_4[13]
 			{
 			 type:    uint(8)*
 			 alias:   "RX_Data{SubArray19}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[39]
+			p_CAN_new_B_uint8_T_4[14]
 			{
 			 type:    uint(8)*
 			 alias:   "RX_Data{SubArray20}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[40]
+			p_CAN_new_B_uint8_T_4[15]
 			{
 			 type:    uint(8)*
 			 alias:   "RX_Data{SubArray21}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[41]
+			p_CAN_new_B_uint8_T_4[16]
 			{
 			 type:    uint(8)*
 			 alias:   "RX_Data{SubArray22}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[42]
+			p_CAN_new_B_uint8_T_4[17]
 			{
 			 type:    uint(8)*
 			 alias:   "RX_Data{SubArray23}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[43]
+			p_CAN_new_B_uint8_T_4[18]
 			{
 			 type:    uint(8)*
 			 alias:   "RX_Data{SubArray24}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[44]
+			p_CAN_new_B_uint8_T_4[19]
 			{
 			 type:    uint(8)*
 			 alias:   "RX_Data{SubArray25}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[45]
+			p_CAN_new_B_uint8_T_4[20]
 			{
 			 type:    uint(8)*
 			 alias:   "RX_Data{SubArray26}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[46]
+			p_CAN_new_B_uint8_T_4[21]
 			{
 			 type:    uint(8)*
 			 alias:   "RX_Data{SubArray27}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[47]
+			p_CAN_new_B_uint8_T_4[22]
 			{
 			 type:    uint(8)*
 			 alias:   "RX_Data{SubArray28}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[48]
+			p_CAN_new_B_uint8_T_4[23]
 			{
 			 type:    uint(8)*
 			 alias:   "RX_Data{SubArray29}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_real_T_0[20]
+			p_CAN_new_B_real_T_0[29]
 			{
 			 type:    flt(64,IEEE)*
 			 alias:   "RX_Data{SubArray30}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_real_T_0[21]
+			p_CAN_new_B_real_T_0[30]
 			{
 			 type:    flt(64,IEEE)*
 			 alias:   "RX_Data{SubArray31}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_real_T_0[22]
+			p_CAN_new_B_real_T_0[31]
 			{
 			 type:    flt(64,IEEE)*
 			 alias:   "RX_Data{SubArray32}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_real_T_0[23]
+			p_CAN_new_B_real_T_0[32]
 			{
 			 type:    flt(64,IEEE)*
 			 alias:   "RX_Data{SubArray33}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_real_T_0[24]
+			p_CAN_new_B_real_T_0[33]
 			{
 			 type:    flt(64,IEEE)*
 			 alias:   "RX_Data{SubArray34}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_real_T_0[25]
+			p_CAN_new_B_real_T_0[34]
 			{
 			 type:    flt(64,IEEE)*
 			 alias:   "RX_Data{SubArray35}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_real_T_0[26]
+			p_CAN_new_B_real_T_0[35]
 			{
 			 type:    flt(64,IEEE)*
 			 alias:   "RX_Data{SubArray36}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_int16_T_1[3]
+			p_CAN_new_B_int16_T_1[11]
 			{
 			 type:    int(16)*
 			 alias:   "RX_Data{SubArray37}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_int16_T_1[4]
+			p_CAN_new_B_int16_T_1[12]
 			{
 			 type:    int(16)*
 			 alias:   "RX_Data{SubArray38}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[49]
+			p_CAN_new_B_uint8_T_4[24]
 			{
 			 type:    uint(8)*
 			 alias:   "RX_Data{SubArray39}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[50]
+			p_CAN_new_B_uint8_T_4[25]
 			{
 			 type:    uint(8)*
 			 alias:   "RX_Data{SubArray40}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_real_T_0[27]
+			p_CAN_new_B_real_T_0[36]
 			{
 			 type:    flt(64,IEEE)*
 			 alias:   "RX_Data{SubArray41}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_real_T_0[28]
+			p_CAN_new_B_real_T_0[37]
 			{
 			 type:    flt(64,IEEE)*
 			 alias:   "RX_Data{SubArray42}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_int16_T_1[5]
+			p_CAN_new_B_int16_T_1[13]
 			{
 			 type:    int(16)*
 			 alias:   "RX_Data{SubArray43}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[51]
+			p_CAN_new_B_uint8_T_4[26]
 			{
 			 type:    uint(8)*
 			 alias:   "RX_Data{SubArray44}"
@@ -2582,7 +3235,7 @@ group "Model Root"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_real_T_0[29]
+			p_CAN_new_B_real_T_0[38]
 			{
 			 type:    flt(64,IEEE)*
 			 alias:   "RX_Data{SubArray46}"
@@ -2625,42 +3278,42 @@ group "Model Root"
 			 bitmask: 0x01
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[52]
+			p_CAN_new_B_uint8_T_4[27]
 			{
 			 type:    uint(8)*
 			 alias:   "RX_Data{SubArray51}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[53]
+			p_CAN_new_B_uint8_T_4[28]
 			{
 			 type:    uint(8)*
 			 alias:   "RX_Data{SubArray52}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[54]
+			p_CAN_new_B_uint8_T_4[29]
 			{
 			 type:    uint(8)*
 			 alias:   "RX_Data{SubArray53}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[55]
+			p_CAN_new_B_uint8_T_4[30]
 			{
 			 type:    uint(8)*
 			 alias:   "RX_Data{SubArray54}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[56]
+			p_CAN_new_B_uint8_T_4[31]
 			{
 			 type:    uint(8)*
 			 alias:   "RX_Data{SubArray55}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[57]
+			p_CAN_new_B_uint8_T_4[32]
 			{
 			 type:    uint(8)*
 			 alias:   "RX_Data{SubArray56}"
@@ -2676,189 +3329,189 @@ group "Model Root"
 			 bitmask: 0x01
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[58]
+			p_CAN_new_B_uint8_T_4[33]
 			{
 			 type:    uint(8)*
 			 alias:   "RX_Data{SubArray58}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_real_T_0[30]
+			p_CAN_new_B_real_T_0[39]
 			{
 			 type:    flt(64,IEEE)*
 			 alias:   "RX_Data{SubArray59}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[59]
+			p_CAN_new_B_uint8_T_4[34]
 			{
 			 type:    uint(8)*
 			 alias:   "RX_Data{SubArray60}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[60]
+			p_CAN_new_B_uint8_T_4[35]
 			{
 			 type:    uint(8)*
 			 alias:   "RX_Data{SubArray61}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[61]
+			p_CAN_new_B_uint8_T_4[36]
 			{
 			 type:    uint(8)*
 			 alias:   "RX_Data{SubArray62}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_real_T_0[31]
+			p_CAN_new_B_real_T_0[40]
 			{
 			 type:    flt(64,IEEE)*
 			 alias:   "RX_Data{SubArray63}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[62]
+			p_CAN_new_B_uint8_T_4[37]
 			{
 			 type:    uint(8)*
 			 alias:   "RX_Data{SubArray64}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[63]
+			p_CAN_new_B_uint8_T_4[38]
 			{
 			 type:    uint(8)*
 			 alias:   "RX_Data{SubArray65}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[64]
+			p_CAN_new_B_uint8_T_4[39]
 			{
 			 type:    uint(8)*
 			 alias:   "RX_Data{SubArray66}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_real_T_0[32]
+			p_CAN_new_B_real_T_0[41]
 			{
 			 type:    flt(64,IEEE)*
 			 alias:   "RX_Data{SubArray67}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_real_T_0[33]
+			p_CAN_new_B_real_T_0[42]
 			{
 			 type:    flt(64,IEEE)*
 			 alias:   "RX_Data{SubArray68}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_real_T_0[34]
+			p_CAN_new_B_real_T_0[43]
 			{
 			 type:    flt(64,IEEE)*
 			 alias:   "RX_Data{SubArray69}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_real_T_0[35]
+			p_CAN_new_B_real_T_0[44]
 			{
 			 type:    flt(64,IEEE)*
 			 alias:   "RX_Data{SubArray70}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_real_T_0[36]
+			p_CAN_new_B_real_T_0[45]
 			{
 			 type:    flt(64,IEEE)*
 			 alias:   "RX_Data{SubArray71}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_real_T_0[37]
+			p_CAN_new_B_real_T_0[46]
 			{
 			 type:    flt(64,IEEE)*
 			 alias:   "RX_Data{SubArray72}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_real_T_0[38]
+			p_CAN_new_B_real_T_0[47]
 			{
 			 type:    flt(64,IEEE)*
 			 alias:   "RX_Data{SubArray73}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_real_T_0[39]
+			p_CAN_new_B_real_T_0[48]
 			{
 			 type:    flt(64,IEEE)*
 			 alias:   "RX_Data{SubArray74}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_real_T_0[40]
+			p_CAN_new_B_real_T_0[49]
 			{
 			 type:    flt(64,IEEE)*
 			 alias:   "RX_Data{SubArray75}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_real_T_0[41]
+			p_CAN_new_B_real_T_0[50]
 			{
 			 type:    flt(64,IEEE)*
 			 alias:   "RX_Data{SubArray76}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_real_T_0[42]
+			p_CAN_new_B_real_T_0[51]
 			{
 			 type:    flt(64,IEEE)*
 			 alias:   "RX_Data{SubArray77}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_real_T_0[43]
+			p_CAN_new_B_real_T_0[52]
 			{
 			 type:    flt(64,IEEE)*
 			 alias:   "RX_Data{SubArray78}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_real_T_0[44]
+			p_CAN_new_B_real_T_0[53]
 			{
 			 type:    flt(64,IEEE)*
 			 alias:   "RX_Data{SubArray79}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_real_T_0[45]
+			p_CAN_new_B_real_T_0[54]
 			{
 			 type:    flt(64,IEEE)*
 			 alias:   "RX_Data{SubArray80}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_real_T_0[46]
+			p_CAN_new_B_real_T_0[55]
 			{
 			 type:    flt(64,IEEE)*
 			 alias:   "RX_Data{SubArray81}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_real_T_0[47]
+			p_CAN_new_B_real_T_0[56]
 			{
 			 type:    flt(64,IEEE)*
 			 alias:   "RX_Data{SubArray82}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[65]
+			p_CAN_new_B_uint8_T_4[40]
 			{
 			 type:    uint(8)*
 			 alias:   "RX_Data{SubArray83}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[66]
+			p_CAN_new_B_uint8_T_4[41]
 			{
 			 type:    uint(8)*
 			 alias:   "RX_Data{SubArray84}"
@@ -2886,70 +3539,70 @@ group "Model Root"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[67]
+			p_CAN_new_B_uint8_T_4[42]
 			{
 			 type:    uint(8)*
 			 alias:   "RX_Data{SubArray88}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[68]
+			p_CAN_new_B_uint8_T_4[43]
 			{
 			 type:    uint(8)*
 			 alias:   "RX_Data{SubArray89}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[69]
+			p_CAN_new_B_uint8_T_4[44]
 			{
 			 type:    uint(8)*
 			 alias:   "RX_Data{SubArray90}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[70]
+			p_CAN_new_B_uint8_T_4[45]
 			{
 			 type:    uint(8)*
 			 alias:   "RX_Data{SubArray91}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[71]
+			p_CAN_new_B_uint8_T_4[46]
 			{
 			 type:    uint(8)*
 			 alias:   "RX_Data{SubArray92}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[72]
+			p_CAN_new_B_uint8_T_4[47]
 			{
 			 type:    uint(8)*
 			 alias:   "RX_Data{SubArray93}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[73]
+			p_CAN_new_B_uint8_T_4[48]
 			{
 			 type:    uint(8)*
 			 alias:   "RX_Data{SubArray94}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[74]
+			p_CAN_new_B_uint8_T_4[49]
 			{
 			 type:    uint(8)*
 			 alias:   "RX_Data{SubArray95}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[75]
+			p_CAN_new_B_uint8_T_4[50]
 			{
 			 type:    uint(8)*
 			 alias:   "RX_Data{SubArray96}"
 			 desc:    ""
 			 flags:   OUTPUT|READONLY
 			}
-			p_CAN_new_B_uint8_T_4[76]
+			p_CAN_new_B_uint8_T_4[51]
 			{
 			 type:    uint(8)*
 			 alias:   "RX_Data{SubArray97}"
@@ -2959,6 +3612,695 @@ group "Model Root"
 
 		endgroup -- subsystem-group "RTICANMM\nMainBlock"
 
+		p_CAN_new_B_real_T_0[13]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "<AnalogInputVoltagesMessage1>{SubArray1}"
+		 origin:  "CAN_new/ETS_CAN1/Bus\nSelector/Out1"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_real_T_0[14]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "<AnalogInputVoltagesMessage1>{SubArray2}"
+		 origin:  "CAN_new/ETS_CAN1/Bus\nSelector/Out1"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_real_T_0[15]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "<AnalogInputVoltagesMessage1>{SubArray3}"
+		 origin:  "CAN_new/ETS_CAN1/Bus\nSelector/Out1"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_real_T_0[16]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "<AnalogInputVoltagesMessage1>{SubArray4}"
+		 origin:  "CAN_new/ETS_CAN1/Bus\nSelector/Out1"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_real_T_0[17]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "<AnalogInputVoltagesMessage2>{SubArray1}"
+		 origin:  "CAN_new/ETS_CAN1/Bus\nSelector/Out2"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_real_T_0[18]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "<AnalogInputVoltagesMessage2>{SubArray2}"
+		 origin:  "CAN_new/ETS_CAN1/Bus\nSelector/Out2"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_real_T_0[19]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "<AnalogInputVoltagesMessage2>{SubArray3}"
+		 origin:  "CAN_new/ETS_CAN1/Bus\nSelector/Out2"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_real_T_0[20]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "<AnalogInputVoltagesMessage2>{SubArray4}"
+		 origin:  "CAN_new/ETS_CAN1/Bus\nSelector/Out2"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_real_T_0[21]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "<CurrentMeasurementOutputs1>{SubArray1}"
+		 origin:  "CAN_new/ETS_CAN1/Bus\nSelector/Out3"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_real_T_0[22]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "<CurrentMeasurementOutputs1>{SubArray2}"
+		 origin:  "CAN_new/ETS_CAN1/Bus\nSelector/Out3"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_real_T_0[23]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "<CurrentMeasurementOutputs1>{SubArray3}"
+		 origin:  "CAN_new/ETS_CAN1/Bus\nSelector/Out3"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_real_T_0[24]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "<CurrentMeasurementOutputs1>{SubArray4}"
+		 origin:  "CAN_new/ETS_CAN1/Bus\nSelector/Out3"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_real_T_0[25]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "<CurrentMeasurementOutputs2>{SubArray1}"
+		 origin:  "CAN_new/ETS_CAN1/Bus\nSelector/Out4"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_real_T_0[26]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "<CurrentMeasurementOutputs2>{SubArray2}"
+		 origin:  "CAN_new/ETS_CAN1/Bus\nSelector/Out4"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_real_T_0[27]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "<CurrentMeasurementOutputs2>{SubArray3}"
+		 origin:  "CAN_new/ETS_CAN1/Bus\nSelector/Out4"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_real_T_0[28]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "<CurrentMeasurementOutputs2>{SubArray4}"
+		 origin:  "CAN_new/ETS_CAN1/Bus\nSelector/Out4"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_uint8_T_4[11]
+		{
+		 type:    uint(8)*
+		 alias:   "<DigitalInput>{SubArray1}"
+		 origin:  "CAN_new/ETS_CAN1/Bus\nSelector/Out5"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_uint8_T_4[12]
+		{
+		 type:    uint(8)*
+		 alias:   "<DigitalInput>{SubArray2}"
+		 origin:  "CAN_new/ETS_CAN1/Bus\nSelector/Out5"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_uint8_T_4[13]
+		{
+		 type:    uint(8)*
+		 alias:   "<DigitalInput>{SubArray3}"
+		 origin:  "CAN_new/ETS_CAN1/Bus\nSelector/Out5"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_uint8_T_4[14]
+		{
+		 type:    uint(8)*
+		 alias:   "<DigitalInput>{SubArray4}"
+		 origin:  "CAN_new/ETS_CAN1/Bus\nSelector/Out5"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_uint8_T_4[15]
+		{
+		 type:    uint(8)*
+		 alias:   "<DigitalInput>{SubArray5}"
+		 origin:  "CAN_new/ETS_CAN1/Bus\nSelector/Out5"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_uint8_T_4[16]
+		{
+		 type:    uint(8)*
+		 alias:   "<DigitalInput>{SubArray6}"
+		 origin:  "CAN_new/ETS_CAN1/Bus\nSelector/Out5"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_uint8_T_4[17]
+		{
+		 type:    uint(8)*
+		 alias:   "<DigitalInput>{SubArray7}"
+		 origin:  "CAN_new/ETS_CAN1/Bus\nSelector/Out5"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_uint8_T_4[18]
+		{
+		 type:    uint(8)*
+		 alias:   "<DigitalInput>{SubArray8}"
+		 origin:  "CAN_new/ETS_CAN1/Bus\nSelector/Out5"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_uint8_T_4[19]
+		{
+		 type:    uint(8)*
+		 alias:   "<DigitalInput>{SubArray9}"
+		 origin:  "CAN_new/ETS_CAN1/Bus\nSelector/Out5"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_uint8_T_4[20]
+		{
+		 type:    uint(8)*
+		 alias:   "<DigitalInput>{SubArray10}"
+		 origin:  "CAN_new/ETS_CAN1/Bus\nSelector/Out5"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_uint8_T_4[21]
+		{
+		 type:    uint(8)*
+		 alias:   "<DigitalInput>{SubArray11}"
+		 origin:  "CAN_new/ETS_CAN1/Bus\nSelector/Out5"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_uint8_T_4[22]
+		{
+		 type:    uint(8)*
+		 alias:   "<EtsDataMessage1>{SubArray1}"
+		 origin:  "CAN_new/ETS_CAN1/Bus\nSelector/Out6"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_uint8_T_4[23]
+		{
+		 type:    uint(8)*
+		 alias:   "<EtsDataMessage1>{SubArray2}"
+		 origin:  "CAN_new/ETS_CAN1/Bus\nSelector/Out6"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_real_T_0[29]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "<EtsDataMessage1>{SubArray3}"
+		 origin:  "CAN_new/ETS_CAN1/Bus\nSelector/Out6"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_real_T_0[30]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "<EtsDataMessage1>{SubArray4}"
+		 origin:  "CAN_new/ETS_CAN1/Bus\nSelector/Out6"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_real_T_0[31]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "<EtsDataMessage1>{SubArray5}"
+		 origin:  "CAN_new/ETS_CAN1/Bus\nSelector/Out6"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_real_T_0[32]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "<EtsDataMessage2>{SubArray1}"
+		 origin:  "CAN_new/ETS_CAN1/Bus\nSelector/Out7"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_real_T_0[33]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "<EtsDataMessage2>{SubArray2}"
+		 origin:  "CAN_new/ETS_CAN1/Bus\nSelector/Out7"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_real_T_0[34]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "<EtsDataMessage2>{SubArray3}"
+		 origin:  "CAN_new/ETS_CAN1/Bus\nSelector/Out7"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_real_T_0[35]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "<EtsDataMessage2>{SubArray4}"
+		 origin:  "CAN_new/ETS_CAN1/Bus\nSelector/Out7"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_int16_T_1[11]
+		{
+		 type:    int(16)*
+		 alias:   "<EtsDataMessage3>{SubArray1}"
+		 origin:  "CAN_new/ETS_CAN1/Bus\nSelector/Out8"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_int16_T_1[12]
+		{
+		 type:    int(16)*
+		 alias:   "<EtsDataMessage3>{SubArray2}"
+		 origin:  "CAN_new/ETS_CAN1/Bus\nSelector/Out8"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_uint8_T_4[24]
+		{
+		 type:    uint(8)*
+		 alias:   "<EtsDataMessage3>{SubArray3}"
+		 origin:  "CAN_new/ETS_CAN1/Bus\nSelector/Out8"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_uint8_T_4[25]
+		{
+		 type:    uint(8)*
+		 alias:   "<EtsDataMessage3>{SubArray4}"
+		 origin:  "CAN_new/ETS_CAN1/Bus\nSelector/Out8"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_real_T_0[36]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "<EtsDataMessage4>{SubArray1}"
+		 origin:  "CAN_new/ETS_CAN1/Bus\nSelector/Out9"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_real_T_0[37]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "<EtsDataMessage4>{SubArray2}"
+		 origin:  "CAN_new/ETS_CAN1/Bus\nSelector/Out9"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_int16_T_1[13]
+		{
+		 type:    int(16)*
+		 alias:   "<EtsDataMessage4>{SubArray3}"
+		 origin:  "CAN_new/ETS_CAN1/Bus\nSelector/Out9"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_uint8_T_4[26]
+		{
+		 type:    uint(8)*
+		 alias:   "<EtsDataMessage4>{SubArray4}"
+		 origin:  "CAN_new/ETS_CAN1/Bus\nSelector/Out9"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_uint16_T_2[0]
+		{
+		 type:    uint(16)*
+		 alias:   "<EtsDataMessage5>{SubArray1}"
+		 origin:  "CAN_new/ETS_CAN1/Bus\nSelector/Out10"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_real_T_0[38]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "<EtsDataMessage5>{SubArray2}"
+		 origin:  "CAN_new/ETS_CAN1/Bus\nSelector/Out10"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_boolean_T_5[0]
+		{
+		 type:    uint(8)*
+		 alias:   "<EtsSystemMessage>{SubArray1}"
+		 bitmask: 0x01
+		 range:   < 0 ; 1 >
+		 origin:  "CAN_new/ETS_CAN1/Bus\nSelector/Out11"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_boolean_T_5[1]
+		{
+		 type:    uint(8)*
+		 alias:   "<EtsSystemMessage>{SubArray2}"
+		 bitmask: 0x01
+		 range:   < 0 ; 1 >
+		 origin:  "CAN_new/ETS_CAN1/Bus\nSelector/Out11"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_boolean_T_5[2]
+		{
+		 type:    uint(8)*
+		 alias:   "<EtsSystemMessage>{SubArray3}"
+		 bitmask: 0x01
+		 range:   < 0 ; 1 >
+		 origin:  "CAN_new/ETS_CAN1/Bus\nSelector/Out11"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_boolean_T_5[3]
+		{
+		 type:    uint(8)*
+		 alias:   "<EtsSystemMessage>{SubArray4}"
+		 bitmask: 0x01
+		 range:   < 0 ; 1 >
+		 origin:  "CAN_new/ETS_CAN1/Bus\nSelector/Out11"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_uint8_T_4[27]
+		{
+		 type:    uint(8)*
+		 alias:   "<EtsSystemMessage>{SubArray5}"
+		 origin:  "CAN_new/ETS_CAN1/Bus\nSelector/Out11"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_uint8_T_4[28]
+		{
+		 type:    uint(8)*
+		 alias:   "<EtsSystemMessage>{SubArray6}"
+		 origin:  "CAN_new/ETS_CAN1/Bus\nSelector/Out11"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_uint8_T_4[29]
+		{
+		 type:    uint(8)*
+		 alias:   "<EtsSystemMessage>{SubArray7}"
+		 origin:  "CAN_new/ETS_CAN1/Bus\nSelector/Out11"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_uint8_T_4[30]
+		{
+		 type:    uint(8)*
+		 alias:   "<EtsSystemMessage>{SubArray8}"
+		 origin:  "CAN_new/ETS_CAN1/Bus\nSelector/Out11"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_uint8_T_4[31]
+		{
+		 type:    uint(8)*
+		 alias:   "<EtsSystemMessage>{SubArray9}"
+		 origin:  "CAN_new/ETS_CAN1/Bus\nSelector/Out11"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_uint8_T_4[32]
+		{
+		 type:    uint(8)*
+		 alias:   "<EtsSystemMessage>{SubArray10}"
+		 origin:  "CAN_new/ETS_CAN1/Bus\nSelector/Out11"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_boolean_T_5[4]
+		{
+		 type:    uint(8)*
+		 alias:   "<EtsSystemMessage>{SubArray11}"
+		 bitmask: 0x01
+		 range:   < 0 ; 1 >
+		 origin:  "CAN_new/ETS_CAN1/Bus\nSelector/Out11"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_uint8_T_4[33]
+		{
+		 type:    uint(8)*
+		 alias:   "<EtsSystemMessage>{SubArray12}"
+		 origin:  "CAN_new/ETS_CAN1/Bus\nSelector/Out11"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_real_T_0[39]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "<OilSupplyAssignmentMessage>{SubArray1}"
+		 origin:  "CAN_new/ETS_CAN1/Bus\nSelector/Out12"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_uint8_T_4[34]
+		{
+		 type:    uint(8)*
+		 alias:   "<OilSupplyAssignmentMessage>{SubArray2}"
+		 origin:  "CAN_new/ETS_CAN1/Bus\nSelector/Out12"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_uint8_T_4[35]
+		{
+		 type:    uint(8)*
+		 alias:   "<OilSupplyAssignmentMessage>{SubArray3}"
+		 origin:  "CAN_new/ETS_CAN1/Bus\nSelector/Out12"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_uint8_T_4[36]
+		{
+		 type:    uint(8)*
+		 alias:   "<OilSupplyAssignmentMessage>{SubArray4}"
+		 origin:  "CAN_new/ETS_CAN1/Bus\nSelector/Out12"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_real_T_0[40]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "<OilSupplyRequestMessage>{SubArray1}"
+		 origin:  "CAN_new/ETS_CAN1/Bus\nSelector/Out13"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_uint8_T_4[37]
+		{
+		 type:    uint(8)*
+		 alias:   "<OilSupplyRequestMessage>{SubArray2}"
+		 origin:  "CAN_new/ETS_CAN1/Bus\nSelector/Out13"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_uint8_T_4[38]
+		{
+		 type:    uint(8)*
+		 alias:   "<OilSupplyRequestMessage>{SubArray3}"
+		 origin:  "CAN_new/ETS_CAN1/Bus\nSelector/Out13"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_uint8_T_4[39]
+		{
+		 type:    uint(8)*
+		 alias:   "<OilSupplyRequestMessage>{SubArray4}"
+		 origin:  "CAN_new/ETS_CAN1/Bus\nSelector/Out13"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_real_T_0[41]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "<PowersupplyVoltageMessage1>{SubArray1}"
+		 origin:  "CAN_new/ETS_CAN1/Bus\nSelector/Out14"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_real_T_0[42]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "<PowersupplyVoltageMessage1>{SubArray2}"
+		 origin:  "CAN_new/ETS_CAN1/Bus\nSelector/Out14"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_real_T_0[43]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "<PowersupplyVoltageMessage1>{SubArray3}"
+		 origin:  "CAN_new/ETS_CAN1/Bus\nSelector/Out14"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_real_T_0[44]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "<PowersupplyVoltageMessage1>{SubArray4}"
+		 origin:  "CAN_new/ETS_CAN1/Bus\nSelector/Out14"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_real_T_0[45]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "<PowersupplyVoltageMessage2>{SubArray1}"
+		 origin:  "CAN_new/ETS_CAN1/Bus\nSelector/Out15"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_real_T_0[46]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "<PowersupplyVoltageMessage2>{SubArray2}"
+		 origin:  "CAN_new/ETS_CAN1/Bus\nSelector/Out15"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_real_T_0[47]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "<PowersupplyVoltageMessage2>{SubArray3}"
+		 origin:  "CAN_new/ETS_CAN1/Bus\nSelector/Out15"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_real_T_0[48]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "<PowersupplyVoltageMessage2>{SubArray4}"
+		 origin:  "CAN_new/ETS_CAN1/Bus\nSelector/Out15"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_real_T_0[49]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "<ResistanceMeasurementOutputs>{SubArray1}"
+		 origin:  "CAN_new/ETS_CAN1/Bus\nSelector/Out16"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_real_T_0[50]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "<ResistanceMeasurementOutputs>{SubArray2}"
+		 origin:  "CAN_new/ETS_CAN1/Bus\nSelector/Out16"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_real_T_0[51]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "<ResistanceMeasurementOutputs>{SubArray3}"
+		 origin:  "CAN_new/ETS_CAN1/Bus\nSelector/Out16"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_real_T_0[52]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "<ResistanceMeasurementOutputs>{SubArray4}"
+		 origin:  "CAN_new/ETS_CAN1/Bus\nSelector/Out16"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_real_T_0[53]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "<ResistanceMeasurementOutputs>{SubArray5}"
+		 origin:  "CAN_new/ETS_CAN1/Bus\nSelector/Out16"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_real_T_0[54]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "<ResistanceMeasurementOutputs>{SubArray6}"
+		 origin:  "CAN_new/ETS_CAN1/Bus\nSelector/Out16"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_real_T_0[55]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "<ResistanceMeasurementOutputs>{SubArray7}"
+		 origin:  "CAN_new/ETS_CAN1/Bus\nSelector/Out16"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_real_T_0[56]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "<ResistanceMeasurementOutputs>{SubArray8}"
+		 origin:  "CAN_new/ETS_CAN1/Bus\nSelector/Out16"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_uint8_T_4[40]
+		{
+		 type:    uint(8)*
+		 alias:   "<SpeedMessage>{SubArray1}"
+		 origin:  "CAN_new/ETS_CAN1/Bus\nSelector/Out17"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_uint8_T_4[41]
+		{
+		 type:    uint(8)*
+		 alias:   "<SpeedMessage>{SubArray2}"
+		 origin:  "CAN_new/ETS_CAN1/Bus\nSelector/Out17"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_int8_T_3[0]
+		{
+		 type:    int(8)*
+		 alias:   "<SpeedMessage>{SubArray3}"
+		 origin:  "CAN_new/ETS_CAN1/Bus\nSelector/Out17"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_int8_T_3[1]
+		{
+		 type:    int(8)*
+		 alias:   "<SpeedMessage>{SubArray4}"
+		 origin:  "CAN_new/ETS_CAN1/Bus\nSelector/Out17"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_int8_T_3[2]
+		{
+		 type:    int(8)*
+		 alias:   "<SpeedMessage>{SubArray5}"
+		 origin:  "CAN_new/ETS_CAN1/Bus\nSelector/Out17"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_uint8_T_4[42]
+		{
+		 type:    uint(8)*
+		 alias:   "<StatusHighOutputPins>{SubArray1}"
+		 origin:  "CAN_new/ETS_CAN1/Bus\nSelector/Out18"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_uint8_T_4[43]
+		{
+		 type:    uint(8)*
+		 alias:   "<StatusHighOutputPins>{SubArray2}"
+		 origin:  "CAN_new/ETS_CAN1/Bus\nSelector/Out18"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_uint8_T_4[44]
+		{
+		 type:    uint(8)*
+		 alias:   "<StatusHighOutputPins>{SubArray3}"
+		 origin:  "CAN_new/ETS_CAN1/Bus\nSelector/Out18"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_uint8_T_4[45]
+		{
+		 type:    uint(8)*
+		 alias:   "<StatusHighOutputPins>{SubArray4}"
+		 origin:  "CAN_new/ETS_CAN1/Bus\nSelector/Out18"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_uint8_T_4[46]
+		{
+		 type:    uint(8)*
+		 alias:   "<StatusHighOutputPins>{SubArray5}"
+		 origin:  "CAN_new/ETS_CAN1/Bus\nSelector/Out18"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_uint8_T_4[47]
+		{
+		 type:    uint(8)*
+		 alias:   "<StatusHighOutputPins>{SubArray6}"
+		 origin:  "CAN_new/ETS_CAN1/Bus\nSelector/Out18"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_uint8_T_4[48]
+		{
+		 type:    uint(8)*
+		 alias:   "<StatusHighOutputPins>{SubArray7}"
+		 origin:  "CAN_new/ETS_CAN1/Bus\nSelector/Out18"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_uint8_T_4[49]
+		{
+		 type:    uint(8)*
+		 alias:   "<StatusHighOutputPins>{SubArray8}"
+		 origin:  "CAN_new/ETS_CAN1/Bus\nSelector/Out18"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_uint8_T_4[50]
+		{
+		 type:    uint(8)*
+		 alias:   "<StatusLowOutputPins>{SubArray1}"
+		 origin:  "CAN_new/ETS_CAN1/Bus\nSelector/Out19"
+		 flags:   LABEL|READONLY
+		}
+		p_CAN_new_B_uint8_T_4[51]
+		{
+		 type:    uint(8)*
+		 alias:   "<StatusLowOutputPins>{SubArray2}"
+		 origin:  "CAN_new/ETS_CAN1/Bus\nSelector/Out19"
+		 flags:   LABEL|READONLY
+		}
 
 	endgroup -- subsystem-group "ETS_CAN1"
   
@@ -3015,179 +4357,59 @@ group "Labels"
 
 	-- Skipping label "CAN{SubArray9}"
 
-	-- Skipping label "CAN{SubArray10}"
+	-- Skipping label "IMU_accelerometer{Occurence1}{SubArray1}"
 
-	-- Skipping label "CAN{SubArray11}"
+	-- Skipping label "IMU_accelerometer{Occurence1}{SubArray2}"
 
-	-- Skipping label "CAN{SubArray12}"
+	-- Skipping label "IMU_accelerometer{Occurence1}{SubArray3}"
 
-	-- Skipping label "CAN{SubArray13}"
+	-- Skipping label "IMU_accelerometer{Occurence2}{SubArray1}"
 
-	-- Skipping label "CAN{SubArray14}"
+	-- Skipping label "IMU_accelerometer{Occurence2}{SubArray2}"
 
-	-- Skipping label "CAN{SubArray15}"
+	-- Skipping label "IMU_accelerometer{Occurence2}{SubArray3}"
 
-	-- Skipping label "CAN{SubArray16}"
+	-- Skipping label "IMU_angels_corrected{Occurence1}{SubArray1}"
 
-	-- Skipping label "CAN{SubArray17}"
+	-- Skipping label "IMU_angels_corrected{Occurence1}{SubArray2}"
 
-	-- Skipping label "CAN{SubArray18}"
+	-- Skipping label "IMU_angels_corrected{Occurence1}{SubArray3}"
 
-	-- Skipping label "CAN{SubArray19}"
+	-- Skipping label "IMU_angels_corrected{Occurence2}{SubArray1}"
 
-	-- Skipping label "CAN{SubArray20}"
+	-- Skipping label "IMU_angels_corrected{Occurence2}{SubArray2}"
 
-	-- Skipping label "CAN{SubArray21}"
+	-- Skipping label "IMU_angels_corrected{Occurence2}{SubArray3}"
 
-	-- Skipping label "CAN{SubArray22}"
+	-- Skipping label "IMU_gyroskop{Occurence1}{SubArray1}"
 
-	-- Skipping label "CAN{SubArray23}"
+	-- Skipping label "IMU_gyroskop{Occurence1}{SubArray2}"
 
-	-- Skipping label "CAN{SubArray24}"
+	-- Skipping label "IMU_gyroskop{Occurence1}{SubArray3}"
 
-	-- Skipping label "RAW_Byte_1{Occurence1}"
+	-- Skipping label "IMU_gyroskop{Occurence2}{SubArray1}"
 
-	-- Skipping label "RAW_Byte_1{Occurence2}"
+	-- Skipping label "IMU_gyroskop{Occurence2}{SubArray2}"
 
-	-- Skipping label "RAW_Byte_1{Occurence3}"
+	-- Skipping label "IMU_gyroskop{Occurence2}{SubArray3}"
 
-	-- Skipping label "RAW_Byte_2{Occurence1}"
+	-- Skipping label "x{Occurence1}"
 
-	-- Skipping label "RAW_Byte_2{Occurence2}"
+	-- Skipping label "x{Occurence2}"
 
-	-- Skipping label "RAW_Byte_2{Occurence3}"
+	-- Skipping label "x{Occurence3}"
 
-	-- Skipping label "RAW_Byte_3{Occurence1}"
+	-- Skipping label "y{Occurence1}"
 
-	-- Skipping label "RAW_Byte_3{Occurence2}"
+	-- Skipping label "y{Occurence2}"
 
-	-- Skipping label "RAW_Byte_3{Occurence3}"
+	-- Skipping label "y{Occurence3}"
 
-	-- Skipping label "RAW_Byte_4{Occurence1}"
+	-- Skipping label "z{Occurence1}"
 
-	-- Skipping label "RAW_Byte_4{Occurence2}"
+	-- Skipping label "z{Occurence2}"
 
-	-- Skipping label "RAW_Byte_4{Occurence3}"
-
-	-- Skipping label "RAW_Byte_5{Occurence1}"
-
-	-- Skipping label "RAW_Byte_5{Occurence2}"
-
-	-- Skipping label "RAW_Byte_5{Occurence3}"
-
-	-- Skipping label "RAW_Byte_6{Occurence1}"
-
-	-- Skipping label "RAW_Byte_6{Occurence2}"
-
-	-- Skipping label "RAW_Byte_6{Occurence3}"
-
-	-- Skipping label "RAW_Byte_7{Occurence1}"
-
-	-- Skipping label "RAW_Byte_7{Occurence2}"
-
-	-- Skipping label "RAW_Byte_7{Occurence3}"
-
-	-- Skipping label "RAW_Byte_8{Occurence1}"
-
-	-- Skipping label "RAW_Byte_8{Occurence2}"
-
-	-- Skipping label "RAW_Byte_8{Occurence3}"
-
-	-- Skipping label "RTICANMMFreeRawMessage_1{Occurence1}{SubArray1}"
-
-	-- Skipping label "RTICANMMFreeRawMessage_1{Occurence1}{SubArray2}"
-
-	-- Skipping label "RTICANMMFreeRawMessage_1{Occurence1}{SubArray3}"
-
-	-- Skipping label "RTICANMMFreeRawMessage_1{Occurence1}{SubArray4}"
-
-	-- Skipping label "RTICANMMFreeRawMessage_1{Occurence1}{SubArray5}"
-
-	-- Skipping label "RTICANMMFreeRawMessage_1{Occurence1}{SubArray6}"
-
-	-- Skipping label "RTICANMMFreeRawMessage_1{Occurence1}{SubArray7}"
-
-	-- Skipping label "RTICANMMFreeRawMessage_1{Occurence1}{SubArray8}"
-
-	-- Skipping label "RTICANMMFreeRawMessage_1{Occurence2}{SubArray1}"
-
-	-- Skipping label "RTICANMMFreeRawMessage_1{Occurence2}{SubArray2}"
-
-	-- Skipping label "RTICANMMFreeRawMessage_1{Occurence2}{SubArray3}"
-
-	-- Skipping label "RTICANMMFreeRawMessage_1{Occurence2}{SubArray4}"
-
-	-- Skipping label "RTICANMMFreeRawMessage_1{Occurence2}{SubArray5}"
-
-	-- Skipping label "RTICANMMFreeRawMessage_1{Occurence2}{SubArray6}"
-
-	-- Skipping label "RTICANMMFreeRawMessage_1{Occurence2}{SubArray7}"
-
-	-- Skipping label "RTICANMMFreeRawMessage_1{Occurence2}{SubArray8}"
-
-	-- Skipping label "RTICANMMFreeRawMessage_2{Occurence1}{SubArray1}"
-
-	-- Skipping label "RTICANMMFreeRawMessage_2{Occurence1}{SubArray2}"
-
-	-- Skipping label "RTICANMMFreeRawMessage_2{Occurence1}{SubArray3}"
-
-	-- Skipping label "RTICANMMFreeRawMessage_2{Occurence1}{SubArray4}"
-
-	-- Skipping label "RTICANMMFreeRawMessage_2{Occurence1}{SubArray5}"
-
-	-- Skipping label "RTICANMMFreeRawMessage_2{Occurence1}{SubArray6}"
-
-	-- Skipping label "RTICANMMFreeRawMessage_2{Occurence1}{SubArray7}"
-
-	-- Skipping label "RTICANMMFreeRawMessage_2{Occurence1}{SubArray8}"
-
-	-- Skipping label "RTICANMMFreeRawMessage_2{Occurence2}{SubArray1}"
-
-	-- Skipping label "RTICANMMFreeRawMessage_2{Occurence2}{SubArray2}"
-
-	-- Skipping label "RTICANMMFreeRawMessage_2{Occurence2}{SubArray3}"
-
-	-- Skipping label "RTICANMMFreeRawMessage_2{Occurence2}{SubArray4}"
-
-	-- Skipping label "RTICANMMFreeRawMessage_2{Occurence2}{SubArray5}"
-
-	-- Skipping label "RTICANMMFreeRawMessage_2{Occurence2}{SubArray6}"
-
-	-- Skipping label "RTICANMMFreeRawMessage_2{Occurence2}{SubArray7}"
-
-	-- Skipping label "RTICANMMFreeRawMessage_2{Occurence2}{SubArray8}"
-
-	-- Skipping label "RTICANMMFreeRawMessage_3{Occurence1}{SubArray1}"
-
-	-- Skipping label "RTICANMMFreeRawMessage_3{Occurence1}{SubArray2}"
-
-	-- Skipping label "RTICANMMFreeRawMessage_3{Occurence1}{SubArray3}"
-
-	-- Skipping label "RTICANMMFreeRawMessage_3{Occurence1}{SubArray4}"
-
-	-- Skipping label "RTICANMMFreeRawMessage_3{Occurence1}{SubArray5}"
-
-	-- Skipping label "RTICANMMFreeRawMessage_3{Occurence1}{SubArray6}"
-
-	-- Skipping label "RTICANMMFreeRawMessage_3{Occurence1}{SubArray7}"
-
-	-- Skipping label "RTICANMMFreeRawMessage_3{Occurence1}{SubArray8}"
-
-	-- Skipping label "RTICANMMFreeRawMessage_3{Occurence2}{SubArray1}"
-
-	-- Skipping label "RTICANMMFreeRawMessage_3{Occurence2}{SubArray2}"
-
-	-- Skipping label "RTICANMMFreeRawMessage_3{Occurence2}{SubArray3}"
-
-	-- Skipping label "RTICANMMFreeRawMessage_3{Occurence2}{SubArray4}"
-
-	-- Skipping label "RTICANMMFreeRawMessage_3{Occurence2}{SubArray5}"
-
-	-- Skipping label "RTICANMMFreeRawMessage_3{Occurence2}{SubArray6}"
-
-	-- Skipping label "RTICANMMFreeRawMessage_3{Occurence2}{SubArray7}"
-
-	-- Skipping label "RTICANMMFreeRawMessage_3{Occurence2}{SubArray8}"
+	-- Skipping label "z{Occurence3}"
 
 
 endgroup
@@ -4070,9 +5292,9 @@ value: 0
 CANMMCAN_Arduino_TXEEIE[0]
 {
 type: UINT(8)
-alias: "Simulator_Enable"
+alias: "Vector__XXX_Enable"
 flags: PARAM
-desc: "Enable Simulator"
+desc: "Enable Vector__XXX"
 unit: ""
 range: <0; 1>
 value: 1
@@ -4082,7 +5304,7 @@ value: 1
 
 
 
-group "New_Message_1" -- subsystem-group
+group "IMU_accelerometer" -- subsystem-group
 {
      flags: COLLAPSED
 }
@@ -4098,7 +5320,7 @@ group "RX" -- subsystem-group
 CANMMCAN_Arduino_RX_Msg_1_Sgn_1
 {
 type: INT(16)
-alias: "New_Signal_3"
+alias: "IMU_accelerometer_x"
 flags: OUTPUT|READONLY
 desc: ""
 unit: ""
@@ -4108,25 +5330,12 @@ value: 0
 
 
 
-CANMMCAN_Arduino_MIDRX[2]
+CANMMCAN_Arduino_RX_Msg_1_Sgn_2
 {
-type: UINT(32)
-alias: "New_Message_1_ID"
+type: INT(16)
+alias: "IMU_accelerometer_y"
 flags: OUTPUT|READONLY
-desc: "Message ID"
-unit: ""
-value: 3
-}
-
-
-
-
-CANMMCAN_Arduino_MIDFRX[2]
-{
-type: UINT(8)
-alias: "New_Message_1_IDFormat"
-flags: OUTPUT|READONLY
-desc: "Message ID Format"
+desc: ""
 unit: ""
 value: 0
 }
@@ -4134,529 +5343,12 @@ value: 0
 
 
 
-CANMMCAN_Arduino_RXLEN[2]
+CANMMCAN_Arduino_RX_Msg_1_Sgn_3
 {
-type: UINT(8)
-alias: "New_Message_1_Length"
+type: INT(16)
+alias: "IMU_accelerometer_z"
 flags: OUTPUT|READONLY
-desc: "Message Length"
-unit: ""
-value: 2
-}
-
-
-
-
-CANMMCAN_Arduino_RXsta[2]
-{
-type: UINT(8)
-alias: "New_Message_1_status"
-flags: OUTPUT|READONLY
-desc: "New_Message_1 Status"
-unit: ""
-value: 0
-}
-
-
-
-
-CANMMCAN_Arduino_RXdt[2]
-{
-type: flt(64,IEEE)
-alias: "New_Message_1_dt"
-flags: OUTPUT|READONLY
-desc: "New_Message_1 DeltaTime"
-unit: "s"
-value: 0
-}
-
-
-
-
-CANMMCAN_Arduino_RXt[2]
-{
-type: flt(64,IEEE)
-alias: "New_Message_1_time"
-flags: OUTPUT|READONLY
-desc: "New_Message_1 Time"
-unit: "s"
-value: 0.0
-}
-
-
-
-
-
-endgroup -- block-group "RX"
-
-
-
-endgroup -- block-group "New_Message_1"
-
-
-
-group "RTICANMMFreeRawMessage_1" -- subsystem-group
-{
-     flags: COLLAPSED
-}
-
-
-
-group "RX" -- subsystem-group
-{
-     flags: COLLAPSED
-}
-
-
-CANMMCAN_Arduino_RX_Msg_2_Sgn_1
-{
-type: UINT(8)
-alias: "RAW_Byte_1"
-flags: OUTPUT|READONLY
-desc: "Free Raw Message Byte 1"
-unit: ""
-value: 0
-}
-
-
-
-
-CANMMCAN_Arduino_RX_Msg_2_Sgn_2
-{
-type: UINT(8)
-alias: "RAW_Byte_2"
-flags: OUTPUT|READONLY
-desc: "Free Raw Message Byte 2"
-unit: ""
-value: 0
-}
-
-
-
-
-CANMMCAN_Arduino_RX_Msg_2_Sgn_3
-{
-type: UINT(8)
-alias: "RAW_Byte_3"
-flags: OUTPUT|READONLY
-desc: "Free Raw Message Byte 3"
-unit: ""
-value: 0
-}
-
-
-
-
-CANMMCAN_Arduino_RX_Msg_2_Sgn_4
-{
-type: UINT(8)
-alias: "RAW_Byte_4"
-flags: OUTPUT|READONLY
-desc: "Free Raw Message Byte 4"
-unit: ""
-value: 0
-}
-
-
-
-
-CANMMCAN_Arduino_RX_Msg_2_Sgn_5
-{
-type: UINT(8)
-alias: "RAW_Byte_5"
-flags: OUTPUT|READONLY
-desc: "Free Raw Message Byte 5"
-unit: ""
-value: 0
-}
-
-
-
-
-CANMMCAN_Arduino_RX_Msg_2_Sgn_6
-{
-type: UINT(8)
-alias: "RAW_Byte_6"
-flags: OUTPUT|READONLY
-desc: "Free Raw Message Byte 6"
-unit: ""
-value: 0
-}
-
-
-
-
-CANMMCAN_Arduino_RX_Msg_2_Sgn_7
-{
-type: UINT(8)
-alias: "RAW_Byte_7"
-flags: OUTPUT|READONLY
-desc: "Free Raw Message Byte 7"
-unit: ""
-value: 0
-}
-
-
-
-
-CANMMCAN_Arduino_RX_Msg_2_Sgn_8
-{
-type: UINT(8)
-alias: "RAW_Byte_8"
-flags: OUTPUT|READONLY
-desc: "Free Raw Message Byte 8"
-unit: ""
-value: 0
-}
-
-
-
-
-CANMMCAN_Arduino_MIDRX[3]
-{
-type: UINT(32)
-alias: "RTICANMMFreeRawMessage_1_ID"
-flags: OUTPUT|READONLY
-desc: "Message ID"
-unit: ""
-value: 7
-}
-
-
-
-
-CANMMCAN_Arduino_MIDFRX[3]
-{
-type: UINT(8)
-alias: "RTICANMMFreeRawMessage_1_IDFormat"
-flags: OUTPUT|READONLY
-desc: "Message ID Format"
-unit: ""
-value: 0
-}
-
-
-
-
-CANMMCAN_Arduino_RXLEN[3]
-{
-type: UINT(8)
-alias: "RTICANMMFreeRawMessage_1_Length"
-flags: OUTPUT|READONLY
-desc: "Message Length"
-unit: ""
-value: 8
-}
-
-
-
-
-CANMMCAN_Arduino_RXsta[3]
-{
-type: UINT(8)
-alias: "RTICANMMFreeRawMessage_1_status"
-flags: OUTPUT|READONLY
-desc: "RTICANMMFreeRawMessage_1 Status"
-unit: ""
-value: 0
-}
-
-
-
-
-CANMMCAN_Arduino_RXdt[3]
-{
-type: flt(64,IEEE)
-alias: "RTICANMMFreeRawMessage_1_dt"
-flags: OUTPUT|READONLY
-desc: "RTICANMMFreeRawMessage_1 DeltaTime"
-unit: "s"
-value: 0
-}
-
-
-
-
-CANMMCAN_Arduino_RXt[3]
-{
-type: flt(64,IEEE)
-alias: "RTICANMMFreeRawMessage_1_time"
-flags: OUTPUT|READONLY
-desc: "RTICANMMFreeRawMessage_1 Time"
-unit: "s"
-value: 0.0
-}
-
-
-
-
-
-endgroup -- block-group "RX"
-
-
-
-group "TX" -- subsystem-group
-{
-     flags: COLLAPSED
-}
-
-
-CANMMCAN_Arduino_WBS[2]
-{
-type: UINT(8)
-alias: "RTICANMMFreeRawMessage_1_CheckEnable"
-flags: OUTPUT|READONLY
-desc: "Check enabled RTICANMMFreeRawMessage_1"
-unit: ""
-value: 0
-}
-
-
-
-
-CANMMCAN_Arduino_TXDT[2]
-{
-type: flt(64,IEEE)
-alias: "RTICANMMFreeRawMessage_1_DelayTime"
-flags: OUTPUT|READONLY
-desc: "DelayTime RTICANMMFreeRawMessage_1"
-unit: "s"
-value: 0
-}
-
-
-
-
-CANMMCAN_Arduino_TXsta[2]
-{
-type: UINT(8)
-alias: "RTICANMMFreeRawMessage_1_status"
-flags: OUTPUT|READONLY
-desc: "RTICANMMFreeRawMessage_1 Status"
-unit: ""
-value: 0
-}
-
-
-
-
-CANMMCAN_Arduino_MIDTXS[3]
-{
-type: UINT(32)
-alias: "RTICANMMFreeRawMessage_1_ID"
-flags: PARAM
-desc: "Message ID"
-unit: ""
-range: <0; 536870911>
-value: 7
-}
-
-
-
-
-CANMMCAN_Arduino_MIDFTXS[3]
-{
-type: UINT(8)
-alias: "RTICANMMFreeRawMessage_1_IDFormat"
-flags: PARAM
-desc: "Message ID Format"
-unit: ""
-range: <0; 1>
-value: 0
-}
-
-
-
-
-CANMMCAN_Arduino_TXLEN[2]
-{
-type: UINT(8)
-alias: "RTICANMMFreeRawMessage_1_Length"
-flags: PARAM
-desc: "Message Length"
-unit: ""
-range: <0; 8>
-value: 8
-}
-
-
-
-
-CANMMCAN_Arduino_TXEIN[2]
-{
-type: UINT(8)
-alias: "RTICANMMFreeRawMessage_1_Enable"
-flags: PARAM
-desc: "Enable RTICANMMFreeRawMessage_1"
-unit: ""
-range: <0; 1>
-value: 1
-}
-
-
-
-
-CANMMCAN_Arduino_TXCIE[2]
-{
-type: UINT(8)
-alias: "RTICANMMFreeRawMessage_1_PeriodicalOn"
-flags: PARAM
-desc: "Activate cyclic transmission for RTICANMMFreeRawMessage_1"
-unit: ""
-range: <0; 1>
-value: 1
-}
-
-
-
-
-CANMMCAN_Arduino_TXKIEX[2]
-{
-type: UINT(8)
-alias: "RTICANMMFreeRawMessage_1_Kickout"
-flags: PARAM
-desc: "Kickout RTICANMMFreeRawMessage_1"
-unit: ""
-range: <0; 1>
-value: 0
-}
-
-
-
-
-CANMMCAN_Arduino_TXCT[2]
-{
-type: flt(64,IEEE)
-alias: "RTICANMMFreeRawMessage_1_CycleTime"
-flags: PARAM
-desc: "CycleTime RTICANMMFreeRawMessage_1"
-unit: "s"
-range: <0; 1000>
-value: 0
-}
-
-
-
-
-
-endgroup -- block-group "TX"
-
-
-
-endgroup -- block-group "RTICANMMFreeRawMessage_1"
-
-
-
-group "RTICANMMFreeRawMessage_2" -- subsystem-group
-{
-     flags: COLLAPSED
-}
-
-
-
-group "RX" -- subsystem-group
-{
-     flags: COLLAPSED
-}
-
-
-CANMMCAN_Arduino_RX_Msg_3_Sgn_1
-{
-type: UINT(8)
-alias: "RAW_Byte_1"
-flags: OUTPUT|READONLY
-desc: "Free Raw Message Byte 1"
-unit: ""
-value: 0
-}
-
-
-
-
-CANMMCAN_Arduino_RX_Msg_3_Sgn_2
-{
-type: UINT(8)
-alias: "RAW_Byte_2"
-flags: OUTPUT|READONLY
-desc: "Free Raw Message Byte 2"
-unit: ""
-value: 0
-}
-
-
-
-
-CANMMCAN_Arduino_RX_Msg_3_Sgn_3
-{
-type: UINT(8)
-alias: "RAW_Byte_3"
-flags: OUTPUT|READONLY
-desc: "Free Raw Message Byte 3"
-unit: ""
-value: 0
-}
-
-
-
-
-CANMMCAN_Arduino_RX_Msg_3_Sgn_4
-{
-type: UINT(8)
-alias: "RAW_Byte_4"
-flags: OUTPUT|READONLY
-desc: "Free Raw Message Byte 4"
-unit: ""
-value: 0
-}
-
-
-
-
-CANMMCAN_Arduino_RX_Msg_3_Sgn_5
-{
-type: UINT(8)
-alias: "RAW_Byte_5"
-flags: OUTPUT|READONLY
-desc: "Free Raw Message Byte 5"
-unit: ""
-value: 0
-}
-
-
-
-
-CANMMCAN_Arduino_RX_Msg_3_Sgn_6
-{
-type: UINT(8)
-alias: "RAW_Byte_6"
-flags: OUTPUT|READONLY
-desc: "Free Raw Message Byte 6"
-unit: ""
-value: 0
-}
-
-
-
-
-CANMMCAN_Arduino_RX_Msg_3_Sgn_7
-{
-type: UINT(8)
-alias: "RAW_Byte_7"
-flags: OUTPUT|READONLY
-desc: "Free Raw Message Byte 7"
-unit: ""
-value: 0
-}
-
-
-
-
-CANMMCAN_Arduino_RX_Msg_3_Sgn_8
-{
-type: UINT(8)
-alias: "RAW_Byte_8"
-flags: OUTPUT|READONLY
-desc: "Free Raw Message Byte 8"
+desc: ""
 unit: ""
 value: 0
 }
@@ -4667,11 +5359,11 @@ value: 0
 CANMMCAN_Arduino_MIDRX[0]
 {
 type: UINT(32)
-alias: "RTICANMMFreeRawMessage_2_ID"
+alias: "IMU_accelerometer_ID"
 flags: OUTPUT|READONLY
 desc: "Message ID"
 unit: ""
-value: 0
+value: 1
 }
 
 
@@ -4680,7 +5372,7 @@ value: 0
 CANMMCAN_Arduino_MIDFRX[0]
 {
 type: UINT(8)
-alias: "RTICANMMFreeRawMessage_2_IDFormat"
+alias: "IMU_accelerometer_IDFormat"
 flags: OUTPUT|READONLY
 desc: "Message ID Format"
 unit: ""
@@ -4693,11 +5385,11 @@ value: 0
 CANMMCAN_Arduino_RXLEN[0]
 {
 type: UINT(8)
-alias: "RTICANMMFreeRawMessage_2_Length"
+alias: "IMU_accelerometer_Length"
 flags: OUTPUT|READONLY
 desc: "Message Length"
 unit: ""
-value: 8
+value: 6
 }
 
 
@@ -4706,9 +5398,9 @@ value: 8
 CANMMCAN_Arduino_RXsta[0]
 {
 type: UINT(8)
-alias: "RTICANMMFreeRawMessage_2_status"
+alias: "IMU_accelerometer_status"
 flags: OUTPUT|READONLY
-desc: "RTICANMMFreeRawMessage_2 Status"
+desc: "IMU_accelerometer Status"
 unit: ""
 value: 0
 }
@@ -4719,9 +5411,9 @@ value: 0
 CANMMCAN_Arduino_RXdt[0]
 {
 type: flt(64,IEEE)
-alias: "RTICANMMFreeRawMessage_2_dt"
+alias: "IMU_accelerometer_dt"
 flags: OUTPUT|READONLY
-desc: "RTICANMMFreeRawMessage_2 DeltaTime"
+desc: "IMU_accelerometer DeltaTime"
 unit: "s"
 value: 0
 }
@@ -4732,9 +5424,9 @@ value: 0
 CANMMCAN_Arduino_RXt[0]
 {
 type: flt(64,IEEE)
-alias: "RTICANMMFreeRawMessage_2_time"
+alias: "IMU_accelerometer_time"
 flags: OUTPUT|READONLY
-desc: "RTICANMMFreeRawMessage_2 Time"
+desc: "IMU_accelerometer Time"
 unit: "s"
 value: 0.0
 }
@@ -4756,9 +5448,9 @@ group "TX" -- subsystem-group
 CANMMCAN_Arduino_WBS[0]
 {
 type: UINT(8)
-alias: "RTICANMMFreeRawMessage_2_CheckEnable"
+alias: "IMU_accelerometer_CheckEnable"
 flags: OUTPUT|READONLY
-desc: "Check enabled RTICANMMFreeRawMessage_2"
+desc: "Check enabled IMU_accelerometer"
 unit: ""
 value: 0
 }
@@ -4769,9 +5461,9 @@ value: 0
 CANMMCAN_Arduino_TXDT[0]
 {
 type: flt(64,IEEE)
-alias: "RTICANMMFreeRawMessage_2_DelayTime"
+alias: "IMU_accelerometer_DelayTime"
 flags: OUTPUT|READONLY
-desc: "DelayTime RTICANMMFreeRawMessage_2"
+desc: "DelayTime IMU_accelerometer"
 unit: "s"
 value: 0
 }
@@ -4782,53 +5474,11 @@ value: 0
 CANMMCAN_Arduino_TXsta[0]
 {
 type: UINT(8)
-alias: "RTICANMMFreeRawMessage_2_status"
+alias: "IMU_accelerometer_status"
 flags: OUTPUT|READONLY
-desc: "RTICANMMFreeRawMessage_2 Status"
+desc: "IMU_accelerometer Status"
 unit: ""
 value: 0
-}
-
-
-
-
-CANMMCAN_Arduino_MIDTXS[0]
-{
-type: UINT(32)
-alias: "RTICANMMFreeRawMessage_2_ID"
-flags: PARAM
-desc: "Message ID"
-unit: ""
-range: <0; 536870911>
-value: 0
-}
-
-
-
-
-CANMMCAN_Arduino_MIDFTXS[0]
-{
-type: UINT(8)
-alias: "RTICANMMFreeRawMessage_2_IDFormat"
-flags: PARAM
-desc: "Message ID Format"
-unit: ""
-range: <0; 1>
-value: 0
-}
-
-
-
-
-CANMMCAN_Arduino_TXLEN[0]
-{
-type: UINT(8)
-alias: "RTICANMMFreeRawMessage_2_Length"
-flags: PARAM
-desc: "Message Length"
-unit: ""
-range: <0; 8>
-value: 8
 }
 
 
@@ -4837,9 +5487,9 @@ value: 8
 CANMMCAN_Arduino_TXEIN[0]
 {
 type: UINT(8)
-alias: "RTICANMMFreeRawMessage_2_Enable"
+alias: "IMU_accelerometer_Enable"
 flags: PARAM
-desc: "Enable RTICANMMFreeRawMessage_2"
+desc: "Enable IMU_accelerometer"
 unit: ""
 range: <0; 1>
 value: 1
@@ -4851,9 +5501,9 @@ value: 1
 CANMMCAN_Arduino_TXCIE[0]
 {
 type: UINT(8)
-alias: "RTICANMMFreeRawMessage_2_PeriodicalOn"
+alias: "IMU_accelerometer_PeriodicalOn"
 flags: PARAM
-desc: "Activate cyclic transmission for RTICANMMFreeRawMessage_2"
+desc: "Activate cyclic transmission for IMU_accelerometer"
 unit: ""
 range: <0; 1>
 value: 1
@@ -4865,9 +5515,9 @@ value: 1
 CANMMCAN_Arduino_TXKIEX[0]
 {
 type: UINT(8)
-alias: "RTICANMMFreeRawMessage_2_Kickout"
+alias: "IMU_accelerometer_Kickout"
 flags: PARAM
-desc: "Kickout RTICANMMFreeRawMessage_2"
+desc: "Kickout IMU_accelerometer"
 unit: ""
 range: <0; 1>
 value: 0
@@ -4879,9 +5529,9 @@ value: 0
 CANMMCAN_Arduino_TXCT[0]
 {
 type: flt(64,IEEE)
-alias: "RTICANMMFreeRawMessage_2_CycleTime"
+alias: "IMU_accelerometer_CycleTime"
 flags: PARAM
-desc: "CycleTime RTICANMMFreeRawMessage_2"
+desc: "CycleTime IMU_accelerometer"
 unit: "s"
 range: <0; 1000>
 value: 0
@@ -4895,11 +5545,11 @@ endgroup -- block-group "TX"
 
 
 
-endgroup -- block-group "RTICANMMFreeRawMessage_2"
+endgroup -- block-group "IMU_accelerometer"
 
 
 
-group "RTICANMMFreeRawMessage_3" -- subsystem-group
+group "IMU_angels_corrected" -- subsystem-group
 {
      flags: COLLAPSED
 }
@@ -4912,12 +5562,12 @@ group "RX" -- subsystem-group
 }
 
 
-CANMMCAN_Arduino_RX_Msg_4_Sgn_1
+CANMMCAN_Arduino_RX_Msg_2_Sgn_1
 {
-type: UINT(8)
-alias: "RAW_Byte_1"
+type: INT(16)
+alias: "IMU_angels_corrected_x"
 flags: OUTPUT|READONLY
-desc: "Free Raw Message Byte 1"
+desc: ""
 unit: ""
 value: 0
 }
@@ -4925,12 +5575,12 @@ value: 0
 
 
 
-CANMMCAN_Arduino_RX_Msg_4_Sgn_2
+CANMMCAN_Arduino_RX_Msg_2_Sgn_2
 {
-type: UINT(8)
-alias: "RAW_Byte_2"
+type: INT(16)
+alias: "IMU_angels_corrected_y"
 flags: OUTPUT|READONLY
-desc: "Free Raw Message Byte 2"
+desc: ""
 unit: ""
 value: 0
 }
@@ -4938,12 +5588,12 @@ value: 0
 
 
 
-CANMMCAN_Arduino_RX_Msg_4_Sgn_3
+CANMMCAN_Arduino_RX_Msg_2_Sgn_3
 {
-type: UINT(8)
-alias: "RAW_Byte_3"
+type: INT(16)
+alias: "IMU_angels_corrected_z"
 flags: OUTPUT|READONLY
-desc: "Free Raw Message Byte 3"
+desc: ""
 unit: ""
 value: 0
 }
@@ -4951,12 +5601,25 @@ value: 0
 
 
 
-CANMMCAN_Arduino_RX_Msg_4_Sgn_4
+CANMMCAN_Arduino_MIDRX[2]
+{
+type: UINT(32)
+alias: "IMU_angels_corrected_ID"
+flags: OUTPUT|READONLY
+desc: "Message ID"
+unit: ""
+value: 3
+}
+
+
+
+
+CANMMCAN_Arduino_MIDFRX[2]
 {
 type: UINT(8)
-alias: "RAW_Byte_4"
+alias: "IMU_angels_corrected_IDFormat"
 flags: OUTPUT|READONLY
-desc: "Free Raw Message Byte 4"
+desc: "Message ID Format"
 unit: ""
 value: 0
 }
@@ -4964,12 +5627,25 @@ value: 0
 
 
 
-CANMMCAN_Arduino_RX_Msg_4_Sgn_5
+CANMMCAN_Arduino_RXLEN[2]
 {
 type: UINT(8)
-alias: "RAW_Byte_5"
+alias: "IMU_angels_corrected_Length"
 flags: OUTPUT|READONLY
-desc: "Free Raw Message Byte 5"
+desc: "Message Length"
+unit: ""
+value: 6
+}
+
+
+
+
+CANMMCAN_Arduino_RXsta[2]
+{
+type: UINT(8)
+alias: "IMU_angels_corrected_status"
+flags: OUTPUT|READONLY
+desc: "IMU_angels_corrected Status"
 unit: ""
 value: 0
 }
@@ -4977,12 +5653,49 @@ value: 0
 
 
 
-CANMMCAN_Arduino_RX_Msg_4_Sgn_6
+CANMMCAN_Arduino_RXdt[2]
+{
+type: flt(64,IEEE)
+alias: "IMU_angels_corrected_dt"
+flags: OUTPUT|READONLY
+desc: "IMU_angels_corrected DeltaTime"
+unit: "s"
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_RXt[2]
+{
+type: flt(64,IEEE)
+alias: "IMU_angels_corrected_time"
+flags: OUTPUT|READONLY
+desc: "IMU_angels_corrected Time"
+unit: "s"
+value: 0.0
+}
+
+
+
+
+
+endgroup -- block-group "RX"
+
+
+
+group "TX" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+CANMMCAN_Arduino_WBS[2]
 {
 type: UINT(8)
-alias: "RAW_Byte_6"
+alias: "IMU_angels_corrected_CheckEnable"
 flags: OUTPUT|READONLY
-desc: "Free Raw Message Byte 6"
+desc: "Check enabled IMU_angels_corrected"
 unit: ""
 value: 0
 }
@@ -4990,12 +5703,25 @@ value: 0
 
 
 
-CANMMCAN_Arduino_RX_Msg_4_Sgn_7
+CANMMCAN_Arduino_TXDT[2]
+{
+type: flt(64,IEEE)
+alias: "IMU_angels_corrected_DelayTime"
+flags: OUTPUT|READONLY
+desc: "DelayTime IMU_angels_corrected"
+unit: "s"
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_TXsta[2]
 {
 type: UINT(8)
-alias: "RAW_Byte_7"
+alias: "IMU_angels_corrected_status"
 flags: OUTPUT|READONLY
-desc: "Free Raw Message Byte 7"
+desc: "IMU_angels_corrected Status"
 unit: ""
 value: 0
 }
@@ -5003,12 +5729,116 @@ value: 0
 
 
 
-CANMMCAN_Arduino_RX_Msg_4_Sgn_8
+CANMMCAN_Arduino_TXEIN[2]
 {
 type: UINT(8)
-alias: "RAW_Byte_8"
+alias: "IMU_angels_corrected_Enable"
+flags: PARAM
+desc: "Enable IMU_angels_corrected"
+unit: ""
+range: <0; 1>
+value: 1
+}
+
+
+
+
+CANMMCAN_Arduino_TXCIE[2]
+{
+type: UINT(8)
+alias: "IMU_angels_corrected_PeriodicalOn"
+flags: PARAM
+desc: "Activate cyclic transmission for IMU_angels_corrected"
+unit: ""
+range: <0; 1>
+value: 1
+}
+
+
+
+
+CANMMCAN_Arduino_TXKIEX[2]
+{
+type: UINT(8)
+alias: "IMU_angels_corrected_Kickout"
+flags: PARAM
+desc: "Kickout IMU_angels_corrected"
+unit: ""
+range: <0; 1>
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_TXCT[2]
+{
+type: flt(64,IEEE)
+alias: "IMU_angels_corrected_CycleTime"
+flags: PARAM
+desc: "CycleTime IMU_angels_corrected"
+unit: "s"
+range: <0; 1000>
+value: 0
+}
+
+
+
+
+
+endgroup -- block-group "TX"
+
+
+
+endgroup -- block-group "IMU_angels_corrected"
+
+
+
+group "IMU_gyroskop" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+
+group "RX" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+CANMMCAN_Arduino_RX_Msg_3_Sgn_1
+{
+type: INT(16)
+alias: "IMU_gyroskop_x"
 flags: OUTPUT|READONLY
-desc: "Free Raw Message Byte 8"
+desc: ""
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_RX_Msg_3_Sgn_2
+{
+type: INT(16)
+alias: "IMU_gyroskop_y"
+flags: OUTPUT|READONLY
+desc: ""
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_Arduino_RX_Msg_3_Sgn_3
+{
+type: INT(16)
+alias: "IMU_gyroskop_z"
+flags: OUTPUT|READONLY
+desc: ""
 unit: ""
 value: 0
 }
@@ -5019,7 +5849,7 @@ value: 0
 CANMMCAN_Arduino_MIDRX[1]
 {
 type: UINT(32)
-alias: "RTICANMMFreeRawMessage_3_ID"
+alias: "IMU_gyroskop_ID"
 flags: OUTPUT|READONLY
 desc: "Message ID"
 unit: ""
@@ -5032,7 +5862,7 @@ value: 2
 CANMMCAN_Arduino_MIDFRX[1]
 {
 type: UINT(8)
-alias: "RTICANMMFreeRawMessage_3_IDFormat"
+alias: "IMU_gyroskop_IDFormat"
 flags: OUTPUT|READONLY
 desc: "Message ID Format"
 unit: ""
@@ -5045,11 +5875,11 @@ value: 0
 CANMMCAN_Arduino_RXLEN[1]
 {
 type: UINT(8)
-alias: "RTICANMMFreeRawMessage_3_Length"
+alias: "IMU_gyroskop_Length"
 flags: OUTPUT|READONLY
 desc: "Message Length"
 unit: ""
-value: 8
+value: 6
 }
 
 
@@ -5058,9 +5888,9 @@ value: 8
 CANMMCAN_Arduino_RXsta[1]
 {
 type: UINT(8)
-alias: "RTICANMMFreeRawMessage_3_status"
+alias: "IMU_gyroskop_status"
 flags: OUTPUT|READONLY
-desc: "RTICANMMFreeRawMessage_3 Status"
+desc: "IMU_gyroskop Status"
 unit: ""
 value: 0
 }
@@ -5071,9 +5901,9 @@ value: 0
 CANMMCAN_Arduino_RXdt[1]
 {
 type: flt(64,IEEE)
-alias: "RTICANMMFreeRawMessage_3_dt"
+alias: "IMU_gyroskop_dt"
 flags: OUTPUT|READONLY
-desc: "RTICANMMFreeRawMessage_3 DeltaTime"
+desc: "IMU_gyroskop DeltaTime"
 unit: "s"
 value: 0
 }
@@ -5084,9 +5914,9 @@ value: 0
 CANMMCAN_Arduino_RXt[1]
 {
 type: flt(64,IEEE)
-alias: "RTICANMMFreeRawMessage_3_time"
+alias: "IMU_gyroskop_time"
 flags: OUTPUT|READONLY
-desc: "RTICANMMFreeRawMessage_3 Time"
+desc: "IMU_gyroskop Time"
 unit: "s"
 value: 0.0
 }
@@ -5108,9 +5938,9 @@ group "TX" -- subsystem-group
 CANMMCAN_Arduino_WBS[1]
 {
 type: UINT(8)
-alias: "RTICANMMFreeRawMessage_3_CheckEnable"
+alias: "IMU_gyroskop_CheckEnable"
 flags: OUTPUT|READONLY
-desc: "Check enabled RTICANMMFreeRawMessage_3"
+desc: "Check enabled IMU_gyroskop"
 unit: ""
 value: 0
 }
@@ -5121,9 +5951,9 @@ value: 0
 CANMMCAN_Arduino_TXDT[1]
 {
 type: flt(64,IEEE)
-alias: "RTICANMMFreeRawMessage_3_DelayTime"
+alias: "IMU_gyroskop_DelayTime"
 flags: OUTPUT|READONLY
-desc: "DelayTime RTICANMMFreeRawMessage_3"
+desc: "DelayTime IMU_gyroskop"
 unit: "s"
 value: 0
 }
@@ -5134,53 +5964,11 @@ value: 0
 CANMMCAN_Arduino_TXsta[1]
 {
 type: UINT(8)
-alias: "RTICANMMFreeRawMessage_3_status"
+alias: "IMU_gyroskop_status"
 flags: OUTPUT|READONLY
-desc: "RTICANMMFreeRawMessage_3 Status"
+desc: "IMU_gyroskop Status"
 unit: ""
 value: 0
-}
-
-
-
-
-CANMMCAN_Arduino_MIDTXS[1]
-{
-type: UINT(32)
-alias: "RTICANMMFreeRawMessage_3_ID"
-flags: PARAM
-desc: "Message ID"
-unit: ""
-range: <0; 536870911>
-value: 2
-}
-
-
-
-
-CANMMCAN_Arduino_MIDFTXS[1]
-{
-type: UINT(8)
-alias: "RTICANMMFreeRawMessage_3_IDFormat"
-flags: PARAM
-desc: "Message ID Format"
-unit: ""
-range: <0; 1>
-value: 0
-}
-
-
-
-
-CANMMCAN_Arduino_TXLEN[1]
-{
-type: UINT(8)
-alias: "RTICANMMFreeRawMessage_3_Length"
-flags: PARAM
-desc: "Message Length"
-unit: ""
-range: <0; 8>
-value: 8
 }
 
 
@@ -5189,9 +5977,9 @@ value: 8
 CANMMCAN_Arduino_TXEIN[1]
 {
 type: UINT(8)
-alias: "RTICANMMFreeRawMessage_3_Enable"
+alias: "IMU_gyroskop_Enable"
 flags: PARAM
-desc: "Enable RTICANMMFreeRawMessage_3"
+desc: "Enable IMU_gyroskop"
 unit: ""
 range: <0; 1>
 value: 1
@@ -5203,9 +5991,9 @@ value: 1
 CANMMCAN_Arduino_TXCIE[1]
 {
 type: UINT(8)
-alias: "RTICANMMFreeRawMessage_3_PeriodicalOn"
+alias: "IMU_gyroskop_PeriodicalOn"
 flags: PARAM
-desc: "Activate cyclic transmission for RTICANMMFreeRawMessage_3"
+desc: "Activate cyclic transmission for IMU_gyroskop"
 unit: ""
 range: <0; 1>
 value: 1
@@ -5217,9 +6005,9 @@ value: 1
 CANMMCAN_Arduino_TXKIEX[1]
 {
 type: UINT(8)
-alias: "RTICANMMFreeRawMessage_3_Kickout"
+alias: "IMU_gyroskop_Kickout"
 flags: PARAM
-desc: "Kickout RTICANMMFreeRawMessage_3"
+desc: "Kickout IMU_gyroskop"
 unit: ""
 range: <0; 1>
 value: 0
@@ -5231,9 +6019,9 @@ value: 0
 CANMMCAN_Arduino_TXCT[1]
 {
 type: flt(64,IEEE)
-alias: "RTICANMMFreeRawMessage_3_CycleTime"
+alias: "IMU_gyroskop_CycleTime"
 flags: PARAM
-desc: "CycleTime RTICANMMFreeRawMessage_3"
+desc: "CycleTime IMU_gyroskop"
 unit: "s"
 range: <0; 1000>
 value: 0
@@ -5247,7 +6035,7 @@ endgroup -- block-group "TX"
 
 
 
-endgroup -- block-group "RTICANMMFreeRawMessage_3"
+endgroup -- block-group "IMU_gyroskop"
 
 
 

@@ -17,7 +17,7 @@
 #undef DEBUG              
 #undef IDMANIPULATION
 #define WITHOUT_DELAY
-#define NO_TX       
+#undef NO_TX         
 #define KICKOUT_ACTIVE               
 #define NOCANID  0xEFFFFFFF
 #define S_FUNCTION_NAME                           RTICANMM_MAIN_CAN_Arduino
@@ -30,12 +30,12 @@
 #endif /* NOT MATLAB_MEX_FILE || CANMM_HOST_DEBUG */                                                                  
                                                        
                                                        
-#define NUM_TX_INPUT                              0
-#define NUM_TX_MSG                                0
-#define NUM_RX_OUTPUT                             1
-#define NUM_RX_MSG                                1
-#define NUM_RX                                    1
-#define NUM_TX                                    0
+#define NUM_TX_INPUT                              9
+#define NUM_TX_MSG                                3
+#define NUM_RX_OUTPUT                             9
+#define NUM_RX_MSG                                3
+#define NUM_RX                                    9
+#define NUM_TX                                    9
 #define TX_PORT_DATA_TYPES                        "RTICANMM_MAIN_CAN_Arduino_TX_PORT.h"
 #define RX_PORT_DATA_TYPES                        "RTICANMM_MAIN_CAN_Arduino_RX_PORT.h"
 #define TX_WRITE_PORT_DATA                        "RTICANMM_MAIN_CAN_Arduino_TX_INPUT.h"
@@ -101,6 +101,7 @@ typedef enum CanMM_MsgTypes CanMM_MsgTypes;
 #define TX_KICKOUT_CHECK_INTERN_EXTERN            CANMMCAN_Arduino_TXKIEXC
 #define RX_STATUS                                 CANMMCAN_Arduino_RXsta
 #define TX_STATUS                                 CANMMCAN_Arduino_TXsta
+#define TX_MESSAGES_EXIST                         1
 #undef USE_CAPTURE                                
 #define CANMM_Q_NUM                               1
 

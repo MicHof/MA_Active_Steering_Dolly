@@ -15,4 +15,18 @@
 /* ***************************************************************************************************************************/
 
 
-/* New_Message_1 */
+/* IMU_accelerometer */
+
+/* IMU_angels_corrected */
+
+/* IMU_gyroskop */
+/* Vector__XXX */ 
+
+/* IMU_accelerometer */
+CANMMCAN_Arduino_TXENIE[0] =  CANMMCAN_Arduino_TXEIN[0] && (CANMMCAN_Arduino_TXEEIE[0]) && CANMMCAN_Arduino_RTVE;
+
+/* IMU_gyroskop */
+CANMMCAN_Arduino_TXENIE[1] =  CANMMCAN_Arduino_TXEIN[1] && (CANMMCAN_Arduino_TXEEIE[0]) && CANMMCAN_Arduino_RTVE;
+
+/* IMU_angels_corrected */
+CANMMCAN_Arduino_TXENIE[2] =  CANMMCAN_Arduino_TXEIN[2] && (CANMMCAN_Arduino_TXEEIE[0]) && CANMMCAN_Arduino_RTVE;

@@ -3,9 +3,9 @@
  *
  * Code generation for model "CAN_new".
  *
- * Model version              : 1.17
+ * Model version              : 1.24
  * Simulink Coder version : 8.5 (R2013b) 08-Aug-2013
- * C source code generated on : Tue Jan 27 15:24:17 2015
+ * C source code generated on : Mon Feb 02 10:16:50 2015
  *
  * Target selection: rti1401.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping
@@ -29,7 +29,7 @@ extern void RTICANMM_MAIN_CAN(SimStruct *rts);
 extern void RTICANMM_SETUP_Controller1(SimStruct *rts);
 extern void RTICANMM_MAIN_CAN_Arduino(SimStruct *rts);
 extern void RTICANMM_SETUP_Controller3(SimStruct *rts);
-extern void RTICANMM_SETUP_Controller2(SimStruct *rts);
 extern void RTICANMM_MAIN_CAN_2(SimStruct *rts);
+extern void RTICANMM_SETUP_Controller2(SimStruct *rts);
 
 #endif                                 /* RTW_HEADER_CAN_new_private_h_ */
