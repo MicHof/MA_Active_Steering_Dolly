@@ -13,4 +13,8 @@ State=Enabled
 ServiceID=1
 BoardName=unknown
 File=can_new.ppc
+<<<<<<< HEAD
 ID=5321D84D-198E-468B-AAA2-23E259E7EDE8
+=======
+ID=629E86C0-3114-47A1-A9EB-57271BB598BD
+>>>>>>> origin/master
