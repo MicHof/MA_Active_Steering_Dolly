@@ -5,9 +5,9 @@
    Task Configuration file for model : demo_simplemodel
 
    RTI1401 7.2 (02-May-2014)/2.5
-   13-Jan-2015 20:10:53
+   26-Jan-2015 11:44:08
 
-   MATLAB 8.3.0.532 (R2014a)
+   MATLAB 8.2.0.701 (R2013b)
 
    Copyright (c) 1993-2002 dSPACE GmbH, GERMANY
 

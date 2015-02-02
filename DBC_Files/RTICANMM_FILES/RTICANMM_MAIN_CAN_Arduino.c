@@ -107,42 +107,43 @@ static int find_ID_number(SimStruct *S, CanMM_Msg *Msg)
   UInt8 MsgIDFormat = Msg->Format; // 0=Standard, 1=Extended                                                           
   int Pos;                                                                                                             
   int i;                                                                                                               
+  int Start, Stop;                                                                                                 
+  int found = 0;                                                                                                   
+                                                                                                                   
   for (i=0; i<2; i++) {                                                                                            
     if( NumOfIds[MsgIDFormat]>0) {                                                                                 
-      for(Pos = StartIdx[MsgIDFormat]; Pos <= StopIdx[MsgIDFormat]; Pos++){                                        
-        if (ID_Table_RX(Pos) == MsgId) {                                                                       
-          if(Msg->Format == CANMMCAN_Arduino_MIDFRX[Pos]) {                                                                             
-            return Pos;                                                                                            
-          }                                                                                                        
+      Start = (unsigned int) StartIdx[MsgIDFormat];                                                                
+      Stop  = (unsigned int) StopIdx[MsgIDFormat];                                                                 
+                                                                                                                   
+      while (!found && (Start <= Stop)) {                                                                          
+        /* Search in the middle of the table */                                                                    
+        Pos = (Start + Stop)>>1;                                                                                   
+        if ((ID_Table_RX(Pos) == MsgId) && (Msg->Format == CANMMCAN_Arduino_MIDFRX[Pos])) {                                             
+          found = 1;                                                                                               
+          break; // while                                                                                          
+        }                                                                                                          
+        else {                                                                                                     
+          if (MsgId < ID_Table_RX(Pos))                                                                            
+            Stop  = Pos - 1;                                                                                       
+          else                                                                                                     
+            Start = Pos + 1;                                                                                       
         }                                                                                                          
       }                                                                                                            
     }                                                                                                              
-    /* Try other message format, because of message id manipulation format may have changed. */                    
-    MsgIDFormat = (MsgIDFormat + 1) & 0x1; // Toogle message format locally!!!                                     
+    if (found) {                                                                                                   
+      break; // i                                                                                                  
+    }                                                                                                              
+    else {                                                                                                         
+      /* Try other message format, because of message id manipulation format may have changed. */                  
+      MsgIDFormat = (MsgIDFormat + 1) & 0x1; // Toogle message format locally!!!                                   
+    }                                                                                                              
   }                                                                                                                
                                                                                                                    
-  Pos = -1; /* not found */                                                                                        
+  if (!found) {                                                                                              
+    Pos = -1; /* not found */                                                                                      
+  }                                                                                                                
+                                                                                                                   
   return Pos;                                                                                                          
-}                                                                                                                      
-                                                                                                                       
-                                                                                                                       
-static int GlobalTxActive = -1;                                                                                        
-static int lastGlobalTxActive = -1;                                                                                    
-                                                                                                                       
-/* This function clears the TX queue from messages which have                                                          
- * been delayed to the next SimStep. It is called whenever                                                             
- * transmission of messages is completely disabled.                                                                    
- * (due to global enable, global tx enable, switch of variation,                                                       
- *  or silent mode of TJA 1041 transceiver)                                                                            
- */                                                                                                                    
-static void clearTxQueue(SimStruct* S) {                                                                               
-  void **PWork = ssGetPWork(S);                                                                                        
-  int i = 0;                                                                                                           
-                                                                                                                       
-  for(i = 0; i < NUM_TX_MSG; i++) {                                                                                    
-      TX_QUEUE(i).id = NOCANID;                                                                                        
-      CAN_SENDBYKICKOUT[i] = 0;                                                                                        
-  }                                                                                                                    
 }                                                                                                                      
                                                                                                                        
 #endif /* MATLAB_MEX_FILE */                                                                                               
@@ -224,17 +225,7 @@ static void mdlInitializeConditions(SimStruct *S)
   if (!memAllocated)                                                                                                       
   {                                                                                                                        
       memAllocated = 1;                                                                                                    
-      TX_TIMESTAMP_Ptr       = malloc(sizeof(unsigned long)*(NUM_TX_MSG));   /* memory for TX_TIMESTAMP of each TX message */
-      OLD_TX_TIMESTAMP_Ptr   = malloc(sizeof(unsigned long)*(NUM_TX_MSG));   /* memory for TX_TIMESTAMP of each TX message */
-      if ((TX_TIMESTAMP_Ptr == NULL) || (OLD_TX_TIMESTAMP_Ptr == NULL))                                                
-      {                                                                                                                
-          msg_error_printf(MSG_SM_CANNEDY, RTICANMM_MAINSFCN_MALLOC_ERROR , RTICANMM_MAINSFCN_MALLOC_ERROR_TXT, "CAN_Arduino");
-      }                                                                                                                
   }                                                                                                                        
-  for (i = 0; i < NUM_TX_MSG; i++) {                                                                                   
-      TX_TIMESTAMP[i] = (long unsigned int)(TX_CYCLETIME[i]*1000000 - TX_DELAYTIME[i]*1000000 - (unsigned long) (ssGetSampleTime(S, 0)*1000000));
-      OLD_TX_TIMESTAMP[i] = 0;                                                                                         
-  }                                                                                                                    
                                                                                                                            
 CANMM_CTL_CLIENT_INIT(CANMM_CONTROLLER_ID, &ctlsetup_client);                                                              
 #endif /* NOT MATLAB_MEX_FILE || CANMM_HOST_DEBUG */                                                                  
@@ -270,21 +261,10 @@ static void mdlStart(SimStruct *S)
     TX_OLDTIME_Ptr         = malloc(sizeof(double)*(NUM_RX_MSG));                                                          
     OLD_TIMESTAMP_Ptr      = malloc(sizeof(double));                                                                       
   }                                                                                                                        
-#if RTICANMM_LOGLEVEL > 2                                                                                              
-  msg_info_printf(MSG_SM_CANNEDY, RTICANMM_MAINSFCN_MDL_START_CYCLETIME_INFO, RTICANMM_MAINSFCN_MDL_START_CYCLETIME_INFO_TXT, "CAN_Arduino", TX_CYCLETIME[0]);
-#endif                                                                                                                 
                                                                                                                            
   for (i = 0; i < NUM_RX_MSG; i++) {                                                                                       
     TX_COUNTER[i] = -1;   /* initial values, will be incremented when sending message */                                   
   }                                                                                                                        
-  for (i = 0;i < NUM_TX_MSG; i++) {                                                                                    
-                                                                                                                       
-    TX_KO_OLD[i]     = 0;                                                                                              
-    TX_CYCL_OLD[i]   = 0;                                                                                              
-                                                                                                                       
-    TX_QUEUE(i).id = NOCANID;                                                                                          
-    TX_QUEUE(i).idx = 0;                                                                                               
-  }                                                                                                                    
                                                                                                                            
   for (i = 0; i < NUM_RX_MSG; i++) {                                                                                       
     RX_OLDTIME[i] = 0.0;                                                                                                   
@@ -310,36 +290,12 @@ static void mdlOutputs(SimStruct *S, int_T tid) {
                                                                                                                            
   Int32 i, j;                                                                                                              
   UInt32 tx_queue_level;                                                                                                   
-  unsigned long cycletime;                                                                                             
-  unsigned long delaytime;                                                                                             
-  unsigned long sampletime = 0;                                                                                    
-  unsigned long sampletime_halbe = 0;                                                                              
   void (*copy_func)(MainSetupMsgData*, int, SimStruct*);                                                               
                                                                                                                            
-  int docapture = 0;                                                                                                   
-  int captureQueueCountData     = 0;                                                                                   
-  int captureQueueCountTimeInfo = 0;                                                                                   
-  int captureidx = 0;                                                                                                  
                                                                                                                            
   tx_queue_level = CANMM_CTL_TX_QUEUE_LEVEL(CANMM_CONTROLLER_ID, &ctlsetup_client);                                        
                                                                                                                            
                                                                                                                            
-  if (ssGetSampleTime(S, 0) > 0.0) {                                                                                    
-    sampletime = (unsigned long) (ssGetSampleTime(S, 0)*1000000);                                                       
-    OLD_TIMESTAMP[0] = ts_time_read();                                                                                 
-  }                                                                                                                    
-  else {                                                                                                               
-    if ( ts_time_read() < OLD_TIMESTAMP[0]) {                                                                          
-      sampletime = (unsigned long) (ts_time_read()*1000000+0.5);                                                       
-      OLD_TIMESTAMP[0] = 0.0;                                                                                          
-    }                                                                                                                  
-    else {                                                                                                             
-      sampletime = (unsigned long) ((ts_time_read()-OLD_TIMESTAMP[0])*1000000+0.5);                                    
-      OLD_TIMESTAMP[0] = ts_time_read();                                                                               
-    }                                                                                                                  
-  }                                                                                                                    
-                                                                                                                       
-  sampletime_halbe = sampletime/2;                                                                                     
                                                                                                                            
   mbActive = CAN_GLOBAL_ENABLE && (CANMM_CTL_VARIATION(CANMM_CONTROLLER_ID) == 1);                                        
                                                                                                                            
@@ -354,13 +310,6 @@ static void mdlOutputs(SimStruct *S, int_T tid) {
                                                                                                                            
   LastActiveState = mbActive;                                                                                              
                                                                                                                            
-  if (lastGlobalTxActive == 1 && GlobalTxActive == 0) {                                                       
-    clearTxQueue(S);                                                                                                        
-  }                                                                                                                        
-                                                                                                                           
-  lastGlobalTxActive = GlobalTxActive;                                                                                     
-  GlobalTxActive = 0;                                                                                                      
-                                                                                                                           
   if (mbActive) {                                                                                                          
     CAN_VAR_TRAFFIC = 0;                                                                                                   
                                                                                                                            
@@ -368,13 +317,6 @@ static void mdlOutputs(SimStruct *S, int_T tid) {
     for (ite = 0; ite < NUM_RX_MSG; ite++)                                                                             
       RX_STATUS[ite] = 0;                                                                                              
                                                                                                                        
-    /* Reset TX status */                                                                                              
-    for (ite = 0; ite < NUM_TX_MSG; ite++)                                                                             
-      TX_STATUS[ite] = 0;                                                                                              
-                                                                                                                       
-    /* Reset capture status */                                                                                         
-    for (ite = 0; ite < CAPTURE_INDEX_MAX; ite++)                                                                      
-     CAPTURE_STATUS[ite] = 0;                                                                                          
                                                                                                                            
     /* Receive all messages */                                                                                             
     while (CANMM_CTL_RX(CANMM_CONTROLLER_ID, &ctlsetup_client, &MsgData.CANMsg)) {                                            
@@ -435,150 +377,14 @@ static void mdlOutputs(SimStruct *S, int_T tid) {
         copy_func = (void (*)(MainSetupMsgData *, int, SimStruct*)) IDPtr_R(idIdx);  /* get copy function */       
         copy_func(&MsgData, RX, S);  /* copy and convert RAW Data to TRC variables */                              
   }                                                                                                                
-    /* Capture messages */                                                                                             
-      docapture = 0;                                                                                                   
-      if( (MsgData.CANMsg.Format == CANMM_MSG_FORMAT_EXT) && (((MsgData.CANMsg.Id^(long)CAPTUREFILTER_EXT)&(long)CAPTUREMASK_EXT) == 0) )
-          docapture = 1;                                                                                               
-      else if( (MsgData.CANMsg.Format == CANMM_MSG_FORMAT_STD) && (((MsgData.CANMsg.Id^(long)CAPTUREFILTER_STD)&(long)CAPTUREMASK_STD) == 0) )
-          docapture = 1;                                                                                               
-                                                                                                                       
-      if (docapture) {                                                                                                 
-          if (captureidx < CAPTURE_INDEX_MAX) {                                                                        
-            MsgData.pData = MsgData.CANMsg.Data;                                                                       
-            CAPTUREFCN(&MsgData, S, captureidx);                                                                       
-            captureidx++;                                                                                              
-          }                                                                                                            
-     }                                                                                                                 
     } /* while RX */                                                                                                       
                                                                                                                            
 #include TX_WRITE_PORT_DATA                                                                                                
                                                                                                                            
-    /* Send TX Data */                                                                                                 
-    /* Check for changes in tx enable list */                                                                         
-    if (CAN_GLOBAL_ENABLE_TX && (CANMM_CTL_TX_STATUS(CANMM_CONTROLLER_ID) == 1)) {                                                               
-       GlobalTxActive = 1;                                                                                                               
-      for (i = 0; i < NUM_TX_MSG; i++) {                                                                               
-                                                                                                                       
-        if (TX_KICKOUT(i) > TX_KO_OLD[i]) {                                                                        
-                                                                                                                       
-            if (CAN_ENABLE(i)) {                                                                                       
-              TX_QUEUE(i).id = ID_Table_RX(ID_Table_TX(i));  /* Add message direct to sending queue */                 
-              TX_QUEUE(i).kickout = 1;      /* Set kickout flag */                                                     
-              CAN_SENDBYKICKOUT[i] = 1;     /* Remember message has been triggered by kickout */                       
-            }                                                                                                          
-        }                                                                                                              
-        TX_KO_OLD[i] = TX_KICKOUT(i);                                                                              
-        if (TX_KICKOUT_CHECK_INTERN_EXTERN[i]) {                                                                   
-          TX_KICKOUT_INTERN_EXTERN[i] = 0;                                                                         
-        }                                                                                                          
-        else {                                                                                                     
-          TX_KICKOUT_INTERN[i] = 0;                                                                                
-        }                                                                                                          
-}                                                                                                                      
-      for (i = 0; i < NUM_TX_MSG; i++) {                                                                                   
-                                                                                                                           
-/* Set status of message (if message could basically be sent) -------------------------- */                                                            
-        if (CAN_ENABLE(i)) {                                                                                           
-            CAN_WOULDBESENT[i] = 1;                                                                                        
-        }                                                                                                                  
-        else {                                                                                                             
-            CAN_WOULDBESENT[i] = 0;                                                                                        
-        }                                                                                                                  
-                                                                                                                           
-     {                                                                                                                  
-        /* Update prospective tx time stamps for this sample step */                                                                          
-        unsigned long old_time = TX_TIMESTAMP[i];                                                                          
-        TX_TIMESTAMP[i] = TX_TIMESTAMP[i] + sampletime;                                                                    
-                                                                                                                           
-        /* Check for arithmetic overflow */                                                                                
-        if (TX_TIMESTAMP[i] < old_time)  {                                                                                 
-          TX_TIMESTAMP[i] = 0xffffffff - OLD_TX_TIMESTAMP[i] + TX_TIMESTAMP[i];                                            
-          OLD_TX_TIMESTAMP[i] = 0;                                                                                         
-        }                                                                                                                  
-                                                                                                                           
-        /* Prevent arithmetic overflow */                                                                                
-        if (TX_TIMESTAMP[i] > 0xf0000000) {                                                                                
-          TX_TIMESTAMP[i] = TX_TIMESTAMP[i] - OLD_TX_TIMESTAMP[i];                                                         
-          OLD_TX_TIMESTAMP[i] = 0;                                                                                         
-        }                                                                                                                  
-     }                                                                                                                  
-                                                                                                                           
-                                                                                                                           
-                                                                                                                           
-                                                                                                                           
-        cycletime = (unsigned long) (TX_CYCLETIME[i]*1000000);                                                             
-        if  (cycletime > 0) {                                                                                              
-          if ((OLD_TX_TIMESTAMP[i] + cycletime) <= (TX_TIMESTAMP[i] + (sampletime_halbe))) {                               
-                                                                                                                           
-            if (CAN_CYCLIC(i) && CAN_ENABLE(i)) {                                                                          
-              TX_QUEUE(i).id = ID_Table_RX(ID_Table_TX(i));  /* add message direct to sending queue */                     
-              TX_QUEUE(i).kickout = 0;  /* remove kickout flag */                                                          
-              TX_CYCL_OLD[i] = 1;                                                                                          
-                                                                                                                           
-            }                                                                                                          
-            else {                                                                                                     
-              TX_CYCL_OLD[i] = 0;                                                                                      
-            }                                                                                                          
-            OLD_TX_TIMESTAMP[i] = TX_TIMESTAMP[i];                                                                 
-          }                                                                                                                
-        }                                                                                                                  
-                                                                                                                           
-      }                                                                                                                    
-                                                                                                                       
-      /* Send the first MAX_TX_PERSTEP queue entries: */                                                               
-      j = 0;                                                                                                           
-      i = 0;                                                                                                           
-      if (CANMMCAN_Arduino_MAXMSGPERSTEP < 1) {                                                                                                    
-          if (MAX_TX_PERSTEP < 1) {                                                                                    
-            CANMMCAN_Arduino_MAXMSGPERSTEP = 1;                                                                                                    
-          }                                                                                                            
-          else {                                                                                                       
-            CANMMCAN_Arduino_MAXMSGPERSTEP = MAX_TX_PERSTEP;                                                                                       
-          }                                                                                                            
-      }                                                                                                                
-                                                                                                                       
-      do { /* while ((i < NUM_TX_MSG) && (j < (CANMMCAN_Arduino_MAXMSGPERSTEP-(Int32)tx_queue_level)) && (j < CANMM_CTL_TX_QUEUE_SIZE(CANMM_CONTROLLER_ID))) */           
-        UInt32 ID_number = TX_QUEUE(i).id;                                                                                 
-        if (ID_number != NOCANID) {                                                                                        
-          UInt8 TxMsgSent = 0;                                                                                             
-                                                                                                                           
-#if RTICANMM_LOGLEVEL > 3                                                                                                  
-          msg_info_printf(MSG_SM_CANNEDY, RTICANMM_MAINSFCN_TX_MSG_INFO, RTICANMM_MAINSFCN_TX_MSG_INFO_TXT, "CAN_Arduino",  ID_number);
-#endif                                                                                                                     
-                                                                                                                           
-          if (RTICANMM_MESSAGE_TYPE_STD == CANMMCAN_Arduino_RXMT[ID_Table_TX(i)] || RTICANMM_MESSAGE_TYPE_EXT == CANMMCAN_Arduino_RXMT[ID_Table_TX(i)]) {        
-            MsgData.pData = MsgData.CANMsg.Data;                                                                           
-            copy_func = (void (*)(MainSetupMsgData *, int, SimStruct*)) IDPtr_T(i);                                        
-            copy_func(&MsgData, TX, S);    /* Encode/Pack signals to Msg.-RAW Data */                                      
-            MsgData.CANMsg.Id = ID_number;                                                                                 
-            CANMM_CTL_TX(CANMM_CONTROLLER_ID, &ctlsetup_client, &MsgData.CANMsg);                                          
-            TxMsgSent = 1;                                                                                                 
-          }                                                                                                                
-          if (TxMsgSent == 1) {                                                                                            
-            CAN_NUM_LOST += 1;                                                                                             
-                                                                                                                           
-            CAN_SENDBYKICKOUT[i] = 0;                                                                                      
-            TX_QUEUE(i).id = NOCANID; /* Delete entry from sending queue */                                                
-            j++;                                                                                                           
-          }                                                                                                                
-        } /* ID_number != NOCANID */                                                                                       
-        i++;                                                                                                               
-      } while ((i < NUM_TX_MSG) && (j < (CANMMCAN_Arduino_MAXMSGPERSTEP-(Int32)tx_queue_level)) && (j < CANMM_CTL_TX_QUEUE_SIZE(CANMM_CONTROLLER_ID)));       
-    }                                                                                                                  
-    else { /* CAN_GLOBAL_ENABLE_TX */                                                                                  
-      for (i = 0; i < NUM_TX_MSG; i++) {                                                                               
-        CAN_WOULDBESENT[i] = 0;                                                                                        
-      }                                                                                                                
-    } /* CAN_GLOBAL_ENABLE_TX */                                                                                       
                                                                                                                            
 #include RX_WRITE_PORT_DATA                                                                                                
                                                                                                                            
   } /* CAN_GLOBAL_ENABLE && CAN_VAR_ENABLE */                                                                              
-  else {                                                                                                               
-    for (i = 0; i < NUM_TX_MSG; i++){                                                                                  
-      CAN_WOULDBESENT[i] = 0;                                                                                          
-    }                                                                                                                  
-  } /* if (CAN_GLOBAL_ENABLE && CAN_VAR_ENABLE) */                                                                     
 #endif /* NOT MATLAB_MEX_FILE || CANMM_HOST_DEBUG */                                                                  
                                                                                                                            
 } /* static void mdlOutputs(SimStruct *S, int_T tid) */                                                                    
@@ -680,3 +486,6 @@ static void mdlTerminate(SimStruct *S)
 #else                                                                                                                      
     #include "cg_sfun.h"       /* Code generation registration function */                                                 
 #endif                                                                                                                     
+ 
+ 
+ 

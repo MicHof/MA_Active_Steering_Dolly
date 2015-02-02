@@ -6,7 +6,7 @@
    the hardware and software interrupts used.
 
    RTI1401 7.2 (02-May-2014)
-   Tue Jan 13 20:10:56 2015
+   Mon Jan 26 11:44:09 2015
 
    (c) Copyright 2006, dSPACE GmbH. All rights reserved.
 
@@ -82,13 +82,13 @@ static void rti_mdl_initialize_io_boards(void)
     {
       vcm_module_descriptor_type* msg_mod_ptr;
       msg_mod_ptr = vcm_module_register(VCM_MID_MATLAB, (void *) 0,
-        VCM_TXT_MATLAB, 8, 3, 0,
+        VCM_TXT_MATLAB, 8, 2, 0,
         VCM_VERSION_RELEASE, 0, 0, 0, VCM_CTRL_NO_ST);
       vcm_module_register(VCM_MID_SIMULINK, msg_mod_ptr,
-                          VCM_TXT_SIMULINK, 8, 3, 0,
+                          VCM_TXT_SIMULINK, 8, 2, 0,
                           VCM_VERSION_RELEASE, 0, 0, 0, VCM_CTRL_NO_ST);
       vcm_module_register(VCM_MID_RTW, msg_mod_ptr,
-                          VCM_TXT_RTW, 8, 6, 0,
+                          VCM_TXT_RTW, 8, 5, 0,
                           VCM_VERSION_RELEASE, 0, 0, 0, VCM_CTRL_NO_ST);
     }
   }

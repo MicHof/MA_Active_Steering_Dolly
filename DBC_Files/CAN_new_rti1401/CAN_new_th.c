@@ -5,7 +5,7 @@
    Task Configuration file for model : CAN_new
 
    RTI1401 7.2 (02-May-2014)/2.5
-   22-Jan-2015 10:17:10
+   27-Jan-2015 15:24:15
 
    MATLAB 8.2.0.701 (R2013b)
 

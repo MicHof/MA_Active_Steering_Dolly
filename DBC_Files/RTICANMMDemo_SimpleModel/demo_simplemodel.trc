@@ -1,0 +1,3814 @@
+-- ****************************************************************************
+--
+--  Trace file: demo_simplemodel.trc
+--
+--  RTI1401 7.2 (02-May-2014)
+--  Mon Jan 26 11:44:09 2015
+--
+--  Used options:
+--    TRCGenerateVirtualBlocks      = 1
+--    TRCGenerateLabels             = 1
+--    TRCGenerateStates             = 0
+--    TRCGenerateDerivatives        = 0
+--    TRCGenerateParamValues        = 0
+--    TRCGenerateApplicationKeyword = 0
+--    TRCOnlyGlobals                = 0
+--    TRCIsOmitVdOn                 = 0
+--
+--  Trace file format: 2
+--
+--  (c) Copyright 2008, dSPACE GmbH. All rights reserved.
+--
+-- ****************************************************************************
+
+-- ******** Keywords **********************************************************
+
+-- _application "demo_simplemodel.map"
+
+_genname     "RTI"
+_genversion  "7.2"
+_gendate     "01/26/2015 11:44:14"
+_description ""
+_author      "RTI1401 7.2 (02-May-2014)"
+_model       "demo_simplemodel.mdl"
+
+-- Default data type formats
+_floating_point_type(64,IEEE)
+_integer_type(32)
+
+-- No Data Capture blocks within model: use base sample time as sampling period
+sampling_period[0]
+{
+  value:       0.001
+  alias:       "HostService"
+  increment:   0.001
+  unit:        "s"
+}
+
+
+
+-- Type definitions for arrays
+typedef demo_simplemodel_ArrayDT5_6 uint(16)[6]
+
+
+-- ******** Simulation control variables **************************************
+
+finalTime
+{
+ type:  flt(64,IEEE)*
+ alias: "finalTime"
+ desc:  "Simulation stop time. When reached, simState switches to STOP."
+ flags:  SYSTEM|READONLY
+ unit:  "s"
+}
+
+currentTime
+{
+ type:  flt(64,IEEE)*
+ alias: "currentTime"
+ desc:  "Current simulation time. Increments with execution of Timer Task 1."
+ flags: SYSTEM|READONLY
+ unit:  "s"
+}
+
+modelStepSize
+{
+ type:  flt(64,IEEE)
+ alias: "modelStepSize"
+ desc:  "Fixed step size of the model, sample time of Timer Task 1."
+ flags: SYSTEM|READONLY
+ unit:  "s"
+}
+
+simState
+{
+ type:  int(32)
+ alias: "simState"
+ desc:  "Simulation state: STOP=0 PAUSE=1 RUN=2"
+ flags: SYSTEM
+ unit:  "-"
+}
+
+msg_last_error_no
+{
+ type:  uint(32)
+ alias: "errorNumber"
+ desc:  "Error number of last error message (zero if no error)."
+ unit:  "-"
+ flags: SYSTEM|READONLY
+}
+
+rtiAssertionMode
+{
+ type:  int(32)
+ alias: "rtiAssertionMode"
+ desc:  "Assertion Mode: OFF=0 WARN=1 STOP=2"
+ flags: SYSTEM
+ unit:  "-"
+}
+
+
+
+-- ******** Model variables ***************************************************
+
+group "Model Root"
+{
+ flags: COLLAPSED
+}
+	group "Reset" -- block-group
+	{
+	 block: "Constant"
+	 desc:  ""
+	 flags: BLOCK|COLLAPSED
+	}
+		-- Skipping output Out1
+		p_demo_simplemodel_P_boolean_T_3[0]
+		{
+		 type:    uint(8)*
+		 alias:   "Value"
+		 range:   < 0 ; 1 >
+		 bitmask: 0x01
+		 flags:   PARAM
+		}
+
+
+	endgroup -- block-group "Reset"
+
+	group "Variation" -- block-group
+	{
+	 block: "Constant"
+	 desc:  ""
+	 flags: BLOCK|COLLAPSED
+	}
+		-- Skipping output Out1
+		p_demo_simplemodel_P_uint8_T_2[0]
+		{
+		 type:    uint(8)*
+		 alias:   "Value"
+		 flags:   PARAM
+		}
+
+
+	endgroup -- block-group "Variation"
+
+  
+  
+	group "Help" -- subsystem-group
+	{
+	 flags: COLLAPSED
+	 desc:  ""
+	}
+
+
+
+
+
+	endgroup -- subsystem-group "Help"
+  
+  
+	group "Logo1" -- subsystem-group
+	{
+	 flags: COLLAPSED
+	 desc:  ""
+	}
+
+
+
+
+
+	endgroup -- subsystem-group "Logo1"
+  
+  
+	group "RTI Data" -- subsystem-group
+	{
+	 flags: COLLAPSED
+	 desc:  ""
+	}
+
+
+	endgroup -- subsystem-group "RTI Data"
+  
+  
+	group "RTICANMM\nControllerSetup" -- subsystem-group
+	{
+	 flags: COLLAPSED
+	 desc:  ""
+	}
+
+
+
+		group "VariationInput" -- block-group
+		{
+		 block: "Inport"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			-- Skipping output Out1
+
+
+		endgroup -- block-group "VariationInput"
+
+		group "Reset" -- block-group
+		{
+		 block: "Inport"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			-- Skipping output Out1
+
+
+		endgroup -- block-group "Reset"
+
+		group "Variation_DTC" -- block-group
+		{
+		 block: "DataTypeConversion"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			p_demo_simplemodel_B_uint8_T_0[0]
+			{
+			 type:    uint(8)*
+			 alias:   "Out1"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "Variation_DTC"
+
+		group "RTICANMMCHANNEL_TLC" -- block-group
+		{
+		 block: "S-Function"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+
+
+			p_demo_simplemodel_P_real_T_0[0]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "P1"
+			 flags:   PARAM
+			}
+			p_demo_simplemodel_P_real_T_0[1]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "P2"
+			 flags:   PARAM
+			}
+			p_demo_simplemodel_P_real_T_0[2]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "P3"
+			 flags:   PARAM
+			}
+			p_demo_simplemodel_P_real_T_0[3]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "P4"
+			 flags:   PARAM
+			}
+			p_demo_simplemodel_P_real_T_0[4]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "P5"
+			 flags:   PARAM
+			}
+			p_demo_simplemodel_P_uint16_T_1[0]
+			{
+			 type:    demo_simplemodel_ArrayDT5_6*
+			 alias:   "P6"
+			 flags:   PARAM
+			}
+
+
+		endgroup -- block-group "RTICANMMCHANNEL_TLC"
+
+		group "sfcn" -- block-group
+		{
+		 block: "S-Function"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			p_demo_simplemodel_B_uint8_T_0[0]
+			{
+			 type:    uint(8)*
+			 alias:   "In1"
+			 desc:    ""
+			 flags:   SINK|READONLY
+			}
+
+			-- Skipping inport In2
+
+
+
+
+		endgroup -- block-group "sfcn"
+
+  
+  
+		group "ModelClose" -- subsystem-group
+		{
+		 flags: COLLAPSED
+		 desc:  ""
+		}
+
+
+
+
+
+		endgroup -- subsystem-group "ModelClose"
+
+
+	endgroup -- subsystem-group "RTICANMM\nControllerSetup"
+  
+  
+	group "RTICANMM\nGeneralSetup" -- subsystem-group
+	{
+	 flags: COLLAPSED
+	 desc:  ""
+	}
+
+
+	endgroup -- subsystem-group "RTICANMM\nGeneralSetup"
+  
+  
+	group "RTICANMM\nMainBlock" -- subsystem-group
+	{
+	 flags: COLLAPSED
+	 desc:  ""
+	}
+
+
+	endgroup -- subsystem-group "RTICANMM\nMainBlock"
+
+
+
+
+endgroup -- "Model Root"
+-- ******** Tunable Parameters ************************************************
+
+-- InlineParameters is off: no separate group for Tunable Parameters
+
+
+-- ******** State Machine Data ************************************************
+
+-- No Stateflow chart within the model.
+
+
+-- ******** Data Store Memories ***********************************************
+
+-- No Data Store Memories within the model.
+
+
+-- ******** Labels ************************************************************
+
+group "Labels"
+{
+ flags: COLLAPSED
+}
+
+endgroup
+
+-- ******** RTT Dynamic Variables *********************************************
+
+group "RTT Dynamic Variables"
+{
+ flags: COLLAPSED
+}
+
+endgroup
+
+ 
+ 
+ 
+
+group "BusSystems" -- subsystem-group
+        {
+     flags: COLLAPSED
+ }
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+
+group "CAN" -- subsystem-group
+        {
+     flags: COLLAPSED
+ }
+
+
+ 
+ 
+ 
+
+
+
+                        RTICANMM_MonitorData[0]
+            {
+             type:    UINT(32)
+             alias:   "ID"
+              flags:   OUTPUT|READONLY
+             desc:  "ID"
+             unit:  ""
+             value:  0
+            }
+
+
+
+                        RTICANMM_MonitorData[1]
+            {
+             type:    UINT(32)
+             alias:   "Service"
+              flags:   OUTPUT|READONLY
+             desc:  "Service"
+             unit:  ""
+             value:  0
+            }
+
+
+
+                        RTICANMM_MonitorData[2]
+            {
+             type:    UINT(32)
+             alias:   "Data1"
+              flags:   OUTPUT|READONLY
+             desc:  "Data1"
+             unit:  ""
+             value:  0
+            }
+
+
+
+                        RTICANMM_MonitorData[3]
+            {
+             type:    UINT(32)
+             alias:   "Data2"
+              flags:   OUTPUT|READONLY
+             desc:  "Data2"
+             unit:  ""
+             value:  0
+            }
+
+
+
+
+
+
+group "ControllerSetup_Blocks" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+
+
+group "CAN_Controller_1" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+                        CANMMMonitor_CAN_Controller_1
+            {
+             type:    UINT(8)
+             alias:   "Monitoring_Enable"
+              flags:   PARAM
+             desc:  "Monitoring Enable"
+             unit:  ""
+             value:  0
+            }
+
+
+
+
+                        MonitoringTimeStamp_CAN_Controller_1
+            {
+             type:    flt(64,IEEE)
+             alias:   "Monitoring_TimeStamp"
+              flags:   OUTPUT|READONLY
+             desc:  "Monitoring TimeStamp"
+             unit:  "s"
+             value:  0
+            }
+
+
+
+                        CANMM_CTL_SETUP_CAN_Controller_1_Variation
+            {
+             type:    UINT(8)
+             alias:   "Variation"
+              flags:   PARAM
+             desc:  "Variation used if Variation_Switch == 1"
+             unit:  ""
+             value:  1
+            }
+
+
+
+
+                        CANMM_CTL_SETUP_CAN_Controller_1_VariationSwitch
+            {
+             type:    UINT(8)
+             alias:   "Variation_Switch"
+              flags:   PARAM
+             desc:  "Variation Switch: Variation changed by MODEL=0 (default) | EXPERIMENT SOFTWARE=1"
+             unit:  ""
+             value:  0
+            }
+
+
+
+
+
+
+
+endgroup -- block-group "CAN_Controller_1"
+
+
+
+
+endgroup -- block-group "ControllerSetup_Blocks"
+
+
+
+
+
+
+-- START@RTICANMM_MAIN_CAN_DS1401_1_1_1
+
+
+
+group "CAN" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+CANMM_CTL_SETUP_CAN_Controller_1_ID
+{
+type: UINT(8)
+alias: "Variation"
+flags: OUTPUT|READONLY
+desc: "current Variation of CAN_Controller_1"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_NL
+{
+type: UINT(32)
+alias: "NumLostMsgs"
+flags: OUTPUT|READONLY
+desc: "Number of lost messages"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_TRAFFIC
+{
+type: UINT(8)
+alias: "Traffic"
+flags: OUTPUT|READONLY
+desc: "Traffic"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_GEIN
+{
+type: UINT(8)
+alias: "GlobalEnable"
+flags: PARAM
+desc: "Enable CAN"
+unit: ""
+range: <0; 1>
+value: 1
+}
+
+
+
+
+CANMMCAN_TXGEIN
+{
+type: UINT(8)
+alias: "GlobalEnableTX"
+flags: PARAM
+desc: "Enable TX of CAN"
+unit: ""
+range: <0; 1>
+value: 1
+}
+
+
+
+
+CANMMCAN_RTVE
+{
+type: UINT(8)
+alias: "GlobalEnableTXexRT"
+flags: PARAM
+desc: "Enable all TX messages excluded the RealTimeExperiment variables"
+unit: ""
+range: <0; 1>
+value: 1
+}
+
+
+
+
+CANMMCAN_MAXMSGPERSTEP
+{
+type: INT(32)
+alias: "MaxMessagesPerStep"
+flags: PARAM
+desc: "MaxMessagesPerStep"
+unit: ""
+range: <0; 100>
+value: 0
+}
+
+
+
+
+CANMMCAN_TXEEIE[0]
+{
+type: UINT(8)
+alias: "ECU_Enable"
+flags: PARAM
+desc: "Enable ECU"
+unit: ""
+range: <0; 1>
+value: 1
+}
+
+
+
+
+CANMMCAN_TXEEIE[1]
+{
+type: UINT(8)
+alias: "Simulator_Enable"
+flags: PARAM
+desc: "Enable Simulator"
+unit: ""
+range: <0; 1>
+value: 1
+}
+
+
+
+
+
+group "ECU" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+
+group "modesignals" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+
+group "RX" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+CANMMCAN_RX_Msg_1_Sgn_1
+{
+type: UINT(8)
+alias: "Modes"
+flags: OUTPUT|READONLY
+desc: "Network management mode"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_RX_Msg_1_Sgn_2
+{
+type: UINT(8)
+alias: "test_1"
+flags: OUTPUT|READONLY
+desc: "test 1"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_RX_Msg_1_Sgn_3
+{
+type: UINT(8)
+alias: "test_2"
+flags: OUTPUT|READONLY
+desc: "test 2"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_RX_Msg_1_Sgn_4
+{
+type: UINT(8)
+alias: "test_3"
+flags: OUTPUT|READONLY
+desc: "test 3"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_RX_Msg_1_Sgn_5
+{
+type: UINT(8)
+alias: "test_4"
+flags: OUTPUT|READONLY
+desc: "test 4"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_RX_Msg_1_Sgn_6
+{
+type: UINT(8)
+alias: "modemanager"
+flags: OUTPUT|READONLY
+desc: "modemanager"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_RX_Msg_1_Sgn_7
+{
+type: UINT(8)
+alias: "isactivemode2_1"
+flags: OUTPUT|READONLY
+desc: "isactive mode 2_1"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_RX_Msg_1_Sgn_8
+{
+type: UINT(8)
+alias: "isactivemode15_1"
+flags: OUTPUT|READONLY
+desc: ""
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_RX_Msg_1_Sgn_9
+{
+type: UINT(8)
+alias: "isactivemode15_2"
+flags: OUTPUT|READONLY
+desc: ""
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_RX_Msg_1_Sgn_10
+{
+type: UINT(8)
+alias: "isactivemode2_2"
+flags: OUTPUT|READONLY
+desc: ""
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_RX_Msg_1_Sgn_11
+{
+type: UINT(8)
+alias: "test_5"
+flags: OUTPUT|READONLY
+desc: ""
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_MIDRX[7]
+{
+type: UINT(32)
+alias: "modesignals_ID"
+flags: OUTPUT|READONLY
+desc: "Message ID"
+unit: ""
+value: 504446976
+}
+
+
+
+
+CANMMCAN_MIDFRX[7]
+{
+type: UINT(8)
+alias: "modesignals_IDFormat"
+flags: OUTPUT|READONLY
+desc: "Message ID format"
+unit: ""
+value: 1
+}
+
+
+
+
+CANMMCAN_RXLEN[7]
+{
+type: UINT(8)
+alias: "modesignals_Length"
+flags: OUTPUT|READONLY
+desc: "Message Length"
+unit: ""
+value: 8
+}
+
+
+
+
+CANMMCAN_RXsta[7]
+{
+type: UINT(8)
+alias: "modesignals_status"
+flags: OUTPUT|READONLY
+desc: "modesignals Status"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_RXdt[7]
+{
+type: flt(64,IEEE)
+alias: "modesignals_dt"
+flags: OUTPUT|READONLY
+desc: "modesignals DeltaTime"
+unit: "s"
+value: 0.05
+}
+
+
+
+
+CANMMCAN_RXt[7]
+{
+type: flt(64,IEEE)
+alias: "modesignals_time"
+flags: OUTPUT|READONLY
+desc: "modesignals Time"
+unit: "s"
+value: 0.0
+}
+
+
+
+
+
+endgroup -- block-group "RX"
+
+
+
+group "TX" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+CANMMCAN_WBS[7]
+{
+type: UINT(8)
+alias: "modesignals_CheckEnable"
+flags: OUTPUT|READONLY
+desc: "Check enabled modesignals"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_TXsta[7]
+{
+type: UINT(8)
+alias: "modesignals_status"
+flags: OUTPUT|READONLY
+desc: "modesignals Status"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_TX_Msg_1_Sgn_1_constant
+{
+type: UINT(8)
+alias: "Modes"
+flags: PARAM
+desc: "Network management mode"
+unit: ""
+range: <0; 255>
+value: 0
+}
+
+
+
+
+CANMMCAN_TX_Msg_1_Sgn_2_constant
+{
+type: UINT(8)
+alias: "test_1"
+flags: PARAM
+desc: "test 1"
+unit: ""
+range: <0; 63>
+value: 0
+}
+
+
+
+
+CANMMCAN_TX_Msg_1_Sgn_3_constant
+{
+type: UINT(8)
+alias: "test_2"
+flags: PARAM
+desc: "test 2"
+unit: ""
+range: <0; 63>
+value: 0
+}
+
+
+
+
+CANMMCAN_TX_Msg_1_Sgn_4_constant
+{
+type: UINT(8)
+alias: "test_3"
+flags: PARAM
+desc: "test 3"
+unit: ""
+range: <0; 1>
+value: 0
+}
+
+
+
+
+CANMMCAN_TX_Msg_1_Sgn_5_constant
+{
+type: UINT(8)
+alias: "test_4"
+flags: PARAM
+desc: "test 4"
+unit: ""
+range: <0; 1>
+value: 0
+}
+
+
+
+
+CANMMCAN_TX_Msg_1_Sgn_6_constant
+{
+type: UINT(8)
+alias: "modemanager"
+flags: PARAM
+desc: "modemanager"
+unit: ""
+range: <0; 255>
+value: 0
+}
+
+
+
+
+CANMMCAN_TX_Msg_1_Sgn_7_constant
+{
+type: UINT(8)
+alias: "isactivemode2_1"
+flags: PARAM
+desc: "isactive mode 2_1"
+unit: ""
+range: <0; 255>
+value: 0
+}
+
+
+
+
+CANMMCAN_TX_Msg_1_Sgn_8_constant
+{
+type: UINT(8)
+alias: "isactivemode15_1"
+flags: PARAM
+desc: ""
+unit: ""
+range: <0; 1>
+value: 0
+}
+
+
+
+
+CANMMCAN_TX_Msg_1_Sgn_9_constant
+{
+type: UINT(8)
+alias: "isactivemode15_2"
+flags: PARAM
+desc: ""
+unit: ""
+range: <0; 1>
+value: 0
+}
+
+
+
+
+CANMMCAN_TX_Msg_1_Sgn_10_constant
+{
+type: UINT(8)
+alias: "isactivemode2_2"
+flags: PARAM
+desc: ""
+unit: ""
+range: <0; 254>
+value: 0
+}
+
+
+
+
+CANMMCAN_TX_Msg_1_Sgn_11_constant
+{
+type: UINT(8)
+alias: "test_5"
+flags: PARAM
+desc: ""
+unit: ""
+range: <0; 255>
+value: 0
+}
+
+
+
+
+CANMMCAN_TXEIN[7]
+{
+type: UINT(8)
+alias: "modesignals_Enable"
+flags: PARAM
+desc: "Enable modesignals"
+unit: ""
+range: <0; 1>
+value: 1
+}
+
+
+
+
+CANMMCAN_TXCIE[7]
+{
+type: UINT(8)
+alias: "modesignals_PeriodicalOn"
+flags: PARAM
+desc: "Activate cyclic transmission for modesignals"
+unit: ""
+range: <0; 1>
+value: 1
+}
+
+
+
+
+CANMMCAN_TXKIEX[7]
+{
+type: UINT(8)
+alias: "modesignals_Kickout"
+flags: PARAM
+desc: "Kickout modesignals"
+unit: ""
+range: <0; 1>
+value: 0
+}
+
+
+
+
+CANMMCAN_TXCT[7]
+{
+type: flt(64,IEEE)
+alias: "modesignals_CycleTime"
+flags: PARAM
+desc: "CycleTime modesignals"
+unit: "s"
+range: <0; 1000>
+value: 5.000000e-02
+}
+
+
+
+
+CANMMCAN_TXDT[7]
+{
+type: flt(64,IEEE)
+alias: "modesignals_DelayTime"
+flags: PARAM
+desc: "DelayTime modesignals"
+unit: "s"
+range: <0; 1000>
+value: 2.000000e-02
+}
+
+
+
+
+
+endgroup -- block-group "TX"
+
+
+
+endgroup -- block-group "modesignals"
+
+
+
+group "standard" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+
+group "RX" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+CANMMCAN_RX_Msg_2_Sgn_1
+{
+type: UINT(8)
+alias: "SignalWithError"
+flags: OUTPUT|READONLY
+desc: ""
+unit: ""
+value: 4
+}
+
+
+
+
+CANMMCAN_RX_Msg_2_Sgn_2
+{
+type: UINT(8)
+alias: "Bit_4"
+flags: OUTPUT|READONLY
+desc: ""
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_RX_Msg_2_Sgn_3
+{
+type: UINT(8)
+alias: "Bit_3"
+flags: OUTPUT|READONLY
+desc: ""
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_RX_Msg_2_Sgn_4
+{
+type: UINT(8)
+alias: "Bit_2"
+flags: OUTPUT|READONLY
+desc: ""
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_RX_Msg_2_Sgn_5
+{
+type: UINT(8)
+alias: "Bit_1"
+flags: OUTPUT|READONLY
+desc: ""
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_RX_Msg_2_Sgn_6
+{
+type: flt(64,IEEE)
+alias: "Signed"
+flags: OUTPUT|READONLY
+desc: ""
+unit: "Degrees"
+value: 0
+}
+
+
+
+
+CANMMCAN_RX_Msg_2_Sgn_7
+{
+type: INT(16)
+alias: "Temperature"
+flags: OUTPUT|READONLY
+desc: ""
+unit: "Degrees Celsius"
+value: -30
+}
+
+
+
+
+CANMMCAN_RX_Msg_2_Sgn_8
+{
+type: flt(64,IEEE)
+alias: "SignalFactor"
+flags: OUTPUT|READONLY
+desc: ""
+unit: "V"
+value: 0
+}
+
+
+
+
+CANMMCAN_RX_Msg_2_Sgn_9
+{
+type: UINT(8)
+alias: "SignalOffset"
+flags: OUTPUT|READONLY
+desc: ""
+unit: ""
+value: 215
+}
+
+
+
+
+CANMMCAN_RX_Msg_2_Sgn_10
+{
+type: UINT(8)
+alias: "CRC"
+flags: OUTPUT|READONLY
+desc: "CRC-checksum byte 1 to 7"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_MIDRX[6]
+{
+type: UINT(32)
+alias: "standard_ID"
+flags: OUTPUT|READONLY
+desc: "Message ID"
+unit: ""
+value: 115
+}
+
+
+
+
+CANMMCAN_MIDFRX[6]
+{
+type: UINT(8)
+alias: "standard_IDFormat"
+flags: OUTPUT|READONLY
+desc: "Message ID format"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_RXLEN[6]
+{
+type: UINT(8)
+alias: "standard_Length"
+flags: OUTPUT|READONLY
+desc: "Message Length"
+unit: ""
+value: 8
+}
+
+
+
+
+CANMMCAN_RXsta[6]
+{
+type: UINT(8)
+alias: "standard_status"
+flags: OUTPUT|READONLY
+desc: "standard Status"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_RXdt[6]
+{
+type: flt(64,IEEE)
+alias: "standard_dt"
+flags: OUTPUT|READONLY
+desc: "standard DeltaTime"
+unit: "s"
+value: 0.1
+}
+
+
+
+
+CANMMCAN_RXt[6]
+{
+type: flt(64,IEEE)
+alias: "standard_time"
+flags: OUTPUT|READONLY
+desc: "standard Time"
+unit: "s"
+value: 0.0
+}
+
+
+
+
+
+endgroup -- block-group "RX"
+
+
+
+group "TX" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+CANMMCAN_WBS[6]
+{
+type: UINT(8)
+alias: "standard_CheckEnable"
+flags: OUTPUT|READONLY
+desc: "Check enabled standard"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_TXsta[6]
+{
+type: UINT(8)
+alias: "standard_status"
+flags: OUTPUT|READONLY
+desc: "standard Status"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_TX_Msg_2_Sgn_1_constant
+{
+type: UINT(8)
+alias: "SignalWithError"
+flags: PARAM
+desc: ""
+unit: ""
+range: <2; 4>
+value: 4
+}
+
+
+
+
+CANMMCAN_TX_Msg_2_Sgn_2_constant
+{
+type: UINT(8)
+alias: "Bit_4"
+flags: PARAM
+desc: ""
+unit: ""
+range: <0; 1>
+value: 0
+}
+
+
+
+
+CANMMCAN_TX_Msg_2_Sgn_3_constant
+{
+type: UINT(8)
+alias: "Bit_3"
+flags: PARAM
+desc: ""
+unit: ""
+range: <0; 1>
+value: 0
+}
+
+
+
+
+CANMMCAN_TX_Msg_2_Sgn_4_constant
+{
+type: UINT(8)
+alias: "Bit_2"
+flags: PARAM
+desc: ""
+unit: ""
+range: <0; 1>
+value: 0
+}
+
+
+
+
+CANMMCAN_TX_Msg_2_Sgn_5_constant
+{
+type: UINT(8)
+alias: "Bit_1"
+flags: PARAM
+desc: ""
+unit: ""
+range: <0; 1>
+value: 0
+}
+
+
+
+
+CANMMCAN_TX_Msg_2_Sgn_6_constant
+{
+type: flt(64,IEEE)
+alias: "Signed"
+flags: PARAM
+desc: ""
+unit: "Degrees"
+range: <-64; 63.5>
+value: 0
+}
+
+
+
+
+CANMMCAN_TX_Msg_2_Sgn_7_constant
+{
+type: INT(16)
+alias: "Temperature"
+flags: PARAM
+desc: ""
+unit: "Degrees Celsius"
+range: <-50; 204>
+value: -30
+}
+
+
+
+
+CANMMCAN_TX_Msg_2_Sgn_8_constant
+{
+type: flt(64,IEEE)
+alias: "SignalFactor"
+flags: PARAM
+desc: ""
+unit: "V"
+range: <0; 25.4>
+value: 0
+}
+
+
+
+
+CANMMCAN_TX_Msg_2_Sgn_9_constant
+{
+type: UINT(8)
+alias: "SignalOffset"
+flags: PARAM
+desc: ""
+unit: ""
+range: <200; 215>
+value: 215
+}
+
+
+
+
+CANMMCAN_TX_Msg_2_Sgn_10_constant
+{
+type: UINT(8)
+alias: "CRC"
+flags: PARAM
+desc: "CRC-checksum byte 1 to 7"
+unit: ""
+range: <0; 255>
+value: 0
+}
+
+
+
+
+CANMMCAN_TXEIN[6]
+{
+type: UINT(8)
+alias: "standard_Enable"
+flags: PARAM
+desc: "Enable standard"
+unit: ""
+range: <0; 1>
+value: 1
+}
+
+
+
+
+CANMMCAN_TXCIE[6]
+{
+type: UINT(8)
+alias: "standard_PeriodicalOn"
+flags: PARAM
+desc: "Activate cyclic transmission for standard"
+unit: ""
+range: <0; 1>
+value: 1
+}
+
+
+
+
+CANMMCAN_TXKIEX[6]
+{
+type: UINT(8)
+alias: "standard_Kickout"
+flags: PARAM
+desc: "Kickout standard"
+unit: ""
+range: <0; 1>
+value: 0
+}
+
+
+
+
+CANMMCAN_TXCT[6]
+{
+type: flt(64,IEEE)
+alias: "standard_CycleTime"
+flags: PARAM
+desc: "CycleTime standard"
+unit: "s"
+range: <0; 1000>
+value: 1.000000e-01
+}
+
+
+
+
+CANMMCAN_TXDT[6]
+{
+type: flt(64,IEEE)
+alias: "standard_DelayTime"
+flags: PARAM
+desc: "DelayTime standard"
+unit: "s"
+range: <0; 1000>
+value: 0
+}
+
+
+
+
+
+endgroup -- block-group "TX"
+
+
+
+endgroup -- block-group "standard"
+
+
+
+endgroup -- block-group "ECU"
+
+
+
+group "ECU_2" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+
+group "modesignals" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+
+group "RX" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+CANMMCAN_RX_Msg_1_Sgn_1
+{
+type: UINT(8)
+alias: "Modes"
+flags: OUTPUT|READONLY
+desc: "Network management mode"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_RX_Msg_1_Sgn_2
+{
+type: UINT(8)
+alias: "test_1"
+flags: OUTPUT|READONLY
+desc: "test 1"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_RX_Msg_1_Sgn_3
+{
+type: UINT(8)
+alias: "test_2"
+flags: OUTPUT|READONLY
+desc: "test 2"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_RX_Msg_1_Sgn_4
+{
+type: UINT(8)
+alias: "test_3"
+flags: OUTPUT|READONLY
+desc: "test 3"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_RX_Msg_1_Sgn_5
+{
+type: UINT(8)
+alias: "test_4"
+flags: OUTPUT|READONLY
+desc: "test 4"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_RX_Msg_1_Sgn_6
+{
+type: UINT(8)
+alias: "modemanager"
+flags: OUTPUT|READONLY
+desc: "modemanager"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_RX_Msg_1_Sgn_7
+{
+type: UINT(8)
+alias: "isactivemode2_1"
+flags: OUTPUT|READONLY
+desc: "isactive mode 2_1"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_RX_Msg_1_Sgn_8
+{
+type: UINT(8)
+alias: "isactivemode15_1"
+flags: OUTPUT|READONLY
+desc: ""
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_RX_Msg_1_Sgn_9
+{
+type: UINT(8)
+alias: "isactivemode15_2"
+flags: OUTPUT|READONLY
+desc: ""
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_RX_Msg_1_Sgn_10
+{
+type: UINT(8)
+alias: "isactivemode2_2"
+flags: OUTPUT|READONLY
+desc: ""
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_RX_Msg_1_Sgn_11
+{
+type: UINT(8)
+alias: "test_5"
+flags: OUTPUT|READONLY
+desc: ""
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_MIDRX[7]
+{
+type: UINT(32)
+alias: "modesignals_ID"
+flags: OUTPUT|READONLY
+desc: "Message ID"
+unit: ""
+value: 504446976
+}
+
+
+
+
+CANMMCAN_MIDFRX[7]
+{
+type: UINT(8)
+alias: "modesignals_IDFormat"
+flags: OUTPUT|READONLY
+desc: "Message ID format"
+unit: ""
+value: 1
+}
+
+
+
+
+CANMMCAN_RXLEN[7]
+{
+type: UINT(8)
+alias: "modesignals_Length"
+flags: OUTPUT|READONLY
+desc: "Message Length"
+unit: ""
+value: 8
+}
+
+
+
+
+CANMMCAN_RXsta[7]
+{
+type: UINT(8)
+alias: "modesignals_status"
+flags: OUTPUT|READONLY
+desc: "modesignals Status"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_RXdt[7]
+{
+type: flt(64,IEEE)
+alias: "modesignals_dt"
+flags: OUTPUT|READONLY
+desc: "modesignals DeltaTime"
+unit: "s"
+value: 0.05
+}
+
+
+
+
+CANMMCAN_RXt[7]
+{
+type: flt(64,IEEE)
+alias: "modesignals_time"
+flags: OUTPUT|READONLY
+desc: "modesignals Time"
+unit: "s"
+value: 0.0
+}
+
+
+
+
+
+endgroup -- block-group "RX"
+
+
+
+endgroup -- block-group "modesignals"
+
+
+
+group "standard" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+
+group "RX" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+CANMMCAN_RX_Msg_2_Sgn_1
+{
+type: UINT(8)
+alias: "SignalWithError"
+flags: OUTPUT|READONLY
+desc: ""
+unit: ""
+value: 4
+}
+
+
+
+
+CANMMCAN_RX_Msg_2_Sgn_2
+{
+type: UINT(8)
+alias: "Bit_4"
+flags: OUTPUT|READONLY
+desc: ""
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_RX_Msg_2_Sgn_3
+{
+type: UINT(8)
+alias: "Bit_3"
+flags: OUTPUT|READONLY
+desc: ""
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_RX_Msg_2_Sgn_4
+{
+type: UINT(8)
+alias: "Bit_2"
+flags: OUTPUT|READONLY
+desc: ""
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_RX_Msg_2_Sgn_5
+{
+type: UINT(8)
+alias: "Bit_1"
+flags: OUTPUT|READONLY
+desc: ""
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_RX_Msg_2_Sgn_6
+{
+type: flt(64,IEEE)
+alias: "Signed"
+flags: OUTPUT|READONLY
+desc: ""
+unit: "Degrees"
+value: 0
+}
+
+
+
+
+CANMMCAN_RX_Msg_2_Sgn_7
+{
+type: INT(16)
+alias: "Temperature"
+flags: OUTPUT|READONLY
+desc: ""
+unit: "Degrees Celsius"
+value: -30
+}
+
+
+
+
+CANMMCAN_RX_Msg_2_Sgn_8
+{
+type: flt(64,IEEE)
+alias: "SignalFactor"
+flags: OUTPUT|READONLY
+desc: ""
+unit: "V"
+value: 0
+}
+
+
+
+
+CANMMCAN_RX_Msg_2_Sgn_9
+{
+type: UINT(8)
+alias: "SignalOffset"
+flags: OUTPUT|READONLY
+desc: ""
+unit: ""
+value: 215
+}
+
+
+
+
+CANMMCAN_RX_Msg_2_Sgn_10
+{
+type: UINT(8)
+alias: "CRC"
+flags: OUTPUT|READONLY
+desc: "CRC-checksum byte 1 to 7"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_MIDRX[6]
+{
+type: UINT(32)
+alias: "standard_ID"
+flags: OUTPUT|READONLY
+desc: "Message ID"
+unit: ""
+value: 115
+}
+
+
+
+
+CANMMCAN_MIDFRX[6]
+{
+type: UINT(8)
+alias: "standard_IDFormat"
+flags: OUTPUT|READONLY
+desc: "Message ID format"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_RXLEN[6]
+{
+type: UINT(8)
+alias: "standard_Length"
+flags: OUTPUT|READONLY
+desc: "Message Length"
+unit: ""
+value: 8
+}
+
+
+
+
+CANMMCAN_RXsta[6]
+{
+type: UINT(8)
+alias: "standard_status"
+flags: OUTPUT|READONLY
+desc: "standard Status"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_RXdt[6]
+{
+type: flt(64,IEEE)
+alias: "standard_dt"
+flags: OUTPUT|READONLY
+desc: "standard DeltaTime"
+unit: "s"
+value: 0.1
+}
+
+
+
+
+CANMMCAN_RXt[6]
+{
+type: flt(64,IEEE)
+alias: "standard_time"
+flags: OUTPUT|READONLY
+desc: "standard Time"
+unit: "s"
+value: 0.0
+}
+
+
+
+
+
+endgroup -- block-group "RX"
+
+
+
+endgroup -- block-group "standard"
+
+
+
+endgroup -- block-group "ECU_2"
+
+
+
+group "Simulator" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+
+endgroup -- block-group "Simulator"
+
+
+
+group "Vector__XXX" -- subsystem-group
+{
+     flags: COLLAPSED
+}
+
+
+
+endgroup -- block-group "Vector__XXX"
+
+
+
+group "RT" -- subsystem-group
+{
+     flags: COLLAPSED | HIDDEN
+}
+
+
+CANMMCAN_RTTNM
+{
+type: UINT(8)
+alias: "NumRTTMessages"
+flags: OUTPUT|READONLY
+desc: "Number of RTT MessageStructures"
+unit: ""
+value: 3
+}
+
+
+
+
+CANMMCAN_RTTTX[0]
+{
+type: UINT(8)
+alias: "RTTTXStartAddress"
+flags: OUTPUT|READONLY
+desc: "TX start address"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_RTTRX[0]
+{
+type: UINT(8)
+alias: "RTTRXStartAddress"
+flags: OUTPUT|READONLY
+desc: "RX start address"
+unit: ""
+value: 0
+}
+
+
+
+
+
+group "FreeRawMessages" -- subsystem-group
+{
+     flags: COLLAPSED | HIDDEN
+}
+
+
+
+group "RTFreeID1" -- subsystem-group
+{
+     flags: COLLAPSED | HIDDEN
+}
+
+
+
+group "RX" -- subsystem-group
+{
+     flags: COLLAPSED | HIDDEN
+}
+
+
+CANMMCAN_RX_Msg_3_Sgn_1
+{
+type: UINT(8)
+alias: "RAW_Byte_1"
+flags: OUTPUT|READONLY
+desc: "Free Raw Message Byte 1"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_RX_Msg_3_Sgn_2
+{
+type: UINT(8)
+alias: "RAW_Byte_2"
+flags: OUTPUT|READONLY
+desc: "Free Raw Message Byte 2"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_RX_Msg_3_Sgn_3
+{
+type: UINT(8)
+alias: "RAW_Byte_3"
+flags: OUTPUT|READONLY
+desc: "Free Raw Message Byte 3"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_RX_Msg_3_Sgn_4
+{
+type: UINT(8)
+alias: "RAW_Byte_4"
+flags: OUTPUT|READONLY
+desc: "Free Raw Message Byte 4"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_RX_Msg_3_Sgn_5
+{
+type: UINT(8)
+alias: "RAW_Byte_5"
+flags: OUTPUT|READONLY
+desc: "Free Raw Message Byte 5"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_RX_Msg_3_Sgn_6
+{
+type: UINT(8)
+alias: "RAW_Byte_6"
+flags: OUTPUT|READONLY
+desc: "Free Raw Message Byte 6"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_RX_Msg_3_Sgn_7
+{
+type: UINT(8)
+alias: "RAW_Byte_7"
+flags: OUTPUT|READONLY
+desc: "Free Raw Message Byte 7"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_RX_Msg_3_Sgn_8
+{
+type: UINT(8)
+alias: "RAW_Byte_8"
+flags: OUTPUT|READONLY
+desc: "Free Raw Message Byte 8"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_MIDRX[0]
+{
+type: UINT(32)
+alias: "ID"
+flags: OUTPUT|READONLY
+desc: "Message ID"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_MIDFRX[0]
+{
+type: UINT(8)
+alias: "IDFormat"
+flags: OUTPUT|READONLY
+desc: "Message ID format"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_RXLEN[0]
+{
+type: UINT(8)
+alias: "Length"
+flags: OUTPUT|READONLY
+desc: "Message Length"
+unit: ""
+value: 8
+}
+
+
+
+
+CANMMCAN_RXsta[0]
+{
+type: UINT(8)
+alias: "RXStatus"
+flags: OUTPUT|READONLY
+desc: "RTFreeID1 Status"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_RXdt[0]
+{
+type: flt(64,IEEE)
+alias: "DeltaTime"
+flags: OUTPUT|READONLY
+desc: "RTFreeID1 DeltaTime"
+unit: "s"
+value: 0
+}
+
+
+
+
+CANMMCAN_RXt[0]
+{
+type: flt(64,IEEE)
+alias: "RXTime"
+flags: OUTPUT|READONLY
+desc: "RTFreeID1 Time"
+unit: "s"
+value: 0.0
+}
+
+
+
+
+CANMMCAN_RXCNT[0]
+{
+type: UINT(32)
+alias: "RXCounter"
+flags: OUTPUT|READONLY
+desc: "RTFreeID1 Counter"
+unit: ""
+value: 0
+}
+
+
+
+
+
+endgroup -- block-group "RX"
+
+
+
+group "TX" -- subsystem-group
+{
+     flags: COLLAPSED | HIDDEN
+}
+
+
+CANMMCAN_WBS[0]
+{
+type: UINT(8)
+alias: "CheckEnable"
+flags: OUTPUT|READONLY
+desc: "Check enabled standard"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_TXsta[0]
+{
+type: UINT(8)
+alias: "TXStatus"
+flags: OUTPUT|READONLY
+desc: "RTFreeID1 Status"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_TX_Msg_3_Sgn_1_constant
+{
+type: UINT(8)
+alias: "RAW_Byte_1"
+flags: PARAM
+desc: "Free Raw Message Byte 1"
+unit: ""
+range: <0; 255>
+value: 0
+}
+
+
+
+
+CANMMCAN_TX_Msg_3_Sgn_2_constant
+{
+type: UINT(8)
+alias: "RAW_Byte_2"
+flags: PARAM
+desc: "Free Raw Message Byte 2"
+unit: ""
+range: <0; 255>
+value: 0
+}
+
+
+
+
+CANMMCAN_TX_Msg_3_Sgn_3_constant
+{
+type: UINT(8)
+alias: "RAW_Byte_3"
+flags: PARAM
+desc: "Free Raw Message Byte 3"
+unit: ""
+range: <0; 255>
+value: 0
+}
+
+
+
+
+CANMMCAN_TX_Msg_3_Sgn_4_constant
+{
+type: UINT(8)
+alias: "RAW_Byte_4"
+flags: PARAM
+desc: "Free Raw Message Byte 4"
+unit: ""
+range: <0; 255>
+value: 0
+}
+
+
+
+
+CANMMCAN_TX_Msg_3_Sgn_5_constant
+{
+type: UINT(8)
+alias: "RAW_Byte_5"
+flags: PARAM
+desc: "Free Raw Message Byte 5"
+unit: ""
+range: <0; 255>
+value: 0
+}
+
+
+
+
+CANMMCAN_TX_Msg_3_Sgn_6_constant
+{
+type: UINT(8)
+alias: "RAW_Byte_6"
+flags: PARAM
+desc: "Free Raw Message Byte 6"
+unit: ""
+range: <0; 255>
+value: 0
+}
+
+
+
+
+CANMMCAN_TX_Msg_3_Sgn_7_constant
+{
+type: UINT(8)
+alias: "RAW_Byte_7"
+flags: PARAM
+desc: "Free Raw Message Byte 7"
+unit: ""
+range: <0; 255>
+value: 0
+}
+
+
+
+
+CANMMCAN_TX_Msg_3_Sgn_8_constant
+{
+type: UINT(8)
+alias: "RAW_Byte_8"
+flags: PARAM
+desc: "Free Raw Message Byte 8"
+unit: ""
+range: <0; 255>
+value: 0
+}
+
+
+
+
+CANMMCAN_TXAIDX1
+{
+type: UINT(8)
+alias: "APPLIDX"
+flags: PARAM
+desc: ""
+unit: ""
+range: <0; 255>
+value: 0
+}
+
+
+
+
+CANMMCAN_MIDTXS[0]
+{
+type: UINT(32)
+alias: "ID"
+flags: PARAM
+desc: "Message ID"
+unit: ""
+range: <0; 536870911>
+value: 0
+}
+
+
+
+
+CANMMCAN_MIDFTXS[0]
+{
+type: UINT(8)
+alias: "IDFormat"
+flags: PARAM
+desc: "Message ID Format"
+unit: ""
+range: <0; 1>
+value: 0
+}
+
+
+
+
+CANMMCAN_TXLEN[0]
+{
+type: UINT(8)
+alias: "Length"
+flags: PARAM
+desc: "Message Length"
+unit: ""
+range: <0; 8>
+value: 8
+}
+
+
+
+
+CANMMCAN_TXEIN[0]
+{
+type: UINT(8)
+alias: "Enable"
+flags: PARAM
+desc: "Enable standard"
+unit: ""
+range: <0; 1>
+value: 1
+}
+
+
+
+
+CANMMCAN_TXCIE[0]
+{
+type: UINT(8)
+alias: "Cyclic"
+flags: PARAM
+desc: "Activate cyclic transmission for RTFreeID1"
+unit: ""
+range: <0; 1>
+value: 1
+}
+
+
+
+
+CANMMCAN_TXKIEX[0]
+{
+type: UINT(8)
+alias: "Kickout"
+flags: PARAM
+desc: "Kickout RTFreeID1"
+unit: ""
+range: <0; 1>
+value: 0
+}
+
+
+
+
+CANMMCAN_TXCT[0]
+{
+type: flt(64,IEEE)
+alias: "CycleTime"
+flags: PARAM
+desc: "CycleTime RTFreeID1"
+unit: "s"
+range: <0; 1000>
+value: 0
+}
+
+
+
+
+CANMMCAN_TXDT[0]
+{
+type: flt(64,IEEE)
+alias: "DelayTime"
+flags: PARAM
+desc: "DelayTime RTFreeID1"
+unit: "s"
+range: <0; 1000>
+value: 0
+}
+
+
+
+
+
+endgroup -- block-group "TX"
+
+
+
+endgroup -- block-group "RTFreeID1"
+
+
+
+group "RTFreeID2" -- subsystem-group
+{
+     flags: COLLAPSED | HIDDEN
+}
+
+
+
+group "RX" -- subsystem-group
+{
+     flags: COLLAPSED | HIDDEN
+}
+
+
+CANMMCAN_RX_Msg_4_Sgn_1
+{
+type: UINT(8)
+alias: "RAW_Byte_1"
+flags: OUTPUT|READONLY
+desc: "Free Raw Message Byte 1"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_RX_Msg_4_Sgn_2
+{
+type: UINT(8)
+alias: "RAW_Byte_2"
+flags: OUTPUT|READONLY
+desc: "Free Raw Message Byte 2"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_RX_Msg_4_Sgn_3
+{
+type: UINT(8)
+alias: "RAW_Byte_3"
+flags: OUTPUT|READONLY
+desc: "Free Raw Message Byte 3"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_RX_Msg_4_Sgn_4
+{
+type: UINT(8)
+alias: "RAW_Byte_4"
+flags: OUTPUT|READONLY
+desc: "Free Raw Message Byte 4"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_RX_Msg_4_Sgn_5
+{
+type: UINT(8)
+alias: "RAW_Byte_5"
+flags: OUTPUT|READONLY
+desc: "Free Raw Message Byte 5"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_RX_Msg_4_Sgn_6
+{
+type: UINT(8)
+alias: "RAW_Byte_6"
+flags: OUTPUT|READONLY
+desc: "Free Raw Message Byte 6"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_RX_Msg_4_Sgn_7
+{
+type: UINT(8)
+alias: "RAW_Byte_7"
+flags: OUTPUT|READONLY
+desc: "Free Raw Message Byte 7"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_RX_Msg_4_Sgn_8
+{
+type: UINT(8)
+alias: "RAW_Byte_8"
+flags: OUTPUT|READONLY
+desc: "Free Raw Message Byte 8"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_MIDRX[1]
+{
+type: UINT(32)
+alias: "ID"
+flags: OUTPUT|READONLY
+desc: "Message ID"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_MIDFRX[1]
+{
+type: UINT(8)
+alias: "IDFormat"
+flags: OUTPUT|READONLY
+desc: "Message ID format"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_RXLEN[1]
+{
+type: UINT(8)
+alias: "Length"
+flags: OUTPUT|READONLY
+desc: "Message Length"
+unit: ""
+value: 8
+}
+
+
+
+
+CANMMCAN_RXsta[1]
+{
+type: UINT(8)
+alias: "RXStatus"
+flags: OUTPUT|READONLY
+desc: "RTFreeID2 Status"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_RXdt[1]
+{
+type: flt(64,IEEE)
+alias: "DeltaTime"
+flags: OUTPUT|READONLY
+desc: "RTFreeID2 DeltaTime"
+unit: "s"
+value: 0
+}
+
+
+
+
+CANMMCAN_RXt[1]
+{
+type: flt(64,IEEE)
+alias: "RXTime"
+flags: OUTPUT|READONLY
+desc: "RTFreeID2 Time"
+unit: "s"
+value: 0.0
+}
+
+
+
+
+CANMMCAN_RXCNT[1]
+{
+type: UINT(32)
+alias: "RXCounter"
+flags: OUTPUT|READONLY
+desc: "RTFreeID2 Counter"
+unit: ""
+value: 0
+}
+
+
+
+
+
+endgroup -- block-group "RX"
+
+
+
+group "TX" -- subsystem-group
+{
+     flags: COLLAPSED | HIDDEN
+}
+
+
+CANMMCAN_WBS[1]
+{
+type: UINT(8)
+alias: "CheckEnable"
+flags: OUTPUT|READONLY
+desc: "Check enabled RTFreeID1"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_TXsta[1]
+{
+type: UINT(8)
+alias: "TXStatus"
+flags: OUTPUT|READONLY
+desc: "RTFreeID2 Status"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_TX_Msg_4_Sgn_1_constant
+{
+type: UINT(8)
+alias: "RAW_Byte_1"
+flags: PARAM
+desc: "Free Raw Message Byte 1"
+unit: ""
+range: <0; 255>
+value: 0
+}
+
+
+
+
+CANMMCAN_TX_Msg_4_Sgn_2_constant
+{
+type: UINT(8)
+alias: "RAW_Byte_2"
+flags: PARAM
+desc: "Free Raw Message Byte 2"
+unit: ""
+range: <0; 255>
+value: 0
+}
+
+
+
+
+CANMMCAN_TX_Msg_4_Sgn_3_constant
+{
+type: UINT(8)
+alias: "RAW_Byte_3"
+flags: PARAM
+desc: "Free Raw Message Byte 3"
+unit: ""
+range: <0; 255>
+value: 0
+}
+
+
+
+
+CANMMCAN_TX_Msg_4_Sgn_4_constant
+{
+type: UINT(8)
+alias: "RAW_Byte_4"
+flags: PARAM
+desc: "Free Raw Message Byte 4"
+unit: ""
+range: <0; 255>
+value: 0
+}
+
+
+
+
+CANMMCAN_TX_Msg_4_Sgn_5_constant
+{
+type: UINT(8)
+alias: "RAW_Byte_5"
+flags: PARAM
+desc: "Free Raw Message Byte 5"
+unit: ""
+range: <0; 255>
+value: 0
+}
+
+
+
+
+CANMMCAN_TX_Msg_4_Sgn_6_constant
+{
+type: UINT(8)
+alias: "RAW_Byte_6"
+flags: PARAM
+desc: "Free Raw Message Byte 6"
+unit: ""
+range: <0; 255>
+value: 0
+}
+
+
+
+
+CANMMCAN_TX_Msg_4_Sgn_7_constant
+{
+type: UINT(8)
+alias: "RAW_Byte_7"
+flags: PARAM
+desc: "Free Raw Message Byte 7"
+unit: ""
+range: <0; 255>
+value: 0
+}
+
+
+
+
+CANMMCAN_TX_Msg_4_Sgn_8_constant
+{
+type: UINT(8)
+alias: "RAW_Byte_8"
+flags: PARAM
+desc: "Free Raw Message Byte 8"
+unit: ""
+range: <0; 255>
+value: 0
+}
+
+
+
+
+CANMMCAN_TXAIDX2
+{
+type: UINT(8)
+alias: "APPLIDX"
+flags: PARAM
+desc: ""
+unit: ""
+range: <0; 255>
+value: 0
+}
+
+
+
+
+CANMMCAN_MIDTXS[1]
+{
+type: UINT(32)
+alias: "ID"
+flags: PARAM
+desc: "Message ID"
+unit: ""
+range: <0; 536870911>
+value: 0
+}
+
+
+
+
+CANMMCAN_MIDFTXS[1]
+{
+type: UINT(8)
+alias: "IDFormat"
+flags: PARAM
+desc: "Message ID Format"
+unit: ""
+range: <0; 1>
+value: 0
+}
+
+
+
+
+CANMMCAN_TXLEN[1]
+{
+type: UINT(8)
+alias: "Length"
+flags: PARAM
+desc: "Message Length"
+unit: ""
+range: <0; 8>
+value: 8
+}
+
+
+
+
+CANMMCAN_TXEIN[1]
+{
+type: UINT(8)
+alias: "Enable"
+flags: PARAM
+desc: "Enable RTFreeID1"
+unit: ""
+range: <0; 1>
+value: 1
+}
+
+
+
+
+CANMMCAN_TXCIE[1]
+{
+type: UINT(8)
+alias: "Cyclic"
+flags: PARAM
+desc: "Activate cyclic transmission for RTFreeID2"
+unit: ""
+range: <0; 1>
+value: 1
+}
+
+
+
+
+CANMMCAN_TXKIEX[1]
+{
+type: UINT(8)
+alias: "Kickout"
+flags: PARAM
+desc: "Kickout RTFreeID2"
+unit: ""
+range: <0; 1>
+value: 0
+}
+
+
+
+
+CANMMCAN_TXCT[1]
+{
+type: flt(64,IEEE)
+alias: "CycleTime"
+flags: PARAM
+desc: "CycleTime RTFreeID2"
+unit: "s"
+range: <0; 1000>
+value: 0
+}
+
+
+
+
+CANMMCAN_TXDT[1]
+{
+type: flt(64,IEEE)
+alias: "DelayTime"
+flags: PARAM
+desc: "DelayTime RTFreeID2"
+unit: "s"
+range: <0; 1000>
+value: 0
+}
+
+
+
+
+
+endgroup -- block-group "TX"
+
+
+
+endgroup -- block-group "RTFreeID2"
+
+
+
+group "RTFreeID3" -- subsystem-group
+{
+     flags: COLLAPSED | HIDDEN
+}
+
+
+
+group "RX" -- subsystem-group
+{
+     flags: COLLAPSED | HIDDEN
+}
+
+
+CANMMCAN_RX_Msg_5_Sgn_1
+{
+type: UINT(8)
+alias: "RAW_Byte_1"
+flags: OUTPUT|READONLY
+desc: "Free Raw Message Byte 1"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_RX_Msg_5_Sgn_2
+{
+type: UINT(8)
+alias: "RAW_Byte_2"
+flags: OUTPUT|READONLY
+desc: "Free Raw Message Byte 2"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_RX_Msg_5_Sgn_3
+{
+type: UINT(8)
+alias: "RAW_Byte_3"
+flags: OUTPUT|READONLY
+desc: "Free Raw Message Byte 3"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_RX_Msg_5_Sgn_4
+{
+type: UINT(8)
+alias: "RAW_Byte_4"
+flags: OUTPUT|READONLY
+desc: "Free Raw Message Byte 4"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_RX_Msg_5_Sgn_5
+{
+type: UINT(8)
+alias: "RAW_Byte_5"
+flags: OUTPUT|READONLY
+desc: "Free Raw Message Byte 5"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_RX_Msg_5_Sgn_6
+{
+type: UINT(8)
+alias: "RAW_Byte_6"
+flags: OUTPUT|READONLY
+desc: "Free Raw Message Byte 6"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_RX_Msg_5_Sgn_7
+{
+type: UINT(8)
+alias: "RAW_Byte_7"
+flags: OUTPUT|READONLY
+desc: "Free Raw Message Byte 7"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_RX_Msg_5_Sgn_8
+{
+type: UINT(8)
+alias: "RAW_Byte_8"
+flags: OUTPUT|READONLY
+desc: "Free Raw Message Byte 8"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_MIDRX[2]
+{
+type: UINT(32)
+alias: "ID"
+flags: OUTPUT|READONLY
+desc: "Message ID"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_MIDFRX[2]
+{
+type: UINT(8)
+alias: "IDFormat"
+flags: OUTPUT|READONLY
+desc: "Message ID format"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_RXLEN[2]
+{
+type: UINT(8)
+alias: "Length"
+flags: OUTPUT|READONLY
+desc: "Message Length"
+unit: ""
+value: 8
+}
+
+
+
+
+CANMMCAN_RXsta[2]
+{
+type: UINT(8)
+alias: "RXStatus"
+flags: OUTPUT|READONLY
+desc: "RTFreeID3 Status"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_RXdt[2]
+{
+type: flt(64,IEEE)
+alias: "DeltaTime"
+flags: OUTPUT|READONLY
+desc: "RTFreeID3 DeltaTime"
+unit: "s"
+value: 0
+}
+
+
+
+
+CANMMCAN_RXt[2]
+{
+type: flt(64,IEEE)
+alias: "RXTime"
+flags: OUTPUT|READONLY
+desc: "RTFreeID3 Time"
+unit: "s"
+value: 0.0
+}
+
+
+
+
+CANMMCAN_RXCNT[2]
+{
+type: UINT(32)
+alias: "RXCounter"
+flags: OUTPUT|READONLY
+desc: "RTFreeID3 Counter"
+unit: ""
+value: 0
+}
+
+
+
+
+
+endgroup -- block-group "RX"
+
+
+
+group "TX" -- subsystem-group
+{
+     flags: COLLAPSED | HIDDEN
+}
+
+
+CANMMCAN_WBS[2]
+{
+type: UINT(8)
+alias: "CheckEnable"
+flags: OUTPUT|READONLY
+desc: "Check enabled RTFreeID2"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_TXsta[2]
+{
+type: UINT(8)
+alias: "TXStatus"
+flags: OUTPUT|READONLY
+desc: "RTFreeID3 Status"
+unit: ""
+value: 0
+}
+
+
+
+
+CANMMCAN_TX_Msg_5_Sgn_1_constant
+{
+type: UINT(8)
+alias: "RAW_Byte_1"
+flags: PARAM
+desc: "Free Raw Message Byte 1"
+unit: ""
+range: <0; 255>
+value: 0
+}
+
+
+
+
+CANMMCAN_TX_Msg_5_Sgn_2_constant
+{
+type: UINT(8)
+alias: "RAW_Byte_2"
+flags: PARAM
+desc: "Free Raw Message Byte 2"
+unit: ""
+range: <0; 255>
+value: 0
+}
+
+
+
+
+CANMMCAN_TX_Msg_5_Sgn_3_constant
+{
+type: UINT(8)
+alias: "RAW_Byte_3"
+flags: PARAM
+desc: "Free Raw Message Byte 3"
+unit: ""
+range: <0; 255>
+value: 0
+}
+
+
+
+
+CANMMCAN_TX_Msg_5_Sgn_4_constant
+{
+type: UINT(8)
+alias: "RAW_Byte_4"
+flags: PARAM
+desc: "Free Raw Message Byte 4"
+unit: ""
+range: <0; 255>
+value: 0
+}
+
+
+
+
+CANMMCAN_TX_Msg_5_Sgn_5_constant
+{
+type: UINT(8)
+alias: "RAW_Byte_5"
+flags: PARAM
+desc: "Free Raw Message Byte 5"
+unit: ""
+range: <0; 255>
+value: 0
+}
+
+
+
+
+CANMMCAN_TX_Msg_5_Sgn_6_constant
+{
+type: UINT(8)
+alias: "RAW_Byte_6"
+flags: PARAM
+desc: "Free Raw Message Byte 6"
+unit: ""
+range: <0; 255>
+value: 0
+}
+
+
+
+
+CANMMCAN_TX_Msg_5_Sgn_7_constant
+{
+type: UINT(8)
+alias: "RAW_Byte_7"
+flags: PARAM
+desc: "Free Raw Message Byte 7"
+unit: ""
+range: <0; 255>
+value: 0
+}
+
+
+
+
+CANMMCAN_TX_Msg_5_Sgn_8_constant
+{
+type: UINT(8)
+alias: "RAW_Byte_8"
+flags: PARAM
+desc: "Free Raw Message Byte 8"
+unit: ""
+range: <0; 255>
+value: 0
+}
+
+
+
+
+CANMMCAN_TXAIDX3
+{
+type: UINT(8)
+alias: "APPLIDX"
+flags: PARAM
+desc: ""
+unit: ""
+range: <0; 255>
+value: 0
+}
+
+
+
+
+CANMMCAN_MIDTXS[2]
+{
+type: UINT(32)
+alias: "ID"
+flags: PARAM
+desc: "Message ID"
+unit: ""
+range: <0; 536870911>
+value: 0
+}
+
+
+
+
+CANMMCAN_MIDFTXS[2]
+{
+type: UINT(8)
+alias: "IDFormat"
+flags: PARAM
+desc: "Message ID Format"
+unit: ""
+range: <0; 1>
+value: 0
+}
+
+
+
+
+CANMMCAN_TXLEN[2]
+{
+type: UINT(8)
+alias: "Length"
+flags: PARAM
+desc: "Message Length"
+unit: ""
+range: <0; 8>
+value: 8
+}
+
+
+
+
+CANMMCAN_TXEIN[2]
+{
+type: UINT(8)
+alias: "Enable"
+flags: PARAM
+desc: "Enable RTFreeID2"
+unit: ""
+range: <0; 1>
+value: 1
+}
+
+
+
+
+CANMMCAN_TXCIE[2]
+{
+type: UINT(8)
+alias: "Cyclic"
+flags: PARAM
+desc: "Activate cyclic transmission for RTFreeID3"
+unit: ""
+range: <0; 1>
+value: 1
+}
+
+
+
+
+CANMMCAN_TXKIEX[2]
+{
+type: UINT(8)
+alias: "Kickout"
+flags: PARAM
+desc: "Kickout RTFreeID3"
+unit: ""
+range: <0; 1>
+value: 0
+}
+
+
+
+
+CANMMCAN_TXCT[2]
+{
+type: flt(64,IEEE)
+alias: "CycleTime"
+flags: PARAM
+desc: "CycleTime RTFreeID3"
+unit: "s"
+range: <0; 1000>
+value: 0
+}
+
+
+
+
+CANMMCAN_TXDT[2]
+{
+type: flt(64,IEEE)
+alias: "DelayTime"
+flags: PARAM
+desc: "DelayTime RTFreeID3"
+unit: "s"
+range: <0; 1000>
+value: 0
+}
+
+
+
+
+
+endgroup -- block-group "TX"
+
+
+
+endgroup -- block-group "RTFreeID3"
+
+
+
+endgroup -- block-group "FreeRawMessages"
+
+
+
+endgroup -- block-group "RT"
+
+
+
+endgroup -- block-group "CAN"
+
+
+-- END@RTICANMM_MAIN_CAN_DS1401_1_1_1
+ 
+ 
+ 
+
+        endgroup -- block-group "CAN"
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+
+        endgroup -- block-group "BusSystems"
+
+
+ 
+ 
+ 
+-- ******** User variables from model_usr.trc *********************************
+
+-- RTI_USR_TRC_BEGIN
+
+-- No user file demo_simplemodel_usr.trc found.
+
+-- RTI_USR_TRC_END
+-- ******** Task Information variables ****************************************
+
+group "Task Info"
+{
+ flags: COLLAPSED
+}
+  group "Timer Task 1"
+  {
+   flags: COLLAPSED
+  }
+
+  pRti_TIMERA_STime
+  {
+   type:  flt(64,IEEE)*
+   alias: "sampleTime"
+   flags: SYSTEM|READONLY
+  }
+  pRti_TIMERA_TTime
+  {
+   type:  flt(64,IEEE)*
+   alias: "turnaroundTime"
+   flags: SYSTEM|READONLY
+  }
+  pRti_TIMERA_TState
+  {
+   type:  int(32)*
+   alias: "state"
+   flags: SYSTEM|READONLY
+  }
+  pRti_TIMERA_OType
+  {
+   type:  int(32)*
+   alias: "overrunCheckType"
+   flags: SYSTEM|READONLY
+  }
+  pRti_TIMERA_OMax
+  {
+   type:  int(32)*
+   alias: "overrunQueueMax"
+   flags: SYSTEM|READONLY
+  }
+  pRti_TIMERA_ORpt
+  {
+   type:  int(32)*
+   alias: "overrunQueueCount"
+   flags: SYSTEM|READONLY
+  }
+  pRti_TIMERA_OCnt
+  {
+   type:  int(32)*
+   alias: "overrunCount"
+   flags: SYSTEM|READONLY
+  }
+  pRti_TIMERA_TCnt
+  {
+   type:  flt(64,IEEE)*
+   alias: "taskCallCount"
+   flags: SYSTEM|READONLY
+  }
+  pRti_TIMERA_Prio
+  {
+   type:  int(32)*
+   alias: "priority"
+   flags: SYSTEM|READONLY
+  }
+  endgroup
+
+
+endgroup
+
+-- ******** [EOF] *************************************************************
+
+
+

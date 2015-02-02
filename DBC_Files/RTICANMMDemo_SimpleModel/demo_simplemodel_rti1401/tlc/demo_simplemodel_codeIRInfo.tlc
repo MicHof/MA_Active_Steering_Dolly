@@ -1,5 +1,5 @@
 %function FcnLoadCodeIRInfo() Output 
-codeIRInfoStruct = load('C:/Users/Sebastian/Desktop/DBC_Files/RTICANMMDemo_SimpleModel/demo_simplemodel_rti1401/tlc/codeIRInfo.mat');
+codeIRInfoStruct = load('C:/Users/1.5V/Documents/GitHub/MA_Active_Steering_Dolly/DBC_Files/RTICANMMDemo_SimpleModel/demo_simplemodel_rti1401/tlc/codeIRInfo.mat');
 codeInfo = codeIRInfoStruct.codeInfo;
 %endfunction
 

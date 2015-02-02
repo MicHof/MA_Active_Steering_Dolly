@@ -87,11 +87,11 @@ VERBOSE_BUILD_OFF_TREATMENT    = PRINT_OUTPUT_ALWAYS
 # SECTION_CUSTOMIZATION_RTW_BEGIN
 MAKEFILE                       = demo_simplemodel.mk
 BUILDARGS                      =  EXTMODE_STATIC_ALLOC=0 TMW_EXTMODE_TESTING=0 EXTMODE_STATIC_ALLOC_SIZE=1000000 EXTMODE_TRANSPORT=0 MAT_FILE=0
-MATLAB_ROOT                    = C:\Program Files\MATLAB\R2014a
-MATLAB_BIN                     = C:\Program Files\MATLAB\R2014a\bin
-MATLAB_ROOT_ALT                = C:\PROGRA~1\MATLAB\R2014a
-MATLAB_BIN_ALT                 = C:\PROGRA~1\MATLAB\R2014a\bin
-RELEASE_VERSION                = R2014a
+MATLAB_ROOT                    = C:\Program Files\MATLAB\R2013b
+MATLAB_BIN                     = C:\Program Files\MATLAB\R2013b\bin
+MATLAB_ROOT_ALT                = C:\PROGRA~1\MATLAB\R2013b
+MATLAB_BIN_ALT                 = C:\PROGRA~1\MATLAB\R2013b\bin
+RELEASE_VERSION                = R2013b
 RELEASE_VERSION               := $(RELEASE_VERSION,S'\.'_',W_,LC,S'^r'')
 COMPUTER                       = PCWIN64
 MODEL                          = demo_simplemodel
@@ -106,7 +106,7 @@ EXT_MODE                       = 0
 MULTITASKING                   = 0
 # Support for parallel computing
 MASTER_ANCHOR_DIR              = 
-START_DIR                      = C:\Users\Sebastian\Desktop\DBC_Files\RTICANMMDemo_SimpleModel
+START_DIR                      = C:\Users\1.5V\Documents\GitHub\MA_Active_Steering_Dolly\DBC_Files\RTICANMMDemo_SimpleModel
 # Shared library for utility code
 RTW_SHARED_LIB_SRCS_WILD       = 
 RTW_SHARED_LIB_SRCS_DIR        = 

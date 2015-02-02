@@ -3,9 +3,9 @@
  *
  * Code generation for model "CAN_new".
  *
- * Model version              : 1.13
+ * Model version              : 1.17
  * Simulink Coder version : 8.5 (R2013b) 08-Aug-2013
- * C source code generated on : Thu Jan 22 10:17:19 2015
+ * C source code generated on : Tue Jan 27 15:24:17 2015
  *
  * Target selection: rti1401.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping
@@ -48,23 +48,23 @@ P_CAN_new_T CAN_new_P = {
   0.0,                                 /* Expression: 0
                                         * Referenced by: '<S9>/RTICANMMCHANNEL_TLC'
                                         */
-  500.0,                               /* Expression: 500
+  250.0,                               /* Expression: 250
                                         * Referenced by: '<S9>/RTICANMMCHANNEL_TLC'
                                         */
   1401.0,                              /* Expression: 1401
-                                        * Referenced by: '<S14>/RTICANMMCHANNEL_TLC'
+                                        * Referenced by: '<S16>/RTICANMMCHANNEL_TLC'
                                         */
   1.0,                                 /* Expression: 1
-                                        * Referenced by: '<S14>/RTICANMMCHANNEL_TLC'
+                                        * Referenced by: '<S16>/RTICANMMCHANNEL_TLC'
                                         */
   2.0,                                 /* Expression: 2
-                                        * Referenced by: '<S14>/RTICANMMCHANNEL_TLC'
+                                        * Referenced by: '<S16>/RTICANMMCHANNEL_TLC'
                                         */
   0.0,                                 /* Expression: 0
-                                        * Referenced by: '<S14>/RTICANMMCHANNEL_TLC'
+                                        * Referenced by: '<S16>/RTICANMMCHANNEL_TLC'
                                         */
   500.0,                               /* Expression: 500
-                                        * Referenced by: '<S14>/RTICANMMCHANNEL_TLC'
+                                        * Referenced by: '<S16>/RTICANMMCHANNEL_TLC'
                                         */
 
   /*  Computed Parameter: RTICANMMCHANNEL_TLC_P6
@@ -78,7 +78,7 @@ P_CAN_new_T CAN_new_P = {
   { 117U, 110U, 117U, 115U, 101U, 100U },
 
   /*  Computed Parameter: RTICANMMCHANNEL_TLC_P6_j
-   * Referenced by: '<S14>/RTICANMMCHANNEL_TLC'
+   * Referenced by: '<S16>/RTICANMMCHANNEL_TLC'
    */
   { 117U, 110U, 117U, 115U, 101U, 100U },
   1U,                                  /* Computed Parameter: VariationRTICANMMControllerSetu

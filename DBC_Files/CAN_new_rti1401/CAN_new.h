@@ -3,9 +3,9 @@
  *
  * Code generation for model "CAN_new".
  *
- * Model version              : 1.13
+ * Model version              : 1.17
  * Simulink Coder version : 8.5 (R2013b) 08-Aug-2013
- * C source code generated on : Thu Jan 22 10:17:19 2015
+ * C source code generated on : Tue Jan 27 15:24:17 2015
  *
  * Target selection: rti1401.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping
@@ -778,75 +778,60 @@ typedef struct {
   real_T sfcn_o12;                     /* '<S7>/sfcn' */
   real_T sfcn_o14;                     /* '<S7>/sfcn' */
   real_T Constant;                     /* '<S6>/Constant' */
-  real_T sfcn_o10;                     /* '<S10>/sfcn' */
-  real_T sfcn_o23;                     /* '<S10>/sfcn' */
-  real_T sfcn_o36;                     /* '<S10>/sfcn' */
-  real_T sfcn_o49;                     /* '<S10>/sfcn' */
-  real_T sfcn_o62;                     /* '<S10>/sfcn' */
-  real_T sfcn_o75;                     /* '<S10>/sfcn' */
-  real_T sfcn_o88;                     /* '<S10>/sfcn' */
-  real_T sfcn_o101;                    /* '<S10>/sfcn' */
-  real_T sfcn_o1;                      /* '<S15>/sfcn' */
-  real_T sfcn_o2;                      /* '<S15>/sfcn' */
-  real_T sfcn_o3_n;                    /* '<S15>/sfcn' */
-  real_T sfcn_o4;                      /* '<S15>/sfcn' */
-  real_T sfcn_o5;                      /* '<S15>/sfcn' */
-  real_T sfcn_o6;                      /* '<S15>/sfcn' */
-  real_T sfcn_o7;                      /* '<S15>/sfcn' */
-  real_T sfcn_o8;                      /* '<S15>/sfcn' */
-  real_T sfcn_o9;                      /* '<S15>/sfcn' */
-  real_T sfcn_o10_e;                   /* '<S15>/sfcn' */
-  real_T sfcn_o11;                     /* '<S15>/sfcn' */
-  real_T sfcn_o12_m;                   /* '<S15>/sfcn' */
-  real_T sfcn_o13;                     /* '<S15>/sfcn' */
-  real_T sfcn_o14_a;                   /* '<S15>/sfcn' */
-  real_T sfcn_o15;                     /* '<S15>/sfcn' */
-  real_T sfcn_o16;                     /* '<S15>/sfcn' */
-  real_T sfcn_o30;                     /* '<S15>/sfcn' */
-  real_T sfcn_o31;                     /* '<S15>/sfcn' */
-  real_T sfcn_o32;                     /* '<S15>/sfcn' */
-  real_T sfcn_o33;                     /* '<S15>/sfcn' */
-  real_T sfcn_o34;                     /* '<S15>/sfcn' */
-  real_T sfcn_o35;                     /* '<S15>/sfcn' */
-  real_T sfcn_o36_k;                   /* '<S15>/sfcn' */
-  real_T sfcn_o41;                     /* '<S15>/sfcn' */
-  real_T sfcn_o42;                     /* '<S15>/sfcn' */
-  real_T sfcn_o46;                     /* '<S15>/sfcn' */
-  real_T sfcn_o59;                     /* '<S15>/sfcn' */
-  real_T sfcn_o63;                     /* '<S15>/sfcn' */
-  real_T sfcn_o67;                     /* '<S15>/sfcn' */
-  real_T sfcn_o68;                     /* '<S15>/sfcn' */
-  real_T sfcn_o69;                     /* '<S15>/sfcn' */
-  real_T sfcn_o70;                     /* '<S15>/sfcn' */
-  real_T sfcn_o71;                     /* '<S15>/sfcn' */
-  real_T sfcn_o72;                     /* '<S15>/sfcn' */
-  real_T sfcn_o73;                     /* '<S15>/sfcn' */
-  real_T sfcn_o74;                     /* '<S15>/sfcn' */
-  real_T sfcn_o75_c;                   /* '<S15>/sfcn' */
-  real_T sfcn_o76;                     /* '<S15>/sfcn' */
-  real_T sfcn_o77;                     /* '<S15>/sfcn' */
-  real_T sfcn_o78;                     /* '<S15>/sfcn' */
-  real_T sfcn_o79;                     /* '<S15>/sfcn' */
-  real_T sfcn_o80;                     /* '<S15>/sfcn' */
-  real_T sfcn_o81;                     /* '<S15>/sfcn' */
-  real_T sfcn_o82;                     /* '<S15>/sfcn' */
-  uint32_T sfcn_o11_i;                 /* '<S10>/sfcn' */
-  uint32_T sfcn_o24;                   /* '<S10>/sfcn' */
-  uint32_T sfcn_o37;                   /* '<S10>/sfcn' */
-  uint32_T sfcn_o50;                   /* '<S10>/sfcn' */
-  uint32_T sfcn_o63_p;                 /* '<S10>/sfcn' */
-  uint32_T sfcn_o76_f;                 /* '<S10>/sfcn' */
-  uint32_T sfcn_o89;                   /* '<S10>/sfcn' */
-  uint32_T sfcn_o102;                  /* '<S10>/sfcn' */
+  real_T sfcn_o1;                      /* '<S17>/sfcn' */
+  real_T sfcn_o2;                      /* '<S17>/sfcn' */
+  real_T sfcn_o3_n;                    /* '<S17>/sfcn' */
+  real_T sfcn_o4;                      /* '<S17>/sfcn' */
+  real_T sfcn_o5;                      /* '<S17>/sfcn' */
+  real_T sfcn_o6;                      /* '<S17>/sfcn' */
+  real_T sfcn_o7;                      /* '<S17>/sfcn' */
+  real_T sfcn_o8;                      /* '<S17>/sfcn' */
+  real_T sfcn_o9;                      /* '<S17>/sfcn' */
+  real_T sfcn_o10;                     /* '<S17>/sfcn' */
+  real_T sfcn_o11;                     /* '<S17>/sfcn' */
+  real_T sfcn_o12_m;                   /* '<S17>/sfcn' */
+  real_T sfcn_o13;                     /* '<S17>/sfcn' */
+  real_T sfcn_o14_a;                   /* '<S17>/sfcn' */
+  real_T sfcn_o15;                     /* '<S17>/sfcn' */
+  real_T sfcn_o16;                     /* '<S17>/sfcn' */
+  real_T sfcn_o30;                     /* '<S17>/sfcn' */
+  real_T sfcn_o31;                     /* '<S17>/sfcn' */
+  real_T sfcn_o32;                     /* '<S17>/sfcn' */
+  real_T sfcn_o33;                     /* '<S17>/sfcn' */
+  real_T sfcn_o34;                     /* '<S17>/sfcn' */
+  real_T sfcn_o35;                     /* '<S17>/sfcn' */
+  real_T sfcn_o36;                     /* '<S17>/sfcn' */
+  real_T sfcn_o41;                     /* '<S17>/sfcn' */
+  real_T sfcn_o42;                     /* '<S17>/sfcn' */
+  real_T sfcn_o46;                     /* '<S17>/sfcn' */
+  real_T sfcn_o59;                     /* '<S17>/sfcn' */
+  real_T sfcn_o63;                     /* '<S17>/sfcn' */
+  real_T sfcn_o67;                     /* '<S17>/sfcn' */
+  real_T sfcn_o68;                     /* '<S17>/sfcn' */
+  real_T sfcn_o69;                     /* '<S17>/sfcn' */
+  real_T sfcn_o70;                     /* '<S17>/sfcn' */
+  real_T sfcn_o71;                     /* '<S17>/sfcn' */
+  real_T sfcn_o72;                     /* '<S17>/sfcn' */
+  real_T sfcn_o73;                     /* '<S17>/sfcn' */
+  real_T sfcn_o74;                     /* '<S17>/sfcn' */
+  real_T sfcn_o75;                     /* '<S17>/sfcn' */
+  real_T sfcn_o76;                     /* '<S17>/sfcn' */
+  real_T sfcn_o77;                     /* '<S17>/sfcn' */
+  real_T sfcn_o78;                     /* '<S17>/sfcn' */
+  real_T sfcn_o79;                     /* '<S17>/sfcn' */
+  real_T sfcn_o80;                     /* '<S17>/sfcn' */
+  real_T sfcn_o81;                     /* '<S17>/sfcn' */
+  real_T sfcn_o82;                     /* '<S17>/sfcn' */
   int16_T sfcn_o4_g;                   /* '<S7>/sfcn' */
   int16_T sfcn_o13_o;                  /* '<S7>/sfcn' */
-  int16_T sfcn_o37_l;                  /* '<S15>/sfcn' */
-  int16_T sfcn_o38;                    /* '<S15>/sfcn' */
-  int16_T sfcn_o43;                    /* '<S15>/sfcn' */
-  uint16_T sfcn_o45;                   /* '<S15>/sfcn' */
-  int8_T sfcn_o85;                     /* '<S15>/sfcn' */
-  int8_T sfcn_o86;                     /* '<S15>/sfcn' */
-  int8_T sfcn_o87;                     /* '<S15>/sfcn' */
+  int16_T sfcn_o1_d;                   /* '<S10>/sfcn' */
+  int16_T sfcn_o37;                    /* '<S17>/sfcn' */
+  int16_T sfcn_o38;                    /* '<S17>/sfcn' */
+  int16_T sfcn_o43;                    /* '<S17>/sfcn' */
+  uint16_T sfcn_o45;                   /* '<S17>/sfcn' */
+  int8_T sfcn_o85;                     /* '<S17>/sfcn' */
+  int8_T sfcn_o86;                     /* '<S17>/sfcn' */
+  int8_T sfcn_o87;                     /* '<S17>/sfcn' */
   uint8_T sfcn_o1_f;                   /* '<S7>/sfcn' */
   uint8_T sfcn_o2_j;                   /* '<S7>/sfcn' */
   uint8_T sfcn_o5_a;                   /* '<S7>/sfcn' */
@@ -857,7 +842,6 @@ typedef struct {
   uint8_T sfcn_o10_j;                  /* '<S7>/sfcn' */
   uint8_T sfcn_o11_p;                  /* '<S7>/sfcn' */
   uint8_T Variation_DTC;               /* '<S5>/Variation_DTC' */
-  uint8_T sfcn_o1_d;                   /* '<S10>/sfcn' */
   uint8_T sfcn_o2_p;                   /* '<S10>/sfcn' */
   uint8_T sfcn_o3_nj;                  /* '<S10>/sfcn' */
   uint8_T sfcn_o4_n;                   /* '<S10>/sfcn' */
@@ -865,6 +849,9 @@ typedef struct {
   uint8_T sfcn_o6_k;                   /* '<S10>/sfcn' */
   uint8_T sfcn_o7_p;                   /* '<S10>/sfcn' */
   uint8_T sfcn_o8_n;                   /* '<S10>/sfcn' */
+  uint8_T sfcn_o9_c;                   /* '<S10>/sfcn' */
+  uint8_T sfcn_o10_jl;                 /* '<S10>/sfcn' */
+  uint8_T sfcn_o11_i;                  /* '<S10>/sfcn' */
   uint8_T sfcn_o12_d;                  /* '<S10>/sfcn' */
   uint8_T sfcn_o13_n;                  /* '<S10>/sfcn' */
   uint8_T sfcn_o14_b;                  /* '<S10>/sfcn' */
@@ -875,146 +862,76 @@ typedef struct {
   uint8_T sfcn_o19;                    /* '<S10>/sfcn' */
   uint8_T sfcn_o20;                    /* '<S10>/sfcn' */
   uint8_T sfcn_o21;                    /* '<S10>/sfcn' */
+  uint8_T sfcn_o22;                    /* '<S10>/sfcn' */
+  uint8_T sfcn_o23;                    /* '<S10>/sfcn' */
+  uint8_T sfcn_o24;                    /* '<S10>/sfcn' */
   uint8_T sfcn_o25;                    /* '<S10>/sfcn' */
-  uint8_T sfcn_o26;                    /* '<S10>/sfcn' */
-  uint8_T sfcn_o27;                    /* '<S10>/sfcn' */
-  uint8_T sfcn_o28;                    /* '<S10>/sfcn' */
-  uint8_T sfcn_o29;                    /* '<S10>/sfcn' */
-  uint8_T sfcn_o30_p;                  /* '<S10>/sfcn' */
-  uint8_T sfcn_o31_n;                  /* '<S10>/sfcn' */
-  uint8_T sfcn_o32_h;                  /* '<S10>/sfcn' */
-  uint8_T sfcn_o33_i;                  /* '<S10>/sfcn' */
-  uint8_T sfcn_o34_m;                  /* '<S10>/sfcn' */
-  uint8_T sfcn_o38_i;                  /* '<S10>/sfcn' */
-  uint8_T sfcn_o39;                    /* '<S10>/sfcn' */
-  uint8_T sfcn_o40;                    /* '<S10>/sfcn' */
-  uint8_T sfcn_o41_p;                  /* '<S10>/sfcn' */
-  uint8_T sfcn_o42_e;                  /* '<S10>/sfcn' */
-  uint8_T sfcn_o43_e;                  /* '<S10>/sfcn' */
-  uint8_T sfcn_o44;                    /* '<S10>/sfcn' */
-  uint8_T sfcn_o45_e;                  /* '<S10>/sfcn' */
-  uint8_T sfcn_o46_b;                  /* '<S10>/sfcn' */
-  uint8_T sfcn_o47;                    /* '<S10>/sfcn' */
-  uint8_T sfcn_o51;                    /* '<S10>/sfcn' */
-  uint8_T sfcn_o52;                    /* '<S10>/sfcn' */
-  uint8_T sfcn_o53;                    /* '<S10>/sfcn' */
-  uint8_T sfcn_o54;                    /* '<S10>/sfcn' */
-  uint8_T sfcn_o55;                    /* '<S10>/sfcn' */
-  uint8_T sfcn_o56;                    /* '<S10>/sfcn' */
-  uint8_T sfcn_o57;                    /* '<S10>/sfcn' */
-  uint8_T sfcn_o58;                    /* '<S10>/sfcn' */
-  uint8_T sfcn_o59_a;                  /* '<S10>/sfcn' */
-  uint8_T sfcn_o60;                    /* '<S10>/sfcn' */
-  uint8_T sfcn_o64;                    /* '<S10>/sfcn' */
-  uint8_T sfcn_o65;                    /* '<S10>/sfcn' */
-  uint8_T sfcn_o66;                    /* '<S10>/sfcn' */
-  uint8_T sfcn_o67_b;                  /* '<S10>/sfcn' */
-  uint8_T sfcn_o68_e;                  /* '<S10>/sfcn' */
-  uint8_T sfcn_o69_l;                  /* '<S10>/sfcn' */
-  uint8_T sfcn_o70_j;                  /* '<S10>/sfcn' */
-  uint8_T sfcn_o71_j;                  /* '<S10>/sfcn' */
-  uint8_T sfcn_o72_k;                  /* '<S10>/sfcn' */
-  uint8_T sfcn_o73_c;                  /* '<S10>/sfcn' */
-  uint8_T sfcn_o77_p;                  /* '<S10>/sfcn' */
-  uint8_T sfcn_o78_b;                  /* '<S10>/sfcn' */
-  uint8_T sfcn_o79_l;                  /* '<S10>/sfcn' */
-  uint8_T sfcn_o80_o;                  /* '<S10>/sfcn' */
-  uint8_T sfcn_o81_b;                  /* '<S10>/sfcn' */
-  uint8_T sfcn_o82_m;                  /* '<S10>/sfcn' */
-  uint8_T sfcn_o83;                    /* '<S10>/sfcn' */
-  uint8_T sfcn_o84;                    /* '<S10>/sfcn' */
-  uint8_T sfcn_o85_c;                  /* '<S10>/sfcn' */
-  uint8_T sfcn_o86_d;                  /* '<S10>/sfcn' */
-  uint8_T sfcn_o90;                    /* '<S10>/sfcn' */
-  uint8_T sfcn_o91;                    /* '<S10>/sfcn' */
-  uint8_T sfcn_o92;                    /* '<S10>/sfcn' */
-  uint8_T sfcn_o93;                    /* '<S10>/sfcn' */
-  uint8_T sfcn_o94;                    /* '<S10>/sfcn' */
-  uint8_T sfcn_o95;                    /* '<S10>/sfcn' */
-  uint8_T sfcn_o96;                    /* '<S10>/sfcn' */
-  uint8_T sfcn_o97;                    /* '<S10>/sfcn' */
-  uint8_T sfcn_o98;                    /* '<S10>/sfcn' */
-  uint8_T sfcn_o99;                    /* '<S10>/sfcn' */
-  uint8_T sfcn_o103;                   /* '<S10>/sfcn' */
-  uint8_T sfcn_o104;                   /* '<S10>/sfcn' */
-  uint8_T sfcn_o105;                   /* '<S10>/sfcn' */
-  uint8_T sfcn_o106;                   /* '<S10>/sfcn' */
-  uint8_T sfcn_o107;                   /* '<S10>/sfcn' */
-  uint8_T sfcn_o108;                   /* '<S10>/sfcn' */
-  uint8_T sfcn_o109;                   /* '<S10>/sfcn' */
-  uint8_T sfcn_o110;                   /* '<S10>/sfcn' */
-  uint8_T sfcn_o111;                   /* '<S10>/sfcn' */
-  uint8_T sfcn_o112;                   /* '<S10>/sfcn' */
   uint8_T Variation_DTC_g;             /* '<S9>/Variation_DTC' */
-  uint8_T Variation_DTC_h;             /* '<S14>/Variation_DTC' */
-  uint8_T sfcn_o17_n;                  /* '<S15>/sfcn' */
-  uint8_T sfcn_o18_l;                  /* '<S15>/sfcn' */
-  uint8_T sfcn_o19_d;                  /* '<S15>/sfcn' */
-  uint8_T sfcn_o20_m;                  /* '<S15>/sfcn' */
-  uint8_T sfcn_o21_i;                  /* '<S15>/sfcn' */
-  uint8_T sfcn_o22;                    /* '<S15>/sfcn' */
-  uint8_T sfcn_o23_f;                  /* '<S15>/sfcn' */
-  uint8_T sfcn_o24_m;                  /* '<S15>/sfcn' */
-  uint8_T sfcn_o25_f;                  /* '<S15>/sfcn' */
-  uint8_T sfcn_o26_o;                  /* '<S15>/sfcn' */
-  uint8_T sfcn_o27_i;                  /* '<S15>/sfcn' */
-  uint8_T sfcn_o28_f;                  /* '<S15>/sfcn' */
-  uint8_T sfcn_o29_l;                  /* '<S15>/sfcn' */
-  uint8_T sfcn_o39_a;                  /* '<S15>/sfcn' */
-  uint8_T sfcn_o40_d;                  /* '<S15>/sfcn' */
-  uint8_T sfcn_o44_n;                  /* '<S15>/sfcn' */
-  uint8_T sfcn_o51_e;                  /* '<S15>/sfcn' */
-  uint8_T sfcn_o52_a;                  /* '<S15>/sfcn' */
-  uint8_T sfcn_o53_e;                  /* '<S15>/sfcn' */
-  uint8_T sfcn_o54_a;                  /* '<S15>/sfcn' */
-  uint8_T sfcn_o55_c;                  /* '<S15>/sfcn' */
-  uint8_T sfcn_o56_k;                  /* '<S15>/sfcn' */
-  uint8_T sfcn_o58_i;                  /* '<S15>/sfcn' */
-  uint8_T sfcn_o60_l;                  /* '<S15>/sfcn' */
-  uint8_T sfcn_o61;                    /* '<S15>/sfcn' */
-  uint8_T sfcn_o62_n;                  /* '<S15>/sfcn' */
-  uint8_T sfcn_o64_p;                  /* '<S15>/sfcn' */
-  uint8_T sfcn_o65_k;                  /* '<S15>/sfcn' */
-  uint8_T sfcn_o66_p;                  /* '<S15>/sfcn' */
-  uint8_T sfcn_o83_p;                  /* '<S15>/sfcn' */
-  uint8_T sfcn_o84_e;                  /* '<S15>/sfcn' */
-  uint8_T sfcn_o88_c;                  /* '<S15>/sfcn' */
-  uint8_T sfcn_o89_j;                  /* '<S15>/sfcn' */
-  uint8_T sfcn_o90_k;                  /* '<S15>/sfcn' */
-  uint8_T sfcn_o91_b;                  /* '<S15>/sfcn' */
-  uint8_T sfcn_o92_n;                  /* '<S15>/sfcn' */
-  uint8_T sfcn_o93_n;                  /* '<S15>/sfcn' */
-  uint8_T sfcn_o94_k;                  /* '<S15>/sfcn' */
-  uint8_T sfcn_o95_e;                  /* '<S15>/sfcn' */
-  uint8_T sfcn_o96_k;                  /* '<S15>/sfcn' */
-  uint8_T sfcn_o97_a;                  /* '<S15>/sfcn' */
-  boolean_T sfcn_o9_c;                 /* '<S10>/sfcn' */
-  boolean_T sfcn_o22_k;                /* '<S10>/sfcn' */
-  boolean_T sfcn_o35_h;                /* '<S10>/sfcn' */
-  boolean_T sfcn_o48;                  /* '<S10>/sfcn' */
-  boolean_T sfcn_o61_j;                /* '<S10>/sfcn' */
-  boolean_T sfcn_o74_o;                /* '<S10>/sfcn' */
-  boolean_T sfcn_o87_j;                /* '<S10>/sfcn' */
-  boolean_T sfcn_o100;                 /* '<S10>/sfcn' */
-  boolean_T sfcn_o47_j;                /* '<S15>/sfcn' */
-  boolean_T sfcn_o48_l;                /* '<S15>/sfcn' */
-  boolean_T sfcn_o49_g;                /* '<S15>/sfcn' */
-  boolean_T sfcn_o50_g;                /* '<S15>/sfcn' */
-  boolean_T sfcn_o57_e;                /* '<S15>/sfcn' */
+  uint8_T Variation_DTC_h;             /* '<S16>/Variation_DTC' */
+  uint8_T sfcn_o17_n;                  /* '<S17>/sfcn' */
+  uint8_T sfcn_o18_l;                  /* '<S17>/sfcn' */
+  uint8_T sfcn_o19_d;                  /* '<S17>/sfcn' */
+  uint8_T sfcn_o20_m;                  /* '<S17>/sfcn' */
+  uint8_T sfcn_o21_i;                  /* '<S17>/sfcn' */
+  uint8_T sfcn_o22_c;                  /* '<S17>/sfcn' */
+  uint8_T sfcn_o23_f;                  /* '<S17>/sfcn' */
+  uint8_T sfcn_o24_m;                  /* '<S17>/sfcn' */
+  uint8_T sfcn_o25_f;                  /* '<S17>/sfcn' */
+  uint8_T sfcn_o26;                    /* '<S17>/sfcn' */
+  uint8_T sfcn_o27;                    /* '<S17>/sfcn' */
+  uint8_T sfcn_o28;                    /* '<S17>/sfcn' */
+  uint8_T sfcn_o29;                    /* '<S17>/sfcn' */
+  uint8_T sfcn_o39;                    /* '<S17>/sfcn' */
+  uint8_T sfcn_o40;                    /* '<S17>/sfcn' */
+  uint8_T sfcn_o44;                    /* '<S17>/sfcn' */
+  uint8_T sfcn_o51;                    /* '<S17>/sfcn' */
+  uint8_T sfcn_o52;                    /* '<S17>/sfcn' */
+  uint8_T sfcn_o53;                    /* '<S17>/sfcn' */
+  uint8_T sfcn_o54;                    /* '<S17>/sfcn' */
+  uint8_T sfcn_o55;                    /* '<S17>/sfcn' */
+  uint8_T sfcn_o56;                    /* '<S17>/sfcn' */
+  uint8_T sfcn_o58;                    /* '<S17>/sfcn' */
+  uint8_T sfcn_o60;                    /* '<S17>/sfcn' */
+  uint8_T sfcn_o61;                    /* '<S17>/sfcn' */
+  uint8_T sfcn_o62;                    /* '<S17>/sfcn' */
+  uint8_T sfcn_o64;                    /* '<S17>/sfcn' */
+  uint8_T sfcn_o65;                    /* '<S17>/sfcn' */
+  uint8_T sfcn_o66;                    /* '<S17>/sfcn' */
+  uint8_T sfcn_o83;                    /* '<S17>/sfcn' */
+  uint8_T sfcn_o84;                    /* '<S17>/sfcn' */
+  uint8_T sfcn_o88;                    /* '<S17>/sfcn' */
+  uint8_T sfcn_o89;                    /* '<S17>/sfcn' */
+  uint8_T sfcn_o90;                    /* '<S17>/sfcn' */
+  uint8_T sfcn_o91;                    /* '<S17>/sfcn' */
+  uint8_T sfcn_o92;                    /* '<S17>/sfcn' */
+  uint8_T sfcn_o93;                    /* '<S17>/sfcn' */
+  uint8_T sfcn_o94;                    /* '<S17>/sfcn' */
+  uint8_T sfcn_o95;                    /* '<S17>/sfcn' */
+  uint8_T sfcn_o96;                    /* '<S17>/sfcn' */
+  uint8_T sfcn_o97;                    /* '<S17>/sfcn' */
+  boolean_T sfcn_o47;                  /* '<S17>/sfcn' */
+  boolean_T sfcn_o48;                  /* '<S17>/sfcn' */
+  boolean_T sfcn_o49;                  /* '<S17>/sfcn' */
+  boolean_T sfcn_o50;                  /* '<S17>/sfcn' */
+  boolean_T sfcn_o57;                  /* '<S17>/sfcn' */
 } B_CAN_new_T;
 
 /* Block states (auto storage) for system '<Root>' */
 typedef struct {
   real_T sfcn_RWORK;                   /* '<S7>/sfcn' */
   real_T sfcn_RWORK_c;                 /* '<S10>/sfcn' */
-  real_T sfcn_RWORK_k;                 /* '<S15>/sfcn' */
+  real_T sfcn_RWORK_k;                 /* '<S17>/sfcn' */
   void *sfcn_PWORK[16];                /* '<S7>/sfcn' */
   void *sfcn_PWORK_a[16];              /* '<S10>/sfcn' */
   struct {
     void *LoggedData;
   } Scope_PWORK;                       /* '<S2>/Scope' */
 
-  void *sfcn_PWORK_i[16];              /* '<S15>/sfcn' */
+  struct {
+    void *LoggedData;
+  } Scope1_PWORK;                      /* '<S2>/Scope1' */
+
+  void *sfcn_PWORK_i[16];              /* '<S17>/sfcn' */
 } DW_CAN_new_T;
 
 /* Backward compatible GRT Identifiers */
@@ -1057,23 +974,23 @@ struct P_CAN_new_T_ {
   real_T RTICANMMCHANNEL_TLC_P4_b;     /* Expression: 0
                                         * Referenced by: '<S9>/RTICANMMCHANNEL_TLC'
                                         */
-  real_T RTICANMMCHANNEL_TLC_P5_p;     /* Expression: 500
+  real_T RTICANMMCHANNEL_TLC_P5_p;     /* Expression: 250
                                         * Referenced by: '<S9>/RTICANMMCHANNEL_TLC'
                                         */
   real_T RTICANMMCHANNEL_TLC_P1_n;     /* Expression: 1401
-                                        * Referenced by: '<S14>/RTICANMMCHANNEL_TLC'
+                                        * Referenced by: '<S16>/RTICANMMCHANNEL_TLC'
                                         */
   real_T RTICANMMCHANNEL_TLC_P2_o;     /* Expression: 1
-                                        * Referenced by: '<S14>/RTICANMMCHANNEL_TLC'
+                                        * Referenced by: '<S16>/RTICANMMCHANNEL_TLC'
                                         */
   real_T RTICANMMCHANNEL_TLC_P3_n;     /* Expression: 2
-                                        * Referenced by: '<S14>/RTICANMMCHANNEL_TLC'
+                                        * Referenced by: '<S16>/RTICANMMCHANNEL_TLC'
                                         */
   real_T RTICANMMCHANNEL_TLC_P4_bc;    /* Expression: 0
-                                        * Referenced by: '<S14>/RTICANMMCHANNEL_TLC'
+                                        * Referenced by: '<S16>/RTICANMMCHANNEL_TLC'
                                         */
   real_T RTICANMMCHANNEL_TLC_P5_k;     /* Expression: 500
-                                        * Referenced by: '<S14>/RTICANMMCHANNEL_TLC'
+                                        * Referenced by: '<S16>/RTICANMMCHANNEL_TLC'
                                         */
   uint16_T RTICANMMCHANNEL_TLC_P6[6];  /* Computed Parameter: RTICANMMCHANNEL_TLC_P6
                                         * Referenced by: '<S5>/RTICANMMCHANNEL_TLC'
@@ -1082,7 +999,7 @@ struct P_CAN_new_T_ {
                                         * Referenced by: '<S9>/RTICANMMCHANNEL_TLC'
                                         */
   uint16_T RTICANMMCHANNEL_TLC_P6_j[6];/* Computed Parameter: RTICANMMCHANNEL_TLC_P6_j
-                                        * Referenced by: '<S14>/RTICANMMCHANNEL_TLC'
+                                        * Referenced by: '<S16>/RTICANMMCHANNEL_TLC'
                                         */
   uint8_T VariationRTICANMMControllerSetu;/* Computed Parameter: VariationRTICANMMControllerSetu
                                            * Referenced by: '<S1>/Variation@RTICANMM ControllerSetup'
@@ -1150,8 +1067,8 @@ struct tag_RTM_CAN_new_T {
       time_T sfcnPeriod[1];
       time_T sfcnOffset[1];
       int_T sfcnTsMap[1];
-      struct _ssPortInputs inputPortInfo[8];
-      struct _ssPortOutputs outputPortInfo[112];
+      struct _ssPortInputs inputPortInfo[24];
+      struct _ssPortOutputs outputPortInfo[25];
       struct _ssDWorkRecord dWork[2];
       struct _ssDWorkAuxRecord dWorkAux[2];
     } Sfcn2;
@@ -1313,11 +1230,13 @@ extern RT_MODEL_CAN_new_T *const CAN_new_M;
  * '<S11>'  : 'CAN_new/Arduino/User2RTICANMM MainBlock'
  * '<S12>'  : 'CAN_new/Arduino/RTICANMM MainBlock/converter'
  * '<S13>'  : 'CAN_new/Arduino/User2RTICANMM MainBlock/RTICANMMFreeRawMessage_1'
- * '<S14>'  : 'CAN_new/ETS_CAN1/RTICANMM ControllerSetup'
- * '<S15>'  : 'CAN_new/ETS_CAN1/RTICANMM MainBlock'
- * '<S16>'  : 'CAN_new/ETS_CAN1/RTICANMM MainBlock/converter'
- * '<S17>'  : 'CAN_new/RTI Data/RTI Data Store'
- * '<S18>'  : 'CAN_new/RTI Data/RTI Data Store/RTI Data Store'
- * '<S19>'  : 'CAN_new/RTI Data/RTI Data Store/RTI Data Store/RTI Data Store'
+ * '<S14>'  : 'CAN_new/Arduino/User2RTICANMM MainBlock/RTICANMMFreeRawMessage_2'
+ * '<S15>'  : 'CAN_new/Arduino/User2RTICANMM MainBlock/RTICANMMFreeRawMessage_3'
+ * '<S16>'  : 'CAN_new/ETS_CAN1/RTICANMM ControllerSetup'
+ * '<S17>'  : 'CAN_new/ETS_CAN1/RTICANMM MainBlock'
+ * '<S18>'  : 'CAN_new/ETS_CAN1/RTICANMM MainBlock/converter'
+ * '<S19>'  : 'CAN_new/RTI Data/RTI Data Store'
+ * '<S20>'  : 'CAN_new/RTI Data/RTI Data Store/RTI Data Store'
+ * '<S21>'  : 'CAN_new/RTI Data/RTI Data Store/RTI Data Store/RTI Data Store'
  */
 #endif                                 /* RTW_HEADER_CAN_new_h_ */

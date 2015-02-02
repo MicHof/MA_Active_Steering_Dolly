@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <BNVSerialization xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" NavigatorTreeType="Default">
   <XMLVersion>2.0.0</XMLVersion>
-  <Monitor RingBufferMode="Continious" UseJ1939PGNResolving="false" UpdateRate="100" UniqueObjectIdentifier="bbfc3da3-ffe3-4a91-829a-f0cbb005a57e" Accessor="&lt;Accessor Version=&quot;2&quot; Identifier=&quot;BusNavigator/BusConfigurations/0e445f79-4de2-43d1-b2ed-4ed4946a6616/Processors/Master/Hardwares/CAN/Controllers/Controller3/&quot; Type=&quot;Path&quot; /&gt;" ViewVisible="false" Name="Monitor1_Controller3" SyncMonitoringWithParent="true" ProtocolType="CAN" RingBufferSizeValue="10000">
-    <MonitoringViewSettings KernelSubViewMode="FrameSignals" ScrollMode="Head" KernelViewMode="StaticView" ProtocolType="CAN" Version="1">
+  <Monitor RingBufferMode="Continious" UseJ1939PGNResolving="false" UpdateRate="100" UniqueObjectIdentifier="b8185c2d-7b80-48a0-9b83-a5a6215f5ac3" Accessor="&lt;Accessor Version=&quot;2&quot; Identifier=&quot;BusNavigator/BusConfigurations/0e445f79-4de2-43d1-b2ed-4ed4946a6616/Processors/Master/Hardwares/CAN/Controllers/Controller3/&quot; Type=&quot;Path&quot; /&gt;" ViewVisible="false" Name="Monitor1_Controller3" SyncMonitoringWithParent="true" ProtocolType="CAN" RingBufferSizeValue="10000">
+    <MonitoringViewSettings KernelSubViewMode="FrameSignals" ScrollMode="Tail" KernelViewMode="StaticView" ProtocolType="CAN" Version="1">
       <ConfiguredColumns>
         <ColumnSetting ID="Identifier" Width="190" SortOrder="None" IsConfigured="true" />
         <ColumnSetting ID="MonitorTimestamp" Width="95" SortOrder="None" IsConfigured="true" />
         <ColumnSetting ID="Id" Width="71" SortOrder="None" IsConfigured="true" />
         <ColumnSetting ID="ControllerID" Width="90" SortOrder="None" IsConfigured="true" />
-        <ColumnSetting ID="Name" Width="92" SortOrder="Ascending" IsConfigured="true" />
-        <ColumnSetting ID="Direction" Width="194" SortOrder="None" IsConfigured="true" />
+        <ColumnSetting ID="Name" Width="204" SortOrder="Ascending" IsConfigured="true" />
+        <ColumnSetting ID="Direction" Width="34" SortOrder="None" IsConfigured="true" />
         <ColumnSetting ID="DataLengthCode" Width="27" SortOrder="None" IsConfigured="true" />
         <ColumnSetting ID="RawBytes" Width="185" SortOrder="None" IsConfigured="true" />
         <ColumnSetting ID="Deltatime" Width="83" SortOrder="None" IsConfigured="true" />

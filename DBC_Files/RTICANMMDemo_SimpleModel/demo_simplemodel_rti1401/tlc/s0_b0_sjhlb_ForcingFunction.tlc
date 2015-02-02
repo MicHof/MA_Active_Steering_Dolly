@@ -1,0 +1,14 @@
+%implements s0_b0_sjhlb_ForcingFunction "C"
+
+%function ForcingFunction(block, system) Output
+%assign tlcForcingFunctionFcnOfS0B2 = OpaqueTLCBlockFcn("ForcingFunction", 0, 2, 0, 5)
+%assign tlcForcingFunctionFcnOfS0B6 = OpaqueTLCBlockFcn("ForcingFunction", 0, 6, 0, 5)
+%<tlcForcingFunctionFcnOfS0B2>\
+%<tlcForcingFunctionFcnOfS0B6>\
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void ForcingFunction(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(0, 5, fcnProtoType)>
+%endfunction

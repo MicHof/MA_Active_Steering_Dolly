@@ -1,0 +1,237 @@
+-- ******** Model variables ***************************************************
+
+group "Model Root"
+{
+ flags: COLLAPSED
+}
+	group "Reset" -- block-group
+	{
+	 block: "Constant"
+	 desc:  ""
+	 flags: BLOCK|COLLAPSED
+	}
+		-- Skipping output Out1
+		p_demo_simplemodel_P_boolean_T_3[0]
+		{
+		 type:    uint(8)*
+		 alias:   "Value"
+		 range:   < 0 ; 1 >
+		 bitmask: 0x01
+		 flags:   PARAM
+		}
+
+
+	endgroup -- block-group "Reset"
+
+	group "Variation" -- block-group
+	{
+	 block: "Constant"
+	 desc:  ""
+	 flags: BLOCK|COLLAPSED
+	}
+		-- Skipping output Out1
+		p_demo_simplemodel_P_uint8_T_2[0]
+		{
+		 type:    uint(8)*
+		 alias:   "Value"
+		 flags:   PARAM
+		}
+
+
+	endgroup -- block-group "Variation"
+
+  
+  
+	group "Help" -- subsystem-group
+	{
+	 flags: COLLAPSED
+	 desc:  ""
+	}
+
+
+
+
+
+	endgroup -- subsystem-group "Help"
+  
+  
+	group "Logo1" -- subsystem-group
+	{
+	 flags: COLLAPSED
+	 desc:  ""
+	}
+
+
+
+
+
+	endgroup -- subsystem-group "Logo1"
+  
+  
+	group "RTI Data" -- subsystem-group
+	{
+	 flags: COLLAPSED
+	 desc:  ""
+	}
+
+
+	endgroup -- subsystem-group "RTI Data"
+  
+  
+	group "RTICANMM\nControllerSetup" -- subsystem-group
+	{
+	 flags: COLLAPSED
+	 desc:  ""
+	}
+
+
+
+		group "VariationInput" -- block-group
+		{
+		 block: "Inport"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			-- Skipping output Out1
+
+
+		endgroup -- block-group "VariationInput"
+
+		group "Reset" -- block-group
+		{
+		 block: "Inport"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			-- Skipping output Out1
+
+
+		endgroup -- block-group "Reset"
+
+		group "Variation_DTC" -- block-group
+		{
+		 block: "DataTypeConversion"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			p_demo_simplemodel_B_uint8_T_0[0]
+			{
+			 type:    uint(8)*
+			 alias:   "Out1"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "Variation_DTC"
+
+		group "RTICANMMCHANNEL_TLC" -- block-group
+		{
+		 block: "S-Function"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+
+
+			p_demo_simplemodel_P_real_T_0[0]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "P1"
+			 flags:   PARAM
+			}
+			p_demo_simplemodel_P_real_T_0[1]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "P2"
+			 flags:   PARAM
+			}
+			p_demo_simplemodel_P_real_T_0[2]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "P3"
+			 flags:   PARAM
+			}
+			p_demo_simplemodel_P_real_T_0[3]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "P4"
+			 flags:   PARAM
+			}
+			p_demo_simplemodel_P_real_T_0[4]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "P5"
+			 flags:   PARAM
+			}
+			p_demo_simplemodel_P_uint16_T_1[0]
+			{
+			 type:    demo_simplemodel_ArrayDT5_6*
+			 alias:   "P6"
+			 flags:   PARAM
+			}
+
+
+		endgroup -- block-group "RTICANMMCHANNEL_TLC"
+
+		group "sfcn" -- block-group
+		{
+		 block: "S-Function"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			p_demo_simplemodel_B_uint8_T_0[0]
+			{
+			 type:    uint(8)*
+			 alias:   "In1"
+			 desc:    ""
+			 flags:   SINK|READONLY
+			}
+
+			-- Skipping inport In2
+
+
+
+
+		endgroup -- block-group "sfcn"
+
+  
+  
+		group "ModelClose" -- subsystem-group
+		{
+		 flags: COLLAPSED
+		 desc:  ""
+		}
+
+
+
+
+
+		endgroup -- subsystem-group "ModelClose"
+
+
+	endgroup -- subsystem-group "RTICANMM\nControllerSetup"
+  
+  
+	group "RTICANMM\nGeneralSetup" -- subsystem-group
+	{
+	 flags: COLLAPSED
+	 desc:  ""
+	}
+
+
+	endgroup -- subsystem-group "RTICANMM\nGeneralSetup"
+  
+  
+	group "RTICANMM\nMainBlock" -- subsystem-group
+	{
+	 flags: COLLAPSED
+	 desc:  ""
+	}
+
+
+	endgroup -- subsystem-group "RTICANMM\nMainBlock"
+
+
+
+
+endgroup -- "Model Root"

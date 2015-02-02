@@ -88,9 +88,15 @@
                                                                                                                    
 static Float32 oldsampletime = 0;                                                                                  
 static Float32 newsampletime = 0;                                                                                  
-static Float64 CANMM_CTL_SETUP_Controller3_baudrate      = 500.0;                                                                                 
-static Float64 CANMM_CTL_SETUP_Controller3_baudrate_in   = 500.0; /* Temporary for input port value */                                            
-static Float64 CANMM_CTL_SETUP_Controller3_baudrate_old  = 500.0;                                                                                 
+<<<<<<< HEAD
+static Float64 CANMM_CTL_SETUP_Controller3_baudrate      = 125.0;                                                                                 
+static Float64 CANMM_CTL_SETUP_Controller3_baudrate_in   = 125.0; /* Temporary for input port value */                                            
+static Float64 CANMM_CTL_SETUP_Controller3_baudrate_old  = 125.0;                                                                                 
+=======
+static Float64 CANMM_CTL_SETUP_Controller3_baudrate      = 250.0;                                                                                 
+static Float64 CANMM_CTL_SETUP_Controller3_baudrate_in   = 250.0; /* Temporary for input port value */                                            
+static Float64 CANMM_CTL_SETUP_Controller3_baudrate_old  = 250.0;                                                                                 
+>>>>>>> origin/master
 #endif /* RTICANMM_HAVE_VALID_PLATFORM */                                                                           
                                                                                                                             
 #define CAN_CHANNELNO                                       1                                                              

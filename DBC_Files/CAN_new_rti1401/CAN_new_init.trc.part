@@ -3,7 +3,7 @@
 --  Trace file: CAN_new.trc
 --
 --  RTI1401 7.2 (02-May-2014)
---  Thu Jan 22 10:17:19 2015
+--  Tue Jan 27 15:24:17 2015
 --
 --  Used options:
 --    TRCGenerateVirtualBlocks      = 1
@@ -27,7 +27,7 @@
 
 _genname     "RTI"
 _genversion  "7.2"
-_gendate     "01/22/2015 10:18:23"
+_gendate     "01/27/2015 15:25:08"
 _description ""
 _author      "RTI1401 7.2 (02-May-2014)"
 _model       "CAN_new.mdl"

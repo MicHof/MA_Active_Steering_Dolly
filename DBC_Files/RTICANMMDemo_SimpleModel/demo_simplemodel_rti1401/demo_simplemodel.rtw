@@ -1,22 +1,19 @@
 CompiledModel {
   Name			  "demo_simplemodel"
   OrigName		  "demo_simplemodel"
-  Version		  "8.6 (R2014a) 27-Dec-2013"
-  SimulinkVersion	  "8.3"
+  Version		  "8.5 (R2013b) 08-Aug-2013"
+  SimulinkVersion	  "8.2"
   ModelVersion		  "1.222"
-  GeneratedOn		  "Tue Jan 13 20:15:25 2015"
+  GeneratedOn		  "Mon Jan 26 11:44:06 2015"
   HasSimStructVars	  0
   HasCodeVariants	  0
   PreserveExternInFcnDecls 1
-  DataDictionary	  ""
-  DataDictionarySet	  ""
-  UseModelRefSIMTargetForRAccel	"1"
-  ParallelExecutionInRapidAccelerator "0"
   ExprFolding		  0
   TargetStyle		  "StandAloneTarget"
   NumDataStoresGlobalDSM  0
   RightClickBuild	  0
   ModelReferenceTargetType "NONE"
+  PILSimTargetUnification 1
   IsExportFcnDiagram	  no
   AllowNoArgFcnInReusedFcn 0
   StandaloneSSSupported	  0
@@ -110,12 +107,10 @@ CompiledModel {
     CPPClassGenCompliant    0
     CodeExecutionProfiling  0
     CodeGenDirectory	    ""
-    CodeInterfacePackaging  "Nonreusable function"
     CodeProfilingInstrumentation 0
-    CodeReplacementLibrary  "None"
+    CodeReplacementLibrary  "ANSI_C"
     CombineOutputUpdateFcns 0
     CombineSignalStateStructs 0
-    CommentStyle	    "Auto"
     CompOptLevelCompliant   0
     ConcurrentExecutionCompliant 0
     ConditionallyExecuteInputs 0
@@ -154,6 +149,7 @@ CompiledModel {
     EnableParallelModelReferenceBuilds 0
     EnableRealTimeTesting   1
     EnableRealTimeTestingNonUI "ON"
+    EnhancedBackFolding	    0
     EvaledLifeSpan	    rtInf
     ExecutionMode	    "real-time"
     ExecutionModeNonUI	    "RTSIM"
@@ -168,7 +164,6 @@ CompiledModel {
     FoldNonRolledExpr	    0
     ForceParamTrailComments 0
     GRTInterface	    1
-    GenFloatMathFcnCalls    "NOT IN USE"
     GenerateASAP2	    0
     GenerateAllocFcn	    0
     GenerateClassInterface  0
@@ -176,6 +171,7 @@ CompiledModel {
     GenerateCodeMetricsReport 0
     GenerateCodeReplacementReport 0
     GenerateComments	    1
+    GenerateErtSFunction    0
     GeneratePreprocessorConditionals "Disable all"
     GenerateReport	    0
     GenerateSampleERTMain   0
@@ -186,8 +182,6 @@ CompiledModel {
     GenerateTraceReportSf   0
     GenerateTraceReportSl   0
     GenerateWebview	    0
-    GlobalBufferReuse	    0
-    GlobalVariableUsage	    "None"
     IgnoreCustomStorageClasses 1
     IgnoreTestpoints	    0
     IncAutoGenComments	    0
@@ -206,10 +200,11 @@ CompiledModel {
     InsertPolySpaceComments 0
     InternalIdentifier	    "Shortened"
     IsERTTarget		    0
+    IsPILTarget		    0
     LaunchReport	    0
     LifeSpan		    "inf"
-    LoadAfterBuild	    0
-    LoadApplNonUI	    "OFF"
+    LoadAfterBuild	    1
+    LoadApplNonUI	    "ON"
     LoadToFlash		    0
     LocalBlockOutputs	    0
     LogVarNameModifier	    "rt_"
@@ -220,7 +215,6 @@ CompiledModel {
     ModelReferenceCompliant 1
     ModelStepFunctionPrototypeControlCompliant 0
     MultiInstanceERTCode    0
-    MultiInstanceErrorCode  "Error"
     MultiwordLength	    2048
     NetworkClient	    ""
     NetworkClientNonUI	    "OPTION_DISABLED"
@@ -308,7 +302,6 @@ CompiledModel {
     TargetHWDeviceType	    "Generic->Custom"
     TargetIntDivRoundTo	    "Zero"
     TargetLang		    "C"
-    TargetLangStandard	    "C89/C90 (ANSI)"
     TargetLargestAtomicFloat "None"
     TargetLargestAtomicInteger "Char"
     TargetLibSuffix	    ""
@@ -451,7 +444,6 @@ CompiledModel {
     MaxConstBOSize	    "Inf"
     MaxStackSize	    "32768"
     MaxStackVariableSize    "512"
-    ModelRefGenIndividualGlobals "0"
     ModelReferenceDirSuffix ""
     ModelReferenceTargetType "NONE"
     PostApplyCallback	    "rticfgmdl_targetclblib('PostApply', 'rti1401', 0, hDlg, hSrc, model)"
@@ -470,13 +462,13 @@ CompiledModel {
     tlcLanguage		    "C"
     tlcTargetType	    "RT"
   }
-  RTWContext		  [1823165840, 1]
+  RTWContext		  [927217504, 1]
   RTWCGIR		  1
   TLCBlkFcnInCGIR	  1
   SLCI			  off
   SubsystemHdlForRightClickBuild 0.0
-  LocalSharedCodeManagerFile "C:/Users/Sebastian/Desktop/DBC_Files/RTICANMMDemo_SimpleModel/slprj/rti1401/_sharedutils"
-  "/shared_file.dmr"
+  LocalSharedCodeManagerFile "C:/Users/1.5V/Documents/GitHub/MA_Active_Steering_Dolly/DBC_Files/RTICANMMDemo_SimpleMod"
+  "el/slprj/rti1401/_sharedutils/shared_file.dmr"
   DataLoggingOpts {
     SaveFormat		    0
     MaxRows		    0
@@ -487,6 +479,7 @@ CompiledModel {
     StateSaveName	    ""
     FinalStateName	    ""
     NumLoggedStates	    0
+    SignalLoggingName	    ""
     SignalLoggingSaveFormat "ModelDataLogs"
     CompiledSignalLoggingSaveFormat "ModelDataLogs"
   }
@@ -506,6 +499,7 @@ CompiledModel {
   NumBlockSignals	  3
   NumBlockParams	  13
   NumAlgebraicLoops	  0
+  CoderReportInfo	  1
   HasRootTriggerPort	  no
   HasRootEnablePort	  no
   RootTriggerType	  ""
@@ -557,8 +551,6 @@ CompiledModel {
     NumDataTypes	    14
     NumSLBuiltInDataTypes   9
     StrictBooleanCheckEnabled 1
-    DataTypeOverrideMode    0
-    DataTypeOverrideAppliesTo 0
     BitfieldContainerType   uint_T
     DataTypeDefaults {
       IdAliasedTo	      -10
@@ -1755,7 +1747,6 @@ CompiledModel {
     StorageClass	    Auto
     NeedParenthesis	    0
     StringTransformed	    ""
-    NumPrmValues	    1
     Value		    [0.0]
   }
   DataInputPortDefaults {
@@ -1887,7 +1878,6 @@ CompiledModel {
     NumCustomStorageClass   0
     NumInMdlRefGlobal	    0
     StructAlignment	    0
-    CollapsedTunableParameters []
     GlobalParamsList	    []
     ParameterDefaults {
       RecordType	      ModelParameter
@@ -2037,7 +2027,7 @@ CompiledModel {
     NumCustomStorageClasses 0
   }
   DataObjectUsage {
-    NumFiles		    [5]
+    NumFiles		    [6]
     File {
       Name		      "demo_simplemodel"
       Type		      "source"
@@ -2060,6 +2050,11 @@ CompiledModel {
     }
     File {
       Name		      "demo_simplemodel_private"
+      Type		      "header"
+      IsCustom		      "no"
+    }
+    File {
+      Name		      "demo_simplemodel_sf"
       Type		      "header"
       IsCustom		      "no"
     }
@@ -2318,7 +2313,6 @@ CompiledModel {
     CachedSubFunctions	    ""
     CachedStateflowFcnCode  ""
     SystemIncludes	    ""
-    UtilityIncludes	    ""
     SharedTypeIncludes	    ""
     SystemSharedDataIncludes ""
     SharedConstantsExterns  ""
@@ -2406,7 +2400,6 @@ CompiledModel {
     ForEachSubsystem	    0
     NumImplicitIter	    1
     HasBlockRunInSimulinkForAccel 0
-    rtPExpanded		    0
     HasRTWUserData	    0
     StartMethodHasUserData  0
     VirtualOutportStartMethodHasUserData 0
@@ -2444,7 +2437,6 @@ CompiledModel {
     OutputUpdateUserDataTLCInserted 0
     NetPreprocessorCondition ""
     NetPreprocessorInstanceConditions ""
-    NetPreprocessorConditionForDefaultVariantExists "0"
     CurrentTID		    -1
     GeneratingSubFunctions  0
     ArgumentReplacements    []
@@ -2660,7 +2652,6 @@ CompiledModel {
 	InputContiguous		[yes@2]
 	DataStoreSource		[]
 	DataStoreGlobalDSM	[]
-	GlobalDataStoreSource	[]
 	SampleTimesToSet	Matrix(1,2)
 [[0, 0];]
 	DynamicallySizedVectors	["NonsampledZCs"]
@@ -2712,7 +2703,6 @@ CompiledModel {
 	InputContiguous		[]
 	DataStoreSource		[]
 	DataStoreGlobalDSM	[]
-	GlobalDataStoreSource	[]
 	SampleTimesToSet	Matrix(1,2)
 [[0, 0];]
 	DynamicallySizedVectors	["NonsampledZCs"]
@@ -2844,7 +2834,6 @@ CompiledModel {
 	InputContiguous		[]
 	DataStoreSource		[]
 	DataStoreGlobalDSM	[]
-	GlobalDataStoreSource	[]
 	SampleTimesToSet	Matrix(1,2)
 [[0, 0];]
 	DynamicallySizedVectors	["NonsampledZCs"]
@@ -2896,7 +2885,6 @@ CompiledModel {
 	InputContiguous		[]
 	DataStoreSource		[]
 	DataStoreGlobalDSM	[]
-	GlobalDataStoreSource	[]
 	SampleTimesToSet	Matrix(1,2)
 [[0, 0];]
 	DynamicallySizedVectors	["NonsampledZCs"]
@@ -2959,7 +2947,6 @@ CompiledModel {
 	InputContiguous		[]
 	DataStoreSource		[]
 	DataStoreGlobalDSM	[]
-	GlobalDataStoreSource	[]
 	SampleTimesToSet	Matrix(1,2)
 [[0, 0];]
 	DynamicallySizedVectors	["NonsampledZCs"]
@@ -2987,7 +2974,7 @@ CompiledModel {
       TID		      0
       firstEntryOfTsMapIsGCD  yes
       NumDataOutputPorts      0
-      TLCFileName	      "s0_b0_zj2x"
+      TLCFileName	      "s0_b0_sjhlb"
       OpaqueBlockMethode {
 	HasStart		1
 	HasInitializeConditions	1
@@ -3026,7 +3013,7 @@ CompiledModel {
   StateflowAutoEnumInfoList {
   }
   BlockParamChecksum	  ["4081377314U", "1241860724U", "3241104853U", "4058264249U"]
-  ModelChecksum		  ["1545381854U", "1305451067U", "1997309999U", "115761784U"]
+  ModelChecksum		  ["1397084188U", "1728924494U", "22625070U", "1324000718U"]
   IncludeCodeGenSettings  1
   CGTypes {
     CGTypeDefaults {
@@ -3239,6 +3226,7 @@ CompiledModel {
   }
   RTWCGModules {
     RTWCGModuleDefaults {
+      IsSignificantModuleFcnConst "yes"
       NumFunctions	      0
       NumSubFunctions	      0
       HasConstants	      0
@@ -3250,7 +3238,6 @@ CompiledModel {
       IsTLCInterfaceLoaded    0
       NeedsSimStruct	      0
       AccessesArgsGlobally    0
-      FcnHeaders	      []
     }
     FunctionDefaults {
       BlockName		      ""
@@ -3279,78 +3266,77 @@ CompiledModel {
       PassThroughArgDefs      ""
       PassThroughArgs	      ""
       NumFcnCalls	      0
-      FcnHeaders	      []
+      NumFcnHeaders	      0
     }
     NumRTWCGModules	    1
     TestInterfaceFcnIdx	    -1
     RTWCGModule {
-      TLCFileName	      "s0_b0_zj2x"
+      TLCFileName	      "s0_b0_sjhlb"
       RTWFcnConst {
 	HasInstanceSetup	"no"
 	Start_Function {
-	  HasTidArg		  0
-	  HasCpiArg		  0
-	  TLCFileName		  "s0_b0_zj2x_Start"
+	  HasTidArg 0
+	  HasCpiArg 0
+	  TLCFileName		  "s0_b0_sjhlb_Start"
 	  StackSize		  0
 	}
 	InitializeConditions_Function {
-	  HasTidArg		  0
-	  HasCpiArg		  0
-	  TLCFileName		  "s0_b0_zj2x_InitializeConditions"
+	  HasTidArg 0
+	  HasCpiArg 0
+	  TLCFileName		  "s0_b0_sjhlb_InitializeConditions"
 	  StackSize		  0
 	}
 	Outputs_Function {
-	  HasTidArg		  0
-	  HasCpiArg		  0
-	  TLCFileName		  "s0_b0_zj2x_Outputs"
+	  HasTidArg 0
+	  HasCpiArg 0
+	  TLCFileName		  "s0_b0_sjhlb_Outputs"
 	  StackSize		  0
 	}
 	Update_Function {
-	  HasTidArg		  0
-	  HasCpiArg		  0
-	  TLCFileName		  "s0_b0_zj2x_Update"
+	  HasTidArg 0
+	  HasCpiArg 0
+	  TLCFileName		  "s0_b0_sjhlb_Update"
 	  StackSize		  0
 	}
 	Derivatives_Function {
-	  HasTidArg		  0
-	  HasCpiArg		  0
-	  TLCFileName		  "s0_b0_zj2x_Derivatives"
+	  HasTidArg 0
+	  HasCpiArg 0
+	  TLCFileName		  "s0_b0_sjhlb_Derivatives"
 	  StackSize		  0
 	}
 	ForcingFunction_Function {
-	  HasTidArg		  0
-	  HasCpiArg		  0
-	  TLCFileName		  "s0_b0_zj2x_ForcingFunction"
+	  HasTidArg 0
+	  HasCpiArg 0
+	  TLCFileName		  "s0_b0_sjhlb_ForcingFunction"
 	  StackSize		  0
 	}
 	Terminate_Function {
-	  HasTidArg		  0
-	  HasCpiArg		  0
-	  TLCFileName		  "s0_b0_zj2x_Terminate"
+	  HasTidArg 0
+	  HasCpiArg 0
+	  TLCFileName		  "s0_b0_sjhlb_Terminate"
 	  StackSize		  0
 	}
       }
       CGSystemIdx	      0
-      FileNameOwnerModuleIdx  0
       NumFunctions	      7
       NumSubFunctions	      0
       SystemFunctions {
-	Start			0
-	InitializeConditions	1
-	Outputs			2
-	Update			3
-	Derivatives		4
-	ForcingFunction		5
-	Terminate		6
+	Start 0
+	InitializeConditions 1
+	Outputs 2
+	Update 3
+	Derivatives 4
+	ForcingFunction 5
+	Terminate 6
       }
       SystemFunctionTypes {
-	Start			0
-	InitializeConditions	1
-	Outputs			2
-	Update			3
-	Derivatives		4
-	ForcingFunction		5
-	Terminate		6
+	Start 0
+	InitializeConditions 1
+	Outputs 2
+	Update 3
+	Derivatives 4
+	ForcingFunction 5
+	Terminate 6
       }
       Function {
 	Name			"Start"
@@ -3389,7 +3375,6 @@ CompiledModel {
       }
     }
   }
-  RTWCGStrings		  []
   VarGroups {
     NumVarGroups	    3
     VarGroupDefaults {

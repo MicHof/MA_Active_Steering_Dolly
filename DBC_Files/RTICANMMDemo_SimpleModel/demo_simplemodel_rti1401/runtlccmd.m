@@ -5,18 +5,18 @@ function runtlccmd
 % 
 % 	tlc
 % 	-r
-% 	C:\Users\Sebastian\Desktop\DBC_Files\RTICANMMDemo_SimpleModel\demo_simplemodel_rti1401\demo_simplemodel.rtw
+% 	C:\Users\1.5V\Documents\GitHub\MA_Active_Steering_Dolly\DBC_Files\RTICANMMDemo_SimpleModel\demo_simplemodel_rti1401\demo_simplemodel.rtw
 % 	C:\Program Files\dSPACE RCPHIL 2014-A\MATLAB\RTI\RTI1401\TLC\rti1401.tlc
-% 	-OC:\Users\Sebastian\Desktop\DBC_Files\RTICANMMDemo_SimpleModel\demo_simplemodel_rti1401
+% 	-OC:\Users\1.5V\Documents\GitHub\MA_Active_Steering_Dolly\DBC_Files\RTICANMMDemo_SimpleModel\demo_simplemodel_rti1401
 % 	-IC:\Program Files\dSPACE RCPHIL 2014-A\MATLAB\RTI\RTI1401\TLC
 % 	-IC:\Program Files\dSPACE RCPHIL 2014-A\matlab\rticanmm\tlc
 % 	-IC:\Program Files\dSPACE RCPHIL 2014-A\MATLAB\RTIMMSU\TLC
-% 	-IC:\Users\Sebastian\Desktop\DBC_Files\RTICANMMDemo_SimpleModel\demo_simplemodel_rti1401\tlc
-% 	-IC:\Program Files\MATLAB\R2014a\rtw\c\tlc\mw
-% 	-IC:\Program Files\MATLAB\R2014a\rtw\c\tlc\lib
-% 	-IC:\Program Files\MATLAB\R2014a\rtw\c\tlc\blocks
-% 	-IC:\Program Files\MATLAB\R2014a\rtw\c\tlc\fixpt
-% 	-IC:\Program Files\MATLAB\R2014a\stateflow\c\tlc
+% 	-IC:\Users\1.5V\Documents\GitHub\MA_Active_Steering_Dolly\DBC_Files\RTICANMMDemo_SimpleModel\demo_simplemodel_rti1401\tlc
+% 	-IC:\Program Files\MATLAB\R2013b\rtw\c\tlc\mw
+% 	-IC:\Program Files\MATLAB\R2013b\rtw\c\tlc\lib
+% 	-IC:\Program Files\MATLAB\R2013b\rtw\c\tlc\blocks
+% 	-IC:\Program Files\MATLAB\R2013b\rtw\c\tlc\fixpt
+% 	-IC:\Program Files\MATLAB\R2013b\stateflow\c\tlc
 % 	-aFoldNonRolledExpr=0
 % 	-aInlineInvariantSignals=0
 % 	-aInlineParameters=0
@@ -41,6 +41,7 @@ function runtlccmd
 % 	-aSimulinkBlockComments=1
 % 	-aInlinedPrmAccess="Literals"
 % 	-aTargetFcnLib="ansi_tfl_table_tmw.mat"
+% 	-aIsPILTarget=0
 % 	-aLogVarNameModifier="rt_"
 % 	-aGenerateFullHeader=1
 % 	-aExtMode=0
@@ -99,7 +100,7 @@ function runtlccmd
 
    else
 
-      rtwprivate('rtwattic', 'setBuildDir', 'C:\Users\Sebastian\Desktop\DBC_Files\RTICANMMDemo_SimpleModel\demo_simplemodel_rti1401');
+      rtwprivate('rtwattic', 'setBuildDir', 'C:\Users\1.5V\Documents\GitHub\MA_Active_Steering_Dolly\DBC_Files\RTICANMMDemo_SimpleModel\demo_simplemodel_rti1401');
       rtwprivate('ec_set_replacement_flag', 'demo_simplemodel');
       load tlccmd.mat;
       savedpwd = pwd;
